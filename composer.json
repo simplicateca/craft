@@ -1,7 +1,7 @@
 {
-  "name": "craftcms/craft",
-  "description": "nystudio107 Craft 3.4 CMS scaffolding project",
-  "version": "2.2.11",
+  "name": "simplicate-web/craft",
+  "description": "Simplicate scaffolding package for Craft 3 CMS projects",
+  "version": "1.0.1",
   "keywords": [
     "craft",
     "cms",
