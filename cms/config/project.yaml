@@ -1,0 +1,203 @@
+dateModified: 1595052906
+email:
+  fromEmail: steve@simplicate.ca
+  fromName: admin
+  transportType: craft\mail\transportadapters\Sendmail
+fieldGroups:
+  94b4d5ac-d7ea-4241-a6cb-92b39f482f99:
+    name: Common
+  d08a0d16-0e00-49e6-9cd4-465fa2d65d7d:
+    name: Errors
+fields:
+  a5cb77be-c4d9-4d3e-88fb-d5384ca13941:
+    contentColumnType: string
+    fieldGroup: d08a0d16-0e00-49e6-9cd4-465fa2d65d7d
+    handle: errorImage
+    instructions: ''
+    name: 'Error Image'
+    searchable: true
+    settings:
+      allowedKinds:
+        - image
+      defaultUploadLocationSource: 'volume:5c642d7e-b16b-4836-9575-668d75d242e5'
+      defaultUploadLocationSubpath: ''
+      limit: '1'
+      localizeRelations: false
+      restrictFiles: '1'
+      selectionLabel: ''
+      singleUploadLocationSource: 'volume:5c642d7e-b16b-4836-9575-668d75d242e5'
+      singleUploadLocationSubpath: ''
+      source: null
+      sources:
+        - 'volume:5c642d7e-b16b-4836-9575-668d75d242e5'
+      targetSiteId: null
+      useSingleFolder: ''
+      validateRelatedElements: ''
+      viewMode: large
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+  b8ba7115-3804-4c06-8a96-501963d1fc5c:
+    contentColumnType: text
+    fieldGroup: d08a0d16-0e00-49e6-9cd4-465fa2d65d7d
+    handle: errorHeadline
+    instructions: ''
+    name: 'Error Headline'
+    searchable: true
+    settings:
+      charLimit: ''
+      code: ''
+      columnType: text
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  e6d658aa-c335-4f15-bbcd-59fe05d9e913:
+    contentColumnType: text
+    fieldGroup: d08a0d16-0e00-49e6-9cd4-465fa2d65d7d
+    handle: errorText
+    instructions: ''
+    name: 'Error Text'
+    searchable: true
+    settings:
+      charLimit: ''
+      code: ''
+      columnType: text
+      initialRows: '4'
+      multiline: '1'
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+graphql:
+  schemas:
+    889dc45f-957f-4ebb-847d-3a6e92d0c0e5:
+      isPublic: '1'
+      name: 'Public Schema'
+plugins:
+  dospaces:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  fastcgi-cache-bust:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  feed-me:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.1.2
+  matrixmate:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  minify:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  reasons:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.1.1
+  redactor:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.3.0
+  seomatic:
+    edition: standard
+    enabled: true
+    licenseKey: null
+    schemaVersion: 3.0.9
+  twigpack:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  typogrify:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+sections:
+  54e60257-f31a-44aa-960e-bbd364197e28:
+    enableVersioning: false
+    entryTypes:
+      fb3a8f31-d1cc-4c13-903b-a501f7e51f54:
+        handle: homepage
+        hasTitleField: false
+        name: Homepage
+        sortOrder: 1
+        titleFormat: '{section.name|raw}'
+        titleLabel: null
+    handle: homepage
+    name: Homepage
+    propagationMethod: all
+    siteSettings:
+      5da841b1-ca0d-46ff-8bb1-04d6c889ac54:
+        enabledByDefault: true
+        hasUrls: true
+        template: index
+        uriFormat: __home__
+    type: single
+  a72bfe0c-3389-4f9f-8ec1-ab318ec10b29:
+    enableVersioning: false
+    entryTypes:
+      faceb3ed-6771-453c-9c2a-aa330847f6db:
+        handle: errors
+        hasTitleField: true
+        name: Errors
+        sortOrder: 1
+        titleFormat: null
+        titleLabel: Title
+    handle: errors
+    name: Errors
+    propagationMethod: all
+    siteSettings:
+      5da841b1-ca0d-46ff-8bb1-04d6c889ac54:
+        enabledByDefault: true
+        hasUrls: false
+        template: null
+        uriFormat: null
+    type: channel
+siteGroups:
+  f89601e9-4ba9-4a48-9e99-350aa9914912:
+    name: Default
+sites:
+  5da841b1-ca0d-46ff-8bb1-04d6c889ac54:
+    baseUrl: $SITE_URL
+    handle: default
+    hasUrls: true
+    language: en-CA
+    name: Default
+    primary: true
+    siteGroup: f89601e9-4ba9-4a48-9e99-350aa9914912
+    sortOrder: 1
+system:
+  edition: pro
+  live: true
+  name: Craft
+  schemaVersion: 3.4.11
+  timeZone: America/Toronto
+users:
+  allowPublicRegistration: false
+  defaultGroup: null
+  photoSubpath: ''
+  photoVolumeUid: null
+  requireEmailVerification: true
+volumes:
+  9c4075cb-9528-457d-83de-4e09b786c0cf:
+    handle: digitalOceanSpaces
+    hasUrls: true
+    name: Site
+    settings:
+      bucket: $DO_SPACES_BUCKET
+      contentDisposition: ''
+      endpoint: $DO_SPACES_ENDPOINT
+      expires: ''
+      keyId: $DO_SPACES_KEY
+      region: $DO_SPACES_REGION
+      secret: $DO_SPACES_SECRET
+      subfolder: '@cdnSub/site'
+    sortOrder: 2
+    type: vaersaagod\dospaces\Volume
+    url: $DO_CDN_URL

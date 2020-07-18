@@ -1,0 +1,6 @@
+{% extends "blocks/_layout.twig" %}
+
+{% block blockBody %}
+    {% if block.headline %}<h2>{{block.headline|typogrify(true)}}</h2>{% endif %}
+    {{block.text|typogrify}}
+{% endblock %}

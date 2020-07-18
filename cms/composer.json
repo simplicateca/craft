@@ -1,0 +1,50 @@
+{
+  "require": {
+    "craftcms/cms": "^3.4.23",
+    "craftcms/feed-me": "^4.2.3",
+    "craftcms/redactor": "^2.6.1",
+    "vlucas/phpdotenv": "^3.4.0",
+    "yiisoft/yii2-redis": "^2.0.6",
+    "nystudio107/craft-fastcgicachebust": "^1.0.0",
+    "nystudio107/craft-minify": "^1.2.5",
+    "nystudio107/craft-typogrify": "^1.1.4",
+    "nystudio107/craft-seomatic": "^3.2.0",
+    "nystudio107/craft-twigpack": "^1.1.0",
+    "mmikkel/reasons": "^2.1.2",
+    "vaersaagod/matrixmate": "^1.2.5",
+    "vaersaagod/dospaces": "^1.1.2"
+  },
+  "autoload": {
+    "psr-4": {
+      "modules\\sitemodule\\": "modules/sitemodule/src/"
+    }
+  },
+  "config": {
+    "sort-packages": true,
+    "optimize-autoloader": true,
+    "platform": {
+      "php": "7.0"
+    }
+  },
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://repo.repman.io"
+    },
+    {
+      "packagist": false
+    }
+  ],
+  "scripts": {
+    "craft-update": [
+      "@php craft migrate/all",
+      "@php craft project-config/sync",
+      "@php craft clear-caches/all"
+    ],
+    "post-root-package-install": [
+      "@php -r \"file_exists('.env') || copy('example.env', '.env');\""
+    ],
+    "post-update-cmd": "@craft-update",
+    "post-install-cmd": "@craft-update"
+  }
+}

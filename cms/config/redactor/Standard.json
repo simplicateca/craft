@@ -1,0 +1,13 @@
+{
+  "buttons": ["html", "formatting", "bold", "italic", "unorderedlist", "orderedlist", "link", "image", "video", "file"],
+  "plugins": ["fullscreen", "video", "email"],
+  "linkNewTab": true,
+  "toolbarFixed": true,
+  "formatting": ["p", "lead", "h2", "h3", "h4"],
+  "formattingAdd": {
+    "lede": {
+      "title": "Lead paragraph",
+      "args": ["p", "class", "lead"]
+    }
+  }
+}
