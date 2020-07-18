@@ -1,7 +1,7 @@
 {
   "name": "simplicate-web/craft",
   "description": "Simplicate scaffolding package for Craft 3 CMS projects",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "keywords": [
     "craft",
     "cms",
@@ -9,25 +9,9 @@
     "project"
   ],
   "license": "Unlicense",
-  "homepage": "https://craftcms.com/",
+  "minimum-stability": "dev",
+  "homepage": "https://www.simplicate.ca",
   "type": "project",
-  "support": {
-    "email": "support@craftcms.com",
-    "issues": "https://github.com/craftcms/cms/issues",
-    "forum": "https://craftcms.stackexchange.com/",
-    "source": "https://github.com/craftcms/cms",
-    "docs": "https://craftcms.com/docs",
-    "rss": "https://craftcms.com/changelog.rss"
-  },
-  "require": {
-    "craftcms/cms": "^3.4.0",
-    "vlucas/phpdotenv": "^3.4.0"
-  },
-  "autoload": {
-    "psr-4": {
-      "modules\\": "modules/"
-    }
-  },
   "config": {
     "optimize-autoloader": true,
     "platform": {
