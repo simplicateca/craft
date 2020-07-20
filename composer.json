@@ -1,15 +1,15 @@
 {
   "name": "simplicate-web/craft",
   "description": "Simplicate scaffolding package for Craft 3 CMS projects",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "keywords": [
     "craft",
     "cms",
     "craftcms",
-    "project"
+    "docker",
+    "webpack"
   ],
-  "license": "Unlicense",
-  "minimum-stability": "dev",
+  "license": "mit",
   "homepage": "https://www.simplicate.ca",
   "type": "project",
   "config": {
