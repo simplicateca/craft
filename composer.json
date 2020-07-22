@@ -1,17 +1,22 @@
 {
   "name": "simplicate-web/craft",
   "description": "Simplicate scaffolding package for Craft 3 CMS projects",
-  "version": "1.0.2",
-  "keywords": [
-    "craft",
-    "cms",
-    "craftcms",
-    "project"
-  ],
+  "keywords": [ "craft", "cms", "craftcms", "project", "docker", "webpack" ],
   "license": "Unlicense",
-  "minimum-stability": "dev",
   "homepage": "https://www.simplicate.ca",
   "type": "project",
+  "authors": [
+    {
+        "name": "Steve Comrie",
+        "email": "steve@simplicate.ca",
+        "homepage": "https://stevecomrie.ca",
+        "role": "Developer"
+    }
+  ],
+  "require": {
+    "craftcms/cms": "^3.4.0",
+    "vlucas/phpdotenv": "^3.4.0"
+  },
   "config": {
     "optimize-autoloader": true,
     "platform": {
