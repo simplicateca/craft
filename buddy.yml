@@ -58,7 +58,7 @@
     remote_path: "/dist/"
     bucket_name: "$SPACES_BUCKET"
     public_access: true
-    region: "sfo2"
+    region: "$SPACES_REGION"
     integration_hash: "$SPACES_HASH"
   - action: "Rsync files to host"
     type: "RSYNC"
@@ -141,5 +141,5 @@
     value: "forge"
   - key: "SPACES_BUCKET"
     value: "REPLACE_ME"
-  - key: "SPACES_HASH"
+  - key: "SPACES_REGION"
     value: "REPLACE_ME"
