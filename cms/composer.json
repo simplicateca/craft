@@ -1,18 +1,20 @@
 {
   "require": {
-    "craftcms/cms": "^3.4.23",
-    "craftcms/feed-me": "^4.2.3",
+    "craftcms/cms": "^3.4.25",
     "craftcms/redactor": "^2.6.1",
-    "vlucas/phpdotenv": "^3.4.0",
+    "mmikkel/reasons": "^2.2.0",
     "yiisoft/yii2-redis": "^2.0.6",
-    "nystudio107/craft-fastcgicachebust": "^1.0.0",
-    "nystudio107/craft-minify": "^1.2.5",
-    "nystudio107/craft-typogrify": "^1.1.4",
-    "nystudio107/craft-seomatic": "^3.2.0",
-    "nystudio107/craft-twigpack": "^1.1.0",
-    "mmikkel/reasons": "^2.1.2",
-    "vaersaagod/matrixmate": "^1.2.5",
-    "vaersaagod/dospaces": "^1.1.2"
+    "nystudio107/craft-fastcgicachebust": "^1.0.9",
+    "nystudio107/craft-minify": "^1.2.10",
+    "nystudio107/craft-seomatic": "^3.3.13",
+    "nystudio107/craft-twigpack": "^1.2.3",
+    "nystudio107/craft-typogrify": "^1.1.18",
+    "vaersaagod/dospaces": "^1.1.2",
+    "vaersaagod/matrixmate": "^1.2.6",
+    "vlucas/phpdotenv": "^3.4.0"
+  },
+  "require-dev": {
+    "yiisoft/yii2-shell": "^2.0.3"
   },
   "autoload": {
     "psr-4": {
@@ -26,20 +28,13 @@
       "php": "7.0"
     }
   },
-  "repositories": [
-    {
-      "type": "composer",
-      "url": "https://repo.repman.io"
-    },
-    {
-      "packagist": false
-    }
-  ],
   "scripts": {
     "craft-update": [
       "@php craft migrate/all",
-      "@php craft project-config/sync",
-      "@php craft clear-caches/all"
+      "@php craft project-config/apply",
+      "@php craft clear-caches/all",
+      "@php -r \"chmod( 'storage', 0777);\"",
+      "@php -r \"chmod( 'config',  0777);\""
     ],
     "post-root-package-install": [
       "@php -r \"file_exists('.env') || copy('example.env', '.env');\""

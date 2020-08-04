@@ -1,0 +1,47 @@
+fieldLayouts:
+  155d9590-a8a9-44a0-b379-c089f17b9c37:
+    tabs:
+      -
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            autofocus: false
+            class: null
+            disabled: false
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            required: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\TitleField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+handle: digitalOceanSpaces
+hasUrls: true
+name: Site
+settings:
+  bucket: $DO_SPACES_BUCKET
+  contentDisposition: ''
+  endpoint: $DO_SPACES_ENDPOINT
+  expires: ''
+  keyId: $DO_SPACES_KEY
+  region: $DO_SPACES_REGION
+  secret: $DO_SPACES_SECRET
+  subfolder: '@cdnSub/site'
+sortOrder: 1
+type: vaersaagod\dospaces\Volume
+url: $DO_CDN_URL

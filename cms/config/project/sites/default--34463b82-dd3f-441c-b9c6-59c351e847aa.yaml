@@ -1,0 +1,8 @@
+baseUrl: $DEFAULT_SITE_URL
+handle: default
+hasUrls: true
+language: en-CA
+name: 'Craft'
+primary: true
+siteGroup: bcb40c76-f64f-408f-b1da-edb455b3588d
+sortOrder: 1

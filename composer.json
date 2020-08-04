@@ -13,10 +13,6 @@
         "role": "Developer"
     }
   ],
-  "require": {
-    "craftcms/cms": "^3.4.0",
-    "vlucas/phpdotenv": "^3.4.0"
-  },
   "config": {
     "optimize-autoloader": true,
     "platform": {
