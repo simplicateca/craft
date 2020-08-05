@@ -33,8 +33,14 @@
       "@php craft migrate/all",
       "@php craft project-config/apply",
       "@php craft clear-caches/all",
-      "@php -r \"chmod( 'storage', 0777);\"",
-      "@php -r \"chmod( 'config',  0777);\""
+      "chmod 0777 .env",
+      "chmod 0777 composer.json",
+      "chmod 0777 composer.lock",
+      "chmod 0777 config/license.key",
+      "chmod -R 0777 config/project",
+      "chmod -R 0777 storage",
+      "chmod -R 0777 vendor",
+      "chmod -R 0777 web/cpresources"
     ],
     "post-root-package-install": [
       "@php -r \"file_exists('.env') || copy('example.env', '.env');\""

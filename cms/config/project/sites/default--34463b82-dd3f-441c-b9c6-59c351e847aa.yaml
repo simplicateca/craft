@@ -1,4 +1,4 @@
-baseUrl: $DEFAULT_SITE_URL
+baseUrl: '@web'
 handle: default
 hasUrls: true
 language: en-CA
