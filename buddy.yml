@@ -3,8 +3,7 @@
   ref_name: "master"
   ref_type: "BRANCH"
   target_site_url: "$PROJECT_URL"
-  always_from_scratch: true
-  auto_clear_cache: true
+  fetch_all_refs: true
   trigger_condition: "ALWAYS"
   actions:
   - action: "Execute: webpack build"

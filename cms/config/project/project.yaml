@@ -1,13 +1,17 @@
-dateModified: 1596573039
+dateModified: 1603478728
 email:
   fromEmail: steve@simplicate.ca
-  fromName: 'admin'
+  fromName: admin
   transportType: craft\mail\transportadapters\Sendmail
 plugins:
   dospaces:
     edition: standard
     enabled: true
     schemaVersion: 1.0.0
+  expanded-search:
+    edition: standard
+    enabled: true
+    schemaVersion: 0.0.1
   fastcgi-cache-bust:
     edition: standard
     enabled: true
@@ -20,6 +24,10 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 1.0.0
+  navigation:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.21
   reasons:
     edition: standard
     enabled: true
@@ -28,10 +36,53 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 2.3.0
+  retcon:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
   seomatic:
     edition: standard
     enabled: true
     schemaVersion: 3.0.9
+    settings:
+      addHrefLang: true
+      addPaginatedHreflang: true
+      addXDefaultHrefLang: true
+      cpTitlePrefix: '⚙ '
+      cspNonce: ''
+      cspScriptSrcPolicies:
+        -
+          __assoc__:
+            -
+              - policy
+              - '''self'''
+      devModeCpTitlePrefix: '&#x1f6a7;⚙ '
+      devModeTitlePrefix: '&#x1f6a7; '
+      displayAnalysisSidebar: true
+      displayPreviewSidebar: true
+      enableJsonLdEndpoint: false
+      enableMetaContainerEndpoint: false
+      enableSeoFileLinkEndpoint: false
+      environment: live
+      generatorEnabled: true
+      headersEnabled: true
+      lowercaseCanonicalUrl: '1'
+      maxDescriptionLength: 155
+      maxTitleLength: 70
+      metaCacheDuration: 'null'
+      pluginName: SEOmatic
+      regenerateSitemapsAutomatically: true
+      renderEnabled: true
+      separatorChar: '|'
+      sidebarDisplayPreviewTypes:
+        - google
+        - twitter
+        - facebook
+      siteGroupsSeparate: '1'
+      siteUrlOverride: ''
+      sitemapsEnabled: true
+      socialMediaPreviewTarget: true
+      submitSitemaps: true
   twigpack:
     edition: standard
     enabled: true
@@ -43,8 +94,8 @@ plugins:
 system:
   edition: solo
   live: true
-  name: 'Craft'
-  schemaVersion: 3.5.12
+  name: Craft
+  schemaVersion: 3.5.13
   timeZone: America/Toronto
 users:
   allowPublicRegistration: false

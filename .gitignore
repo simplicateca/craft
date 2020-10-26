@@ -53,3 +53,4 @@ npm-debug.log
 !.vscode/extensions.json
 config.codekit3
 prepros-6.config
+cms/core

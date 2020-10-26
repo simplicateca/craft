@@ -1,0 +1,26 @@
+.c-block--textImage {
+    
+    .wrapper {
+        display: flex;
+
+        @include mobile {
+            flex-direction: column-reverse;
+        }
+    }
+
+    .text {
+
+    }
+
+    .image {
+        max-width: 33%;
+        margin-left: 4rem;
+
+        @include mobile {
+            max-width: 100%;
+            margin-left: 0rem;
+            margin-bottom: 1rem;
+        }
+    }
+
+}

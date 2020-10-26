@@ -1,0 +1,9 @@
+<article class="tease topic">
+    <h2>{{category.title}}</h2>
+             
+    <div class="summary">
+        {{category.summary|truncateOnWord(250)}}
+    </div>
+
+    <a href="{{ category.url }}">Read more</a>
+</article>

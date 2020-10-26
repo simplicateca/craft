@@ -1,0 +1,48 @@
+.c-hero {
+    background: #ccc;
+    height    : 100%;
+    overflow  : hidden;
+    position  : relative;
+
+    &.normal {
+        max-height: 300px;
+        min-height: 300px;
+    }
+
+    &.large {
+        max-height: 90vh;
+        min-height: 700px;
+
+        @include mobile {
+            max-height: calc( 100vh - 60px );
+            min-height: calc( 100vh - 60px );
+        }
+    }
+
+    .image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+
+        img {
+            object-fit: cover;
+            object-position: 50% 50%;
+            height: 100%;
+            width: 100%;
+            max-width: inherit;
+        }
+    }
+
+    .text {
+        position: absolute;
+        top: 50%;
+        width: calc(100% - 20px);
+        transform: translateY(-50%);
+        text-align: center;
+        color: var(--dark);
+        z-index: 5;
+        padding: 0 10px;
+    }
+}

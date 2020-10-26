@@ -46,6 +46,8 @@
             {% block bodyTag %}
             <body>
             {% endblock bodyTag %}
+                {% include "_boilerplate/_partials/skip-link.twig" %}
+
                 {# -- Page content that should be included in the <body> -- #}
                 {% block bodyContent %}
                 {% endblock bodyContent %}

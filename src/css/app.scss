@@ -16,28 +16,40 @@
  */
 @import './settings/global.scss';
 @import './settings/typography.scss';
-@import './settings/webfonts.scss';
 
 
 /**
- * Utility classes
+ * Layout & utility classes
  */
- @import './settings/utility.scss';
+@import './settings/utility.scss';
+@import './layout/frame.scss';
+@import './layout/header.scss';
+@import './layout/footer.scss';
+@import './components/a11y.scss';
 
 
 /**
  * Include styles for individual components
  */
- @import './components/_common.scss';
-
+@import './components/buttons.scss';
+@import './components/blocks.scss';
+@import './components/hero.scss';
+@import './components/search.scss';
+@import './components/pagination.scss';
+@import './components/above-footer.scss';
+@import './components/breadcrumb.scss';
+  
 
 /**
  * Include styles for individual pages
  */
-@import './pages/homepage.scss';
+@import './pages/pages.scss';
+@import './pages/home.scss';
+@import './pages/news.scss';
+@import './pages/topics.scss';
 
 
 /**
  * Include vendor css.
  */
- @import 'vendor.scss';
+@import './components/vendor.scss';

@@ -1,0 +1,74 @@
+/* keep this outside #page-header so it can also be picked up by MobileMenu.vue */
+div.c-primaryLogo {
+    font-size: 3rem;
+    font-weight: bold;
+
+    a {
+        color: var(--dark);
+        text-decoration: none;
+    }
+}
+
+#page-header {
+    background: #eee;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+
+    .wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 0;
+    }
+
+    nav {
+        justify-self: flex-end;
+        text-align: right;
+    }
+}
+
+nav.c-primary {
+    ul {
+        @include tablet-down {
+            display: none;
+        }
+    }
+
+    li {
+        margin-left: 2rem;
+        position: relative;
+
+        &:hover, 
+        &:focus-within {
+            ul {
+                display: block;
+            }
+        }
+
+        a {
+            display: block;
+            padding: 1rem 0.5rem;
+        }
+
+        ul {
+            position: absolute;
+            top: 3.5rem;
+            left: 0;
+            display: none;
+            background: #eee;
+            text-align: left;
+
+            li {
+                display: block;
+                margin: 0;
+
+                a {
+                    display: block;
+                    white-space: nowrap;
+                    padding: 1rem 0.5rem;
+                }
+            }
+        }
+    }
+}

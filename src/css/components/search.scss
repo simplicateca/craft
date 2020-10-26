@@ -1,0 +1,32 @@
+.c-searchForm {
+    font-size: 1.8rem;
+
+    label {
+        font-weight: bold;
+        display: block;
+    }
+
+    input[type=search] {
+        min-width: 20rem;
+        font-size: 1.8rem;
+        line-height: 1em;
+        padding: 1rem;
+
+        @include tablet-up {
+            min-width: 40rem;
+        }
+        
+        @include mobile {
+            width: calc( 100% - 9rem );
+        }
+    }
+        
+    button {
+        padding: 1rem;
+        width: 9rem;
+    }
+}
+
+.c-searchResults {
+    
+}

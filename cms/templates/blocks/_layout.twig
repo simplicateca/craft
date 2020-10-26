@@ -1,10 +1,6 @@
-<div class="c-block-wrapper {{block.type.handle}} {{block.layoutFormatting}}">
-    <div class="container">
-        <div
-            class="c-block {{block.type.handle}} {{block.layoutFormatting}}"
-            v-waypoint="{ active: true, callback: onWaypoint, options: intersectionOptions }"
-            id="{{block.type.handle}}-{{block.id}}">
-            {% block blockBody %}{% endblock %}
-        </div>
-    </div>
+<div
+    class="c-block c-block--{{block.type.handle}} {{block.layout}} {{block.spacing}} {{block.background}}"
+    v-waypoint="{ active: true, callback: onWaypoint, options: intersectionOptions }"
+    id="{{block.type.handle}}-{{block.id}}">
+    {% block blockBody %}{% endblock %}
 </div>

@@ -1,0 +1,32 @@
+{% extends "_layouts/generic-page-layout.twig" %}
+
+{% block content %}
+    {% include '_partials/hero.twig' with { image: '', title: entry.title } %}
+
+    {% include '_partials/breadcrumb.twig' %}
+
+    <div class="page--{{entry.slug}}">
+        
+        {% set query = craft.entries()
+            .section('news')
+            .limit(10) %}
+        
+        {% paginate query as pageInfo, pageEntries %}
+
+        {% if pageInfo.currentPage == 1 %}
+            {% include 'blocks/_loop.twig' with { 'blocks': entry.contentBlocks } %}
+        {% endif %}
+
+        <div class="container">
+            {% for entry in pageEntries %}
+                {% include 'tease/news.twig' %}
+            {% endfor %}
+            
+            {% include '_partials/pagination.twig' %}
+        </div>
+    </div>
+{% endblock %}
+
+{% block subcontent %}
+    {% include '_partials/above-footer.twig' %}
+{% endblock %}

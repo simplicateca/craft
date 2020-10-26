@@ -1,6 +1,5 @@
 <template>
-    <main>
-    </main>
+    <div></div>
 </template>
 
 <script>
@@ -22,3 +21,9 @@
         methods: {}
     }
 </script>
+
+<style lang="scss">
+    #confetti-canvas {
+        z-index: 1000;
+    }
+</style>

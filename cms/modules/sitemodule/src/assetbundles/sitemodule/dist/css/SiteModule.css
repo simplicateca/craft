@@ -1,7 +1,7 @@
 /**
  * Site module for Craft CMS
  *
- * Site CSS
+ * Admin side styles
  *
  * @author    simplicate
  * @copyright Copyright (c) 2020 simplicate
@@ -9,3 +9,6 @@
  * @package   SiteModule
  * @since     1.0.0
  */
+
+@import 'matrix.css';
+@import 'redactor.css';

@@ -4,3 +4,32 @@
  * Typography rules.
  *
  */
+
+/**
+ !! ADD GOOGLE FONT IMPORTS TO:
+ !! templates/_inline_css/site-fonts.css
+ **/
+
+
+h1 {
+    font-size: 5rem;
+}
+
+h2 {
+    font-size: 3.5rem;
+}
+
+h3 {
+    font-size: 2rem;
+}
+
+
+p {
+    font-size: 1.8rem;
+    line-height: 1.5em;
+
+    &.lead {
+        font-size: 2.2rem;
+    }
+}
+

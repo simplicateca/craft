@@ -1,0 +1,22 @@
+{% extends "_layouts/generic-page-layout.twig" %}
+
+{% block content %}
+
+    {% include '_partials/breadcrumb.twig' %}
+
+    <div class="news--{{entry.slug}}">
+        <div class="container">
+            <h1>{{entry.title}}</h1>
+        </div>
+
+        {% include 'blocks/_loop.twig' with { 'blocks': entry.contentBlocks } %}
+
+        <div class="container">
+            {% include '_partials/topics.twig' with { 'topics': entry.topics } %}
+        </div>
+    </div>
+{% endblock %}
+
+{% block subcontent %}
+    {% include '_partials/above-footer.twig' %}
+{% endblock %}

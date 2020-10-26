@@ -1,0 +1,13 @@
+{# -- Load Emergency Message Single -- #}
+{% set eMsg = craft.entries().section('emergencyMessage').one() %}
+
+{# -- Load Emergency Message Single -- #}
+{% if eMsg and ( eMsg.emergencyMessagePlacement != 'homePage' or ( entry.slug is defined and entry.slug == 'home' ) ) %}
+    {% set msg = {
+        'text': eMsg.emergencyMessageText,
+        'placement': eMsg.emergencyMessagePlacement,
+        'link': eMsg.emergencyMessageLink,
+        'url': eMsg.emergencyMessageUrl
+    } %}    
+    <EmergencyMessage :msg="{{ msg|json_encode }}"></EmergencyMessage>
+{% endif %}

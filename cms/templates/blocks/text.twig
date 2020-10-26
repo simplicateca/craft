@@ -1,6 +1,13 @@
 {% extends "blocks/_layout.twig" %}
 
 {% block blockBody %}
-    {% if block.headline %}<h2>{{block.headline|typogrify(true)}}</h2>{% endif %}
-    {{block.text|typogrify}}
+    <div class="block-content container">
+        {% include 'blocks/_partials/headline.twig' %}
+        <div class="wrapper">
+            <div class="text">
+                {% include 'blocks/_partials/redactor-text.twig' %}
+                {% include 'blocks/_partials/buttons.twig' %}
+            </div>
+        </div>
+    </div>
 {% endblock %}

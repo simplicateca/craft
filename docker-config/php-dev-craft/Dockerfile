@@ -5,6 +5,7 @@ RUN apt-get update \
     && \
     # apt Debian packages
     apt-get install -y \
+        mariadb-client \
         nano \
     && \
     # Install PHP extensions

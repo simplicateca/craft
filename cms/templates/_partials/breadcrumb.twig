@@ -1,0 +1,14 @@
+{% set crumbs = crumbs is defined ? crumbs : craft.navigation.breadcrumbs() %}
+<div class="c-breadcrumb">
+    <div class="container">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+            <ol>
+                {% for crumb in crumbs %}
+                    <li><a href="{{ crumb.url }}" {% if loop.last %}aria-current="page"{% endif %}>
+                        {{ crumb.title }}
+                    </a></li>
+                {% endfor %}
+            </ol>
+        </nav>
+    </div>
+</div>

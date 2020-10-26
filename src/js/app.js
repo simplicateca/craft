@@ -21,6 +21,8 @@ const main = async () => {
 
         components: {
             'confetti': () => import(/* webpackChunkName: "confetti" */ '../vue/Confetti.vue'),
+            'emergencymessage': () => import(/* webpackChunkName: "emergencymessage" */ '../vue/EmergencyMessage.vue'),
+            'mobilemenu': () => import(/* webpackChunkName: "mobilemenu" */ '../vue/MobileMenu.vue')
         },
 
         data: {

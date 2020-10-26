@@ -1,0 +1,18 @@
+contentColumnType: text
+fieldGroup: 1e0f22f0-2c77-45f2-a8dd-9405520e5ce0
+handle: emergencyMessageText
+instructions: ''
+name: 'Message Text'
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: null
+  code: ''
+  columnType: null
+  initialRows: '4'
+  multiline: ''
+  placeholder: 'The important thing you want to tell people'
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

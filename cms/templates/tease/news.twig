@@ -1,0 +1,15 @@
+<article class="tease news">
+    <h2>{{entry.title}}</h2>
+
+    <time datetime="{{ entry.postDate | date('Y-m-d') }}">{{ entry.postDate | date('d M Y') }}</time>
+              
+    <div class="summary">
+        {% set summary = summary is defined and summary ? '<p>' ~ summary ~ '</p>' : '' %}
+        {{ summary
+            ? summary| raw| retconChange( 'b', 'mark' )
+            : entry.summary
+        }}
+    </div>
+
+    <a href="{{ entry.url }}">Read more</a>
+</article>

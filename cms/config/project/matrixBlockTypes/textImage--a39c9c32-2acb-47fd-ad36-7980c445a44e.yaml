@@ -1,0 +1,310 @@
+field: a4fe99b5-7832-4eb2-9833-f551177bb821
+fieldLayouts:
+  a067cac1-ec42-43cc-b56a-f98e3b5b7803:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 20aa7fd2-2f1f-4b3f-b505-a14c1c3cc164
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 75
+          -
+            fieldUid: 7574f2c5-ebea-4c7c-9efb-fabe0fc82275
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 25
+          -
+            fieldUid: 1d242d6f-f863-4979-b2af-bb1da5c2aee2
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: dda1fa64-dd45-42b6-8df9-476cbac15152
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: c9c14235-dfc3-4c81-bb97-f3e3be70fb14
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: b0be437c-c9b7-4725-b61e-01ae79d26892
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 25
+          -
+            fieldUid: e8279648-aafc-4293-a410-7e3c587f89c2
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 25
+          -
+            fieldUid: c2aae972-6c74-45e4-a721-cb093d6508db
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 25
+        name: Content
+        sortOrder: 1
+fields:
+  1d242d6f-f863-4979-b2af-bb1da5c2aee2:
+    contentColumnType: text
+    fieldGroup: null
+    handle: text
+    instructions: ''
+    name: Text
+    searchable: true
+    settings:
+      availableTransforms: '*'
+      availableVolumes: '*'
+      cleanupHtml: true
+      columnType: text
+      configSelectionMode: choose
+      defaultTransform: ''
+      manualConfig: ''
+      purifierConfig: ''
+      purifyHtml: '1'
+      redactorConfig: Standard.json
+      removeEmptyTags: '1'
+      removeInlineStyles: '1'
+      removeNbsp: '1'
+      showHtmlButtonForNonAdmins: ''
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      uiMode: enlarged
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\redactor\Field
+  20aa7fd2-2f1f-4b3f-b505-a14c1c3cc164:
+    contentColumnType: text
+    fieldGroup: null
+    handle: headline
+    instructions: ''
+    name: Headline
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '2'
+      multiline: '1'
+      placeholder: ''
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  7574f2c5-ebea-4c7c-9efb-fabe0fc82275:
+    contentColumnType: string
+    fieldGroup: null
+    handle: headlineStyle
+    instructions: ''
+    name: 'Headline Style'
+    searchable: false
+    settings:
+      optgroups: true
+      options:
+        -
+          __assoc__:
+            -
+              - label
+              - Normal
+            -
+              - value
+              - normal
+            -
+              - default
+              - '1'
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Dropdown
+  b0be437c-c9b7-4725-b61e-01ae79d26892:
+    contentColumnType: string
+    fieldGroup: null
+    handle: layout
+    instructions: 'Some components can have different layout variations.'
+    name: Layout
+    searchable: false
+    settings:
+      optgroups: true
+      options:
+        -
+          __assoc__:
+            -
+              - label
+              - Normal
+            -
+              - value
+              - normal
+            -
+              - default
+              - '1'
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Dropdown
+  c2aae972-6c74-45e4-a721-cb093d6508db:
+    contentColumnType: string
+    fieldGroup: null
+    handle: background
+    instructions: 'Some components have different background options.'
+    name: Background
+    searchable: false
+    settings:
+      optgroups: true
+      options:
+        -
+          __assoc__:
+            -
+              - label
+              - Normal
+            -
+              - value
+              - normal
+            -
+              - default
+              - '1'
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Dropdown
+  c9c14235-dfc3-4c81-bb97-f3e3be70fb14:
+    contentColumnType: text
+    fieldGroup: null
+    handle: buttons
+    instructions: ''
+    name: Buttons
+    searchable: true
+    settings:
+      addRowLabel: 'Add Button'
+      columnType: text
+      columns:
+        __assoc__:
+          -
+            - col1
+            -
+              __assoc__:
+                -
+                  - heading
+                  - Label
+                -
+                  - handle
+                  - label
+                -
+                  - width
+                  - ''
+                -
+                  - type
+                  - singleline
+          -
+            - col2
+            -
+              __assoc__:
+                -
+                  - heading
+                  - URL
+                -
+                  - handle
+                  - url
+                -
+                  - width
+                  - ''
+                -
+                  - type
+                  - url
+      maxRows: '2'
+      minRows: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Table
+  dda1fa64-dd45-42b6-8df9-476cbac15152:
+    contentColumnType: string
+    fieldGroup: null
+    handle: images
+    instructions: ''
+    name: Image(s)
+    searchable: true
+    settings:
+      allowSelfRelations: false
+      allowUploads: true
+      allowedKinds:
+        - image
+      defaultUploadLocationSource: 'volume:dbe1ed1e-73d5-4e8e-a67a-3928f44b1a60'
+      defaultUploadLocationSubpath: '{owner.owner.type.handle}/{owner.owner.slug}/'
+      limit: ''
+      localizeRelations: false
+      previewMode: full
+      restrictFiles: '1'
+      selectionLabel: 'Add Image'
+      showSiteMenu: true
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      singleUploadLocationSource: 'volume:dbe1ed1e-73d5-4e8e-a67a-3928f44b1a60'
+      singleUploadLocationSubpath: ''
+      source: null
+      sources:
+        - 'volume:dbe1ed1e-73d5-4e8e-a67a-3928f44b1a60'
+      targetSiteId: null
+      useSingleFolder: false
+      validateRelatedElements: false
+      viewMode: large
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+  e8279648-aafc-4293-a410-7e3c587f89c2:
+    contentColumnType: string
+    fieldGroup: null
+    handle: spacing
+    instructions: 'How much spacing appears around the component.'
+    name: Spacing
+    searchable: false
+    settings:
+      optgroups: true
+      options:
+        -
+          __assoc__:
+            -
+              - label
+              - Normal
+            -
+              - value
+              - normal
+            -
+              - default
+              - ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Dropdown
+handle: textImage
+name: 'Text + Image'
+sortOrder: 2

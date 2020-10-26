@@ -1,0 +1,5 @@
+{% if block.images.one() %}
+    <img src="{{block.images.one().url}}" alt="{{block.images.one().title}}" />
+{% else %}
+    <div class="wireframe"></div>
+{% endif %}

@@ -4,3 +4,30 @@
  * Utility classes
  *
  */
+
+@mixin reset-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+  
+@mixin horizontal-list {
+    @include reset-list;
+  
+    li {
+        display: inline-block;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+nav ul, nav ol {
+    @include horizontal-list;
+}
+
+.tag {
+    display: inline-block;
+    padding: .2rem .5rem;
+    background: #eee;
+    margin: .2rem 1rem .2rem -.5rem;
+}

@@ -1,13 +1,18 @@
 {
-  "buttons": ["html", "formatting", "bold", "italic", "unorderedlist", "orderedlist", "link", "image", "video", "file"],
-  "plugins": ["fullscreen", "video", "email"],
+  "buttons": ["html", "formatting", "bold", "italic", "unorderedlist", "orderedlist", "alignment", "link", "image", "video", "file"],
+  "plugins": ["fullscreen", "video", "email", "alignment"],
   "linkNewTab": true,
   "toolbarFixed": true,
+  "imagePosition": false,
   "formatting": ["p", "lead", "h2", "h3", "h4"],
   "formattingAdd": {
     "lede": {
-      "title": "Lead paragraph",
-      "args": ["p", "class", "lead"]
+      "title": "Lead / Intro Paragraph",
+      "api": "module.block.format",
+      "args": {
+          "tag": "p",
+          "class": "lead"
+      }
     }
   }
 }

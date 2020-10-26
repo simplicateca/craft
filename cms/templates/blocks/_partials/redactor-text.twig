@@ -1,0 +1,9 @@
+{{
+    block.text
+        | typogrify
+        | retconAttr( "figure", { style: '' } )
+        | retconWrap( "figure img", ".img" )
+        | retconWrap( "figure iframe[src*='youtube']", ".video" )
+        | retconAttr( "figure div.image + figcaption", { class: 'img' } )
+        | retconAttr( "figure div.video iframe", { style: '' } )
+}}

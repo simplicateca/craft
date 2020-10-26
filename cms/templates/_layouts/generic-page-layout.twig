@@ -34,30 +34,36 @@
 
 {# -- Page body -- #}
 {% block bodyHtml %}
-    <div id="page-container" class="overflow-hidden leading-tight">
-        <confetti></confetti>
-        <div id="content-container" class="bg-repeat header-background">
+    <div id="page-container">
+        {# -- Emergency Message / Hello Bar -- #}
+        {% include "_partials/emergency-message.twig" %}
 
+        <div id="content-container">
             {# -- Info header, including _navbar.twig -- #}
             {% include "_partials/info-header.twig" %}
 
-            <main>
-                <div class="container mx-auto pb-8">
-                    {# -- Primary content block -- #}
-                    {% block content %}
-                    {% endblock %}
-                </div>
+            <main id="page-content">
+                {# -- Primary content block -- #}
+                {% block content %}
+                {% endblock %}
             </main>
+
+            {# -- Mobile Menu -- #}
+            {% include "_partials/mobile-menu.twig" %}
         </div>
 
         {# -- Content that appears below the primary content block -- #}
-        {% block subcontent %}
-        {% endblock %}
+        {% block subcontent %}{% endblock %}
 
         {# -- Info footer -- #}
         {% include "_partials/info-footer.twig" %}
 
         {# -- HTML Footer -- #}
         {% include "_partials/global-footer.twig" %}
+
+        {# -- Confetti proves Vue single file components are loading. Remove for production -- #}
+        {% if not craft.app.request.pathInfo %}
+            <confetti></confetti>
+        {% endif %}
     </div>
 {% endblock bodyHtml %}

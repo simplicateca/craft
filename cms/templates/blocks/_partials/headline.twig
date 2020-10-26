@@ -1,0 +1,11 @@
+{% if block.headline %}
+    <h2
+        class="block-headline {{block.headlineStyle}}"    
+        id="{{block.headline|kebab|ascii}}"      
+    >
+        {{ block.headline
+            | nl2br
+            | typogrify(true)
+        }}
+    </h2>
+{% endif %}

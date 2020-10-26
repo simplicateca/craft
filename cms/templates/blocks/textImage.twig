@@ -1,0 +1,16 @@
+{% extends "blocks/_layout.twig" %}
+
+{% block blockBody %}
+    <div class="block-content container">
+        {% include 'blocks/_partials/headline.twig' %}
+        <div class="wrapper">
+            <div class="text">
+                {% include 'blocks/_partials/redactor-text.twig' %}
+                {% include 'blocks/_partials/buttons.twig' %}
+            </div>
+            <div class="image">
+                {% include 'blocks/_partials/image.twig' %}
+            </div>
+        </div>
+    </div>
+{% endblock %}

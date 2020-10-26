@@ -1,3 +1,62 @@
-{% set entry = craft.entries.section('errors').slug('error404').one() %}
-
 {% extends "_layouts/error-page-layout.twig" %}
+
+{% block content %}
+    <div class="page--404">
+        <div class="container">
+
+            <h1>Page Not Found</h1>
+            <p>Sorry about that, but we can't seem to find the page you were looking for.</p>
+
+            {% set searchQuery = craft.app.request.pathInfo|replace({ '/': ' ', '_': ' ', '-': ' ' })|trim|replace({ '  ': ' ' }) %}
+            {% set entries = craft.entries()
+                .search(searchQuery)
+                .orderBy('score')
+                .limit(5)
+                .all() %}
+
+            {% if searchQuery and entries|length %}
+
+                <h2>Here are some search results that might help:</h2>
+
+                {% include '_partials/search-form.twig' with { searchText: searchQuery } %}
+
+                <div class="c-searchResults">
+                    {% for result in entries %}
+                        {% include 'tease/' ~ entry.type.handle ~ '.twig' with { entry: entry } %}
+                    {% endfor %}
+                </div>
+
+            {% else %}
+
+                <div class="text">
+                    <h2>Here are some of our most frequently visited pages:</h2>
+
+                    <ul>
+                        <li><a href="/">Home page</a></li>
+                        {# Include more popular pages #}
+                        {#
+                            <li><a href="#"></a></li>
+                            <li><a href="#"></a></li>
+                            <li><a href="#"></a></li>
+                            <li><a href="#"></a></li>
+                        #}
+                    </ul>
+                </div>
+
+                <h3>You could also try searching for what you were trying to find:</h3>
+                
+                {% include '_partials/search-form.twig' with { searchText: '' } %}
+
+            {% endif %}
+
+            {# Update contact email address #}
+            {#  
+                <p>
+                    If you're still having trouble finding something or you think
+                    something is broken that needs fixing, please send us an email at
+                    <a href="mailto:webmaster@example.com">webmaster@example.com</a>.
+                </p>
+            #}
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,13 @@
+<article class="tease page">
+    <h2>{{entry.title}}</h2>
+             
+    <div class="summary">
+        {% set summary = summary is defined and summary ? '<p>' ~ summary ~ '</p>' : '' %}
+        {{ summary
+            ? summary| raw| retconChange( 'b', 'mark' )
+            : seomatic.helper.extractTextFromField(entry.contentBlocks)|truncateOnWord(250)
+        }}
+    </div>
+
+    <a href="{{ entry.url }}">Read more</a>
+</article>

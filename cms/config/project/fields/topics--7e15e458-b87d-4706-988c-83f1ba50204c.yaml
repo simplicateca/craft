@@ -1,0 +1,23 @@
+contentColumnType: string
+fieldGroup: e0dac603-c510-4bb5-8701-e25672d93744
+handle: topics
+instructions: ''
+name: Topics
+searchable: true
+settings:
+  allowLimit: false
+  allowMultipleSources: false
+  allowSelfRelations: false
+  branchLimit: ''
+  limit: null
+  localizeRelations: false
+  selectionLabel: 'Add topic'
+  showSiteMenu: true
+  source: 'group:28948fc8-a354-4c75-a861-b11dda3c6929'
+  sources: '*'
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: null
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Categories

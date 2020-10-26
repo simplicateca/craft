@@ -9,7 +9,11 @@
  :root {
   --dark: #414141;
   --grey: #E6E7E8;
+  --background: #FFF;
+  --blonde: #FFFFB3;
   --red: #F21D44;
+  --blue:#1daff2;
+  --green:#1df261;
   --headline: arial, sans-serif;
   --text: times, serif;
   --ease: cubic-bezier(0.16, 1, 0.3, 1);
@@ -21,7 +25,6 @@
 $widescreen-width  : 1600px;
 $desktop-width     : 1280px;
 $legacy-width      : 1000px;
-$drawer-menu-width : 1020px;
 $tablet-width      : 760px;
 $mobile-width      : 576px;
 $small-mobile-width: 360px;
@@ -58,12 +61,6 @@ $small-mobile-width: 360px;
 
 @mixin legacy-down {
   @media screen and (max-width: #{$desktop-width - 1px}) {
-      @content;
-  }
-}
-
-@mixin drawer-menu {
-  @media screen and (max-width: #{$drawer-menu-width}) {
       @content;
   }
 }

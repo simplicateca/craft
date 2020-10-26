@@ -1,0 +1,5 @@
+{% if blocks %}
+    {% for block in blocks.all() %}
+        {% include ('blocks/' ~ block.type.handle ~ '.twig') %}
+    {% endfor %}
+{% endif %}

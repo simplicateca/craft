@@ -1,0 +1,29 @@
+{% extends "_layouts/generic-page-layout.twig" %}
+
+{% block content %}
+    {% include '_partials/hero.twig' with { image: '', title: entry.title } %}
+
+    {% include '_partials/breadcrumb.twig' %}
+
+    <div class="page--{{entry.slug}}">
+        
+        {% set query = craft.categories()
+            .group('topics') %}
+
+        {% set categories = query.all() %}
+        
+        {% include 'blocks/_loop.twig' with { 'blocks': entry.contentBlocks } %}
+
+        {% if categories %}
+            <div class="container">
+                {% for category in categories %}
+                    {% include 'tease/topic.twig' %}
+                {% endfor %}
+            </div>
+        {% endif %}
+    </div>
+{% endblock %}
+
+{% block subcontent %}
+    {% include '_partials/above-footer.twig' %}
+{% endblock %}

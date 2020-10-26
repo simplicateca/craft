@@ -1,0 +1,48 @@
+/**
+ * Inline Redactor Styles
+ *
+ * Use this for creating frontend styles within backend redactor fields
+ *
+ * @author    simplicate
+ * @copyright Copyright (c) 2020 simplicate
+ * @link      https://simplicate.ca/
+ * @package   SiteModule
+ * @since     1.0.0
+ */
+
+
+/* paragraph formatting dropdown selector */ 
+.redactor-dropdown-item-lead span {
+    font-size: 22px !important;
+}
+
+/* in editor styles */
+.input .redactor-styles p.lead {
+    font-size: 22px !important;
+    line-height: 1.3em !important;
+}
+
+
+.input .redactor-styles figure {
+    display: block !important;
+    float: none !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 24px 0 !important;
+    text-align: center;
+}
+
+.input .redactor-styles figure img {
+    display: inline-block;
+    margin: 0 auto;
+    padding: 0;
+    line-height: 1em;
+}
+
+.input .redactor-styles figure figcaption {
+    display: block;
+    margin: 5px auto 0;
+    padding: 0;
+    line-height: 1em;
+    text-align: center;
+}
