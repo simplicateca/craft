@@ -1,7 +1,5 @@
-{% set nodes = craft.navigation.nodes('primaryNavigation').all() %}
-
-{# clean up & minimize what we push through the props as JSON #}
 {% set mobilePages = [] %}
+{# {% set nodes = craft.navigation.nodes('primaryNavigation').all() %}
 {% for item in nodes %}
     {% set mobilePages = mobilePages|merge([{
         id: item.id,
@@ -9,6 +7,6 @@
         title: item.title,
         level: item.level,
     }]) %}
-{% endfor %}
+{% endfor %} #}
 
 <MobileMenu :pages="{{mobilePages|json_encode}}"></MobileMenu>

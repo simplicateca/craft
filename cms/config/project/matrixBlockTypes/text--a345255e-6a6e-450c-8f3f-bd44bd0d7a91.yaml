@@ -70,6 +70,30 @@ fieldLayouts:
         name: Content
         sortOrder: 1
 fields:
+  5ad1a48a-0387-4098-89e7-bf69eed8508e:
+    contentColumnType: string
+    fieldGroup: null
+    handle: layout
+    instructions: 'Some components can have different layout variations.'
+    name: Layout
+    searchable: false
+    settings:
+      optgroups: true
+      options:
+        -
+          __assoc__:
+            -
+              - label
+              - Normal
+            -
+              - value
+              - normal
+            -
+              - default
+              - '1'
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Dropdown
   07a0012a-4bdf-4aaa-8415-bbe06adaf62c:
     contentColumnType: text
     fieldGroup: null
@@ -98,30 +122,6 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\redactor\Field
-  5ad1a48a-0387-4098-89e7-bf69eed8508e:
-    contentColumnType: string
-    fieldGroup: null
-    handle: layout
-    instructions: 'Some components can have different layout variations.'
-    name: Layout
-    searchable: false
-    settings:
-      optgroups: true
-      options:
-        -
-          __assoc__:
-            -
-              - label
-              - Normal
-            -
-              - value
-              - normal
-            -
-              - default
-              - '1'
-    translationKeyFormat: null
-    translationMethod: none
-    type: craft\fields\Dropdown
   b2c539bf-f3bf-4c27-81e6-cffc9cb8657d:
     contentColumnType: string
     fieldGroup: null

@@ -5,6 +5,7 @@
   "license": "Unlicense",
   "homepage": "https://www.simplicate.ca",
   "type": "project",
+  "version": "1.2.0",
   "authors": [
     {
         "name": "Steve Comrie",
@@ -16,17 +17,22 @@
   "config": {
     "optimize-autoloader": true,
     "platform": {
-      "php": "7.0"
+      "php": "7.4"
     }
   },
   "scripts": {
     "post-create-project-cmd": [
       "@php -r \"copy('./cms/example.env', './cms/.env');\"",
       "@php -r \"copy('./scripts/example.env.sh', './scripts/.env.sh');\"",
+      "@php -r \"unlink('.gitignore');\"",
       "@php -r \"unlink('composer.json');\"",
       "@php -r \"unlink('composer.lock');\"",
       "@php -r \"unlink('LICENSE.md');\"",
-      "@php -r \"unlink('README.md');\""
+      "@php -r \"unlink('README.md');\"",
+      "@php -r \"unlink('CHANGELOG.md');\"",
+      "@php -r \"unlink('.gitignore');\"",
+      "@php -r \"copy('.gitignore.prod', '.gitignore');\"",
+      "@php -r \"unlink('.gitignore.prod');\""
     ]
   }
 }

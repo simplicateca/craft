@@ -1,4 +1,4 @@
-dateModified: 1603478728
+dateModified: 1621277914
 email:
   fromEmail: steve@simplicate.ca
   fromName: admin
@@ -43,6 +43,7 @@ plugins:
   seomatic:
     edition: standard
     enabled: true
+    licenseKey: EWN15KQL316V7LBU4SWYKUUH
     schemaVersion: 3.0.9
     settings:
       addHrefLang: true
@@ -95,7 +96,7 @@ system:
   edition: solo
   live: true
   name: Craft
-  schemaVersion: 3.5.13
+  schemaVersion: 3.6.8
   timeZone: America/Toronto
 users:
   allowPublicRegistration: false

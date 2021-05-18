@@ -1,24 +1,20 @@
 version: '3.7'
-
 services:
-  # nginx - web server
   nginx:
     build:
       context: ./docker-config/nginx
       dockerfile: ./Dockerfile
     env_file: &env
       - ./cms/.env
-    links:
-      - php
+    init: true
     ports:
-      - "8000:80"
+      - '8000:80'
     volumes:
-      - cpresources:/var/www/project/cms/web/cpresources
+      - cpresources:/var/www/project/cms/web/cpresources:delegated
       - ./cms/web:/var/www/project/cms/web:cached
-  # php - personal home page
   php:
     build: &php-build
-      context: ./docker-config/php-dev-craft
+      context: ./docker-config/php
       dockerfile: ./Dockerfile
     depends_on:
       - "mariadb"
@@ -26,18 +22,16 @@ services:
     env_file:
       *env
     expose:
-      - "9000"
+      - '9000'
     init: true
-    links: &php-links
-      - mariadb
-      - redis
     volumes: &php-volumes
-      - cpresources:/var/www/project/cms/web/cpresources
-      - storage:/var/www/project/cms/storage
+      - cpresources:/var/www/project/cms/web/cpresources:delegated
+      - storage:/var/www/project/cms/storage:delegated
+      - ./cms/storage/logs:/var/www/project/cms/storage/logs:delegated
+      - ./cms/storage/backups:/var/www/project/cms/storage/backups:delegated
+      - ./cms/storage/runtime/compiled_templates:/var/www/project/cms/storage/runtime/compiled_templates:delegated
       - ./cms:/var/www/project/cms:cached
       - ./cms/vendor:/var/www/project/cms/vendor:delegated
-      - ./cms/storage/logs:/var/www/project/cms/storage/logs:delegated
-  # mariadb - database
   mariadb:
     build:
       context: ./docker-config/mariadb
@@ -54,31 +48,28 @@ services:
       - "3306:3306"
     volumes:
       - db-data:/var/lib/mysql
-  # redis - key/value database for caching & php sessions
   redis:
     build:
       context: ./docker-config/redis
       dockerfile: ./Dockerfile
     expose:
-      - "6379"
+      - '6379'
     init: true
-  # webpack - frontend build system
   webpack:
     build:
-      context: ./docker-config/webpack-dev-base
+      context: ./docker-config/webpack
       dockerfile: ./Dockerfile
     env_file:
       *env
     init: true
     ports:
-      - "8080:8080"
+      - '8080:8080'
     volumes:
-      - ./docker-config/webpack-dev-craft:/var/www/project/docker-config/webpack-dev-craft:cached
-      - ./docker-config/webpack-dev-craft/node_modules:/var/www/project/docker-config/webpack-dev-craft/node_modules:delegated
-      - ./cms/web/dist:/var/www/project/cms/web/dist:delegated
+      - ./buildchain:/var/www/project/buildchain:cached
+      - ./buildchain/node_modules:/var/www/project/buildchain/node_modules:delegated
+      - ./cms/web:/var/www/project/cms/web:delegated
       - ./src:/var/www/project/src:cached
       - ./cms/templates:/var/www/project/cms/templates:cached
-
 volumes:
   db-data:
   cpresources:

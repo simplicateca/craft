@@ -10,22 +10,22 @@ module.exports = {
     copyright: "Example Company, Inc.",
     paths: {
         src: {
-            base: "../../src/",
-            css: "../../src/css/",
-            js: "../../src/js/"
+            base: "../src/",
+            css: "../src/css/",
+            js: "../src/js/"
         },
         dist: {
-            base: "../../cms/web/dist/",
+            base: "../cms/web/dist/",
             clean: [
                 '**/*',
             ]
         },
-        templates: "../../cms/templates/"
+        templates: "../cms/templates/"
     },
     urls: {
-        live: "https://example.com/",
-        local: "http://example.test/",
-        critical: "http://example.test/",
+        live: "",
+        local: "",
+        critical: "",
         publicPath: () => process.env.PUBLIC_PATH || "/dist/",
     },
     vars: {
@@ -40,32 +40,16 @@ module.exports = {
         ],
     },
     criticalCssConfig: {
-        base: "../../cms/web/dist/criticalcss/",
+        base: "../cms/web/dist/criticalcss/",
         suffix: "_critical.min.css",
         criticalHeight: 1200,
         criticalWidth: 1200,
         pages: [
-                {
-                    url: "",
-                    template: "index"
-                },
-                {
-                    url: "errors/offline",
-                    template: "errors/offline"
-                },
-                {
-                    url: "errors/error",
-                    template: "errors/error"
-                },
-                {
-                    url: "errors/503",
-                    template: "errors/503"
-                },
-                {
-                    url: "errors/404",
-                    template: "errors/404"
-                }
-            ]
+            {
+                url: "",
+                template: "pages/home"
+            }
+        ]
     },
     devServerConfig: {
         public: () => process.env.DEVSERVER_PUBLIC || "http://localhost:8080",
@@ -84,7 +68,7 @@ module.exports = {
         }
     ],
     webappConfig: {
-        logo: "../../src/img/favicon-src.png",
+        logo: "../src/img/favicon-src.png",
         prefix: "img/favicons/"
     }
 };

@@ -87,18 +87,16 @@ const configureCriticalCss = () => {
     return (settings.criticalCssConfig.pages.map((row) => {
             const criticalSrc = settings.urls.critical + row.url;
             const criticalDest = settings.criticalCssConfig.base + row.template + settings.criticalCssConfig.suffix;
-            let criticalWidth = settings.criticalCssConfig.criticalWidth;
-            let criticalHeight = settings.criticalCssConfig.criticalHeight;
             console.log("source: " + criticalSrc + " dest: " + criticalDest);
             return new CriticalCssPlugin({
                 base: './',
                 src: criticalSrc,
-                dest: criticalDest,
+                target: criticalDest,
                 extract: false,
                 inline: false,
                 minify: true,
-                width: criticalWidth,
-                height: criticalHeight,
+                width: settings.criticalCssConfig.criticalWidth,
+                height: settings.criticalCssConfig.criticalHeight,
             })
         })
     );
