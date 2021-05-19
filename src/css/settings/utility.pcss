@@ -5,14 +5,14 @@
  *
  */
 
-@mixin reset-list {
+@define-mixin reset-list {
     margin: 0;
     padding: 0;
     list-style: none;
 }
   
-@mixin horizontal-list {
-    @include reset-list;
+@define-mixin horizontal-list {
+    @mixin reset-list;
   
     li {
         display: inline-block;
@@ -22,7 +22,7 @@
 }
 
 nav ul, nav ol {
-    @include horizontal-list;
+    @mixin horizontal-list;
 }
 
 .tag {

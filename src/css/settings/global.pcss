@@ -1,0 +1,106 @@
+/**
+ * components/global.css
+ *
+ * Project-wide variables & mixins
+ *
+ */
+
+
+ :root {
+  --dark: #414141;
+  --grey: #E6E7E8;
+  --background: #FFF;
+  --blonde: #FFFFB3;
+  --red: #F21D44;
+  --blue:#1daff2;
+  --green:#1df261;
+  --headline: arial, sans-serif;
+  --text: times, serif;
+  --ease: cubic-bezier(0.16, 1, 0.3, 1);
+
+  --widescreen-width  : 1600px;
+  --desktop-width     : 1280px;
+  --legacy-width      : 1000px;
+  --tablet-width      : 760px;
+  --mobile-width      : 576px;
+  --small-mobile-width: 360px;
+}
+
+/* Breakpoints */
+@define-mixin widescreen {
+  @media screen and (min-width: 1600px) {
+      @mixin-content;
+  }
+}
+
+@define-mixin desktop {
+  @media screen and (min-width: 1280px) and (max-width: 1599px) {
+      @mixin-content;
+  }
+}
+
+@define-mixin desktop-up {
+  @media screen and (min-width: 1280px) {
+      @mixin-content;
+  }
+}
+
+@define-mixin legacy {
+  @media screen and (min-width: 1000px) and (max-width: 1279px) {
+      @mixin-content;
+  }
+}
+
+@define-mixin legacy-up {
+  @media screen and (min-width: 1000px) {
+      @mixin-content;
+  }
+}
+
+@define-mixin legacy-down {
+  @media screen and (max-width: 1279px) {
+      @mixin-content;
+  }
+}
+
+@define-mixin tablet-up {
+  @media screen and (min-width: 577px) {
+      @mixin-content;
+  }
+}
+
+@define-mixin tablet {
+  @media screen and (min-width: 577px) and (max-width: 999px) {
+      @mixin-content;
+  }
+}
+
+@define-mixin tablet-down {
+  @media screen and (max-width: 999px) {
+      @mixin-content;
+  }
+}
+
+@define-mixin phablet {
+  @media screen and (min-width: 577px) and (max-width: 759px) {
+      @mixin-content;
+  }
+}
+
+@define-mixin phablet-down {
+  @media screen and (max-width: 759px) {
+      @mixin-content;
+  }
+}
+
+@define-mixin mobile {
+  @media screen and (max-width: 576px) {
+      @mixin-content;
+  }
+}
+
+@define-mixin tiny {
+  @media screen and (max-width: 360px) {
+      @mixin-content;
+  }
+}

@@ -61,9 +61,11 @@
         {# -- HTML Footer -- #}
         {% include "_partials/global-footer.twig" %}
 
-        {# -- Confetti proves Vue single file components are loading. Remove for production -- #}
-        {% if not craft.app.request.pathInfo %}
-            <confetti></confetti>
-        {% endif %}
+        <div id="component-container">
+            {# -- Confetti proves Vue single file components are loading. Remove for production -- #}
+            {% if not craft.app.request.pathInfo %}
+                <confetti></confetti>
+            {% endif %}
+        </div>
     </div>
 {% endblock bodyHtml %}

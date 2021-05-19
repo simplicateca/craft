@@ -26,7 +26,7 @@ a.button {
     margin-top: 1rem;
     padding-bottom: 1rem;
 
-    @include tiny {
+    @mixin tiny {
         display: flex;
         flex-direction: column;
     }
@@ -34,7 +34,7 @@ a.button {
     a.button + a.button {
         margin-left: 2rem;
 
-        @include tiny {
+        @mixin tiny {
             margin-left: 0px;
             margin-top: 2rem;
         }

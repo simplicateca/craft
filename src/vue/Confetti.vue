@@ -11,7 +11,9 @@
     export default {
         mounted: function() {
             this.$confetti.start({
-                shape: 'heart',
+                particles: [
+                    { type: 'heart' },
+                ],
                 colors: ['DodgerBlue', 'OliveDrab', 'Gold', 'pink', 'SlateBlue', 'lightblue', 'Violet', 'PaleGreen', 'SteelBlue', 'SandyBrown', 'Chocolate', 'Crimson'],
             });
             setTimeout(() => {
@@ -22,8 +24,8 @@
     }
 </script>
 
-<style lang="scss">
+<style>
     #confetti-canvas {
         z-index: 1000;
     }
-</style>
+</style>true

@@ -8,7 +8,7 @@
         align-items: center;
         justify-content: space-between;
 
-        @include mobile {
+        @mixin mobile {
             flex-direction: column-reverse;
             text-align: center;
         }
@@ -26,7 +26,7 @@
         li {
             margin-left: 2rem;
 
-            @include mobile {
+            @mixin mobile {
                 margin-left: 0rem;
                 padding: 1rem;
             }

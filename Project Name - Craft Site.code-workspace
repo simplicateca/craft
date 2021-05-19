@@ -1,0 +1,17 @@
+{
+	"folders": [
+		{
+			"path": "src"
+		},
+		{
+			"path": "cms/config"
+		},
+		{
+			"path": "cms/modules"
+		},
+		{
+			"path": "buildchain"
+		}
+	],
+	"settings": {}
+}

@@ -1,9 +1,5 @@
 // import CSS
-import styles from '../css/app.scss';
-
-// import fonts
-// import fontname  from '../fonts/fontname.woff';
-// import fontname2 from '../fonts/fontname.woff2';
+import styles from '../css/app.pcss';
 
 // app main
 const main = async () => {
@@ -17,12 +13,10 @@ const main = async () => {
 
     // Create our vue instance
     const vm = new Vue({
-        el: "#page-container",
+        el: '#component-container',
 
         components: {
             'confetti': () => import(/* webpackChunkName: "confetti" */ '../vue/Confetti.vue'),
-            'emergencymessage': () => import(/* webpackChunkName: "emergencymessage" */ '../vue/EmergencyMessage.vue'),
-            'mobilemenu': () => import(/* webpackChunkName: "mobilemenu" */ '../vue/MobileMenu.vue')
         },
 
         data: {
@@ -61,14 +55,13 @@ const main = async () => {
         destroyed () {
             window.removeEventListener('scroll', this.handleScroll);
         },
-    });
+    })
 
     return vm;
 };
 
 // Execute async function
 main().then( (vm) => {
-
 });
 
 // Accept HMR as per: https://webpack.js.org/api/hot-module-replacement#accept

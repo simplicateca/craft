@@ -1,4 +1,11 @@
-1.2.0# simplicate-web/craft Change Log
+# simplicate-web/craft Change Log
+
+## 1.2.1 - 2021.05.19
+### Changed
+* Updated to webpack 5
+* Switched from SASS to PostCSS
+* Included Tailwind
+
 
 ## 1.2.0 - 2021.05.18
 ### Changed

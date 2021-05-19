@@ -1,5 +1,5 @@
 <template>
-    <div id="emergency-message" :class="{ hidden: !showing }">
+    <div class="emergency-message" :class="{ hidden: !showing }">
         <p>
             {{msg.text}}
             <a v-if="msg.url" :href="msg.url">{{msg.link || 'Details'}}</a>
@@ -14,6 +14,8 @@
     Vue.use(VueCookies)
 
     export default {
+        components: {},
+        
         data() {
             return {
                 showing: false
@@ -22,7 +24,8 @@
 
         props: {
             msg: {
-                type: Object
+                type: Object,
+                default: function() { return {} }
             }
         },
 
@@ -43,8 +46,8 @@
     }
 </script>
 
-<style lang="scss" scoped>
-    #emergency-message {
+<style scoped>
+    .emergency-message {
         background: #000;
         display: flex;
         max-height: 60px;
@@ -54,6 +57,7 @@
         transition: all 0.15s linear;
         position: relative;
         z-index: 9999;
+        padding: 0 1rem;
         
         p {
             margin: 0;
@@ -62,6 +66,10 @@
             color: #fff;
             text-align : center;
             flex-grow: 1;
+
+            &:before {
+                content: '';
+            }
 
             a {
                 color: var(--blonde);
@@ -91,9 +99,9 @@
         }
 
         .close {
-            position: absolute;
-            right: 22px;
-            top: 18px;
+            position: relative;
+            /* right: 22px;
+            top: 18px; */
             width: 22px;
             height: 22px;
             opacity: 0.8;

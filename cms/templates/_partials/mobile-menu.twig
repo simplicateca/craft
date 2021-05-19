@@ -9,4 +9,8 @@
     }]) %}
 {% endfor %} #}
 
-<MobileMenu :pages="{{mobilePages|json_encode}}"></MobileMenu>
+<div id="mobile-menu">
+    <mobile-menu :pages="{{mobilePages|json_encode}}"></mobile-menu>
+</div>
+
+{{ craft.twigpack.includeJsModule("mobile-menu.js", true) }}

@@ -12,11 +12,11 @@
         line-height: 1em;
         padding: 1rem;
 
-        @include tablet-up {
+        @mixin tablet-up {
             min-width: 40rem;
         }
         
-        @include mobile {
+        @mixin mobile {
             width: calc( 100% - 9rem );
         }
     }

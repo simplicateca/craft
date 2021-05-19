@@ -29,17 +29,6 @@ settings:
         -
           - default
           - ''
-    -
-      __assoc__:
-        -
-          - label
-          - ''
-        -
-          - value
-          - ''
-        -
-          - default
-          - ''
 translationKeyFormat: null
 translationMethod: none
 type: craft\fields\Dropdown

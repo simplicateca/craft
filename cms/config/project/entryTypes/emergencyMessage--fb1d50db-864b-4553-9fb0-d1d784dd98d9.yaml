@@ -54,7 +54,7 @@ fieldLayouts:
             warning: null
             width: 50
           -
-            fieldUid: 2edaff57-1ee7-4c19-a3c9-7b8f0e40e49c
+            fieldUid: 2edaff57-1ee7-4c19-a3c9-7b8f0e40e49c # Where should it appear?
             instructions: null
             label: null
             required: false
