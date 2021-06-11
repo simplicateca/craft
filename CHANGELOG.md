@@ -1,5 +1,9 @@
 # simplicate-web/craft Change Log
 
+## 1.2.3 - 2021.06.11
+### Changed
+* Minor streamlining adjustments to the base template and webpack structure
+
 ## 1.2.2 - 2021.05.20
 ### Fixed
 * Removed the verbb navigation plugin from the initial Craft CMS `composer.json` and `project.yaml` files
