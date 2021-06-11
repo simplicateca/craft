@@ -55,7 +55,10 @@
                 {% if expandedResults is defined %}
                     <div class="c-searchResults">
                         {% for result in expandedResults %}
-                            {% include 'tease/' ~ result.entry.type.handle ~ '.twig' with { entry: result.entry, summary: result.matchedValue } %}
+                            {% include  [
+                                ( result.entry.type.handle ~ '/_tease.twig'), 
+                                'pages/_tease.twig'
+                            ] with { entry: result.entry, summary: result.matchedValue } %}
                         {% endfor %}
                     </div>
 

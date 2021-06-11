@@ -36,7 +36,7 @@ return [
     // Public server config
     'server' => [
         'manifestPath' => '@webroot/dist/',
-        'publicPath' => '@cdnUrl',
+        'publicPath' => getenv('ASSETS_URL'),
     ],
     // webpack-dev-server config
     'devServer' => [

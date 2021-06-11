@@ -14,8 +14,8 @@ return [
     // Craft config settings from .env variables
     'aliases' => [
         '@assetsUrl' => App::env('ASSETS_URL'),
-        '@cdnUrl' => App::env('DO_CDN_URL'),
-        '@cdnSub' => App::env('DO_SPACES_SUBFOLDER'),
+        '@cdnUrl' => App::env('CDN_URL'),
+        '@cdnSub' => App::env('CDN_FOLDER'),
         '@web' => App::env('SITE_URL'),
         '@webroot' => App::env('WEB_ROOT_PATH'),
     ],

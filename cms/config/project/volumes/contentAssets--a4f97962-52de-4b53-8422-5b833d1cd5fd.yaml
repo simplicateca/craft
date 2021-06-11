@@ -1,5 +1,5 @@
 fieldLayouts:
-  f7245cee-41f8-4db2-8e8c-97be66059bcd:
+  155d9590-a8a9-44a0-b379-c089f17b9c37:
     tabs:
       -
         elements:
@@ -28,11 +28,20 @@ fieldLayouts:
             width: 100
         name: Content
         sortOrder: 1
-handle: images
+handle: contentAssets
 hasUrls: true
-name: Images
+name: Uploads
 settings:
-  path: images
-sortOrder: 2
-type: craft\volumes\Local
-url: /images/
+  bucket: $S3_BUCKET
+  contentDisposition: ''
+  endpoint: $S3_ENDPOINT
+  expires: ''
+  keyId: $S3_KEY
+  region: $S3_REGION
+  secret: $S3_SECRET
+  subfolder: assets
+sortOrder: 0
+titleTranslationKeyFormat: null
+titleTranslationMethod: null
+type: vaersaagod\dospaces\Volume
+url: $CDN_URL

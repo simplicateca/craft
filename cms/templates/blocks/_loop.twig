@@ -1,5 +1,26 @@
+{#
+    this template can be called two ways:
+
+    (1) passing in just the `blocks` array will look through the blocks and output the content
+    (2) also including the `js` variable == true, will tell the loop to only output the {% block js %} block for each block
+
+    this is so that we can have a vue instance manage the entire block container for common animations and other tasks, but also so that individual blocks
+    can include their own JS modules without embedding `script` elements inside the main block container (which vue will bitch about).
+#}
+
 {% if blocks %}
-    {% for block in blocks.all() %}
-        {% include ('blocks/' ~ block.type.handle ~ '.twig') %}
-    {% endfor %}
+    {% if js is defined %}
+        {% for blockItem in blocks.all() %}
+            {% if block("js", 'blocks/' ~ blockItem.type.handle ~ '.twig') is defined %}    
+                {{ block ('js', 'blocks/' ~ blockItem.type.handle ~ '.twig') }}
+            {% endif %}
+        {% endfor %}
+    {% else %}
+        <div id="block-container">
+            {% for blockItem in blocks.all() %}
+                {{ include ('blocks/' ~ blockItem.type.handle ~ '.twig', { block: blockItem } ) }}
+            {% endfor %}
+        </div>
+        {{ craft.twigpack.includeJsModule("content-blocks.js", true) }}
+    {% endif %}
 {% endif %}

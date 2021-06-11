@@ -13,3 +13,7 @@
 {% block subcontent %}
     {% include '_partials/above-footer.twig' %}
 {% endblock %}
+
+{% block contentJS %}
+    {% include 'blocks/_loop.twig' with { 'blocks': entry.contentBlocks, js: true } %}
+{% endblock contentJS %}

@@ -22,7 +22,10 @@
 
                 <div class="c-searchResults">
                     {% for result in entries %}
-                        {% include 'tease/' ~ entry.type.handle ~ '.twig' with { entry: entry } %}
+                        {% include  [
+                            ( result.entry.type.handle ~ '/_tease.twig'), 
+                            'pages/_tease.twig'
+                        ] with { entry: result.entry } %}
                     {% endfor %}
                 </div>
 

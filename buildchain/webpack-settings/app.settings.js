@@ -30,6 +30,7 @@ module.exports = {
         ],
         'emergency-message': '@/js/modules/emergency-message.js',
         'mobile-menu': '@/js/modules/mobile-menu.js',
+        'content-blocks': '@/js/modules/content-blocks.js',
     },
     extensions: [ '.tsx', '.ts', '.js', '.vue' ],
     name: 'Example Project',

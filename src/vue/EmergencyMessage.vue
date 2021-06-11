@@ -2,9 +2,9 @@
     <div class="emergency-message" :class="{ hidden: !showing }">
         <p>
             {{msg.text}}
-            <a v-if="msg.url" :href="msg.url">{{msg.link || 'Details'}}</a>
+            <a v-if="msg.url" :href="msg.url" v-on:click.prevent="onCTA">{{msg.link || 'Details'}}</a>
         </p>
-        <a href="#" class="close" aria-label="Close Notification" v-on:click.prevent="close"></a>
+        <a href="#" class="close" aria-label="Close Notification" v-on:click.prevent="onClose"></a>
     </div>
 </template>
 
@@ -37,7 +37,12 @@
         },
 
         methods: {
-            close() {
+            onCTA() {
+                $cookies.set('hideEMsg', true )
+                window.location.href = this.msg.url
+            },
+
+            onClose() {
                 this.showing = false
                 document.body.classList.remove('has-emergency-message')
                 $cookies.set('hideEMsg', true )
@@ -46,26 +51,35 @@
     }
 </script>
 
-<style scoped>
+<style>
+    #emergency-message {
+        position: sticky;
+        top: 0;
+        width: 100%;
+        z-index: 10000;
+    }
+
     .emergency-message {
         background: #000;
         display: flex;
-        max-height: 60px;
         align-items: center;
         justify-content: center;
         overflow: hidden;
-        transition: all 0.15s linear;
         position: relative;
         z-index: 9999;
         padding: 0 1rem;
-        
+        min-height: 40px;
+        max-height: 40px;
+        transition: max-height 0.15s linear, opacity 0.15s linear;
+               
         p {
             margin: 0;
-            padding: 20px 0;
+            padding: 0px 0;
             font-weight: bold;
             color: #fff;
             text-align : center;
             flex-grow: 1;
+            font-size: 1.5rem;
 
             &:before {
                 content: '';
@@ -89,19 +103,14 @@
             }
         }
 
-        body.scrolled & {
-            max-height: 0;
-        }
-
         &.hidden {
+            min-height: 0 !important;
             max-height: 0 !important;
             opacity: 0;
         }
 
         .close {
             position: relative;
-            /* right: 22px;
-            top: 18px; */
             width: 22px;
             height: 22px;
             opacity: 0.8;

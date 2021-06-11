@@ -7,6 +7,12 @@
     <div class="news--{{entry.slug}}">
         <div class="container">
             <h1>{{entry.title}}</h1>
+
+            <div class="summary">
+                {{entry.summary}}   
+            </div>
+            
+            <time datetime="{{ entry.postDate | date('Y-m-d') }}">{{ entry.postDate | date('F jS, Y') }}</time>
         </div>
 
         {% include 'blocks/_loop.twig' with { 'blocks': entry.contentBlocks } %}

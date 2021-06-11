@@ -7,10 +7,6 @@ const main = async () => {
     // Async load the vue module
     const { default: Vue } = await import(/* webpackChunkName: "vue" */ 'vue');
 
-    // load the vue waypoint
-    const { default: VueWaypoint } = await import(/* webpackChunkName: "vuewaypoint" */ 'vue-waypoint');
-    Vue.use(VueWaypoint)
-
     // Create our vue instance
     const vm = new Vue({
         el: '#component-container',
@@ -19,10 +15,10 @@ const main = async () => {
             'confetti': () => import(/* webpackChunkName: "confetti" */ '../vue/Confetti.vue'),
         },
 
-        data: {
-            intersectionOptions: {
-                threshold: [0.75]
-            }
+        data: function() {
+            return {
+
+            };
         },
 
         methods: {
@@ -33,12 +29,6 @@ const main = async () => {
 
                 if( window.pageYOffset == 0 ) {
                     document.body.classList.remove("scrolled");
-                }
-            },
-
-            onWaypoint({ el, going, direction }) {
-                if( this.$waypointMap.GOING_IN === going ) {
-                    el.classList.add('active')
                 }
             }
         },
