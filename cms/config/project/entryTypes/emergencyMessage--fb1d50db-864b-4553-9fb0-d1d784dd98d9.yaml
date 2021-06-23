@@ -27,7 +27,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 0cdabc70-da3d-4a31-b6b7-dad81aabc3a8
+            fieldUid: 0cdabc70-da3d-4a31-b6b7-dad81aabc3a8 # Message Text
             instructions: null
             label: null
             required: false
@@ -36,7 +36,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: ac5efc25-68b4-4028-b704-548cebcb183f
+            fieldUid: ac5efc25-68b4-4028-b704-548cebcb183f # "Learn More" Call-to-Action
             instructions: null
             label: null
             required: false
@@ -45,7 +45,7 @@ fieldLayouts:
             warning: null
             width: 50
           -
-            fieldUid: 4e5aed85-0e72-4702-9a1a-3e9f3dfb55ca
+            fieldUid: 4e5aed85-0e72-4702-9a1a-3e9f3dfb55ca # Link URL to "Learn More"
             instructions: null
             label: null
             required: false

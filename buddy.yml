@@ -73,6 +73,7 @@
     port: "22"
     authentication_mode: "WORKSPACE_KEY"
     commands:
+    - "mkdir -p releases"
     - "if [ -d \"releases/$BUDDY_EXECUTION_REVISION\" ] && [ \"$BUDDY_EXECUTION_REFRESH\" = \"true\" ];"
     - "then"
     - " echo \"Removing: releases/$BUDDY_EXECUTION_REVISION\""

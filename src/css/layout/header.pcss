@@ -12,8 +12,23 @@ div.c-primaryLogo {
 #page-header {
     background: #eee;
     position: sticky;
+    width: 100%;
     top: 0;
     z-index: 10;
+    transition: background-color 0.3s ease;
+
+    body.has-emergency-message & {
+        top: 40px;
+    }
+
+    body.scrolled & {
+        background: var(--blue);
+    }
+    
+    body.noHero & {
+        background: var(--blue);
+    }
+
 
     .wrapper {
         display: flex;
@@ -71,4 +86,23 @@ nav.c-primary {
             }
         }
     }
+
+    a.search {
+
+        svg {
+            max-height: 24px;
+            min-height: 24px;
+            width: 24px;
+            fill: white;
+            transform: translateY(4px);
+        }
+
+        &:hover {
+            svg {
+                fill: var(--yellow);
+            }
+        }
+
+    }
+
 }

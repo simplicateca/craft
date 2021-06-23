@@ -1,5 +1,8 @@
+{% set tag = titleTag is defined and titleTag ? titleTag : 'h2' %}
 <article class="tease news">
-    <h2>{{entry.title}}</h2>
+    <{{tag}}>
+        {{entry.title}}
+    </{{tag}}>
 
     <time datetime="{{ entry.postDate | date('Y-m-d') }}">{{ entry.postDate | date('d M Y') }}</time>
               

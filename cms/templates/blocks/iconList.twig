@@ -1,0 +1,30 @@
+{% extends "blocks/_layout.twig" %}
+
+{% block body %}
+    <div class="block-content container">
+        {% include 'blocks/_partials/headline.twig' %}
+
+        {% include 'blocks/_partials/redactor-text.twig' %}
+
+        <div class="wrapper">
+            {% for row in block.icons %}
+                <div class="icon">
+                    <div class="image"><img src="{{row.url}}"></div>
+
+                    <div class="text">
+                        {% if row.headline %}<h3>{{row.headline}}</h3>{% endif %}
+                        {{row.text}}
+                    </div>
+
+                    {% if row.linkUrl %}
+                        <a href="{{row.linkUrl}}" class="button">{{row.linkLabel}}</a>
+                    {% endif %}
+                </div>           
+            {% endfor %}
+        </div>
+
+        {% include 'blocks/_partials/buttons.twig' %}
+    </div>
+{% endblock %}
+
+{% block js %}{% endblock %}

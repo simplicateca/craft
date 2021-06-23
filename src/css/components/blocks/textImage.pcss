@@ -8,6 +8,12 @@
         }
     }
 
+    &.imageLeft {
+        .wrapper {
+            flex-direction: row-reverse;
+        }
+    }
+
     .text {
 
     }
@@ -23,4 +29,32 @@
         }
     }
 
+    /* on load animations */
+    .image, .text {
+        opacity: 0;
+        transition: transform 0.3s ease, opacity 0.5s linear;
+    }
+
+    &.imageLeft {
+        .image, .text {
+            transform: translateX(-50px);
+        }
+    }
+
+    &.imageRight {
+        .image, .text {
+            transform: translateX(50px);
+        }
+    }
+
+    &.active {
+        .image, .text {
+            transform: translateX(0px);
+            opacity: 1;
+        }
+
+        .text {
+            transition: transform 0.3s ease 0.4s, opacity 0.5s linear 0.4s;
+        }
+    }
 }

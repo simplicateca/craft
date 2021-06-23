@@ -11,12 +11,13 @@ const main = async() => {
     const vm = new Vue({
         el: "#block-container",
         components: {
-            
+            'modal': () => import(/* webpackChunkName: "modal" */ '@/vue/Modal.vue'),
         },
         data: function() {
             return {
+                modalLink : '',
                 intersectionOptions: {
-                    threshold: [0.75]
+                    threshold: [0.25]
                 }
             };
         },
@@ -26,7 +27,25 @@ const main = async() => {
                 if( this.$waypointMap.GOING_IN === going ) {
                     el.classList.add('active')
                 }
-            }
+            },
+
+            loadModal(event) {
+                var isIE11 = !!window.MSInputMethodContext && !!document.documentMode;
+                if( event.target.href ) {
+                    this.modalLink = event.target.href
+                }
+                else if( event.target.closest('a') ) {
+                    if( isIE11 ) {
+                        window.location.href = event.target.closest('a').href
+                    } else {
+                        this.modalLink = event.target.closest('a').href
+                    }
+                }
+            },
+
+            onModalClose() {
+                this.modalLink = ''
+            },
         },
 
         mounted() {

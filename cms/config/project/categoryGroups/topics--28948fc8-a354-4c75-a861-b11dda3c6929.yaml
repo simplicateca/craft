@@ -27,7 +27,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: b1c52a06-4990-43f5-90d3-898a48789556
+            fieldUid: b1c52a06-4990-43f5-90d3-898a48789556 # Summary
             instructions: null
             label: null
             required: false
@@ -40,7 +40,7 @@ fieldLayouts:
 handle: topics
 name: Topics
 siteSettings:
-  34463b82-dd3f-441c-b9c6-59c351e847aa:
+  34463b82-dd3f-441c-b9c6-59c351e847aa: # Craft
     hasUrls: true
     template: pages/topic
     uriFormat: 'topics/{slug}'

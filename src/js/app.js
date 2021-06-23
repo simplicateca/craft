@@ -23,14 +23,14 @@ const main = async () => {
 
         methods: {
             handleScroll (event) {
-                if( window.pageYOffset >= 10 ) {
+                if( window.pageYOffset >= 120 ) {
                     document.body.classList.add("scrolled");
                 }
 
                 if( window.pageYOffset == 0 ) {
                     document.body.classList.remove("scrolled");
                 }
-            }
+            },
         },
 
         mounted() {

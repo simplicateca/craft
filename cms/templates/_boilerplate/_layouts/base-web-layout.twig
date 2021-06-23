@@ -44,7 +44,7 @@
             </head>
 
             {% block bodyTag %}
-            <body>
+            <body class="{{bodyClasses|default('')}}">
             {% endblock bodyTag %}
                 {% include "_boilerplate/_partials/skip-link.twig" %}
 

@@ -2,8 +2,6 @@
 
 {% block content %}
     {% include '_partials/hero.twig' with { image: '', title: entry.title } %}
-
-    {% include '_partials/breadcrumb.twig' %}
     
     <div class="page--{{entry.slug}}">
         {% include 'blocks/_loop.twig' with { 'blocks': entry.contentBlocks } %}

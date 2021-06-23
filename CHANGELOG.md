@@ -1,5 +1,12 @@
 # simplicate-web/craft Change Log
 
+## 1.2.4 - 2021.06.23
+### Changed
+* Added several new default Content Block types: Entries, Image Only, Two Text, Icon List
+* Added a Vue Modal component for loading sub-page content within a lightbox while stripping away the primary content frame
+* Added default Hero Banner fields
+* Additional tweaks to template structure and base CSS
+
 ## 1.2.3 - 2021.06.11
 ### Changed
 * Minor streamlining adjustments to the base template and webpack structure

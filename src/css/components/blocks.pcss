@@ -1,8 +1,23 @@
 @import './blocks/text.pcss';
+@import './blocks/image.pcss';
 @import './blocks/textImage.pcss';
+@import './blocks/textTwo.pcss';
+@import './blocks/entries.pcss';
+@import './blocks/iconList.pcss';
 
 .c-block {
     margin-bottom: 4rem;
+
+    &.bg-dark {
+        background: var(--dark);
+        color: #fff;
+
+        .block-content {
+            p, li, h1, h2, h3, div {
+                color: #fff;
+            }
+        }
+    }
 
     .block-content {
         .wrapper {

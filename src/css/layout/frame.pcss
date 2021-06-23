@@ -1,5 +1,17 @@
 html {
     font-size: 62.5%;
+
+    @mixin legacy {
+        font-size: 55%;
+    }
+
+    @mixin tablet {
+        font-size: 50%;
+    }
+
+    @mixin phablet-down {
+        font-size: 45%;
+    }
 }
 
 body {
@@ -19,6 +31,10 @@ body {
         max-height: 100vh;
         min-height: 100vh;
     }
+
+    &.noscroll { 
+        overflow: hidden !important;
+    }
 }
 
 #page-container {
@@ -28,14 +44,14 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    overflow-x:hidden;
+    position: relative;
     max-width: 1920px;
     margin: 0 auto;
     box-shadow: 0 0 10px 3px rgba(33,33,33,.1);
 }
 
 #content-container {
-	position: relative;
+    position: relative;
     padding-bottom: 10rem;
     flex-grow: 1;
     z-index: 5;
@@ -55,7 +71,7 @@ div.container {
     width : 100%;
 
     /* for testing purposes only */
-    border: 1px dashed rgba(0,0,0,0.25);
+    /* box-shadow: inset 0px 0px 0px 1px rgba(255,0,0,0.25); */
 
     @mixin desktop-up {
         max-width: calc( var(--desktop-width) - 50px );       

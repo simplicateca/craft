@@ -1,9 +1,7 @@
 {% extends "_layouts/generic-page-layout.twig" %}
 
 {% block content %}
-    {% set pageTitle = entry.title %}
-    {% set heroImage = '' %}
-    {% include '_partials/hero.twig' with { image: heroImage, title: pageTitle, size: 'large' } %}
+    {% include '_partials/hero.twig' with { entry: entry, size: 'large' } %}
 
     <div class="page--{{entry.slug}}">
         {% include 'blocks/_loop.twig' with { 'blocks': entry.contentBlocks } %}

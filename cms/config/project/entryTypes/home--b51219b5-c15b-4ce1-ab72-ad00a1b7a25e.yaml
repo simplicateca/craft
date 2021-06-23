@@ -27,7 +27,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: a4fe99b5-7832-4eb2-9833-f551177bb821
+            fieldUid: a4fe99b5-7832-4eb2-9833-f551177bb821 # Content Blocks
             instructions: null
             label: null
             required: false
@@ -40,7 +40,7 @@ fieldLayouts:
       -
         elements:
           -
-            fieldUid: d79b3073-00bf-430c-95d5-6d03d8303032
+            fieldUid: d79b3073-00bf-430c-95d5-6d03d8303032 # SEO
             instructions: ''
             label: __blank__
             required: ''
@@ -53,7 +53,7 @@ fieldLayouts:
 handle: home
 hasTitleField: false
 name: Home
-section: 6ec26690-b0b1-410f-9bc5-1a5512e6dc3e
+section: 6ec26690-b0b1-410f-9bc5-1a5512e6dc3e # Home
 sortOrder: 1
 titleFormat: '{section.name|raw}'
 titleTranslationKeyFormat: null

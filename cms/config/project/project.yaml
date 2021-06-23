@@ -1,4 +1,4 @@
-dateModified: 1621399830
+dateModified: 1624472252
 email:
   fromEmail: steve@simplicate.ca
   fromName: admin
@@ -40,7 +40,7 @@ plugins:
     edition: standard
     enabled: true
     licenseKey: EWN15KQL316V7LBU4SWYKUUH
-    schemaVersion: 3.0.9
+    schemaVersion: 3.0.10
     settings:
       addHrefLang: true
       addPaginatedHreflang: true

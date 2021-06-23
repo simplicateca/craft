@@ -1,29 +1,11 @@
 field: a4fe99b5-7832-4eb2-9833-f551177bb821 # Content Blocks
 fieldLayouts:
-  a067cac1-ec42-43cc-b56a-f98e3b5b7803:
+  ddb9be0d-9c71-4e4a-82c1-e7bae599e577:
     tabs:
       -
         elements:
           -
-            fieldUid: 20aa7fd2-2f1f-4b3f-b505-a14c1c3cc164 # Headline
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            warning: null
-            width: 75
-          -
-            fieldUid: 7574f2c5-ebea-4c7c-9efb-fabe0fc82275 # Headline Style
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            warning: null
-            width: 25
-          -
-            fieldUid: 1d242d6f-f863-4979-b2af-bb1da5c2aee2 # Text
+            fieldUid: 5ff7eb60-d8c3-46aa-812a-d1e865a3f872 # Headline
             instructions: null
             label: null
             required: false
@@ -32,16 +14,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: dda1fa64-dd45-42b6-8df9-476cbac15152 # Image(s)
-            instructions: null
-            label: null
-            required: true
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            warning: null
-            width: 100
-          -
-            fieldUid: c9c14235-dfc3-4c81-bb97-f3e3be70fb14 # Buttons
+            fieldUid: 7b71f9f9-edbb-45b7-80c8-3d8bba143155 # Headline Style
             instructions: null
             label: null
             required: false
@@ -50,177 +23,63 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: b0be437c-c9b7-4725-b61e-01ae79d26892 # Layout
+            fieldUid: b431aa28-7fd8-4a95-8ace-467582d8e01f # Text (Left)
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
             warning: null
-            width: 25
+            width: 100
           -
-            fieldUid: e8279648-aafc-4293-a410-7e3c587f89c2 # Spacing
+            fieldUid: 79001047-67b4-4b93-825f-333664a55c70 # Text (Right)
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
             warning: null
-            width: 25
+            width: 100
           -
-            fieldUid: c2aae972-6c74-45e4-a721-cb093d6508db # Background
+            fieldUid: 5c438d3a-ab99-4c94-9e0b-39ddb3e3100f # Buttons
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
             warning: null
-            width: 25
+            width: 100
+          -
+            fieldUid: 86da4c73-7a95-496d-9abe-cd3807a11ead # Layout
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: ba25b35f-89c4-4230-96a4-31904c63bbf7 # Spacing
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 67a0e610-9765-4200-9b9f-e59e4130f652 # Background
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
         name: Content
         sortOrder: 1
 fields:
-  1d242d6f-f863-4979-b2af-bb1da5c2aee2: # Text
-    contentColumnType: text
-    fieldGroup: null
-    handle: text
-    instructions: ''
-    name: Text
-    searchable: true
-    settings:
-      availableTransforms: '*'
-      availableVolumes: '*'
-      cleanupHtml: true
-      columnType: text
-      configSelectionMode: choose
-      defaultTransform: ''
-      manualConfig: ''
-      purifierConfig: ''
-      purifyHtml: '1'
-      redactorConfig: Standard.json
-      removeEmptyTags: '1'
-      removeInlineStyles: '1'
-      removeNbsp: '1'
-      showHtmlButtonForNonAdmins: ''
-      showUnpermittedFiles: false
-      showUnpermittedVolumes: false
-      uiMode: enlarged
-    translationKeyFormat: null
-    translationMethod: none
-    type: craft\redactor\Field
-  20aa7fd2-2f1f-4b3f-b505-a14c1c3cc164: # Headline
-    contentColumnType: text
-    fieldGroup: null
-    handle: headline
-    instructions: ''
-    name: Headline
-    searchable: true
-    settings:
-      byteLimit: null
-      charLimit: null
-      code: ''
-      columnType: null
-      initialRows: '2'
-      multiline: '1'
-      placeholder: null
-      uiMode: normal
-    translationKeyFormat: null
-    translationMethod: none
-    type: craft\fields\PlainText
-  7574f2c5-ebea-4c7c-9efb-fabe0fc82275: # Headline Style
-    contentColumnType: string
-    fieldGroup: null
-    handle: headlineStyle
-    instructions: ''
-    name: 'Headline Style'
-    searchable: false
-    settings:
-      optgroups: true
-      options:
-        -
-          __assoc__:
-            -
-              - label
-              - Normal
-            -
-              - value
-              - normal
-            -
-              - default
-              - '1'
-    translationKeyFormat: null
-    translationMethod: none
-    type: craft\fields\Dropdown
-  b0be437c-c9b7-4725-b61e-01ae79d26892: # Layout
-    contentColumnType: string
-    fieldGroup: null
-    handle: layout
-    instructions: 'Some components can have different layout variations.'
-    name: Layout
-    searchable: false
-    settings:
-      optgroups: true
-      options:
-        -
-          __assoc__:
-            -
-              - label
-              - 'Text Left / Image Right'
-            -
-              - value
-              - imageRight
-            -
-              - default
-              - '1'
-        -
-          __assoc__:
-            -
-              - label
-              - 'Image Left / Text Right'
-            -
-              - value
-              - imageLeft
-            -
-              - default
-              - ''
-    translationKeyFormat: null
-    translationMethod: none
-    type: craft\fields\Dropdown
-  c2aae972-6c74-45e4-a721-cb093d6508db: # Background
-    contentColumnType: string
-    fieldGroup: null
-    handle: background
-    instructions: 'Some components have different background options.'
-    name: Background
-    searchable: false
-    settings:
-      optgroups: true
-      options:
-        -
-          __assoc__:
-            -
-              - label
-              - Normal
-            -
-              - value
-              - normal
-            -
-              - default
-              - '1'
-        -
-          __assoc__:
-            -
-              - label
-              - Dark
-            -
-              - value
-              - dark
-            -
-              - default
-              - ''
-    translationKeyFormat: null
-    translationMethod: none
-    type: craft\fields\Dropdown
-  c9c14235-dfc3-4c81-bb97-f3e3be70fb14: # Buttons
+  5c438d3a-ab99-4c94-9e0b-39ddb3e3100f: # Buttons
     contentColumnType: text
     fieldGroup: null
     handle: buttons
@@ -264,49 +123,174 @@ fields:
                 -
                   - type
                   - url
-      maxRows: '2'
+      maxRows: ''
       minRows: ''
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\Table
-  dda1fa64-dd45-42b6-8df9-476cbac15152: # Image(s)
-    contentColumnType: string
+  5ff7eb60-d8c3-46aa-812a-d1e865a3f872: # Headline
+    contentColumnType: text
     fieldGroup: null
-    handle: images
+    handle: headline
     instructions: ''
-    name: Image(s)
+    name: Headline
     searchable: true
     settings:
-      allowSelfRelations: false
-      allowUploads: true
-      allowedKinds:
-        - image
-      defaultUploadLocationSource: 'volume:a4f97962-52de-4b53-8422-5b833d1cd5fd' # Uploads
-      defaultUploadLocationSubpath: '{owner.owner.type.handle}/{owner.owner.slug}/'
-      limit: ''
-      localizeRelations: false
-      previewMode: full
-      restrictFiles: '1'
-      selectionLabel: 'Add Image'
-      showSiteMenu: true
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  7b71f9f9-edbb-45b7-80c8-3d8bba143155: # Headline Style
+    contentColumnType: string
+    fieldGroup: null
+    handle: headlineStyle
+    instructions: ''
+    name: 'Headline Style'
+    searchable: false
+    settings:
+      optgroups: true
+      options:
+        -
+          __assoc__:
+            -
+              - label
+              - Normal
+            -
+              - value
+              - normal
+            -
+              - default
+              - '1'
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Dropdown
+  67a0e610-9765-4200-9b9f-e59e4130f652: # Background
+    contentColumnType: string
+    fieldGroup: null
+    handle: background
+    instructions: ''
+    name: Background
+    searchable: false
+    settings:
+      optgroups: true
+      options:
+        -
+          __assoc__:
+            -
+              - label
+              - Normal
+            -
+              - value
+              - normal
+            -
+              - default
+              - '1'
+        -
+          __assoc__:
+            -
+              - label
+              - Dark
+            -
+              - value
+              - dark
+            -
+              - default
+              - ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Dropdown
+  86da4c73-7a95-496d-9abe-cd3807a11ead: # Layout
+    contentColumnType: string
+    fieldGroup: null
+    handle: layout
+    instructions: ''
+    name: Layout
+    searchable: false
+    settings:
+      optgroups: true
+      options:
+        -
+          __assoc__:
+            -
+              - label
+              - Normal
+            -
+              - value
+              - normal
+            -
+              - default
+              - '1'
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Dropdown
+  79001047-67b4-4b93-825f-333664a55c70: # Text (Right)
+    contentColumnType: text
+    fieldGroup: null
+    handle: text2
+    instructions: ''
+    name: 'Text (Right)'
+    searchable: true
+    settings:
+      availableTransforms: '*'
+      availableVolumes: '*'
+      cleanupHtml: true
+      columnType: text
+      configSelectionMode: choose
+      defaultTransform: ''
+      manualConfig: ''
+      purifierConfig: ''
+      purifyHtml: '1'
+      redactorConfig: Standard.json
+      removeEmptyTags: '1'
+      removeInlineStyles: '1'
+      removeNbsp: '1'
+      showHtmlButtonForNonAdmins: ''
       showUnpermittedFiles: false
       showUnpermittedVolumes: false
-      singleUploadLocationSource: 'volume:a4f97962-52de-4b53-8422-5b833d1cd5fd' # Uploads
-      singleUploadLocationSubpath: ''
-      source: null
-      sources: '*'
-      targetSiteId: null
-      useSingleFolder: false
-      validateRelatedElements: false
-      viewMode: large
+      uiMode: enlarged
     translationKeyFormat: null
-    translationMethod: site
-    type: craft\fields\Assets
-  e8279648-aafc-4293-a410-7e3c587f89c2: # Spacing
+    translationMethod: none
+    type: craft\redactor\Field
+  b431aa28-7fd8-4a95-8ace-467582d8e01f: # Text (Left)
+    contentColumnType: text
+    fieldGroup: null
+    handle: textLeft
+    instructions: ''
+    name: 'Text (Left)'
+    searchable: true
+    settings:
+      availableTransforms: '*'
+      availableVolumes: '*'
+      cleanupHtml: true
+      columnType: text
+      configSelectionMode: choose
+      defaultTransform: ''
+      manualConfig: ''
+      purifierConfig: ''
+      purifyHtml: '1'
+      redactorConfig: Standard.json
+      removeEmptyTags: '1'
+      removeInlineStyles: '1'
+      removeNbsp: '1'
+      showHtmlButtonForNonAdmins: ''
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      uiMode: enlarged
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\redactor\Field
+  ba25b35f-89c4-4230-96a4-31904c63bbf7: # Spacing
     contentColumnType: string
     fieldGroup: null
     handle: spacing
-    instructions: 'How much spacing appears around the component.'
+    instructions: ''
     name: Spacing
     searchable: false
     settings:
@@ -322,10 +306,10 @@ fields:
               - normal
             -
               - default
-              - ''
+              - '1'
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\Dropdown
-handle: textImage
-name: 'Text + Image'
-sortOrder: 2
+handle: textText
+name: 'Text + Text'
+sortOrder: 3

@@ -1,5 +1,5 @@
 fieldLayouts:
-  89885d4f-8b0f-4133-b6a0-1632b3f78fa0:
+  0e6296a2-ebef-4158-ba3d-e196af38899e:
     tabs:
       -
         elements:
@@ -27,7 +27,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: a4fe99b5-7832-4eb2-9833-f551177bb821
+            fieldUid: a4fe99b5-7832-4eb2-9833-f551177bb821 # Content Blocks
             instructions: null
             label: null
             required: false
@@ -40,7 +40,38 @@ fieldLayouts:
       -
         elements:
           -
-            fieldUid: d79b3073-00bf-430c-95d5-6d03d8303032
+            fieldUid: 8df52d2f-d9a7-4fcf-af9b-913c7223e875 # Headliine
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 9acbe7c3-3de7-4755-9334-7542883cd539 # Intro Copy
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: d815706a-e269-4664-98c2-4cfc236386ee # Background Image
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Hero
+        sortOrder: 2
+      -
+        elements:
+          -
+            fieldUid: d79b3073-00bf-430c-95d5-6d03d8303032 # SEO
             instructions: ''
             label: __blank__
             required: ''
@@ -49,12 +80,12 @@ fieldLayouts:
             warning: null
             width: 100
         name: SEO
-        sortOrder: 2
-handle: topicsIndex
+        sortOrder: 3
+handle: standard
 hasTitleField: true
-name: 'Topics Index'
+name: Pages
 section: 650e7d1d-63e5-42f9-b3ab-4febfb502723
-sortOrder: 3
+sortOrder: 1
 titleFormat: null
 titleTranslationKeyFormat: null
 titleTranslationMethod: site

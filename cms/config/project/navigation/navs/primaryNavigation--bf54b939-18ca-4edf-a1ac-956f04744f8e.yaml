@@ -18,7 +18,7 @@ permissions:
     enabled: '1'
 propagateNodes: false
 siteSettings:
-  34463b82-dd3f-441c-b9c6-59c351e847aa: null
+  34463b82-dd3f-441c-b9c6-59c351e847aa: null # Craft
 sortOrder: 1
 structure:
   maxLevels: null

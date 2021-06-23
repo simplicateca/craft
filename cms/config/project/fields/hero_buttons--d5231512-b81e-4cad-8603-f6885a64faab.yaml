@@ -1,0 +1,48 @@
+contentColumnType: text
+fieldGroup: 7902e1c8-6594-4a40-8c22-e510c7a0b9e8 # Hero
+handle: hero_buttons
+instructions: ''
+name: Buttons
+searchable: false
+settings:
+  addRowLabel: 'Add Button'
+  columnType: text
+  columns:
+    __assoc__:
+      -
+        - col1
+        -
+          __assoc__:
+            -
+              - heading
+              - Label
+            -
+              - handle
+              - label
+            -
+              - width
+              - ''
+            -
+              - type
+              - singleline
+      -
+        - col2
+        -
+          __assoc__:
+            -
+              - heading
+              - URL
+            -
+              - handle
+              - url
+            -
+              - width
+              - ''
+            -
+              - type
+              - url
+  maxRows: ''
+  minRows: ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Table

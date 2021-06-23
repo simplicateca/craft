@@ -1,9 +1,9 @@
 contentColumnType: text
-fieldGroup: e0dac603-c510-4bb5-8701-e25672d93744 # Common
-handle: summary
+fieldGroup: 7902e1c8-6594-4a40-8c22-e510c7a0b9e8 # Hero
+handle: hero_introCopy
 instructions: ''
-name: Summary
-searchable: true
+name: 'Intro Copy'
+searchable: false
 settings:
   availableTransforms: '*'
   availableVolumes: ''
@@ -17,7 +17,7 @@ settings:
   redactorConfig: Simple.json
   removeEmptyTags: '1'
   removeInlineStyles: '1'
-  removeNbsp: '1'
+  removeNbsp: ''
   showHtmlButtonForNonAdmins: ''
   showUnpermittedFiles: false
   showUnpermittedVolumes: false

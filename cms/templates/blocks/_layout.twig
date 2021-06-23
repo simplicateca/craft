@@ -1,5 +1,5 @@
 <div
-    class="c-block c-block--{{block.type.handle}} {{block.layout}} {{block.spacing}} {{block.background}}"
+    class="c-block c-block--{{block.type.handle}} {{block.layout}} spacing--{{block.spacing}} bg--{{block.background}}"
     v-waypoint="{ active: true, callback: onWaypoint, options: intersectionOptions }"
     id="{{block.type.handle}}-{{block.id}}">
     {% block body %}{% endblock %}

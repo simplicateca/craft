@@ -1,23 +1,25 @@
-<div class="c-hero {{size|default('normal')}}">
-    {% if image %}
+{% set size     = size ?? 'normal' %}
+{% set headline = entry.hero_headline ?? entry.title %}
+<div class="c-hero {{size}}">
+    {% if entry.hero_backgroundImage and entry.hero_backgroundImage.one() %}
         <div class="image">
             <picture>
-                {# <source type="image/webp" media="(max-width: 560px)" srcset="https://res.cloudinary.com/cvca/image/fetch/w_560,h_560,c_thumb,f_webp/{{ alias('@cdnBaseUrl') }}{{heroImage}}">
-                <source type="image/jpeg" media="(max-width: 560px)" srcset="https://res.cloudinary.com/cvca/image/fetch/w_560,h_560,c_thumb/{{ alias('@cdnBaseUrl') }}{{heroImage}}">
-
-                <source type="image/webp" media="(max-width: 760px)" srcset="https://res.cloudinary.com/cvca/image/fetch/w_800,h_600,c_thumb,f_webp/{{ alias('@cdnBaseUrl') }}{{heroImage}}">
-                <source type="image/jpeg" media="(max-width: 760px)" srcset="https://res.cloudinary.com/cvca/image/fetch/w_800,h_600,c_thumb/{{ alias('@cdnBaseUrl') }}{{heroImage}}">
-
-                <source type="image/webp" media="(max-width: 1024px)" srcset="https://res.cloudinary.com/cvca/image/fetch/w_1000,h_340,c_thumb,f_webp/{{ alias('@cdnBaseUrl') }}{{heroImage}}">
-                <source type="image/jpeg" media="(max-width: 1024px)" srcset="https://res.cloudinary.com/cvca/image/fetch/w_1000,h_340,c_thumb/{{ alias('@cdnBaseUrl') }}{{heroImage}}">
-
-                <source type="image/webp" srcset="https://res.cloudinary.com/cvca/image/fetch/w_1600,h_430,c_thumb,f_webp/{{ alias('@cdnBaseUrl') }}{{heroImage}}">
-                <source type="image/jpeg" srcset="https://res.cloudinary.com/cvca/image/fetch/w_1600,h_430,c_thumb/{{ alias('@cdnBaseUrl') }}{{heroImage}}"> #}
-                <img src="{{image}}" loading="lazy" alt="{{title}}">
+                <img src="{{entry.hero_backgroundImage.one().url}}" loading="lazy" alt="{{title}}">
             </picture>
         </div>
     {% endif %}
-    <div class="text">
-        <h1>{{title}}</h1>
+    <div class="container">
+        <div class="text">
+	    <h1>{{headline}}</h1>
+	    <p>{{entry.hero_introCopy}}</p>
+
+            {% if entry.hero_buttons|length %}
+                <div class="button-wrapper">
+                    {% for button in entry.hero_buttons %}
+                        <a href="{{button.url}}" class="button">{{button.label}}</a>
+                    {% endfor %}
+                </div>
+            {% endif %}
+	</div>
     </div>
 </div>
