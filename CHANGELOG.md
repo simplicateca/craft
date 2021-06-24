@@ -1,5 +1,9 @@
 # simplicate-web/craft Change Log
 
+## 1.2.5 - 2021.06.23
+### Changed
+* Fixed composer version to satisfy packagist
+
 ## 1.2.4 - 2021.06.23
 ### Changed
 * Added several new default Content Block types: Entries, Image Only, Two Text, Icon List
