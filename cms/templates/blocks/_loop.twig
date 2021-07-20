@@ -20,9 +20,6 @@
             {% for blockItem in blocks.all() %}
                 {{ include ('blocks/' ~ blockItem.type.handle ~ '.twig', { block: blockItem } ) }}
             {% endfor %}
-
-            <modal :link="modalLink" v-on:close="onModalClose"></modal>
         </div>
-        {{ craft.twigpack.includeJsModule("content-blocks.js", true) }}
     {% endif %}
 {% endif %}

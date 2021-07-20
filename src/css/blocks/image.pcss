@@ -1,0 +1,22 @@
+.c-block--image {
+    
+    .block-content {
+
+        text-align: center;
+
+        /* on load animations */
+        .image {
+            opacity: 0;
+            transition: transform 0.3s ease, opacity 0.5s linear;
+            transform: translateX(50px);
+        }
+
+        &.active,
+        .c-modal & {
+            .image {
+                transform: translateX(0px);
+                opacity: 1;
+            }
+        }
+    }
+}

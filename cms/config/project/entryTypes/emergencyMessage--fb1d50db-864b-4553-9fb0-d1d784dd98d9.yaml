@@ -67,7 +67,7 @@ fieldLayouts:
 handle: emergencyMessage
 hasTitleField: false
 name: 'Emergency Message'
-section: 7fa68ddc-cf1c-4e9b-9ce7-b8865ca9d48c
+section: 7fa68ddc-cf1c-4e9b-9ce7-b8865ca9d48c # Emergency Message
 sortOrder: 1
 titleFormat: '{section.name|raw}'
 titleTranslationKeyFormat: null

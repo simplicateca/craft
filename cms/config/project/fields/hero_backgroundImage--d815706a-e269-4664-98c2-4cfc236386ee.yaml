@@ -1,3 +1,4 @@
+columnSuffix: null
 contentColumnType: string
 fieldGroup: 7902e1c8-6594-4a40-8c22-e510c7a0b9e8 # Hero
 handle: hero_backgroundImage
@@ -10,13 +11,13 @@ settings:
   allowedKinds:
     - image
   defaultUploadLocationSource: 'volume:a4f97962-52de-4b53-8422-5b833d1cd5fd' # Uploads
-  defaultUploadLocationSubpath: ''
+  defaultUploadLocationSubpath: backgrounds/
   limit: '1'
   localizeRelations: false
   previewMode: thumbs
   restrictFiles: '1'
-  selectionLabel: ''
-  showSiteMenu: false
+  selectionLabel: 'Choose image'
+  showSiteMenu: true
   showUnpermittedFiles: false
   showUnpermittedVolumes: false
   singleUploadLocationSource: 'volume:a4f97962-52de-4b53-8422-5b833d1cd5fd' # Uploads

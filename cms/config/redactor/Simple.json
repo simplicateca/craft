@@ -1,4 +1,6 @@
 {
-  "buttons": ["bold", "italic", "unorderedlist", "orderedlist"],
+  "buttons": ["html", "bold", "italic", "unorderedlist", "orderedlist", "link"],
+  "plugins": ["email"],
+  "linkNewTab": true,
   "toolbarFixed": true
 }

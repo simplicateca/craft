@@ -1,5 +1,23 @@
 # simplicate-web/craft Change Log
 
+## 1.2.7 - 2021.07.20
+### Changed
+* Updated to Craft CMS v3.7.4
+* Added DevOps config helpers for Cloudways and Forge setups in src/conf
+* Added default Typogrify config
+* Added default page transition animation
+* Added knock-knock plugin for password protected staging sites
+* Added Super Table plugin and made use of it for IconList block type and button fields
+* Added Typed Link Field plugin and used it to replace all button fields
+* Rearranged base web layout
+* Rearranged CSS files
+* Rearranged News Index to be an Entry Type of the Pages Section instead of a standalone Single
+* Changed all Content Block headlines to BoldOnly redactor fields
+* Cleaned up default Asset folder settings
+* Split buddy.yml files into staging & production versions
+* Disabled Matrixmate tabs & groups
+* Removed topics as a default category
+
 ## 1.2.5 - 2021.06.23
 ### Changed
 * Fixed composer version to satisfy packagist

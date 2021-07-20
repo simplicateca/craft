@@ -31,6 +31,10 @@ const main = async () => {
                     document.body.classList.remove("scrolled");
                 }
             },
+
+            handleUnload( event ) {
+                document.querySelector('div.loader').classList.add('unload');
+            }
         },
 
         mounted() {
@@ -39,11 +43,14 @@ const main = async () => {
 
         created () {
             document.body.classList.add("js-loaded");
+            document.querySelector('div.loader').classList.add('active');
             window.addEventListener('scroll', this.handleScroll);
+            window.addEventListener('beforeunload', this.handleUnload);
         },
        
         destroyed () {
             window.removeEventListener('scroll', this.handleScroll);
+            window.removeEventListener('beforeunload', this.handleUnload);
         },
     })
 

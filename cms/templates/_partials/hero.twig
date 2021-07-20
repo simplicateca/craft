@@ -15,8 +15,8 @@
 
             {% if entry.hero_buttons|length %}
                 <div class="button-wrapper">
-                    {% for button in entry.hero_buttons %}
-                        <a href="{{button.url}}" class="button">{{button.label}}</a>
+                    {% for rec in entry.hero_buttons.all() %}
+                        {{ rec.button.getLink({ class: 'button' }) }}
                     {% endfor %}
                 </div>
             {% endif %}

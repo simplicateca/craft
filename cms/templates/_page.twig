@@ -2,14 +2,3 @@
 {% set handle = entry.type.handle|replace( { 'Index' : '-index' } ) %}
 
 {% extends folder ~ "/" ~ handle ~ ".twig" %}
-
-{# -- Anything that should be included before </head> -- #}
-{% block headLinks %}
-    {{ parent() }}
-{% endblock headLinks %}
-
-
-{# -- Any JavaScript that should be included before </body> -- #}
-{% block bodyJs %}
-    {{ parent() }}
-{% endblock bodyJs %}

@@ -7,49 +7,44 @@
 /**
  * Normalize.css
  */
-@import './settings/normalize.pcss';
-
+@import './_settings/normalize.pcss';
+@import './_settings/vendor.pcss';
 
 /**
  * Site settings (variables / fonts / breakpoints / etc)
  */
-@import './settings/global.pcss';
-@import './settings/typography.pcss';
-
+@import './_settings/_global.pcss';
+@import './_settings/typography.pcss';
 
 /**
  * Layout & utility classes
  */
-@import './settings/utility.pcss';
-@import './layout/frame.pcss';
-@import './layout/header.pcss';
-@import './layout/footer.pcss';
-@import './components/a11y.pcss';
-
+@import './_settings/utility.pcss';
+@import './_settings/frame.pcss';
 
 /**
  * Include styles for individual components
  */
+@import './components/header.pcss';
+@import './components/footer.pcss';
+@import './components/a11y.pcss';
 @import './components/mobile-menu.pcss';
 @import './components/buttons.pcss';
-@import './components/blocks.pcss';
 @import './components/hero.pcss';
 @import './components/search.pcss';
 @import './components/pagination.pcss';
 @import './components/above-footer.pcss';
 @import './components/breadcrumb.pcss';
-  
+
+/**
+ * Include block components
+ */
+@import './blocks/_blocks.pcss';
 
 /**
  * Include styles for individual pages
  */
-@import './pages/pages.pcss';
-@import './pages/home.pcss';
-@import './pages/news.pcss';
-@import './pages/topics.pcss';
-
-
-/**
- * Include vendor css.
- */
-@import './components/vendor.pcss';
+@import './sections/pages.pcss';
+@import './sections/home.pcss';
+@import './sections/news.pcss';
+@import './sections/topics.pcss';

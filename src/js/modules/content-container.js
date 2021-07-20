@@ -9,7 +9,7 @@ const main = async() => {
 
     // Create our vue instance
     const vm = new Vue({
-        el: "#block-container",
+        el: "#content-container",
         components: {
             'modal': () => import(/* webpackChunkName: "modal" */ '@/vue/Modal.vue'),
         },

@@ -12,7 +12,7 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             warning: null
-            width: 100
+            width: 75
           -
             fieldUid: 479c17fb-3144-43b4-9417-f940264f6a71 # Headline Style
             instructions: null
@@ -21,7 +21,7 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             warning: null
-            width: 100
+            width: 25
           -
             fieldUid: b911f8a5-3dbc-4aa9-8be2-9eb2c9c8a2ed # Intro Text
             instructions: null
@@ -50,23 +50,23 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 07fd881e-0862-439b-a7f3-7232454c1947 # Layout
+            fieldUid: 07fd881e-0862-439b-a7f3-7232454c1947 # Layout Variations
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
             warning: null
-            width: 100
+            width: 25
           -
-            fieldUid: b947d0e1-da59-4426-bb04-17175245afa2 # Spacing
+            fieldUid: b947d0e1-da59-4426-bb04-17175245afa2 # Bottom Spacing
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
             warning: null
-            width: 100
+            width: 25
           -
             fieldUid: b99b85fc-06c0-4960-bcda-7f07690ef20d # Background
             instructions: null
@@ -75,16 +75,17 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             warning: null
-            width: 100
+            width: 25
         name: Content
         sortOrder: 1
 fields:
-  07fd881e-0862-439b-a7f3-7232454c1947: # Layout
+  07fd881e-0862-439b-a7f3-7232454c1947: # Layout Variations
+    columnSuffix: null
     contentColumnType: string
     fieldGroup: null
     handle: layout
     instructions: ''
-    name: Layout
+    name: 'Layout Variations'
     searchable: false
     settings:
       optgroups: true
@@ -104,6 +105,7 @@ fields:
     translationMethod: none
     type: craft\fields\Dropdown
   479c17fb-3144-43b4-9417-f940264f6a71: # Headline Style
+    columnSuffix: null
     contentColumnType: string
     fieldGroup: null
     handle: headlineStyle
@@ -128,6 +130,7 @@ fields:
     translationMethod: none
     type: craft\fields\Dropdown
   a1609989-70ec-42e9-a2d0-ce1a902593c7: # Records
+    columnSuffix: null
     contentColumnType: string
     fieldGroup: null
     handle: records
@@ -139,7 +142,7 @@ fields:
       limit: ''
       localizeRelations: false
       selectionLabel: ''
-      showSiteMenu: false
+      showSiteMenu: true
       source: null
       sources:
         - 'section:3721b4d6-42d5-41fc-b6e7-76204b42c91a' # News
@@ -150,6 +153,7 @@ fields:
     translationMethod: site
     type: craft\fields\Entries
   b99b85fc-06c0-4960-bcda-7f07690ef20d: # Background
+    columnSuffix: null
     contentColumnType: string
     fieldGroup: null
     handle: background
@@ -185,6 +189,7 @@ fields:
     translationMethod: none
     type: craft\fields\Dropdown
   b911f8a5-3dbc-4aa9-8be2-9eb2c9c8a2ed: # Intro Text
+    columnSuffix: null
     contentColumnType: text
     fieldGroup: null
     handle: text
@@ -212,12 +217,13 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\redactor\Field
-  b947d0e1-da59-4426-bb04-17175245afa2: # Spacing
+  b947d0e1-da59-4426-bb04-17175245afa2: # Bottom Spacing
+    columnSuffix: null
     contentColumnType: string
     fieldGroup: null
     handle: spacing
     instructions: ''
-    name: Spacing
+    name: 'Bottom Spacing'
     searchable: false
     settings:
       optgroups: true
@@ -237,6 +243,7 @@ fields:
     translationMethod: none
     type: craft\fields\Dropdown
   c4d11cc3-ff49-4b48-ad2a-d5a30294d552: # Headline
+    columnSuffix: null
     contentColumnType: text
     fieldGroup: null
     handle: headline
@@ -244,66 +251,55 @@ fields:
     name: Headline
     searchable: true
     settings:
-      byteLimit: null
-      charLimit: null
-      code: ''
-      columnType: null
-      initialRows: '4'
-      multiline: ''
-      placeholder: null
-      uiMode: normal
+      availableTransforms: '*'
+      availableVolumes: ''
+      cleanupHtml: true
+      columnType: text
+      configSelectionMode: choose
+      defaultTransform: ''
+      manualConfig: ''
+      purifierConfig: ''
+      purifyHtml: '1'
+      redactorConfig: BoldOnly.json
+      removeEmptyTags: '1'
+      removeInlineStyles: '1'
+      removeNbsp: '1'
+      showHtmlButtonForNonAdmins: ''
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      uiMode: enlarged
     translationKeyFormat: null
     translationMethod: none
-    type: craft\fields\PlainText
+    type: craft\redactor\Field
   fac14507-5966-4d29-8eeb-fb358414aaaf: # Buttons
-    contentColumnType: text
+    columnSuffix: null
+    contentColumnType: string
     fieldGroup: null
     handle: buttons
     instructions: ''
     name: Buttons
     searchable: false
     settings:
-      addRowLabel: 'Add Button'
-      columnType: text
       columns:
         __assoc__:
           -
-            - col1
+            - 4cef665b-8759-4bd2-af57-d2867d7447d3 # Button
             -
               __assoc__:
                 -
-                  - heading
-                  - Label
-                -
-                  - handle
-                  - label
-                -
                   - width
                   - ''
-                -
-                  - type
-                  - singleline
-          -
-            - col2
-            -
-              __assoc__:
-                -
-                  - heading
-                  - URL
-                -
-                  - handle
-                  - url
-                -
-                  - width
-                  - ''
-                -
-                  - type
-                  - url
+      contentTable: '{{%stc_5_buttons}}'
+      fieldLayout: table
       maxRows: ''
       minRows: ''
+      placeholderKey: null
+      propagationMethod: all
+      selectionLabel: 'Add Button'
+      staticField: ''
     translationKeyFormat: null
-    translationMethod: none
-    type: craft\fields\Table
+    translationMethod: site
+    type: verbb\supertable\fields\SuperTableField
 handle: entries
 name: Entries
 sortOrder: 5

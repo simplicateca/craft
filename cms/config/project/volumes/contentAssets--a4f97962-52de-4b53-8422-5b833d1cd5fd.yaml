@@ -39,9 +39,9 @@ settings:
   keyId: $S3_KEY
   region: $S3_REGION
   secret: $S3_SECRET
-  subfolder: assets
+  subfolder: '@cdnFolder/uploads'
 sortOrder: 0
 titleTranslationKeyFormat: null
-titleTranslationMethod: null
+titleTranslationMethod: site
 type: vaersaagod\dospaces\Volume
 url: $CDN_URL

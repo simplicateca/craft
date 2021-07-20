@@ -50,6 +50,46 @@ fieldLayouts:
             width: 100
         name: SEO
         sortOrder: 2
+      -
+        elements:
+          -
+            fieldUid: 8df52d2f-d9a7-4fcf-af9b-913c7223e875 # Headliine
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 9acbe7c3-3de7-4755-9334-7542883cd539 # Intro Copy
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: d815706a-e269-4664-98c2-4cfc236386ee # Background Image
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: d5231512-b81e-4cad-8603-f6885a64faab # Buttons
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Hero
+        sortOrder: 3
 handle: home
 hasTitleField: false
 name: Home

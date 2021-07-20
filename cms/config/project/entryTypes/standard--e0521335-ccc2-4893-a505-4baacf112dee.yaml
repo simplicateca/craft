@@ -83,8 +83,8 @@ fieldLayouts:
         sortOrder: 3
 handle: standard
 hasTitleField: true
-name: Pages
-section: 650e7d1d-63e5-42f9-b3ab-4febfb502723
+name: Standard
+section: 650e7d1d-63e5-42f9-b3ab-4febfb502723 # Pages
 sortOrder: 1
 titleFormat: null
 titleTranslationKeyFormat: null

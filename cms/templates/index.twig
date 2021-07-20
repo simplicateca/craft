@@ -1,9 +1,11 @@
 {% extends "_layouts/generic-page-layout.twig" %}
 
+{% set bodyClasses = 'home' %}
+
 {% block content %}
     {% include '_partials/hero.twig' with { entry: entry, size: 'large' } %}
 
-    <div class="page--{{entry.slug}}">
+    <div class="page--home">
         {% include 'blocks/_loop.twig' with { 'blocks': entry.contentBlocks } %}
     </div>
 {% endblock %}

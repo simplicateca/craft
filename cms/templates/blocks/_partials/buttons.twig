@@ -1,7 +1,7 @@
 {% if block.buttons|length %}
     <div class="button-wrapper">
-        {% for button in block.buttons %}
-            <a href="{{button.url}}" class="button">{{button.label}}</a>
+        {% for rec in block.buttons.all() %}
+            {{ rec.button.getLink({ class: 'button' }) }}
         {% endfor %}
     </div>
 {% endif %}

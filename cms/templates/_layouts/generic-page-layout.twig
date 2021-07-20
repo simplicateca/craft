@@ -48,18 +48,20 @@
                 {% endblock %}
             </main>
 
-            {# -- Mobile Menu -- #}
-            {% include "_partials/mobile-menu.twig" %}
+            {# -- Content that appears below the primary content block -- #}
+            {% block subcontent %}{% endblock %}
+
+            {# -- Info footer -- #}
+            {% include "_partials/info-footer.twig" %}
+
+            {# -- HTML Footer -- #}
+            {% include "_partials/global-footer.twig" %}
+
+            <modal :link="modalLink" v-on:close="onModalClose"></modal>
         </div>
 
-        {# -- Content that appears below the primary content block -- #}
-        {% block subcontent %}{% endblock %}
-
-        {# -- Info footer -- #}
-        {% include "_partials/info-footer.twig" %}
-
-        {# -- HTML Footer -- #}
-        {% include "_partials/global-footer.twig" %}
+        {{ craft.twigpack.includeJsModule("content-container.js", true) }}
+        {% block contentJS %}{% endblock %}
 
         <div id="component-container">
             {# -- Confetti proves Vue single file components are loading. Remove for production -- #}
@@ -68,6 +70,7 @@
             {% endif %}
         </div>
 
-        {% block contentJS %}{% endblock %}
+        {# -- Mobile Menu -- #}
+        {% include "_partials/mobile-menu.twig" %}
     </div>
 {% endblock bodyHtml %}

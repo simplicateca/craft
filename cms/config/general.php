@@ -15,7 +15,7 @@ return [
     'aliases' => [
         '@assetsUrl' => App::env('ASSETS_URL'),
         '@cdnUrl' => App::env('CDN_URL'),
-        '@cdnSub' => App::env('CDN_FOLDER'),
+        '@cdnFolder' => App::env('CDN_FOLDER'),
         '@web' => App::env('SITE_URL'),
         '@webroot' => App::env('WEB_ROOT_PATH'),
     ],

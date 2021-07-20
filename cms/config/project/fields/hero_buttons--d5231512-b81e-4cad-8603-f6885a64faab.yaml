@@ -1,48 +1,28 @@
-contentColumnType: text
+columnSuffix: null
+contentColumnType: string
 fieldGroup: 7902e1c8-6594-4a40-8c22-e510c7a0b9e8 # Hero
 handle: hero_buttons
 instructions: ''
 name: Buttons
 searchable: false
 settings:
-  addRowLabel: 'Add Button'
-  columnType: text
   columns:
     __assoc__:
       -
-        - col1
+        - 138531be-7e43-4759-a397-5325db40a30b # Button
         -
           __assoc__:
             -
-              - heading
-              - Label
-            -
-              - handle
-              - label
-            -
               - width
               - ''
-            -
-              - type
-              - singleline
-      -
-        - col2
-        -
-          __assoc__:
-            -
-              - heading
-              - URL
-            -
-              - handle
-              - url
-            -
-              - width
-              - ''
-            -
-              - type
-              - url
+  contentTable: '{{%stc_hero_buttons}}'
+  fieldLayout: table
   maxRows: ''
   minRows: ''
+  placeholderKey: null
+  propagationMethod: all
+  selectionLabel: 'Add Button'
+  staticField: ''
 translationKeyFormat: null
-translationMethod: none
-type: craft\fields\Table
+translationMethod: site
+type: verbb\supertable\fields\SuperTableField
