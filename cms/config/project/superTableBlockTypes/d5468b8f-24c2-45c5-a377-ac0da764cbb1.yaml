@@ -216,7 +216,7 @@ fields:
       allowedKinds:
         - image
       defaultUploadLocationSource: 'volume:a4f97962-52de-4b53-8422-5b833d1cd5fd' # Uploads
-      defaultUploadLocationSubpath: '{section.handle}/{owner.slug}/'
+      defaultUploadLocationSubpath: icons/
       limit: '1'
       localizeRelations: false
       previewMode: full

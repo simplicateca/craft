@@ -76,6 +76,15 @@ fieldLayouts:
             type: craft\fieldlayoutelements\CustomField
             warning: null
             width: 25
+          -
+            fieldUid: 54aa6fb8-4a59-4704-9956-2c47eb2f5ceb # Anchor Link
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 25
         name: Content
         sortOrder: 1
 fields:
@@ -133,10 +142,30 @@ fields:
       showHtmlButtonForNonAdmins: ''
       showUnpermittedFiles: false
       showUnpermittedVolumes: false
-      uiMode: enlarged
+      uiMode: normal
     translationKeyFormat: null
     translationMethod: none
     type: craft\redactor\Field
+  54aa6fb8-4a59-4704-9956-2c47eb2f5ceb: # Anchor Link
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: anchor
+    instructions: 'Used to create links that jump to a specific part of the page.'
+    name: 'Anchor Link'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: '1'
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: '#example-link'
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
   7574f2c5-ebea-4c7c-9efb-fabe0fc82275: # Headline Style
     columnSuffix: null
     contentColumnType: string
@@ -177,7 +206,7 @@ fields:
           __assoc__:
             -
               - label
-              - 'Text Left / Image Right'
+              - 'Image Right'
             -
               - value
               - imageRight
@@ -188,7 +217,7 @@ fields:
           __assoc__:
             -
               - label
-              - 'Image Left / Text Right'
+              - 'Image Left'
             -
               - value
               - imageLeft
@@ -316,6 +345,17 @@ fields:
             -
               - value
               - normal
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - None
+            -
+              - value
+              - none
             -
               - default
               - ''

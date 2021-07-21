@@ -4,7 +4,7 @@
     {% if entry.hero_backgroundImage and entry.hero_backgroundImage.one() %}
         <div class="image">
             <picture>
-                <img src="{{entry.hero_backgroundImage.one().url}}" loading="lazy" alt="{{title}}">
+                <img src="{{entry.hero_backgroundImage.one().url}}" loading="lazy" alt="{{entry.hero_backgroundImage.one().title}}">
             </picture>
         </div>
     {% endif %}

@@ -15,6 +15,7 @@ const main = async() => {
         },
         data: function() {
             return {
+                currentAccordion: false,
                 modalLink : '',
                 intersectionOptions: {
                     threshold: [0.25]
@@ -46,10 +47,46 @@ const main = async() => {
             onModalClose() {
                 this.modalLink = ''
             },
+
+            openAccordion(rowID, slug) {
+                if( this.currentAccordion == rowID ) {
+                    document.querySelector('#ar'+rowID).style.height=0
+                    this.currentAccordion = false
+                    history.replaceState( null, null, '#' )
+                } else {
+
+                    if( this.currentAccordion ) {
+                        document.querySelector('#ar'+this.currentAccordion).style.height=0
+                    }
+
+                    this.currentAccordion = rowID
+                    document.querySelector('#ar'+rowID).style.height = document.querySelector('#ar'+rowID).scrollHeight + 'px';
+                    history.replaceState( null, null, '#ai'+rowID + '-' + slug )
+                }
+            },
+
+            scrollToID(id) {
+                const yOffset = -100;
+                const element = document.getElementById(id);
+                const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+
+                window.scrollTo({top: y, behavior: 'smooth'});
+            }
         },
 
         mounted() {
-
+            let match = window.location.hash.match(/^#ai(\d+).*?/gi)
+            if( match ) {
+                let rowID = match[0].replace( '#ai', '' )
+                let slug  = window.location.hash.replace( match[0] + '-', '' )
+                this.openAccordion( rowID, slug )
+                this.scrollToID( 'ai'+rowID )
+            } else {
+                let match2 = window.location.hash.match(/^#([\w\-]+)/gi)
+                if( match2 ) {
+                    this.scrollToID( match2[0].replace( '#', '' ) )
+                }
+            }
         },
     });
 };

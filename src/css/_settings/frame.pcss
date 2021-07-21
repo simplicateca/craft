@@ -1,5 +1,6 @@
 html {
     font-size: 62.5%;
+    scroll-behavior: smooth;
 
     @mixin legacy {
         font-size: 55%;
@@ -52,9 +53,12 @@ body {
 
 #content-container {
     position: relative;
-    padding-bottom: 10rem;
     flex-grow: 1;
     z-index: 5;
+}
+
+main {
+    padding-bottom: 10rem;
 }
 
 ::selection {

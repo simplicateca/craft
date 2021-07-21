@@ -67,15 +67,44 @@ fieldLayouts:
             type: craft\fieldlayoutelements\CustomField
             warning: null
             width: 25
+          -
+            fieldUid: 1edf3767-b37f-430e-8ffd-4bd1a3b9f478 # Anchor Link
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 25
         name: Content
         sortOrder: 1
 fields:
+  1edf3767-b37f-430e-8ffd-4bd1a3b9f478: # Anchor Link
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: anchor
+    instructions: 'Used to create links that jump to a specific part of the page.'
+    name: 'Anchor Link'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: '1'
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: '#example-link'
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
   7b0a973f-bff0-4f46-bfb0-b6a50c8fe28a: # Layout Variations
     columnSuffix: null
     contentColumnType: string
     fieldGroup: null
     handle: layout
-    instructions: ''
+    instructions: 'Some components can have different layout variations.'
     name: 'Layout Variations'
     searchable: false
     settings:
@@ -163,7 +192,7 @@ fields:
     contentColumnType: string
     fieldGroup: null
     handle: background
-    instructions: ''
+    instructions: 'Some components have different background options.'
     name: Background
     searchable: false
     settings:
@@ -219,7 +248,7 @@ fields:
       showHtmlButtonForNonAdmins: ''
       showUnpermittedFiles: false
       showUnpermittedVolumes: false
-      uiMode: enlarged
+      uiMode: normal
     translationKeyFormat: null
     translationMethod: none
     type: craft\redactor\Field
@@ -253,7 +282,7 @@ fields:
     contentColumnType: string
     fieldGroup: null
     handle: spacing
-    instructions: ''
+    instructions: 'How much spacing appears around the component.'
     name: 'Bottom Spacing'
     searchable: false
     settings:
@@ -270,6 +299,17 @@ fields:
             -
               - default
               - '1'
+        -
+          __assoc__:
+            -
+              - label
+              - None
+            -
+              - value
+              - none
+            -
+              - default
+              - ''
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\Dropdown

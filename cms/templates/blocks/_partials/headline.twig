@@ -4,8 +4,9 @@
         id="{{block.headline|kebab|ascii}}"      
     >
         {{ block.headline
-            | nl2br
+            | replace( { '<p>': '', '</p>': '' } )
             | typogrify(true)
+            | nl2br
         }}
     </h2>
 {% endif %}

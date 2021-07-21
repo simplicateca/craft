@@ -76,9 +76,38 @@ fieldLayouts:
             type: craft\fieldlayoutelements\CustomField
             warning: null
             width: 25
+          -
+            fieldUid: 1bd5ff27-b43b-4768-8fdd-170cf3a12f81 # Anchor Link
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 25
         name: Content
         sortOrder: 1
 fields:
+  1bd5ff27-b43b-4768-8fdd-170cf3a12f81: # Anchor Link
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: anchor
+    instructions: 'Used to create links that jump to a specific part of the page.'
+    name: 'Anchor Link'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: '1'
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: '#example-link'
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
   5c438d3a-ab99-4c94-9e0b-39ddb3e3100f: # Buttons
     columnSuffix: null
     contentColumnType: string
@@ -133,7 +162,7 @@ fields:
       showHtmlButtonForNonAdmins: ''
       showUnpermittedFiles: false
       showUnpermittedVolumes: false
-      uiMode: enlarged
+      uiMode: normal
     translationKeyFormat: null
     translationMethod: none
     type: craft\redactor\Field
@@ -167,7 +196,7 @@ fields:
     contentColumnType: string
     fieldGroup: null
     handle: background
-    instructions: ''
+    instructions: 'Some components have different background options.'
     name: Background
     searchable: false
     settings:
@@ -203,7 +232,7 @@ fields:
     contentColumnType: string
     fieldGroup: null
     handle: layout
-    instructions: ''
+    instructions: 'Some components can have different layout variations.'
     name: 'Layout Variations'
     searchable: false
     settings:
@@ -256,7 +285,7 @@ fields:
     columnSuffix: null
     contentColumnType: text
     fieldGroup: null
-    handle: textLeft
+    handle: text
     instructions: ''
     name: 'Text (Left)'
     searchable: true
@@ -286,7 +315,7 @@ fields:
     contentColumnType: string
     fieldGroup: null
     handle: spacing
-    instructions: ''
+    instructions: 'How much spacing appears around the component.'
     name: 'Bottom Spacing'
     searchable: false
     settings:
@@ -303,6 +332,17 @@ fields:
             -
               - default
               - '1'
+        -
+          __assoc__:
+            -
+              - label
+              - None
+            -
+              - value
+              - none
+            -
+              - default
+              - ''
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\Dropdown

@@ -1,16 +1,21 @@
-dateModified: 1626760746
+dateModified: 1626886227
 email:
   fromEmail: steve@simplicate.ca
   fromName: admin
   transportType: craft\mail\transportadapters\Sendmail
 meta:
   __names__:
+    0a39dfec-64a9-4ad4-98a8-f27aed7fbcd2: 'Intro Text' # Intro Text
     0cdabc70-da3d-4a31-b6b7-dad81aabc3a8: 'Message Text' # Message Text
+    0ff0357f-b500-4e0b-8e70-4be44829bed8: 'Anchor Link' # Anchor Link
+    1bd5ff27-b43b-4768-8fdd-170cf3a12f81: 'Anchor Link' # Anchor Link
     1d242d6f-f863-4979-b2af-bb1da5c2aee2: Text # Text
     1ddd814c-a3f1-4689-bb67-33d04ad8307a: Headline # Headline
     1e0f22f0-2c77-45f2-a8dd-9405520e5ce0: 'Emergency Message' # Emergency Message
+    1edf3767-b37f-430e-8ffd-4bd1a3b9f478: 'Anchor Link' # Anchor Link
     1f038922-6c05-454b-bd6c-786e2a7885f8: 'News Home' # News Home
     2edaff57-1ee7-4c19-a3c9-7b8f0e40e49c: 'Where should it appear?' # Where should it appear?
+    3b748353-8f9a-49de-9662-ee18c32578e3: Text # Text
     3c05e593-d621-444e-8fb9-ddbb1b356a43: 'Static Assets' # Static Assets
     3d132a28-a031-453f-8dcf-7c2f939cb34a: Button # Button
     4cef665b-8759-4bd2-af57-d2867d7447d3: Button # Button
@@ -20,11 +25,13 @@ meta:
     5ad1a48a-0387-4098-89e7-bf69eed8508e: 'Layout Variations' # Layout Variations
     5bcbe5df-4160-4a4f-9920-b80fcb5ea72d: Button # Button
     5c438d3a-ab99-4c94-9e0b-39ddb3e3100f: Buttons # Buttons
+    05fb8aa2-0c98-4cee-93c3-5ad2f2709822: 'Anchor Link' # Anchor Link
     5ff7eb60-d8c3-46aa-812a-d1e865a3f872: Headline # Headline
     6ec26690-b0b1-410f-9bc5-1a5512e6dc3e: Home # Home
     07a0012a-4bdf-4aaa-8415-bbe06adaf62c: Text # Text
     7b0a973f-bff0-4f46-bfb0-b6a50c8fe28a: 'Layout Variations' # Layout Variations
     7b71f9f9-edbb-45b7-80c8-3d8bba143155: 'Headline Style' # Headline Style
+    7df7b031-eaca-476e-984f-2455f793f599: Accordion # Accordion
     7fa68ddc-cf1c-4e9b-9ce7-b8865ca9d48c: 'Emergency Message' # Emergency Message
     07fd881e-0862-439b-a7f3-7232454c1947: 'Layout Variations' # Layout Variations
     8df52d2f-d9a7-4fcf-af9b-913c7223e875: Headliine # Headliine
@@ -32,10 +39,13 @@ meta:
     9acbe7c3-3de7-4755-9334-7542883cd539: 'Intro Copy' # Intro Copy
     20aa7fd2-2f1f-4b3f-b505-a14c1c3cc164: Headline # Headline
     51b4cdd8-a3aa-47f5-bbb3-f01ce199d3d8: 'Headline Style' # Headline Style
+    54aa6fb8-4a59-4704-9956-2c47eb2f5ceb: 'Anchor Link' # Anchor Link
     67a0e610-9765-4200-9b9f-e59e4130f652: Background # Background
     69c2d7dc-3df8-4df1-a444-d2ae376da00c: Text # Text
+    72b4a2cb-e557-468e-ac08-22f48060f192: Headline # Headline
     86da4c73-7a95-496d-9abe-cd3807a11ead: 'Layout Variations' # Layout Variations
     213c9175-81d2-4141-8993-904e59925583: 'Icon List' # Icon List
+    267c2f19-de6c-4986-a2fa-d0a8b2a5f969: Headline # Headline
     479c17fb-3144-43b4-9417-f940264f6a71: 'Headline Style' # Headline Style
     650e7d1d-63e5-42f9-b3ab-4febfb502723: Pages # Pages
     0976e4cf-6b48-45af-9477-99ac396436ae: Buttons # Buttons
@@ -56,15 +66,19 @@ meta:
     a4f97962-52de-4b53-8422-5b833d1cd5fd: Uploads # Uploads
     a4fe99b5-7832-4eb2-9833-f551177bb821: 'Content Blocks' # Content Blocks
     a39c9c32-2acb-47fd-ad36-7980c445a44e: 'Text + Image' # Text + Image
+    a61ac261-5f37-431f-a92f-8b38277c3a8d: Background # Background
     a345255e-6a6e-450c-8f3f-bd44bd0d7a91: Text # Text
     a1609989-70ec-42e9-a2d0-ce1a902593c7: Records # Records
     aa5de47f-bd21-4e66-9e6b-93f174062abc: Image(s) # Image(s)
     aaa3f092-4a89-4ed0-9389-471df91b59d1: 'Layout Variations' # Layout Variations
     ac5efc25-68b4-4028-b704-548cebcb183f: '"Learn More" Call-to-Action' # "Learn More" Call-to-Action
+    ad4c26f2-0839-4f69-bd4b-8f2f43c2d3f1: 'Bottom Spacing' # Bottom Spacing
     adcea45e-bf40-4faf-b0c8-4ce089696971: Images # Images
     b0be437c-c9b7-4725-b61e-01ae79d26892: 'Layout Variations' # Layout Variations
     b1c52a06-4990-43f5-90d3-898a48789556: Summary # Summary
     b2c539bf-f3bf-4c27-81e6-cffc9cb8657d: Background # Background
+    b7f27b4f-7fd9-4b59-a422-46ec9280d3a6: 'Headline Style' # Headline Style
+    b9c0114e-75ed-4614-8290-a484cd43652b: Items # Items
     b90dc7a3-3d38-40c1-81e0-0ff813fb6fd9: Background # Background
     b99b85fc-06c0-4960-bcda-7f07690ef20d: Background # Background
     b431aa28-7fd8-4a95-8ace-467582d8e01f: 'Text (Left)' # Text (Left)
@@ -72,6 +86,7 @@ meta:
     b947d0e1-da59-4426-bb04-17175245afa2: 'Bottom Spacing' # Bottom Spacing
     b51219b5-c15b-4ce1-ab72-ad00a1b7a25e: Home # Home
     ba25b35f-89c4-4230-96a4-31904c63bbf7: 'Bottom Spacing' # Bottom Spacing
+    bb08d0c0-bcc3-4d96-b172-572ca8f601a1: 'Anchor Link' # Anchor Link
     bcb40c76-f64f-408f-b1da-edb455b3588d: Craft # Craft
     bf54b939-18ca-4edf-a1ac-956f04744f8e: 'Primary Navigation' # Primary Navigation
     c0bba8e0-117d-4192-b3a3-ac1a1ed80a6b: Buttons # Buttons
@@ -81,6 +96,7 @@ meta:
     c441b407-6c5c-4101-b07b-1883f705c486: Buttons # Buttons
     c864b8d2-2de8-4995-9bb6-4647bee68943: 'Bottom Spacing' # Bottom Spacing
     c6677eab-6c78-4ca1-93cd-0faa266d1c45: 'Intro Text' # Intro Text
+    cd660f34-a88e-4f6f-a63d-dac487f3c1b3: 'Anchor Link' # Anchor Link
     d79b3073-00bf-430c-95d5-6d03d8303032: SEO # SEO
     d3282cfb-d044-4890-b553-9a0b87393027: News # News
     d815706a-e269-4664-98c2-4cfc236386ee: 'Background Image' # Background Image
@@ -95,6 +111,7 @@ meta:
     e8279648-aafc-4293-a410-7e3c587f89c2: 'Bottom Spacing' # Bottom Spacing
     f2bf26d7-ca02-4ca1-be4f-08d37fad24b4: 'Bottom Spacing' # Bottom Spacing
     f4fc0c65-90af-4f1c-88ef-eb0ed255ddb0: 'Feature Image' # Feature Image
+    f7b9a8d7-c436-467b-8a9e-b42540bd0149: 'Layout Variations' # Layout Variations
     fac14507-5966-4d29-8eeb-fb358414aaaf: Buttons # Buttons
     fb1d50db-864b-4553-9fb0-d1d784dd98d9: 'Emergency Message' # Emergency Message
     fd647249-c4ea-4ade-99ab-13f9e53bba3f: Icon # Icon

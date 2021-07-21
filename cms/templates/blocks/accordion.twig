@@ -1,0 +1,29 @@
+{% extends "blocks/_layout.twig" %}
+
+{% block body %}
+    <div class="block-content container">
+        
+        {% include 'blocks/_partials/headline.twig' %}
+        {% include 'blocks/_partials/redactor-text.twig' %}
+
+        <div class="wrapper">
+            {% for row in block.items.all() %}
+                <div class="accordion-item" id="ai{{row.id}}">
+                    {% set rowHeadline = row.headline|striptags('<strong><b>')|nl2br %}
+                    {% set rowHashtag  = row.headline|striptags('<strong><b>')|kebab|ascii %}
+                    <h3><a href="#ai{{row.id}}" @click.prevent="openAccordion({{row.id}}, '{{rowHashtag}}')">{{rowHeadline}}</a></h3>
+                    
+                    <div class="accordion-text" id="ar{{row.id}}" style="height: 0px;">
+                        {% if row.text %}
+                            <div class="inner">
+                                {{row.text}}
+                            </div>
+                        {% endif %}
+                    </div>                    
+                </div>           
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}
+
+{% block js %}{% endblock %}

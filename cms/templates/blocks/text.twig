@@ -3,12 +3,8 @@
 {% block body %}
     <div class="block-content container">
         {% include 'blocks/_partials/headline.twig' %}
-        <div class="wrapper">
-            <div class="text">
-                {% include 'blocks/_partials/redactor-text.twig' %}
-                {% include 'blocks/_partials/buttons.twig' %}
-            </div>
-        </div>
+        {% include 'blocks/_partials/redactor-text.twig' %}
+        {% include 'blocks/_partials/buttons.twig' %}
     </div>
 {% endblock %}
 

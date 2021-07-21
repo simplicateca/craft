@@ -1,7 +1,27 @@
 .c-block--text {
     
-    .block-content {
+    &.centered {
+        .block-content {
+            text-align: center;
 
+            h2, h3, p {
+                text-align: center;
+            }
+
+            p {
+                max-width: 74rem;
+                margin: 0 auto 2em;
+            }
+        }
     }
 
+
+    &.columns {
+        .block-content {
+            .text-wrapper {
+                column-count: 2;
+                column-gap: 10rem;
+            }
+        }
+    }
 }

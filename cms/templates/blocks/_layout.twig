@@ -1,6 +1,15 @@
+{% set blockID  = block.type.handle ~ '-' ~ block.id %}
+{% set blockID  = block.anchor ?? blockID %}
+{% set blockID  = blockID|kebab|ascii|replace({'#': ''}) %}
+{% set cssClass = class is defined ? class : '' %}
+
 <div
-    class="c-block c-block--{{block.type.handle}} {{block.layout}} spacing--{{block.spacing}} bg--{{block.background}}"
+    class="c-block c-block--{{block.type.handle}} {{block.layout}} spacing--{{block.spacing}} bg--{{block.background}} {{cssClass}}"
     v-waypoint="{ active: true, callback: onWaypoint, options: intersectionOptions }"
-    id="{{block.type.handle}}-{{block.id}}">
+    {% if blockID %}
+        id="{{blockID}}"
+        data-toc="toc-{{blockID}}"
+    {% endif %}
+    >
     {% block body %}{% endblock %}
 </div>

@@ -1,5 +1,22 @@
 # simplicate-web/craft Change Log
 
+## 1.2.8 - 2021.07.21
+### Changed
+* Added Accordion block
+* Added Anchor Link field to all block types
+* Added CSS for text block type `centered` & `column` layout variations
+* Added CSS for iconList block type `horizontal`, `vertical`, `verticalAlternative`, & `grid` layout variations
+* Added Makefile to [automate frontend tasks](https://nystudio107.com/blog/using-make-makefiles-to-automate-your-frontend-workflow)
+* Added `alpha` & `omega` class names to blocks inside block loop
+* Added bottom spacing: `none` option to all block types
+* Added sample `block/_combinations.pcss` for storing how different blocks interact when butting up against each other
+* Fixed Two Text block CSS
+* Fixed typo in Hero image alt text
+* Fixed breaking change in `webpack-dev-server` version upgrade
+* Standardized help text on all block fields (layout/spacing/background)
+
+
+
 ## 1.2.7 - 2021.07.20
 ### Changed
 * Updated to Craft CMS v3.7.4
@@ -62,3 +79,4 @@
 ### Added
 * Initial release.
 * Influenced by and heavily modified from [nystudio107/craft](https://github.com/nystudio107/craft)
+

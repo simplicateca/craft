@@ -18,7 +18,10 @@
     {% else %}
         <div id="block-container">
             {% for blockItem in blocks.all() %}
-                {{ include ('blocks/' ~ blockItem.type.handle ~ '.twig', { block: blockItem } ) }}
+                {% set extraClasses = '' %}
+                {% if loop.first %}{% set extraClasses = extraClasses ~ ' alpha' %}{% endif %}
+                {% if loop.last  %}{% set extraClasses = extraClasses ~ ' omega'  %}{% endif %}
+                {{ include ('blocks/' ~ blockItem.type.handle ~ '.twig', { block: blockItem, class: extraClasses } ) }}
             {% endfor %}
         </div>
     {% endif %}
