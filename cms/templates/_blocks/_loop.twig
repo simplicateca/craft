@@ -11,8 +11,8 @@
 {% if blocks %}
     {% if js is defined %}
         {% for blockItem in blocks.all() %}
-            {% if block("js", 'blocks/' ~ blockItem.type.handle ~ '.twig') is defined %}    
-                {{ block ('js', 'blocks/' ~ blockItem.type.handle ~ '.twig') }}
+            {% if block("js", '_blocks/' ~ blockItem.type.handle ~ '.twig') is defined %}    
+                {{ block ('js', '_blocks/' ~ blockItem.type.handle ~ '.twig') }}
             {% endif %}
         {% endfor %}
     {% else %}
@@ -21,7 +21,7 @@
                 {% set extraClasses = '' %}
                 {% if loop.first %}{% set extraClasses = extraClasses ~ ' alpha' %}{% endif %}
                 {% if loop.last  %}{% set extraClasses = extraClasses ~ ' omega'  %}{% endif %}
-                {{ include ('blocks/' ~ blockItem.type.handle ~ '.twig', { block: blockItem, class: extraClasses } ) }}
+                {{ include ('_blocks/' ~ blockItem.type.handle ~ '.twig', { block: blockItem, class: extraClasses } ) }}
             {% endfor %}
         </div>
     {% endif %}

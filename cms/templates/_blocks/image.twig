@@ -1,0 +1,15 @@
+{% extends '_blocks/_layout.twig' %}
+
+{% block body %}
+    <div class="block-content container">
+        {% include '_blocks/_partials/headline.twig' %}
+
+        <div class="wrapper">
+            <div class="image">
+                {% include '_blocks/_partials/image.twig' %}
+            </div>
+        </div>
+
+        {% include '_blocks/_partials/buttons.twig' %}
+    </div>
+{% endblock %}

@@ -15,7 +15,7 @@
             <time datetime="{{ entry.postDate | date('Y-m-d') }}">{{ entry.postDate | date('F jS, Y') }}</time>
         </div>
 
-        {% include 'blocks/_loop.twig' with { 'blocks': entry.contentBlocks } %}
+        {% include '_blocks/_loop.twig' with { 'blocks': entry.contentBlocks } %}
 
     </div>
 {% endblock %}

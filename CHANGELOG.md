@@ -1,5 +1,19 @@
 # simplicate-web/craft Change Log
 
+## 1.2.9 - 2021.08.29
+
+### Added
+* `APP_ID` field added to .env & craft/config/app.php to prevent staging server redis cache collisons
+* redactor-link-class plugin for assigning class names to `<a>` links in redactor
+* redactor-list-class plugin for assigning class names to `<ul>` + `<ol>` elements in redactor
+* redactor-image-class plugin for assigning class names to the `<figure>` wrapper around `<img>` elements in redactor
+
+### Changed
+* Renamed `cms/template/pages` and `cms/template/blocks` to `_pages` and `_blocks` respectively so that the twig files couldn't be called by URL through the browser
+
+
+
+
 ## 1.2.8 - 2021.07.21
 ### Changed
 * Added Accordion block

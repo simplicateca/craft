@@ -32,6 +32,7 @@ services:
       - ./cms/storage/runtime/compiled_templates:/var/www/project/cms/storage/runtime/compiled_templates:delegated
       - ./cms:/var/www/project/cms:cached
       - ./cms/vendor:/var/www/project/cms/vendor:delegated
+      - ../entrymate:/var/www/entrymate:delegated
   mariadb:
     build:
       context: ./docker-config/mariadb

@@ -1,20 +1,20 @@
-{% extends "blocks/_layout.twig" %}
+{% extends '_blocks/_layout.twig' %}
 
 {% block body %}
     <div class="block-content container">
-        {% include 'blocks/_partials/headline.twig' %}
+        {% include '_blocks/_partials/headline.twig' %}
 
-        {% include 'blocks/_partials/redactor-text.twig' %}
+        {% include '_blocks/_partials/redactor-text.twig' %}
 
         <div class="records">
             {% for entry in block.records.all() %}
                 {% include  [
                     ( entry.type.handle ~ '/_tease.twig'), 
-                    'pages/_tease.twig'
+                    '_pages/_tease.twig'
                 ] with { entry: entry } %}
             {% endfor %}
         </div>
 
-        {% include 'blocks/_partials/buttons.twig' %}
+        {% include '_blocks/_partials/buttons.twig' %}
     </div>
 {% endblock %}

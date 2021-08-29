@@ -1,4 +1,4 @@
-dateModified: 1626886227
+dateModified: 1629600915
 email:
   fromEmail: steve@simplicate.ca
   fromName: admin
@@ -26,32 +26,32 @@ meta:
     5bcbe5df-4160-4a4f-9920-b80fcb5ea72d: Button # Button
     5c438d3a-ab99-4c94-9e0b-39ddb3e3100f: Buttons # Buttons
     05fb8aa2-0c98-4cee-93c3-5ad2f2709822: 'Anchor Link' # Anchor Link
-    5ff7eb60-d8c3-46aa-812a-d1e865a3f872: Headline # Headline
+    5ff7eb60-d8c3-46aa-812a-d1e865a3f872: 'Section Title' # Section Title
     6ec26690-b0b1-410f-9bc5-1a5512e6dc3e: Home # Home
     07a0012a-4bdf-4aaa-8415-bbe06adaf62c: Text # Text
     7b0a973f-bff0-4f46-bfb0-b6a50c8fe28a: 'Layout Variations' # Layout Variations
-    7b71f9f9-edbb-45b7-80c8-3d8bba143155: 'Headline Style' # Headline Style
+    7b71f9f9-edbb-45b7-80c8-3d8bba143155: 'Title Style' # Title Style
     7df7b031-eaca-476e-984f-2455f793f599: Accordion # Accordion
     7fa68ddc-cf1c-4e9b-9ce7-b8865ca9d48c: 'Emergency Message' # Emergency Message
     07fd881e-0862-439b-a7f3-7232454c1947: 'Layout Variations' # Layout Variations
     8df52d2f-d9a7-4fcf-af9b-913c7223e875: Headliine # Headliine
     8fb8abb9-c8de-487c-ae92-012e8f094ca2: Background # Background
     9acbe7c3-3de7-4755-9334-7542883cd539: 'Intro Copy' # Intro Copy
-    20aa7fd2-2f1f-4b3f-b505-a14c1c3cc164: Headline # Headline
-    51b4cdd8-a3aa-47f5-bbb3-f01ce199d3d8: 'Headline Style' # Headline Style
+    20aa7fd2-2f1f-4b3f-b505-a14c1c3cc164: 'Section Title' # Section Title
+    51b4cdd8-a3aa-47f5-bbb3-f01ce199d3d8: 'Title Style' # Title Style
     54aa6fb8-4a59-4704-9956-2c47eb2f5ceb: 'Anchor Link' # Anchor Link
     67a0e610-9765-4200-9b9f-e59e4130f652: Background # Background
     69c2d7dc-3df8-4df1-a444-d2ae376da00c: Text # Text
-    72b4a2cb-e557-468e-ac08-22f48060f192: Headline # Headline
+    72b4a2cb-e557-468e-ac08-22f48060f192: 'Section Title' # Section Title
     86da4c73-7a95-496d-9abe-cd3807a11ead: 'Layout Variations' # Layout Variations
     213c9175-81d2-4141-8993-904e59925583: 'Icon List' # Icon List
     267c2f19-de6c-4986-a2fa-d0a8b2a5f969: Headline # Headline
-    479c17fb-3144-43b4-9417-f940264f6a71: 'Headline Style' # Headline Style
+    479c17fb-3144-43b4-9417-f940264f6a71: 'Title Style' # Title Style
     650e7d1d-63e5-42f9-b3ab-4febfb502723: Pages # Pages
     0976e4cf-6b48-45af-9477-99ac396436ae: Buttons # Buttons
     3721b4d6-42d5-41fc-b6e7-76204b42c91a: News # News
     5347a201-6da8-47ff-bc5b-20a0dc63d44e: Icons # Icons
-    7574f2c5-ebea-4c7c-9efb-fabe0fc82275: 'Headline Style' # Headline Style
+    7574f2c5-ebea-4c7c-9efb-fabe0fc82275: 'Title Style' # Title Style
     7593ee0e-5c97-47ca-a580-35990cabaffe: Image # Image
     7902e1c8-6594-4a40-8c22-e510c7a0b9e8: Hero # Hero
     8749fe2b-aa88-4c5b-a8d6-01dd11b919b9: Button # Button
@@ -60,7 +60,7 @@ meta:
     67671be0-6716-4133-92fd-9b01454d8838: Button # Button
     138531be-7e43-4759-a397-5325db40a30b: Button # Button
     6996714c-bbb3-4367-9b3f-90be15abbbee: 'Public Schema' # Public Schema
-    7506709b-79c3-40ab-b4d3-5ce0fa5ba5bc: Headline # Headline
+    7506709b-79c3-40ab-b4d3-5ce0fa5ba5bc: 'Section Title' # Section Title
     79001047-67b4-4b93-825f-333664a55c70: 'Text (Right)' # Text (Right)
     a2bd406d-dfd3-4190-aad1-ef06ff685696: Button # Button
     a4f97962-52de-4b53-8422-5b833d1cd5fd: Uploads # Uploads
@@ -77,7 +77,7 @@ meta:
     b0be437c-c9b7-4725-b61e-01ae79d26892: 'Layout Variations' # Layout Variations
     b1c52a06-4990-43f5-90d3-898a48789556: Summary # Summary
     b2c539bf-f3bf-4c27-81e6-cffc9cb8657d: Background # Background
-    b7f27b4f-7fd9-4b59-a422-46ec9280d3a6: 'Headline Style' # Headline Style
+    b7f27b4f-7fd9-4b59-a422-46ec9280d3a6: 'Title Style' # Title Style
     b9c0114e-75ed-4614-8290-a484cd43652b: Items # Items
     b90dc7a3-3d38-40c1-81e0-0ff813fb6fd9: Background # Background
     b99b85fc-06c0-4960-bcda-7f07690ef20d: Background # Background
@@ -91,7 +91,7 @@ meta:
     bf54b939-18ca-4edf-a1ac-956f04744f8e: 'Primary Navigation' # Primary Navigation
     c0bba8e0-117d-4192-b3a3-ac1a1ed80a6b: Buttons # Buttons
     c2aae972-6c74-45e4-a721-cb093d6508db: Background # Background
-    c4d11cc3-ff49-4b48-ad2a-d5a30294d552: Headline # Headline
+    c4d11cc3-ff49-4b48-ad2a-d5a30294d552: 'Section Title' # Section Title
     c9c14235-dfc3-4c81-bb97-f3e3be70fb14: Buttons # Buttons
     c441b407-6c5c-4101-b07b-1883f705c486: Buttons # Buttons
     c864b8d2-2de8-4995-9bb6-4647bee68943: 'Bottom Spacing' # Bottom Spacing
@@ -102,12 +102,12 @@ meta:
     d815706a-e269-4664-98c2-4cfc236386ee: 'Background Image' # Background Image
     d5231512-b81e-4cad-8603-f6885a64faab: Buttons # Buttons
     dda1fa64-dd45-42b6-8df9-476cbac15152: Image(s) # Image(s)
-    de3083f1-a02b-4884-ae77-ddd215b34e40: Headline # Headline
-    dfaccb44-ab96-458f-8938-7bb7466b4e98: 'Headline Style' # Headline Style
+    de3083f1-a02b-4884-ae77-ddd215b34e40: 'Section Title' # Section Title
+    dfaccb44-ab96-458f-8938-7bb7466b4e98: 'Title Style' # Title Style
     e0dac603-c510-4bb5-8701-e25672d93744: Common # Common
     e0521335-ccc2-4893-a505-4baacf112dee: Standard # Standard
-    e2e0830e-80f8-4dfd-8edf-45b6f917cd2d: Headline # Headline
-    e3ee13e0-fc9a-44f0-bc39-783e24026d9c: 'Headline Style' # Headline Style
+    e2e0830e-80f8-4dfd-8edf-45b6f917cd2d: 'Section Title' # Section Title
+    e3ee13e0-fc9a-44f0-bc39-783e24026d9c: 'Title Style' # Title Style
     e8279648-aafc-4293-a410-7e3c587f89c2: 'Bottom Spacing' # Bottom Spacing
     f2bf26d7-ca02-4ca1-be4f-08d37fad24b4: 'Bottom Spacing' # Bottom Spacing
     f4fc0c65-90af-4f1c-88ef-eb0ed255ddb0: 'Feature Image' # Feature Image
@@ -118,6 +118,10 @@ meta:
     fdddeb54-6dc3-4563-a953-78d9c99db44a: 'Bottom Spacing' # Bottom Spacing
 plugins:
   dospaces:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  entry-mate:
     edition: standard
     enabled: true
     schemaVersion: 1.0.0
@@ -157,7 +161,7 @@ plugins:
     edition: standard
     enabled: true
     licenseKey: EWN15KQL316V7LBU4SWYKUUH
-    schemaVersion: 3.0.10
+    schemaVersion: 3.0.11
     settings:
       addHrefLang: true
       addPaginatedHreflang: true

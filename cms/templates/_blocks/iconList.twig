@@ -1,10 +1,10 @@
-{% extends "blocks/_layout.twig" %}
+{% extends '_blocks/_layout.twig' %}
 
 {% block body %}
     <div class="block-content container">
 
-        {% include 'blocks/_partials/headline.twig' %}
-        {% include 'blocks/_partials/redactor-text.twig' %}
+        {% include '_blocks/_partials/headline.twig' %}
+        {% include '_blocks/_partials/redactor-text.twig' %}
 
         <div class="wrapper">
             {% for row in block.icons.all() %}
@@ -27,7 +27,7 @@
             {% endfor %}
         </div>
 
-        {% include 'blocks/_partials/buttons.twig' %}
+        {% include '_blocks/_partials/buttons.twig' %}
     </div>
 {% endblock %}
 

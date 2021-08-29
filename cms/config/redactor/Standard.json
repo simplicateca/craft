@@ -1,6 +1,6 @@
 {
   "buttons": ["html", "formatting", "bold", "italic", "unorderedlist", "orderedlist", "alignment", "link", "image", "video", "file"],
-  "plugins": ["fullscreen", "video", "email", "alignment"],
+  "plugins": ["fullscreen", "video", "email", "alignment", "linkclass", "imageclass", "listclass"],
   "linkNewTab": true,
   "toolbarFixed": true,
   "imagePosition": false,
@@ -14,5 +14,14 @@
           "class": "lead"
       }
     }
-  }
+  },
+  "linkClasses" : [
+    { "label": "Button", "class": "button" }
+  ],
+  "imageClasses" : [
+    { "label": "Normal", "class": "image", "default": true }
+  ],
+  "listClasses" : [
+    { "label": "Two Column", "class": "two-column" }
+  ]
 }

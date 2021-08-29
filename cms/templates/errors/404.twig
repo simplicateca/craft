@@ -24,7 +24,7 @@
                     {% for result in entries %}
                         {% include  [
                             ( result.entry.type.handle ~ '/_tease.twig'), 
-                            'pages/_tease.twig'
+                            '_pages/_tease.twig'
                         ] with { entry: result.entry } %}
                     {% endfor %}
                 </div>

@@ -58,7 +58,7 @@
                         {% for result in expandedResults %}
                             {% include  [
                                 ( result.entry.type.handle ~ '/_tease.twig'), 
-                                'pages/_tease.twig'
+                                '_pages/_tease.twig'
                             ] with { entry: result.entry, summary: result.matchedValue } %}
                         {% endfor %}
                     </div>

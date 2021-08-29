@@ -1,0 +1,20 @@
+{% extends '_blocks/_layout.twig' %}
+
+{% block body %}
+    <div class="block-content container">
+        {% include '_blocks/_partials/headline.twig' %}
+        <div class="wrapper">
+            <div class="text left">
+                {% include '_blocks/_partials/redactor-text.twig' %}
+                {% include '_blocks/_partials/buttons.twig' %}
+            </div>
+
+            <div class="text right">
+                {% include '_blocks/_partials/redactor-text.twig' with { 'text': (block.text2) } %}
+                {% include '_blocks/_partials/buttons.twig' %}
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block js %}{% endblock %}

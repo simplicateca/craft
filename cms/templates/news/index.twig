@@ -14,7 +14,7 @@
         {% paginate query as pageInfo, pageEntries %}
 
         {% if pageInfo.currentPage == 1 %}
-            {% include 'blocks/_loop.twig' with { 'blocks': entry.contentBlocks } %}
+            {% include '_blocks/_loop.twig' with { 'blocks': entry.contentBlocks } %}
         {% endif %}
 
         <div class="container">

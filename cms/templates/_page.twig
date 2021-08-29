@@ -1,4 +1,4 @@
-{% set folder = 'pages' %}
+{% set folder = '_pages' %}
 {% set handle = entry.type.handle|replace( { 'Index' : '-index' } ) %}
 
 {% extends folder ~ "/" ~ handle ~ ".twig" %}

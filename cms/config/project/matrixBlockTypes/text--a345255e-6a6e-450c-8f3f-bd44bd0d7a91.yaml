@@ -5,7 +5,7 @@ fieldLayouts:
       -
         elements:
           -
-            fieldUid: e2e0830e-80f8-4dfd-8edf-45b6f917cd2d # Headline
+            fieldUid: e2e0830e-80f8-4dfd-8edf-45b6f917cd2d # Section Title
             instructions: null
             label: null
             required: false
@@ -14,7 +14,7 @@ fieldLayouts:
             warning: null
             width: 75
           -
-            fieldUid: e3ee13e0-fc9a-44f0-bc39-783e24026d9c # Headline Style
+            fieldUid: e3ee13e0-fc9a-44f0-bc39-783e24026d9c # Title Style
             instructions: null
             label: null
             required: false
@@ -229,13 +229,13 @@ fields:
     translationKeyFormat: null
     translationMethod: site
     type: verbb\supertable\fields\SuperTableField
-  e2e0830e-80f8-4dfd-8edf-45b6f917cd2d: # Headline
+  e2e0830e-80f8-4dfd-8edf-45b6f917cd2d: # Section Title
     columnSuffix: null
     contentColumnType: text
     fieldGroup: null
     handle: headline
     instructions: ''
-    name: Headline
+    name: 'Section Title'
     searchable: true
     settings:
       availableTransforms: '*'
@@ -258,13 +258,13 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\redactor\Field
-  e3ee13e0-fc9a-44f0-bc39-783e24026d9c: # Headline Style
+  e3ee13e0-fc9a-44f0-bc39-783e24026d9c: # Title Style
     columnSuffix: null
     contentColumnType: string
     fieldGroup: null
     handle: headlineStyle
     instructions: ''
-    name: 'Headline Style'
+    name: 'Title Style'
     searchable: false
     settings:
       optgroups: true

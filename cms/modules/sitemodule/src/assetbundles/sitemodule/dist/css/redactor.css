@@ -46,3 +46,21 @@
     line-height: 1em;
     text-align: center;
 }
+
+.input .redactor-styles a.button {
+    display : inline-block;
+    padding: 0.25em 0.5em;
+    border: 2px solid #3397ff;
+}
+
+.input .redactor-styles a.button:hover {
+    background: #3397ff;
+    text-decoration: none;
+    color: #fff;
+}
+
+.input .redactor-styles ul.two-column {
+    column-count: 2;
+}
+
+  

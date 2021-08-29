@@ -4,7 +4,7 @@
     {% include '_partials/hero.twig' with { image: '', title: entry.title } %}
     
     <div class="page--standard page--{{entry.slug}}">
-        {% include 'blocks/_loop.twig' with { 'blocks': entry.contentBlocks } %}
+        {% include '_blocks/_loop.twig' with { 'blocks': entry.contentBlocks } %}
     </div>
 {% endblock %}
 
@@ -13,5 +13,5 @@
 {% endblock %}
 
 {% block contentJS %}
-    {% include 'blocks/_loop.twig' with { 'blocks': entry.contentBlocks, js: true } %}
+    {% include '_blocks/_loop.twig' with { 'blocks': entry.contentBlocks, js: true } %}
 {% endblock contentJS %}

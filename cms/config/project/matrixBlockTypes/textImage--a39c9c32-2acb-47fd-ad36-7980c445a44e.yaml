@@ -5,7 +5,7 @@ fieldLayouts:
       -
         elements:
           -
-            fieldUid: 20aa7fd2-2f1f-4b3f-b505-a14c1c3cc164 # Headline
+            fieldUid: 20aa7fd2-2f1f-4b3f-b505-a14c1c3cc164 # Section Title
             instructions: null
             label: null
             required: false
@@ -14,7 +14,7 @@ fieldLayouts:
             warning: null
             width: 75
           -
-            fieldUid: 7574f2c5-ebea-4c7c-9efb-fabe0fc82275 # Headline Style
+            fieldUid: 7574f2c5-ebea-4c7c-9efb-fabe0fc82275 # Title Style
             instructions: null
             label: null
             required: false
@@ -117,13 +117,13 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\redactor\Field
-  20aa7fd2-2f1f-4b3f-b505-a14c1c3cc164: # Headline
+  20aa7fd2-2f1f-4b3f-b505-a14c1c3cc164: # Section Title
     columnSuffix: null
     contentColumnType: text
     fieldGroup: null
     handle: headline
     instructions: ''
-    name: Headline
+    name: 'Section Title'
     searchable: true
     settings:
       availableTransforms: '*'
@@ -166,13 +166,13 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\PlainText
-  7574f2c5-ebea-4c7c-9efb-fabe0fc82275: # Headline Style
+  7574f2c5-ebea-4c7c-9efb-fabe0fc82275: # Title Style
     columnSuffix: null
     contentColumnType: string
     fieldGroup: null
     handle: headlineStyle
     instructions: ''
-    name: 'Headline Style'
+    name: 'Title Style'
     searchable: false
     settings:
       optgroups: true
