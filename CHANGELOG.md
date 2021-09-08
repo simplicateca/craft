@@ -1,5 +1,13 @@
 # simplicate-web/craft Change Log
 
+## 1.2.11 - 2021.09.08
+
+### Changed
+* Updated seed database
+
+
+
+
 ## 1.2.10 - 2021.09.08
 
 ### Removed
