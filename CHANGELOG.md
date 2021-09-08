@@ -1,5 +1,13 @@
 # simplicate-web/craft Change Log
 
+## 1.2.10 - 2021.09.08
+
+### Removed
+* Errant inclusion of work-in-progress EntryMate plugin
+
+
+
+
 ## 1.2.9 - 2021.08.29
 
 ### Added
