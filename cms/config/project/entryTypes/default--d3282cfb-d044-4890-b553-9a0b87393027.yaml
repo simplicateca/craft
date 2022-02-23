@@ -1,0 +1,95 @@
+fieldLayouts:
+  428ba83c-5ca7-4751-9529-c3d5c77739fc:
+    tabs:
+      -
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\EntryTitleField
+            warning: null
+            width: 100
+          -
+            fieldUid: adcea45e-bf40-4faf-b0c8-4ce089696971 # Lead Image(s)
+            instructions: ''
+            label: ''
+            required: ''
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 50
+          -
+            fieldUid: b1c52a06-4990-43f5-90d3-898a48789556 # Dek
+            instructions: ''
+            label: ''
+            required: '1'
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 50
+          -
+            type: craft\fieldlayoutelements\HorizontalRule
+          -
+            heading: 'Hero Content'
+            type: craft\fieldlayoutelements\Heading
+          -
+            fieldUid: d05f4009-0b38-4065-a1b1-65221aa65e63 # Hero Block
+            instructions: 'Use the block below to customize the hero section for this page'
+            label: ''
+            required: ''
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            heading: 'Page Content'
+            type: craft\fieldlayoutelements\Heading
+          -
+            fieldUid: a4fe99b5-7832-4eb2-9833-f551177bb821 # Content Blocks
+            instructions: 'Use the blocks below to construct the body of your entry. Each block contains specific settings and content requirements.'
+            label: 'Article Content Blocks'
+            required: ''
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+      -
+        elements:
+          -
+            fieldUid: d79b3073-00bf-430c-95d5-6d03d8303032 # SEO
+            instructions: ''
+            label: __blank__
+            required: ''
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: SEO
+        sortOrder: 2
+handle: default
+hasTitleField: true
+name: Default
+section: 3721b4d6-42d5-41fc-b6e7-76204b42c91a # News
+sortOrder: 1
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

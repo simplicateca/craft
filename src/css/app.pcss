@@ -1,14 +1,22 @@
 /**
- * app.css
- *
- * The entry point for the css.
- *
+ * This injects Tailwind's base styles, which is a combination of
+ * Normalize.css and some additional base styles.
  */
+@import 'tailwindcss/base';
+
 /**
- * Normalize.css
+ * Here we add custom base styles, applied after the tailwind-base
+ * classes
+ *
  */
-@import './_settings/normalize.pcss';
-@import './_settings/vendor.pcss';
+
+
+/**
+ * This injects any component classes registered by plugins.
+ *
+ */
+@import 'tailwindcss/components';
+
 
 /**
  * Site settings (variables / fonts / breakpoints / etc)
@@ -16,35 +24,37 @@
 @import './_settings/_global.pcss';
 @import './_settings/typography.pcss';
 
+
 /**
  * Layout & utility classes
  */
 @import './_settings/utility.pcss';
 @import './_settings/frame.pcss';
 
+
 /**
  * Include styles for individual components
  */
 @import './components/header.pcss';
-@import './components/footer.pcss';
 @import './components/a11y.pcss';
 @import './components/mobile-menu.pcss';
 @import './components/buttons.pcss';
-@import './components/hero.pcss';
 @import './components/search.pcss';
 @import './components/pagination.pcss';
 @import './components/above-footer.pcss';
-@import './components/breadcrumb.pcss';
+@import './components/blocks.pcss';
+ 
 
 /**
- * Include block components
+ * This injects all of Tailwind's utility classes, generated based on your config file.
+ * (buildchain/tailwind.config.js)
+ *
  */
-@import './blocks/_blocks.pcss';
+@import 'tailwindcss/utilities';
+
 
 /**
- * Include styles for individual pages
+ * Include vendor css.
+ *
  */
-@import './sections/pages.pcss';
-@import './sections/home.pcss';
-@import './sections/news.pcss';
-@import './sections/topics.pcss';
+@import './components/hooper.pcss';

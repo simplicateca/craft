@@ -1,0 +1,39 @@
+{% extends '_blocks/_layout.twig' %}
+
+{% block body %}
+    <div class="block-content container">
+        {% include '_blocks/_partials/headline.twig' with {
+            class: 'mb-16'
+        } %}
+
+        {% set cols = block.images|length >= 4 ? 4 : block.images|length %}
+
+        {% set bgcolor = '' %}
+        {% if ( block.background == 'band' or block.background == 'box' ) and cols == 4 %}
+            {% set bgcolor = 'bg-white' %}
+        {% endif %}
+
+        <div class="flex w-full">
+            <div class="w-1/3">
+                {% set firstimg = block.images.one() %}
+                <div>
+                    <img src="{{firstimg.url}}" ref="gallery{{block.id}}" alt="{{firstimg.title}}">
+                </div>
+            </div>
+
+            <div class="w-2/3 pl-8">
+                <div class="grid gap-8 grid-cols-4 w-full">
+                    {% for image in block.images.all() %}
+                        <div class="image cursor-pointer" @click.prevent="loadImage({{block.id}}, '{{image.url}}', '{{image.title}}')">
+                            <div class="image {{bgcolor}}">
+                                {% include '_blocks/_partials/image.twig' with {
+                                    image: image
+                                } %}
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

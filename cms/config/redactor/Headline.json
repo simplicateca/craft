@@ -1,0 +1,5 @@
+{
+    "buttons": ["html", "bold", "alignment"],
+    "plugins": ["alignment"],
+    "toolbarFixed": true
+}

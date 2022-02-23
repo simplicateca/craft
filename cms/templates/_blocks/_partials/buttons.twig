@@ -1,7 +1,0 @@
-{% if block.buttons|length %}
-    <div class="button-wrapper">
-        {% for rec in block.buttons.all() %}
-            {{ rec.button.getLink({ class: 'button' }) }}
-        {% endfor %}
-    </div>
-{% endif %}

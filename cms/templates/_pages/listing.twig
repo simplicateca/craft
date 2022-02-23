@@ -1,0 +1,41 @@
+{% extends "_layouts/generic-page-layout.twig" %}
+
+{% block content %}
+    <div class="{{entry.section.handle}} {{entry.section.handle}}--{{entry.type.handle}}">
+        <div class="header" role="heading" aria-level="1">
+            {% if entry.heroBlock.one() %}
+                {% include '_blocks/_loop.twig' with {
+                    'position': 'hero',
+                    'blocks'  : entry.heroBlock,
+                    'entry'   : entry,
+                } %}
+            {% else %}
+                <div class="container pt-12">
+                    {% include '_blocks/_partials/headline-h1.twig' with { headline: entry.title } %}
+                </div>
+            {% endif %}
+        </div>
+
+        <div class="body">
+            {% include '_blocks/_loop.twig' with {
+                'position': 'content',
+                'blocks'  : entry.contentBlocks,
+                'entry'   : entry,
+            } %}
+
+            {% include '_blocks/_loop.twig' with {
+                'position': 'listing',
+                'blocks'  : entry.listingBlock,
+                'entry'   : entry,
+            } %}
+        </div>
+    </div>
+{% endblock %}
+
+{% block subcontent %}
+    {% include '_partials/above-footer.twig' %}
+{% endblock %}
+
+{% block contentJS %}
+    {% include '_blocks/_loop.twig' with { 'blocks': entry.contentBlocks, js: true } %}
+{% endblock contentJS %}

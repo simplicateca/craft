@@ -1,0 +1,24 @@
+defaultPlacement: end
+enableVersioning: true
+handle: error404
+name: 'Error 404'
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primary entry page'
+      -
+        - urlFormat
+        - '{url}'
+      -
+        - refresh
+        - '1'
+propagationMethod: all
+siteSettings:
+  34463b82-dd3f-441c-b9c6-59c351e847aa: # Wireframe Site
+    enabledByDefault: true
+    hasUrls: false
+    template: null
+    uriFormat: null
+type: single

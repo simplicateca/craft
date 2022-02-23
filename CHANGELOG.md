@@ -1,5 +1,25 @@
 # simplicate-web/craft Change Log
 
+## 1.3 - 2022.02.23
+
+### Changed
+* Completely overhauled content block design & implementation including 30+ sample matrix block layouts
+* Enabled Tailwind project wide and began using it to replace CSS in .pcsss files where possible
+* Upgraded base CMS to Pro version
+
+### Added
+* Created Hero & Sidebar block options
+* Created a default sub-site (guide.domain.com) as a template for providing onsite documentation
+* Created a Page entry type template with a sidebar content area
+* Created a Page entry type template to be used as a general entry type listing (i.e. news, etc)
+* Created a Page entry type template for creating quick inline redirects
+* Added default sections for News & FAQs to show 
+* Added a number of default Craft plugins including: Sherlock, Navigate, Spring, Redirect Manager, Environment Label, and Express Forms
+* Added vue-hooper to the default JS package for creating basic, accessible sliders
+* Added default SiteModule Controller and Console Controller
+
+
+
 ## 1.2.11 - 2021.09.08
 
 ### Changed

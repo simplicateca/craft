@@ -1,12 +1,12 @@
 {% if pageInfo.totalPages > 1 %}
-    <nav class="c-pagination" role="navigation" aria-label="Pagination Navigation">
+    <nav class="c-pagination mt-20" role="navigation" aria-label="Pagination Navigation">
         <ul>
             {% if pageInfo.prevUrl %}
-                <li class="prev"><a href="{{ pageInfo.prevUrl }}">&larr; Prev</a></li>
+                <li class="prev"><a href="{{ pageInfo.prevUrl }}">&larr; {{"Previous"|t}}</a></li>
             {% endif %}
-            <li class="pageCount">{{ pageInfo.currentPage }} of {{ pageInfo.totalPages }}</li>
+            <li class="pageCount">{{ pageInfo.currentPage }} {{"of"|t}} {{ pageInfo.totalPages }}</li>
             {% if pageInfo.nextUrl %}
-                <li class="next"><a href="{{ pageInfo.nextUrl }}">Next &rarr;</a></li>
+                <li class="next"><a href="{{ pageInfo.nextUrl }}">{{"Next"|t}} &rarr;</a></li>
             {% endif %}
         </ul>
     </nav>

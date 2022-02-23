@@ -9,7 +9,7 @@
  */
 
 /* align & enlarge 25% / 50% / 75% select fields */
-.field.width-25,
+/* .field.width-25,
 .field.width-50,
 .field.width-75 {
      display: flex;
@@ -38,7 +38,7 @@
 .field.width-50 div.instructions,
 .field.width-75 div.instructions {
     flex-grow: 1;
-}
+} */
 
 
 /* a little more spacing after button fields */
@@ -47,25 +47,3 @@ div[id*='buttons-field'].field.width-100 {
 }
 
 /* a little extra padding above the create new component button */
-.matrixmate-buttons {
-    padding-top: 24px;
-}
-
-.matrixblock:not(.static) > .fields {
-    padding-top: 24px !important;
-}
-
-/* headline style field beside 2 row headline textarea */
-div[id*='headlineStyle-field'].field.width-25 {
-    display : flex;
-    flex-direction: column;
-}
-
-div[id*='headlineStyle-field'].field.width-25 div.input {
-    flex-grow: 1;
-}
-
-div[id*='headlineStyle-field'].field.width-25 div.input .select,
-div[id*='headlineStyle-field'].field.width-25 div.input .select select {
-    height: 100%;
-}

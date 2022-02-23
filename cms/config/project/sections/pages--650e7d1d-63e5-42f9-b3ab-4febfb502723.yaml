@@ -2,9 +2,21 @@ defaultPlacement: end
 enableVersioning: true
 handle: pages
 name: Pages
-propagationMethod: all
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primary entry page'
+      -
+        - urlFormat
+        - '{url}'
+      -
+        - refresh
+        - '1'
+propagationMethod: none
 siteSettings:
-  34463b82-dd3f-441c-b9c6-59c351e847aa: # Craft
+  34463b82-dd3f-441c-b9c6-59c351e847aa: # Wireframe Site
     enabledByDefault: true
     hasUrls: true
     template: _page

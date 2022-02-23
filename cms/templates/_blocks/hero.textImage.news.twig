@@ -1,0 +1,27 @@
+{% extends '_blocks/_layout.twig' %}
+
+{% block body %}
+    <div class="bg-gray-300 py-24">
+        <div class="container mx-auto relative overflow-hidden">
+            <div class="flex">
+                <div class="w-1/2">
+                    {% include '_blocks/_partials/headline-h1.twig' with {
+                        class: 'mb-8'
+                    } %}
+
+                    <time datetime="{{ entry.postDate | date('Y-m-d') }}">{{ entry.postDate | date('F jS, Y') }}</time>
+
+                    {% include '_blocks/_partials/prose.twig' with {
+                        class: 'prose-2xl'
+                    } %}
+                </div>
+
+                <div class="w-1/2">
+                    {% include '_blocks/_partials/image.twig' %}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block js %}{% endblock %}

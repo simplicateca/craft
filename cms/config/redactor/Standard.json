@@ -1,6 +1,6 @@
 {
-  "buttons": ["html", "formatting", "bold", "italic", "unorderedlist", "orderedlist", "alignment", "link", "image", "video", "file"],
-  "plugins": ["fullscreen", "video", "email", "alignment", "linkclass", "imageclass", "listclass"],
+  "buttons": ["html", "formatting", "bold", "italic", "unorderedlist", "orderedlist", "alignment", "link", "image", "video", "file", "line"],
+  "plugins": ["fullscreen", "video", "email", "alignment", "imageclass", "listclass", "linkclass"],
   "linkNewTab": true,
   "toolbarFixed": true,
   "imagePosition": false,
@@ -16,12 +16,19 @@
     }
   },
   "linkClasses" : [
-    { "label": "Button", "class": "button" }
+    { "label": "Button (regular)",      "class": "button" },
+    { "label": "Text Button (regular)", "class": "button button--text" },
+    { "label": "Button (large)",        "class": "button button--large" },
+    { "label": "Button (small)",        "class": "button button--small" }
+  ],
+  "listClasses" : [
+    { "label": "Two Column", "class": "two-column" },
+    { "label": "Checkmarks", "class": "checkmarks" },
+    { "label": "Two Column + Checkmarks", "class": "two-column checkmarks" },
+    { "label": "Grid (2 columns)",  "class": "grid" },
+    { "label": "Grid (3 columns)",  "class": "grid-3" }
   ],
   "imageClasses" : [
     { "label": "Normal", "class": "image", "default": true }
-  ],
-  "listClasses" : [
-    { "label": "Two Column", "class": "two-column" }
   ]
 }

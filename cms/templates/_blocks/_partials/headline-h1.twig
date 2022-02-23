@@ -1,0 +1,14 @@
+{% set class    = class ?? 'page-headline' %}
+{% set headline = block.headline ?? headline %}
+{% set headline = headline|retconChange( ['h1','h2','h3','h4','h5','h6','p'], '' ) %}
+{% if headline %}
+    <h1
+        class="{{class}}"
+        id="{{headline|kebab|ascii}}"
+    >
+        {{ headline
+            | typogrify(true)
+            | nl2br
+        }}
+    </h1>
+{% endif %}

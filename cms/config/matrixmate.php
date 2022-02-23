@@ -2,36 +2,112 @@
 
 return [
     'fields' => [
-        'contentBlocks' => [
-            // 'defaultTabName' => 'Misc',
+        'heroBlock' => [
+            'defaultTabName' => 'Additional Settings',
             // 'groups' => [[
             //     'label' => 'Basic Components',
             //     'types' => ['text', 'textImage'],
             // ], ],
             'types' => [
                 'text' => [
-                    // 'tabs' => [[
-                    //     'label' => 'Content',
-                    //     'fields' => ['headline', 'headlineStyle', 'text'],
-                    // ], [
-                    //     'label' => 'Buttons & Settings',
-                    //     'fields' => ['buttons', 'layout', 'spacing', 'background'],
-                    // ]],
+                    'tabs' => [[
+                        'label' => 'Content',
+                        'fields' => ['text'],
+                    ], [
+                        'label' => 'Headline & Layout',
+                        'fields' => ['headline', 'anchor', 'layout', 'edges', 'background'],
+                    ]],
+                ],
+
+                'entries' => [
+                    'tabs' => [[
+                        'label' => 'Content',
+                        'fields' => ['text', 'records'],
+                    ], [
+                        'label' => 'Headline & Layout',
+                        'fields' => ['headline', 'anchor', 'layout', 'edges', 'background'],
+                    ]],
+                ],
+            ]
+        ],
+
+        'contentBlocks' => [
+            'defaultTabName' => 'Additional Settings',
+            // 'groups' => [[
+            //     'label' => 'Basic Components',
+            //     'types' => ['text', 'textImage'],
+            // ], ],
+            'types' => [
+                'text' => [
+                    'tabs' => [[
+                        'label' => 'Content',
+                        'fields' => ['text'],
+                    ], [
+                        'label' => 'Headline & Layout',
+                        'fields' => ['headline', 'anchor', 'layout', 'edges', 'background'],
+                    ]],
                 ],
 
                 'textImage' => [
-                    // 'tabs' => [[
-                    //     'label' => 'Content',
-                    //     'fields' => ['headline', 'headlineStyle', 'text', 'images'],
-                    // ], [
-                    //     'label' => 'Buttons & Settings',
-                    //     'fields' => ['buttons', 'layout', 'spacing', 'background'],
-                    // ]],
+                    'tabs' => [[
+                        'label' => 'Content',
+                        'fields' => ['text', 'images'],
+                    ], [
+                        'label' => 'Headline & Layout',
+                        'fields' => ['headline', 'anchor', 'layout', 'edges', 'background'],
+                    ]],
                 ],
 
-                // 'news' => [
-                //     'maxLimit' => 1,
-                // ],
+                'textText' => [
+                    'tabs' => [[
+                        'label' => 'Content',
+                        'fields' => ['text', 'text2'],
+                    ], [
+                        'label' => 'Headline & Layout',
+                        'fields' => ['headline', 'anchor', 'layout', 'edges', 'background'],
+                    ]],
+                ],
+
+                'image' => [
+                    'tabs' => [[
+                        'label' => 'Content',
+                        'fields' => ['images'],
+                    ], [
+                        'label' => 'Headline & Layout',
+                        'fields' => ['headline', 'anchor', 'layout', 'edges', 'background'],
+                    ]],
+                ],
+
+                'entries' => [
+                    'tabs' => [[
+                        'label' => 'Content',
+                        'fields' => ['text', 'records'],
+                    ], [
+                        'label' => 'Headline & Layout',
+                        'fields' => ['headline', 'anchor', 'layout', 'edges', 'background'],
+                    ]],
+                ],
+
+                'features' => [
+                    'tabs' => [[
+                        'label' => 'Content',
+                        'fields' => ['text', 'features'],
+                    ], [
+                        'label' => 'Headline & Layout',
+                        'fields' => ['headline', 'anchor', 'layout', 'edges', 'background'],
+                    ]],
+                ],
+
+                'revealer' => [
+                    'tabs' => [[
+                        'label' => 'Content',
+                        'fields' => ['text', 'items'],
+                    ], [
+                        'label' => 'Headline & Layout',
+                        'fields' => ['headline', 'anchor', 'layout', 'edges', 'background'],
+                    ]],
+                ],
+
             ],
         ],
     ],

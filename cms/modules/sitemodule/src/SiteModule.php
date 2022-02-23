@@ -17,9 +17,14 @@ use modules\sitemodule\variables\SiteVariable;
 use Craft;
 use craft\events\RegisterTemplateRootsEvent;
 use craft\events\TemplateEvent;
+use craft\console\Application as ConsoleApplication;
 use craft\i18n\PhpMessageSource;
+use craft\web\UrlManager;
+use craft\events\RegisterUrlRulesEvent;
 use craft\web\twig\variables\CraftVariable;
 use craft\web\View;
+
+use craft\redactor\Field AS RedactorField;
 
 use yii\base\Event;
 use yii\base\InvalidConfigException;
@@ -81,6 +86,7 @@ class SiteModule extends Module
         parent::__construct($id, $parent, $config);
     }
 
+
     /**
      * @inheritdoc
      */
@@ -89,14 +95,19 @@ class SiteModule extends Module
         parent::init();
         self::$instance = $this;
 
-        // Register our components
+        // Add in our console commands
+        if (Craft::$app instanceof ConsoleApplication) {
+            $this->controllerNamespace = 'modules\sitemodule\console\controllers';
+        }
+
+        // register our components
         $this->setComponents([
             'helper' => [
                 'class' => Helper::class,
             ]
         ]);
 
-        // Register our variables
+        // register our variables
         Event::on(
             CraftVariable::class,
             CraftVariable::EVENT_INIT,
@@ -107,8 +118,21 @@ class SiteModule extends Module
             }
         );
 
-        // Register our Asset bundle for CP requests
+
+        // Register our site routes
+        Event::on(
+            UrlManager::class,
+            UrlManager::EVENT_REGISTER_SITE_URL_RULES,
+            function (RegisterUrlRulesEvent $event) {
+                $event->rules['module-route'] = 'site-module/default/index';
+            }
+        );
+
+        
+        // if we're on the control panel
         if (Craft::$app->getRequest()->getIsCpRequest()) {
+            
+            // register our Asset bundle for CP requests
             Event::on(
                 View::class,
                 View::EVENT_BEFORE_RENDER_TEMPLATE,
@@ -123,7 +147,22 @@ class SiteModule extends Module
                     }
                 }
             );
+
+            // register html purifier config changes
+            Event::on(
+                RedactorField::class,
+                RedactorField::EVENT_MODIFY_PURIFIER_CONFIG,
+                function (Event $event) {
+                    if( $event->config ) {
+                        if( $def = $event->config->getDefinition('HTML', true) ) {
+                            $def->addAttribute('a', 'aria-label',    'Text');
+                            $def->addAttribute('a', 'data-tracking', 'Text');
+                        }
+                    }
+                }
+            );
         }
+
 
         Craft::info(
             Craft::t(

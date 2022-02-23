@@ -1,0 +1,277 @@
+@import 'blocks-combinations.pcss';
+@import 'blocks-revealer.pcss';
+
+#hero-blocks {
+    .c-block {
+        margin-top: 0;
+    }
+}
+
+.c-block {
+    margin-top: var(--block-gap);
+    scroll-margin-top: var(--scroll-margin-top);
+
+    h2, h3, h4 {
+        scroll-margin-top: var(--scroll-margin-top);
+    }
+
+    .card.relative {
+        a {
+            &:after {
+                content: '';
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                z-index: 2;
+            }
+        }
+    }
+
+    .prose {
+        h2 {
+            @apply mb-2;
+        }
+    }
+
+    &.bg--band {
+        background: var(--dark);
+        color: #fff;
+        padding: 5rem 0;
+
+        /* if this is the last block before the footer, and the block has a band,
+           eliminate the bottom gap so it touches the footer */
+        &.omega {
+            margin-bottom: calc( var(--block-gap) * -1 );
+        }
+
+        .block-content {
+            p, li, h1, h2, h3, div, a, strong {
+                color: #fff;
+            }
+
+            a.button:not(.button--text) {
+                border: 2px solid #fff;
+            }
+        }
+    }
+
+    &.bg--verticalLine {
+        div.block-content {            
+            div.text.left {
+                border-right: 3px solid #ccc;
+                @apply pr-20;
+            }
+
+            div.text.right {
+                @apply pl-20;
+            }
+        }
+    }
+
+    &.bg--boxRight {
+        div.block-content {
+            div.text.right {
+                background: var(--dark);
+                color: #fff;
+                padding: 5rem;
+    
+                p, li, h1, h2, h3, h4, div, a, strong {
+                    color: #fff;
+                }
+
+                a.button:not(.button--text) {
+                    border: 2px solid #fff;
+                }
+            }
+        }
+    }
+
+    &.bg--boxLeft {
+        div.block-content {            
+            div.text.left {
+                background: var(--dark);
+                color: #fff;
+                padding: 5rem;
+    
+                p, li, h1, h2, h3, h4, div, a, strong {
+                    color: #fff;
+                }
+                
+                a.button:not(.button--text) {
+                    border: 2px solid #fff;
+                }
+            }
+        }
+    }
+
+    &.bg--box {
+        div.block-content {
+            background: var(--dark);
+            color: #fff;
+            padding: 5rem;
+
+            p, li, h1, h2, h3, h4, div, a, strong {
+                color: #fff;
+            }
+
+            a.button:not(.button--text) {
+                border: 2px solid #fff;
+            }
+        }
+
+        &.c-block--textImage {
+            div.block-content {
+                padding: 0;
+
+                .image {
+                    object-fit: cover;
+                    img {
+                        height: 100%;
+                        width: 100%;
+                    }
+                }
+
+                .text {
+                    padding: 4rem;
+                }
+            }
+        }
+    }
+
+    &.bg--outline {
+        div.block-content {
+            border: 3px solid var(--dark);
+            padding: 5rem;
+        }
+    }
+
+    &.edges--extraSpace {
+        margin-top: calc(2 * var(--block-gap));
+        margin-bottom: calc(2 * var(--block-gap));
+    }
+
+    &.edges--lineBefore {
+        div.block-content {
+            padding-top: var(--block-gap);
+            border-top: 3px solid var(--dark);
+        }        
+    }
+
+    &.edges--noGapBefore {
+        margin-top: 0;
+    }
+
+
+    figure {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        text-align: center;
+        margin-top: 0.25em;
+
+        &.image {
+            margin-top: 0;
+        }
+
+        div.img {
+            img {
+                display: block;
+                margin: 0;
+                padding: 0;
+                line-height: 1em;
+            }
+        }
+
+        div.video {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 */
+            height: 0;
+            
+            iframe {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+
+
+    ul.grid,
+    ul.grid-2 {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 2rem;
+        grid-row-gap: 2rem;
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: 0;
+        padding-right: 0;
+
+        li {
+            list-style: none;
+            padding-left: 0;
+        }
+    }
+
+    ul.grid-3 {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-column-gap: 2rem;
+        grid-row-gap: 2rem;
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: 0;
+        padding-right: 0;
+
+        li {
+            list-style: none;
+            padding-left: 0;
+            @apply text-base;
+        }
+    }
+
+    ul.two-column {
+        @apply columns-2 m-0 p-0;
+
+        li {
+            margin: 0 0 0.75rem 0;
+            line-height: 1.25em;
+
+            &::before {
+                transform: translateY(0px);
+            }
+        }
+    }
+
+    ul.checkmarks.two-column {
+        li {
+            &::before {
+                transform: translateY(0px);
+            }
+        }        
+    }
+
+    
+    ul.checkmarks {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+            position: relative;
+            padding: 0 0 0 2rem;
+
+            &::before {
+                content: '✓';
+                position: absolute;
+                transform: translateY(-10px);
+                left: 0rem;
+                font-size: 2rem;
+            }
+        }
+    }
+}

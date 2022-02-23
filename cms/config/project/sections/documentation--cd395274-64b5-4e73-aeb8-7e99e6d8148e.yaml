@@ -1,0 +1,27 @@
+defaultPlacement: end
+enableVersioning: true
+handle: documentation
+name: Documentation
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primary entry page'
+      -
+        - urlFormat
+        - '{url}'
+      -
+        - refresh
+        - '1'
+propagationMethod: none
+siteSettings:
+  cc8cbe25-440c-439e-a58b-6515a3b420d0: # Site Guide
+    enabledByDefault: true
+    hasUrls: true
+    template: _page
+    uriFormat: '{parent.uri}/{slug}'
+structure:
+  maxLevels: null
+  uid: 8db16329-d7e8-40ce-aece-45f9da88cdbe
+type: structure

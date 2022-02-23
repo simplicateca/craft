@@ -3,7 +3,7 @@ enabled: true
 handle: default
 hasUrls: true
 language: en-CA
-name: Craft
+name: 'Wireframe Site'
 primary: true
 siteGroup: bcb40c76-f64f-408f-b1da-edb455b3588d # Craft
 sortOrder: 1

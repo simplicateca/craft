@@ -1,0 +1,31 @@
+.c-block.bg-dark:not(.spacing-none) +  .c-block.bg-dark {
+    margin-top: var(--negative-block-gap);
+}
+
+.c-block.bg--band + .c-block.bg--band {
+    margin-top: 0;
+    padding-top: 0;
+
+    &.edges--lineBefore {
+        div.block-content {
+            border-top-color: #fff;
+        }        
+    }
+}
+
+.c-block.bg--box + .c-block.bg--box.edges--noGapBefore {
+    margin-top: 0;
+    .block-content {
+        padding-top: 0;
+    }
+}
+
+.c-block.bg--outline + .c-block.bg--outline.edges--noGapBefore {
+    margin-top: -4px;
+    .block-content {
+        padding-top: 0;
+        border-top: 0;
+        z-index: 2;
+        background: #fff;
+    }
+}

@@ -1,18 +1,38 @@
-{% set tag = titleTag is defined and titleTag ? titleTag : 'h2' %}
-<article class="tease news">
-    <{{tag}}>
-        {{entry.title}}
-    </{{tag}}>
+{% set tag    = titleTag ?? 'h2'   %}
+{% set format = format   ?? 'text' %}
+{% set class = '' %}
+{% set imgClass  = '' %}
+{% set textClass = '' %}
+{% if format == 'cards' %}
+    {% set class  = 'flex flex-col' %}
+    {% set imgClass   = 'mb-8' %}
+{% endif %}
+{% if format == 'feature' %}
+    {% set class  = 'flex flex-row' %}
+    {% set imgClass   = 'w-2/5' %}
+    {% set textClass  = 'pl-12 pr-12 w-3/5 flex items-center content-center' %}
+{% endif %}
+<article class="tease news relative {{class}}" role="article">
+    
+    {% if ( format == 'cards' or format == 'feature' ) and entry.images.one() %}
+        <div class="image {{imgClass}}">
+            {% include '_blocks/_partials/image.twig' with {
+                image: entry.images.one()
+            } %}
+        </div>
+    {% endif %}
 
-    <time datetime="{{ entry.postDate | date('Y-m-d') }}">{{ entry.postDate | date('d M Y') }}</time>
-              
-    <div class="summary">
-        {% set summary = summary is defined and summary ? '<p>' ~ summary ~ '</p>' : '' %}
-        {{ summary
-            ? summary| raw| retconChange( 'b', 'mark' )
-            : entry.summary
-        }}
+    <div class="text {{textClass}}">
+        <div>
+            <{{tag}}>{{entry.title}}</{{tag}}>
+
+            <time
+                class="my-2 block"
+                datetime="{{ entry.postDate | date('Y-m-d') }}">{{ entry.postDate | date('d M Y') }}</time>
+        
+            <div class="text-2xl mb-4">{{ entry.dek }}</div>
+
+            <a href="{{ entry.url }}" class="more">{{ "Continue reading"|t }} →</a>
+        </div>
     </div>
-
-    <a href="{{ entry.url }}">Read more</a>
 </article>

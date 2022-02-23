@@ -4,7 +4,7 @@
 {% set cssClass = class is defined ? class : '' %}
 
 <div
-    class="c-block c-block--{{block.type.handle}} {{block.layout}} spacing--{{block.spacing}} bg--{{block.background}} {{cssClass}}"
+    class="c-block c-block--{{block.type.handle}} layout--{{block.layout}} edges--{{block.edges}} bg--{{block.background}} {{cssClass}} {% if loop.first %}alpha{% endif %} {% if loop.last %}omega{% endif %}"
     v-waypoint="{ active: true, callback: onWaypoint, options: intersectionOptions }"
     {% if blockID %}
         id="{{blockID}}"

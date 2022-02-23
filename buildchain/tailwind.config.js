@@ -1,29 +1,28 @@
 // module exports
 module.exports = {
-  mode: 'jit',
-  purge: {
-    content: [
-      '../cms/templates/**/*.{twig,html}',
-      '../src/vue/**/*.{vue,html}',
-    ],
-    layers: [
-      'base',
-      'components',
-      'utilities',
-    ],
-    mode: 'layers',
-    options: {
-      whitelist: [
-        '../src/css/components/**/*.{css}',
-      ],
+  content: [
+    '../cms/templates/**/*.{twig,html}',
+    '../src/vue/**/*.{vue,html}',
+    '../src/css/components/**/*.pcss',
+  ],
+  theme: {
+    extend: {
+      colors: {
+        // 'grey': '#eeeeee',
+        // 'blue': '#1d70b8'
+      },
+
+      typography: (theme) => ({
+        DEFAULT: {
+          css: {
+            maxWidth: '100%'
+          },
+        },
+      }),
     }
   },
-  theme: {
-    // Extend the default Tailwind config here
-    extend: {
-    },
-    // Replace the default Tailwind config here
-  },
-  corePlugins: {},
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/typography'),
+    // ...
+  ],
 };

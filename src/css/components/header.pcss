@@ -1,7 +1,8 @@
 /* keep this outside #page-header so it can also be picked up by MobileMenu.vue */
 div.c-primaryLogo {
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: bold;
+    font-family: var(--headline);
 
     a {
         color: var(--dark);
@@ -21,14 +22,27 @@ div.c-primaryLogo {
         top: 40px;
     }
 
+    body.noHero &,
     body.scrolled & {
-        background: var(--blue);
+        background: #000;
+
+        li {
+            a {
+                color: #fff;
+
+                &:hover, &:focus {
+                    @apply text-blue-600;
+                }
+            }
+        }        
+
+        div.c-primaryLogo {        
+            a {
+                color: #fff;
+            }
+        }
     }
     
-    body.noHero & {
-        background: var(--blue);
-    }
-
 
     .wrapper {
         display: flex;
@@ -62,8 +76,17 @@ nav.c-primary {
         }
 
         a {
+            font-family: var(--headline);
+            font-weight: 700;
+            text-decoration: none;
+            font-size: 1.3rem;
             display: block;
             padding: 1rem 0.5rem;
+            color: var(--dark);
+
+            &:hover, &:focus {
+                @apply text-blue-600;
+            }
         }
 
         ul {

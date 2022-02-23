@@ -1,14 +1,19 @@
-<footer id="page-footer">
-    <div class="container">
-        <div class="wrapper">
-            <div class="legal">
-                © {{"now"|date('Y')}} Example Inc. All rights reserved.
+<footer id="page-footer" class="bg-black bg-opacity-70">
+    <div class="container py-6">
+        <div class="flex">
+            <div class="text-white">
+                © {{"now"|date('Y')}} {{ currentSite.name }}. All rights reserved.
             </div>
 
             <nav class="legal" role="navigation" aria-label="Legal Navigation">
+                {% set nav = craft.navigate.raw('bottom') %}
                 <ul>
-                    <li><a href="#">Terms & Conditions</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
+                    {% for node in nav %}
+                        <li><a
+                            href="{{ node.url }}"
+                            class="text-white hover:text-yellow-300 focus:text-yellow-300"
+                            >{{ node.name }}</a></li>
+                    {% endfor %}
                 </ul>
             </nav>
         </div>

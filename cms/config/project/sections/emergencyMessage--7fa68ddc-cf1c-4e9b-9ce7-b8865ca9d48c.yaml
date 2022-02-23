@@ -4,7 +4,7 @@ handle: emergencyMessage
 name: 'Emergency Message'
 propagationMethod: all
 siteSettings:
-  34463b82-dd3f-441c-b9c6-59c351e847aa: # Craft
+  34463b82-dd3f-441c-b9c6-59c351e847aa: # Wireframe Site
     enabledByDefault: true
     hasUrls: false
     template: null

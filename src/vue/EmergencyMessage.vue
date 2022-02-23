@@ -1,9 +1,7 @@
 <template>
     <div class="emergency-message" :class="{ hidden: !showing }">
-        <p>
-            {{msg.text}}
-            <a v-if="msg.url" :href="msg.url" v-on:click.prevent="onCTA">{{msg.link || 'Details'}}</a>
-        </p>
+        <div v-html="msg.text"></div>
+        <a v-if="msg.url" :href="msg.url" v-on:click.prevent="onCTA">{{msg.link || 'Details'}}</a>
         <a href="#" class="close" aria-label="Close Notification" v-on:click.prevent="onClose"></a>
     </div>
 </template>
@@ -84,22 +82,22 @@
             &:before {
                 content: '';
             }
+        }
 
-            a {
-                color: var(--blonde);
+        a {
+            color: var(--blonde);
+            display: inline-block;
+            margin-left: 2px;
+
+            &:focus,
+            &:hover {
+                color: var(--red);
+            }
+
+            &::after {
+                content: '›';
                 display: inline-block;
-                margin-left: 2px;
-
-                &:focus,
-                &:hover {
-                    color: var(--red);
-                }
-
-                &::after {
-                    content: '›';
-                    display: inline-block;
-                    margin-left: 3px;
-                }
+                margin-left: 3px;
             }
         }
 

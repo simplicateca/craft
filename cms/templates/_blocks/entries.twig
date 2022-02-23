@@ -1,20 +1,40 @@
 {% extends '_blocks/_layout.twig' %}
 
+{% set titleTag = 'h3' %}
+{% set cols = 1 %}
+{% if block.layout == 'cards' %}
+    {% set cols = block.records|length >= 3 ? 3 : block.records|length %}
+    {% set titleTag = 'h3' %}
+{% endif %}
+
+{% set headlineClass = 'mb-16' %}
+{% if block.layout == 'normal' %}
+    {% set headlineClass = 'mb-8' %}
+{% endif %}
+
 {% block body %}
     <div class="block-content container">
-        {% include '_blocks/_partials/headline.twig' %}
+        {% include '_blocks/_partials/headline.twig' with {
+            class: headlineClass
+        } %}
 
-        {% include '_blocks/_partials/redactor-text.twig' %}
+        {% include '_blocks/_partials/prose.twig' with {
 
-        <div class="records">
+        } %}
+
+        <div class="records grid gap-16 grid-cols-{{cols}}">
             {% for entry in block.records.all() %}
                 {% include  [
-                    ( entry.type.handle ~ '/_tease.twig'), 
+                    ( entry.section.handle ~  '/_tease.' ~ position ~ '.twig'), 
+                    ( entry.section.handle ~ '/_tease.twig'),
+                    '_pages/_tease.' ~ position ~ '.twig',
                     '_pages/_tease.twig'
-                ] with { entry: entry } %}
+                ] with {
+                    titleTag: titleTag,
+                    entry: entry,
+                    format: block.layout.value
+                } %}
             {% endfor %}
         </div>
-
-        {% include '_blocks/_partials/buttons.twig' %}
     </div>
 {% endblock %}

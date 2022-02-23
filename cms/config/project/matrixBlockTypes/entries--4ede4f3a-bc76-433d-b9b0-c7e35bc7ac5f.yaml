@@ -5,24 +5,6 @@ fieldLayouts:
       -
         elements:
           -
-            fieldUid: c4d11cc3-ff49-4b48-ad2a-d5a30294d552 # Section Title
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            warning: null
-            width: 75
-          -
-            fieldUid: 479c17fb-3144-43b4-9417-f940264f6a71 # Title Style
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            warning: null
-            width: 25
-          -
             fieldUid: b911f8a5-3dbc-4aa9-8be2-9eb2c9c8a2ed # Intro Text
             instructions: null
             label: null
@@ -41,16 +23,16 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: fac14507-5966-4d29-8eeb-fb358414aaaf # Buttons
+            fieldUid: c4d11cc3-ff49-4b48-ad2a-d5a30294d552 # Block Headline
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
             warning: null
-            width: 100
+            width: 75
           -
-            fieldUid: 07fd881e-0862-439b-a7f3-7232454c1947 # Layout Variations
+            fieldUid: cd660f34-a88e-4f6f-a63d-dac487f3c1b3 # Anchor Link
             instructions: null
             label: null
             required: false
@@ -59,7 +41,7 @@ fieldLayouts:
             warning: null
             width: 25
           -
-            fieldUid: b947d0e1-da59-4426-bb04-17175245afa2 # Bottom Spacing
+            fieldUid: 07fd881e-0862-439b-a7f3-7232454c1947 # Layout Variations
             instructions: null
             label: null
             required: false
@@ -77,7 +59,7 @@ fieldLayouts:
             warning: null
             width: 25
           -
-            fieldUid: cd660f34-a88e-4f6f-a63d-dac487f3c1b3 # Anchor Link
+            fieldUid: b947d0e1-da59-4426-bb04-17175245afa2 # Edges
             instructions: null
             label: null
             required: false
@@ -93,7 +75,7 @@ fields:
     contentColumnType: string
     fieldGroup: null
     handle: layout
-    instructions: 'Some components can have different layout variations.'
+    instructions: 'How the content lays out inside the block.'
     name: 'Layout Variations'
     searchable: false
     settings:
@@ -110,28 +92,25 @@ fields:
             -
               - default
               - '1'
-    translationKeyFormat: null
-    translationMethod: none
-    type: craft\fields\Dropdown
-  479c17fb-3144-43b4-9417-f940264f6a71: # Title Style
-    columnSuffix: null
-    contentColumnType: string
-    fieldGroup: null
-    handle: headlineStyle
-    instructions: ''
-    name: 'Title Style'
-    searchable: false
-    settings:
-      optgroups: true
-      options:
         -
           __assoc__:
             -
               - label
-              - Normal
+              - Cards
             -
               - value
-              - normal
+              - cards
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - Carousel
+            -
+              - value
+              - carousel
             -
               - default
               - ''
@@ -154,7 +133,9 @@ fields:
       showSiteMenu: true
       source: null
       sources:
+        - 'section:a52e2b08-2e30-4b00-8784-4104c409d3ed' # FAQs
         - 'section:3721b4d6-42d5-41fc-b6e7-76204b42c91a' # News
+        - 'section:650e7d1d-63e5-42f9-b3ab-4febfb502723' # Pages
       targetSiteId: null
       validateRelatedElements: false
       viewMode: null
@@ -166,7 +147,7 @@ fields:
     contentColumnType: string
     fieldGroup: null
     handle: background
-    instructions: 'Some components have different background options.'
+    instructions: 'How the block background should look.'
     name: Background
     searchable: false
     settings:
@@ -187,10 +168,32 @@ fields:
           __assoc__:
             -
               - label
-              - Dark
+              - Band
             -
               - value
-              - dark
+              - band
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - Box
+            -
+              - value
+              - box
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - Outline
+            -
+              - value
+              - outline
             -
               - default
               - ''
@@ -208,7 +211,6 @@ fields:
     settings:
       availableTransforms: '*'
       availableVolumes: '*'
-      cleanupHtml: true
       columnType: text
       configSelectionMode: choose
       defaultTransform: ''
@@ -226,13 +228,13 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\redactor\Field
-  b947d0e1-da59-4426-bb04-17175245afa2: # Bottom Spacing
+  b947d0e1-da59-4426-bb04-17175245afa2: # Edges
     columnSuffix: null
     contentColumnType: string
     fieldGroup: null
-    handle: spacing
-    instructions: 'How much spacing appears around the component.'
-    name: 'Bottom Spacing'
+    handle: edges
+    instructions: 'How the block interacts with elements around it.'
+    name: Edges
     searchable: false
     settings:
       optgroups: true
@@ -252,38 +254,59 @@ fields:
           __assoc__:
             -
               - label
-              - None
+              - 'Line Before'
             -
               - value
-              - none
+              - lineBefore
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - 'No Gap Before'
+            -
+              - value
+              - noGapBefore
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - 'Extra Space'
+            -
+              - value
+              - extraSpace
             -
               - default
               - ''
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\Dropdown
-  c4d11cc3-ff49-4b48-ad2a-d5a30294d552: # Section Title
+  c4d11cc3-ff49-4b48-ad2a-d5a30294d552: # Block Headline
     columnSuffix: null
     contentColumnType: text
     fieldGroup: null
     handle: headline
-    instructions: ''
-    name: 'Section Title'
+    instructions: 'Use as a section headline above the primary content of this block.'
+    name: 'Block Headline'
     searchable: true
     settings:
       availableTransforms: '*'
       availableVolumes: ''
-      cleanupHtml: true
       columnType: text
       configSelectionMode: choose
       defaultTransform: ''
       manualConfig: ''
       purifierConfig: ''
       purifyHtml: '1'
-      redactorConfig: BoldOnly.json
+      redactorConfig: Headline.json
       removeEmptyTags: '1'
       removeInlineStyles: '1'
-      removeNbsp: '1'
+      removeNbsp: ''
       showHtmlButtonForNonAdmins: ''
       showUnpermittedFiles: false
       showUnpermittedVolumes: false
@@ -295,8 +318,8 @@ fields:
     columnSuffix: null
     contentColumnType: text
     fieldGroup: null
-    handle: anchorLink
-    instructions: 'Used to create links that jump to a specific part of the page.'
+    handle: anchor
+    instructions: 'The a URL `#hash-tag` for jumping to this part of the entry.'
     name: 'Anchor Link'
     searchable: false
     settings:
@@ -311,35 +334,6 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\PlainText
-  fac14507-5966-4d29-8eeb-fb358414aaaf: # Buttons
-    columnSuffix: null
-    contentColumnType: string
-    fieldGroup: null
-    handle: buttons
-    instructions: ''
-    name: Buttons
-    searchable: false
-    settings:
-      columns:
-        __assoc__:
-          -
-            - 4cef665b-8759-4bd2-af57-d2867d7447d3 # Button
-            -
-              __assoc__:
-                -
-                  - width
-                  - ''
-      contentTable: '{{%stc_5_buttons}}'
-      fieldLayout: table
-      maxRows: ''
-      minRows: ''
-      placeholderKey: null
-      propagationMethod: all
-      selectionLabel: 'Add Button'
-      staticField: ''
-    translationKeyFormat: null
-    translationMethod: site
-    type: verbb\supertable\fields\SuperTableField
 handle: entries
 name: Entries
 sortOrder: 5

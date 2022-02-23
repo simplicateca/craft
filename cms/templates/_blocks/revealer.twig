@@ -1,0 +1,35 @@
+{% extends '_blocks/_layout.twig' %}
+
+{% block body %}
+    <div class="block-content container">
+        
+        {% include '_blocks/_partials/headline.twig' %}
+        {% include '_blocks/_partials/prose.twig' %}
+        
+        <div class="accordion flex flex-col justify-center mt-8">
+            {% for row in block.items.all() %}
+
+                <div class="w-2/3" id="ai{{row.id}}">
+                    {% set rowHeadline = row.headline|striptags('<strong><b>')|nl2br %}
+                    {% set rowHashtag  = row.headline|striptags('<strong><b>')|kebab|ascii %}
+
+                    <input type="checkbox" name="panel-{{row.id}}" id="panel-{{row.id}}" @change.prevent="openAccordion({{row.id}}, '{{rowHashtag}}')" class="hidden">
+                    <label for="panel-{{row.id}}" class="relative block bg-black text-white text-2xl p-4 shadow border-b border-grey cursor-pointer hover:text-yellow-300">{{rowHeadline}}</label>
+
+                    <div class="accordion__content overflow-hidden bg-grey-lighter" id="ar{{row.id}}" style="height: 0px;">
+                        {% if row.text %}
+                            <div class="inner p-4">
+                                {% include '_blocks/_partials/prose.twig' with {
+                                    text: row.text,
+                                    class: 'prose-xl'
+                                } %}
+                            </div>
+                        {% endif %}
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}
+
+{% block js %}{% endblock %}

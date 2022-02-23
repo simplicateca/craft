@@ -2,14 +2,32 @@
 
 {% block body %}
     <div class="block-content container">
-        {% include '_blocks/_partials/headline.twig' %}
+        
+        {% include '_blocks/_partials/headline.twig' with {
+            class: 'mb-16'
+        } %}
 
-        <div class="wrapper">
-            <div class="image">
-                {% include '_blocks/_partials/image.twig' %}
-            </div>
+        {% set cols = block.images|length >= 4 ? 4 : block.images|length %}
+
+        {% set bgcolor = '' %}
+        {% if ( block.background == 'band' or block.background == 'box' ) and cols == 4 %}
+            {% set bgcolor = 'bg-white' %}
+        {% endif %}
+
+        <div class="grid gap-16 grid-cols-{{cols}} w-full">
+            {% for image in block.images.all() %}
+                <div class="image">
+                    <div class="image {{bgcolor}}">
+                        {% include '_blocks/_partials/image.twig' with {
+                            image: image
+                        } %}
+                    </div>
+
+                    {% if cols == 4 %}
+                        <h4 class="text-xl mt-4 text-center">{{image.title}}</h4>
+                    {% endif %}
+                </div>
+            {% endfor %}
         </div>
-
-        {% include '_blocks/_partials/buttons.twig' %}
     </div>
 {% endblock %}

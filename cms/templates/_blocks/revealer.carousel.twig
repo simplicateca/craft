@@ -1,0 +1,47 @@
+{% extends '_blocks/_layout.twig' %}
+
+{% block body %}
+    <div class="block-content container">       
+        {% include '_blocks/_partials/headline.twig' with {
+            class: 'mb-16'
+        } %}
+
+        <hooper
+            :wheel-control="false"
+            :auto-play="false"
+            :play-speed="15000"
+            >
+            {% for row in block.items.all() %}
+                <slide>
+                    <div class="flex p-16">
+                        {% if row.text %}
+                            <div class="inner w-2/3 pr-16">
+                                {% include '_blocks/_partials/headline.twig' with {
+                                    headline: row.headline,
+                                    class: 'mb-8'
+                                } %}
+
+                                {% include '_blocks/_partials/prose.twig' with {
+                                    text: row.text,
+                                    class: 'prose-xl'
+                                } %}
+                            </div>
+                        {% endif %}
+
+                        <div class="image w-1/3">
+                            <div>
+                                {% include '_blocks/_partials/image.twig' with {
+                                    image: row.image.one()
+                                } %}
+                            </div>
+                        </div>
+                    </div>
+                </slide>
+            {% endfor %}
+
+            {% if block.items.all()|length > 1 %}
+                <hooper-pagination slot="hooper-addons" class="my-4 flex justify-center"></hooper-pagination>
+            {% endif %}
+        </hooper>
+    </div>
+{% endblock %}

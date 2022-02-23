@@ -1,0 +1,51 @@
+{% extends '_blocks/_layout.twig' %}
+
+{% block body %}
+    <div class="block-content container">
+       
+        {% include '_blocks/_partials/headline.twig' with {
+            class: 'mb-10'
+        } %}
+
+        <div class="flex w-full">
+            <div class="text w-1/3 pr-10">
+       
+                {% include '_blocks/_partials/prose.twig' with {
+                    
+                } %}
+            </div>
+
+            <div class="features w-2/3">
+                <div class="grid gap-10 grid-cols-2">
+                    {% for row in block.features.all() %}
+                        <div class="p-6 border-2 border-gray-400 bg-gray-100">
+                            {% if row.icon.one() %}
+                                <div class='mb-4'>
+                                    <img src="{{row.icon.one().url}}" alt="{{row.icon.one().title}}" width="50">
+                                </div>
+                            {% endif %}
+        
+                            <div class="card relative">
+                                <h4 class="mb-2">{{row.headline}}</h4>                               
+                                {% include '_blocks/_partials/prose.twig' with {
+                                    text: row.text,
+                                    class: 'prose'
+                                } %}
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block tailwind %}
+    {#-- these don't show up anywhere, but the tailwind JIT compiler finds them -- #}
+    <div class="grid-cols-1"></div>
+    <div class="grid-cols-2"></div>
+    <div class="grid-cols-3"></div>
+    <div class="grid-cols-4"></div>
+{% endblock %}
+
+{% block js %}{% endblock %}

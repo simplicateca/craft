@@ -1,4 +1,4 @@
-dateModified: 1631127447
+dateModified: 1645643192
 email:
   fromEmail: steve@simplicate.ca
   fromName: admin
@@ -6,76 +6,94 @@ email:
 meta:
   __names__:
     0a39dfec-64a9-4ad4-98a8-f27aed7fbcd2: 'Intro Text' # Intro Text
-    0cdabc70-da3d-4a31-b6b7-dad81aabc3a8: 'Message Text' # Message Text
+    0ad703e2-37a9-478e-9ad4-b6b00485da31: Simple # Simple
+    0cf8a6fe-e260-4ded-9320-9db2b141edcc: 'Listing Block' # Listing Block
     0ff0357f-b500-4e0b-8e70-4be44829bed8: 'Anchor Link' # Anchor Link
     1bd5ff27-b43b-4768-8fdd-170cf3a12f81: 'Anchor Link' # Anchor Link
     1d242d6f-f863-4979-b2af-bb1da5c2aee2: Text # Text
+    1da13089-e303-46d0-930f-aefd062df474: 'With Sidebar' # With Sidebar
     1ddd814c-a3f1-4689-bb67-33d04ad8307a: Headline # Headline
-    1e0f22f0-2c77-45f2-a8dd-9405520e5ce0: 'Emergency Message' # Emergency Message
     1edf3767-b37f-430e-8ffd-4bd1a3b9f478: 'Anchor Link' # Anchor Link
-    1f038922-6c05-454b-bd6c-786e2a7885f8: 'News Home' # News Home
-    2edaff57-1ee7-4c19-a3c9-7b8f0e40e49c: 'Where should it appear?' # Where should it appear?
+    2c133977-4e62-45df-af34-a21ab5afed67: Basic # Basic
     3b748353-8f9a-49de-9662-ee18c32578e3: Text # Text
     3c05e593-d621-444e-8fb9-ddbb1b356a43: 'Static Assets' # Static Assets
     3d132a28-a031-453f-8dcf-7c2f939cb34a: Button # Button
+    4bff5ba2-d958-41db-a23e-5f04f5c07d06: Entry # Entry
     4cef665b-8759-4bd2-af57-d2867d7447d3: Button # Button
-    4e5aed85-0e72-4702-9a1a-3e9f3dfb55ca: 'Link URL to "Learn More"' # Link URL to "Learn More"
+    4ebdb729-ea5a-4ff4-b10f-e4b2d0da2292: Entry # Entry
     4ede4f3a-bc76-433d-b9b0-c7e35bc7ac5f: Entries # Entries
+    4f595261-8437-4ec8-918c-d02f09238a1c: Edges # Edges
     4fa97a99-7fb7-479d-aa34-e020e16ab4b8: 'Text + Text' # Text + Text
+    4faab281-22d5-4b78-a310-d3f84c34aa67: Search # Search
     5ad1a48a-0387-4098-89e7-bf69eed8508e: 'Layout Variations' # Layout Variations
     5bcbe5df-4160-4a4f-9920-b80fcb5ea72d: Button # Button
     5c438d3a-ab99-4c94-9e0b-39ddb3e3100f: Buttons # Buttons
     05fb8aa2-0c98-4cee-93c3-5ad2f2709822: 'Anchor Link' # Anchor Link
-    5ff7eb60-d8c3-46aa-812a-d1e865a3f872: 'Section Title' # Section Title
-    6ec26690-b0b1-410f-9bc5-1a5512e6dc3e: Home # Home
+    5ff7eb60-d8c3-46aa-812a-d1e865a3f872: 'Block Headline' # Block Headline
+    6a1ab78a-ce1d-4e06-944f-7fa172aaa06a: Text # Text
+    6bd61b45-415d-4702-8b93-c734e25ed41e: Text # Text
     07a0012a-4bdf-4aaa-8415-bbe06adaf62c: Text # Text
     7b0a973f-bff0-4f46-bfb0-b6a50c8fe28a: 'Layout Variations' # Layout Variations
     7b71f9f9-edbb-45b7-80c8-3d8bba143155: 'Title Style' # Title Style
-    7df7b031-eaca-476e-984f-2455f793f599: Accordion # Accordion
+    7c143451-c641-4b9e-9b70-317f53656197: Search # Search
+    7df7b031-eaca-476e-984f-2455f793f599: Revealer # Revealer
     7fa68ddc-cf1c-4e9b-9ce7-b8865ca9d48c: 'Emergency Message' # Emergency Message
     07fd881e-0862-439b-a7f3-7232454c1947: 'Layout Variations' # Layout Variations
-    8df52d2f-d9a7-4fcf-af9b-913c7223e875: Headliine # Headliine
+    8d76450d-4425-43d1-a9eb-b151c3cae1d0: Layout # Layout
     8fb8abb9-c8de-487c-ae92-012e8f094ca2: Background # Background
-    9acbe7c3-3de7-4755-9334-7542883cd539: 'Intro Copy' # Intro Copy
-    20aa7fd2-2f1f-4b3f-b505-a14c1c3cc164: 'Section Title' # Section Title
+    9d81e4ce-5846-4157-aebc-c26abc01d16e: 'Has Search?' # Has Search?
+    14d7d858-e4eb-4c44-90bc-a606a5a2372a: Redirect # Redirect
+    20aa7fd2-2f1f-4b3f-b505-a14c1c3cc164: 'Block Headline' # Block Headline
+    29f0f7bf-a7d4-4015-9ea2-cfd8f1530b1b: 'Has Search?' # Has Search?
     51b4cdd8-a3aa-47f5-bbb3-f01ce199d3d8: 'Title Style' # Title Style
     54aa6fb8-4a59-4704-9956-2c47eb2f5ceb: 'Anchor Link' # Anchor Link
     67a0e610-9765-4200-9b9f-e59e4130f652: Background # Background
+    69ac403d-1688-46dc-ab62-a46257cb4e1b: 'Emergency Message Layout' # Emergency Message Layout
     69c2d7dc-3df8-4df1-a444-d2ae376da00c: Text # Text
-    72b4a2cb-e557-468e-ac08-22f48060f192: 'Section Title' # Section Title
+    72b4a2cb-e557-468e-ac08-22f48060f192: 'Block Headline' # Block Headline
+    85eec3ec-1883-4c10-af75-90414406842a: People # People
     86da4c73-7a95-496d-9abe-cd3807a11ead: 'Layout Variations' # Layout Variations
-    213c9175-81d2-4141-8993-904e59925583: 'Icon List' # Icon List
+    187bd4a1-b799-4996-9fbc-c74c2d8b7ce0: 'Background Image' # Background Image
+    213c9175-81d2-4141-8993-904e59925583: Features # Features
+    237ef9a6-2022-4b3a-8925-f51a79590775: Layout # Layout
     267c2f19-de6c-4986-a2fa-d0a8b2a5f969: Headline # Headline
     479c17fb-3144-43b4-9417-f940264f6a71: 'Title Style' # Title Style
+    625a205f-5664-4223-840b-ec4c4e73b1bb: Limit # Limit
     650e7d1d-63e5-42f9-b3ab-4febfb502723: Pages # Pages
     0976e4cf-6b48-45af-9477-99ac396436ae: Buttons # Buttons
+    986a0a6d-c09c-4a78-b259-2190a004b305: Redirect # Redirect
     3721b4d6-42d5-41fc-b6e7-76204b42c91a: News # News
-    5347a201-6da8-47ff-bc5b-20a0dc63d44e: Icons # Icons
+    5347a201-6da8-47ff-bc5b-20a0dc63d44e: Features # Features
     7574f2c5-ebea-4c7c-9efb-fabe0fc82275: 'Title Style' # Title Style
     7593ee0e-5c97-47ca-a580-35990cabaffe: Image # Image
-    7902e1c8-6594-4a40-8c22-e510c7a0b9e8: Hero # Hero
+    8496e71d-a6f9-42fd-b44d-5223878de015: 'Listing Page' # Listing Page
     8749fe2b-aa88-4c5b-a8d6-01dd11b919b9: Button # Button
     9767bce4-dc9a-4cba-a7d9-3096b82bbac6: Button # Button
-    34463b82-dd3f-441c-b9c6-59c351e847aa: Craft # Craft
+    16422b2c-c780-4355-b3a5-44a1cc28ba36: 'Error 404' # Error 404
+    34463b82-dd3f-441c-b9c6-59c351e847aa: 'Wireframe Site' # Wireframe Site
+    64029a67-3d0c-4cad-8fc6-dc0eec8c112c: Default # Default
     67671be0-6716-4133-92fd-9b01454d8838: Button # Button
     138531be-7e43-4759-a397-5325db40a30b: Button # Button
+    568005e9-0360-4053-b2e8-85db17dc554b: Text # Text
     6996714c-bbb3-4367-9b3f-90be15abbbee: 'Public Schema' # Public Schema
-    7506709b-79c3-40ab-b4d3-5ce0fa5ba5bc: 'Section Title' # Section Title
+    7506709b-79c3-40ab-b4d3-5ce0fa5ba5bc: 'Block Headline' # Block Headline
+    25414516-f079-42de-9891-f9dd403af271: Image(s) # Image(s)
     79001047-67b4-4b93-825f-333664a55c70: 'Text (Right)' # Text (Right)
     a2bd406d-dfd3-4190-aad1-ef06ff685696: Button # Button
     a4f97962-52de-4b53-8422-5b833d1cd5fd: Uploads # Uploads
     a4fe99b5-7832-4eb2-9833-f551177bb821: 'Content Blocks' # Content Blocks
+    a35a0beb-0cf7-4a2b-9ec3-91e953a18116: 'Sidebar Blocks' # Sidebar Blocks
     a39c9c32-2acb-47fd-ad36-7980c445a44e: 'Text + Image' # Text + Image
+    a52e2b08-2e30-4b00-8784-4104c409d3ed: FAQs # FAQs
     a61ac261-5f37-431f-a92f-8b38277c3a8d: Background # Background
     a345255e-6a6e-450c-8f3f-bd44bd0d7a91: Text # Text
     a1609989-70ec-42e9-a2d0-ce1a902593c7: Records # Records
     aa5de47f-bd21-4e66-9e6b-93f174062abc: Image(s) # Image(s)
     aaa3f092-4a89-4ed0-9389-471df91b59d1: 'Layout Variations' # Layout Variations
-    ac5efc25-68b4-4028-b704-548cebcb183f: '"Learn More" Call-to-Action' # "Learn More" Call-to-Action
-    ad4c26f2-0839-4f69-bd4b-8f2f43c2d3f1: 'Bottom Spacing' # Bottom Spacing
-    adcea45e-bf40-4faf-b0c8-4ce089696971: Images # Images
+    ad4c26f2-0839-4f69-bd4b-8f2f43c2d3f1: Edges # Edges
+    adcea45e-bf40-4faf-b0c8-4ce089696971: 'Lead Image(s)' # Lead Image(s)
     b0be437c-c9b7-4725-b61e-01ae79d26892: 'Layout Variations' # Layout Variations
-    b1c52a06-4990-43f5-90d3-898a48789556: Summary # Summary
+    b1c52a06-4990-43f5-90d3-898a48789556: Dek # Dek
     b2c539bf-f3bf-4c27-81e6-cffc9cb8657d: Background # Background
     b7f27b4f-7fd9-4b59-a422-46ec9280d3a6: 'Title Style' # Title Style
     b9c0114e-75ed-4614-8290-a484cd43652b: Items # Items
@@ -83,41 +101,57 @@ meta:
     b99b85fc-06c0-4960-bcda-7f07690ef20d: Background # Background
     b431aa28-7fd8-4a95-8ace-467582d8e01f: 'Text (Left)' # Text (Left)
     b911f8a5-3dbc-4aa9-8be2-9eb2c9c8a2ed: 'Intro Text' # Intro Text
-    b947d0e1-da59-4426-bb04-17175245afa2: 'Bottom Spacing' # Bottom Spacing
-    b51219b5-c15b-4ce1-ab72-ad00a1b7a25e: Home # Home
-    ba25b35f-89c4-4230-96a4-31904c63bbf7: 'Bottom Spacing' # Bottom Spacing
+    b947d0e1-da59-4426-bb04-17175245afa2: Edges # Edges
+    ba25b35f-89c4-4230-96a4-31904c63bbf7: Edges # Edges
     bb08d0c0-bcc3-4d96-b172-572ca8f601a1: 'Anchor Link' # Anchor Link
     bcb40c76-f64f-408f-b1da-edb455b3588d: Craft # Craft
     bf54b939-18ca-4edf-a1ac-956f04744f8e: 'Primary Navigation' # Primary Navigation
     c0bba8e0-117d-4192-b3a3-ac1a1ed80a6b: Buttons # Buttons
+    c00d6261-7e8e-413b-816c-41326575c213: Feature # Feature
     c2aae972-6c74-45e4-a721-cb093d6508db: Background # Background
-    c4d11cc3-ff49-4b48-ad2a-d5a30294d552: 'Section Title' # Section Title
+    c4d11cc3-ff49-4b48-ad2a-d5a30294d552: 'Block Headline' # Block Headline
     c9c14235-dfc3-4c81-bb97-f3e3be70fb14: Buttons # Buttons
+    c25e161a-2f9c-406c-9ace-21fa7f000c4a: Limit # Limit
     c441b407-6c5c-4101-b07b-1883f705c486: Buttons # Buttons
-    c864b8d2-2de8-4995-9bb6-4647bee68943: 'Bottom Spacing' # Bottom Spacing
+    c864b8d2-2de8-4995-9bb6-4647bee68943: Edges # Edges
+    c1193bb1-b500-4050-8b68-a0a7bee4594f: Headline # Headline
+    c3237db2-d369-48c5-813e-2345a8581370: Background # Background
     c6677eab-6c78-4ca1-93cd-0faa266d1c45: 'Intro Text' # Intro Text
+    cc8cbe25-440c-439e-a58b-6515a3b420d0: 'Site Guide' # Site Guide
     cd660f34-a88e-4f6f-a63d-dac487f3c1b3: 'Anchor Link' # Anchor Link
+    cd395274-64b5-4e73-aeb8-7e99e6d8148e: Documentation # Documentation
+    d05f4009-0b38-4065-a1b1-65221aa65e63: 'Hero Block' # Hero Block
+    d08c5ca6-5020-4ac5-9460-c831d0921585: Headline # Headline
+    d4b0af7c-aad2-41a6-9de2-49f00ef28aa5: Background # Background
     d79b3073-00bf-430c-95d5-6d03d8303032: SEO # SEO
-    d3282cfb-d044-4890-b553-9a0b87393027: News # News
-    d815706a-e269-4664-98c2-4cfc236386ee: 'Background Image' # Background Image
-    d5231512-b81e-4cad-8603-f6885a64faab: Buttons # Buttons
+    d339dd86-5cec-4889-b2d2-81f993979c61: Button # Button
+    d3282cfb-d044-4890-b553-9a0b87393027: Default # Default
+    dc845fdf-e229-4765-9b4c-c77ca578bd52: Text # Text
     dda1fa64-dd45-42b6-8df9-476cbac15152: Image(s) # Image(s)
-    de3083f1-a02b-4884-ae77-ddd215b34e40: 'Section Title' # Section Title
+    de3083f1-a02b-4884-ae77-ddd215b34e40: 'Block Headline' # Block Headline
+    decb9b0a-5710-46ed-a447-bc2856783123: News # News
     dfaccb44-ab96-458f-8938-7bb7466b4e98: 'Title Style' # Title Style
     e0dac603-c510-4bb5-8701-e25672d93744: Common # Common
-    e0521335-ccc2-4893-a505-4baacf112dee: Standard # Standard
-    e2e0830e-80f8-4dfd-8edf-45b6f917cd2d: 'Section Title' # Section Title
+    e0521335-ccc2-4893-a505-4baacf112dee: Basic # Basic
+    e2e0830e-80f8-4dfd-8edf-45b6f917cd2d: 'Block Headline' # Block Headline
     e3ee13e0-fc9a-44f0-bc39-783e24026d9c: 'Title Style' # Title Style
-    e8279648-aafc-4293-a410-7e3c587f89c2: 'Bottom Spacing' # Bottom Spacing
-    f2bf26d7-ca02-4ca1-be4f-08d37fad24b4: 'Bottom Spacing' # Bottom Spacing
-    f4fc0c65-90af-4f1c-88ef-eb0ed255ddb0: 'Feature Image' # Feature Image
+    e8279648-aafc-4293-a410-7e3c587f89c2: Edges # Edges
+    ec26ccd6-8b77-446f-83e4-5a157ab84ee5: Text # Text
+    ecafdb45-55b7-4568-b087-9c19bc75197a: 'Error 404' # Error 404
+    f2bf26d7-ca02-4ca1-be4f-08d37fad24b4: Edges # Edges
     f7b9a8d7-c436-467b-8a9e-b42540bd0149: 'Layout Variations' # Layout Variations
+    f550181c-24c3-4a0a-b98c-93332f009dd0: Edges # Edges
+    fa8b5ac4-70bd-4a10-8f53-e75b245a33c7: Image # Image
     fac14507-5966-4d29-8eeb-fb358414aaaf: Buttons # Buttons
     fb1d50db-864b-4553-9fb0-d1d784dd98d9: 'Emergency Message' # Emergency Message
-    fd647249-c4ea-4ade-99ab-13f9e53bba3f: Icon # Icon
-    fdddeb54-6dc3-4563-a953-78d9c99db44a: 'Bottom Spacing' # Bottom Spacing
+    fd647249-c4ea-4ade-99ab-13f9e53bba3f: 'Image / Icon' # Image / Icon
+    fdddeb54-6dc3-4563-a953-78d9c99db44a: Edges # Edges
 plugins:
   dospaces:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  environment-label:
     edition: standard
     enabled: true
     schemaVersion: 1.0.0
@@ -125,6 +159,10 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 0.0.1
+  express-forms:
+    edition: lite
+    enabled: true
+    schemaVersion: 1.0.1
   fastcgi-cache-bust:
     edition: standard
     enabled: true
@@ -141,6 +179,11 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 1.0.0
+  navigate:
+    edition: standard
+    enabled: true
+    licenseKey: ZJUANHF6DTK3900Y0HHLHU2G
+    schemaVersion: 2.4.0
   reasons:
     edition: standard
     enabled: true
@@ -149,6 +192,10 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 2.3.0
+  redirect:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.5
   retcon:
     edition: standard
     enabled: true
@@ -156,7 +203,7 @@ plugins:
   seomatic:
     edition: standard
     enabled: true
-    licenseKey: EWN15KQL316V7LBU4SWYKUUH
+    licenseKey: D9HVMP5CG85325880WZZDFFR
     schemaVersion: 3.0.11
     settings:
       addHrefLang: true
@@ -197,6 +244,14 @@ plugins:
       sitemapsEnabled: true
       socialMediaPreviewTarget: true
       submitSitemaps: true
+  sherlock:
+    edition: lite
+    enabled: true
+    schemaVersion: 3.1.3
+  sprig:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.1
   super-table:
     edition: standard
     enabled: true
@@ -214,10 +269,10 @@ plugins:
     enabled: true
     schemaVersion: 1.0.0
 system:
-  edition: solo
+  edition: pro
   live: true
   name: Craft
-  schemaVersion: 3.7.8
+  schemaVersion: 3.7.33
   timeZone: America/Toronto
 users:
   allowPublicRegistration: false

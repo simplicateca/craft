@@ -1,0 +1,24 @@
+defaultPlacement: end
+enableVersioning: true
+handle: search
+name: Search
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primary entry page'
+      -
+        - urlFormat
+        - '{url}'
+      -
+        - refresh
+        - '1'
+propagationMethod: all
+siteSettings:
+  34463b82-dd3f-441c-b9c6-59c351e847aa: # Wireframe Site
+    enabledByDefault: true
+    hasUrls: true
+    template: search.twig
+    uriFormat: search
+type: single

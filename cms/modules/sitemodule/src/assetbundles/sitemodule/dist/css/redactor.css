@@ -63,4 +63,25 @@
     column-count: 2;
 }
 
+.input .redactor-styles ul.grid,
+.input .redactor-styles ul.grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 2rem;
+    grid-row-gap: 2rem;
+}
+
+.input .redactor-styles ul.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 2rem;
+    grid-row-gap: 2rem;
+}
+
+.input .redactor-styles ul.checkmarks {
+    list-style: none;
+}
   
+.input .redactor-styles ul.checkmarks li:before {
+    content: '✓ ';
+}

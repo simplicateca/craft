@@ -1,0 +1,16 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: e0dac603-c510-4bb5-8701-e25672d93744 # Common
+handle: listingBlock
+instructions: ''
+name: 'Listing Block'
+searchable: false
+settings:
+  contentTable: '{{%matrixcontent_listingblock}}'
+  maxBlocks: ''
+  minBlocks: ''
+  propagationKeyFormat: null
+  propagationMethod: all
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

@@ -1,0 +1,10 @@
+{% set tag    = titleTag ?? 'h4'   %}
+{% set format = format   ?? 'text' %}
+<article class="tease news relative" role="article">
+    <{{tag}} class="mb-2">{{entry.title}}</{{tag}}>
+
+    {% include '_blocks/_partials/prose.twig' with {
+        text:  (entry.text),
+        class: 'prose'
+    } %}
+</article>

@@ -1,5 +1,7 @@
-{% if block.images.one() %}
-    <img src="{{block.images.one().url}}" alt="{{block.images.one().title}}" />
-{% else %}
-    <div class="wireframe"></div>
+{% set image = image ?? null %}
+{% if not image and block.images.one() %}
+    {% set image = block.images.one() %}
+{% endif %}
+{% if image %}
+    <img src="{{image.url}}" alt="{{image.title}}" />
 {% endif %}

@@ -1,0 +1,9 @@
+baseUrl: '@web'
+enabled: true
+handle: guide
+hasUrls: true
+language: en-CA
+name: 'Site Guide'
+primary: false
+siteGroup: bcb40c76-f64f-408f-b1da-edb455b3588d # Craft
+sortOrder: 2

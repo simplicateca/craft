@@ -1,0 +1,35 @@
+columnSuffix: zfkvvptv
+contentColumnType: string
+fieldGroup: e0dac603-c510-4bb5-8701-e25672d93744 # Common
+handle: eMsgLayout
+instructions: ''
+name: 'Emergency Message Layout'
+searchable: false
+settings:
+  optgroups: true
+  options:
+    -
+      __assoc__:
+        -
+          - label
+          - 'All Pages'
+        -
+          - value
+          - allPages
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Home Page Only'
+        -
+          - value
+          - homePageOnly
+        -
+          - default
+          - ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Dropdown

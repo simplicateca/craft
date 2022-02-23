@@ -1,0 +1,48 @@
+{% extends '_blocks/_layout.twig' %}
+
+{% block body %}
+    <div class="block-content container">
+        
+        {% include '_blocks/_partials/headline.twig' with {
+            class: 'mb-16'
+        } %}
+
+        {% include '_blocks/_partials/prose.twig' %}
+        
+        <div class="tabs flex mt-8">
+            <div class="w-1/4">
+                {% for row in block.items.all() %}
+                    {% set rowHeadline = row.headline|striptags('<strong><b>')|nl2br %}
+                    {% set rowHashtag  = row.headline|striptags('<strong><b>')|kebab|ascii %}
+                    <div>
+                        <a
+                            id="tabs{{row.id}}"    
+                            href="#{{rowHashtag}}"
+                            @click.prevent="openTab({{row.id}}, '{{rowHashtag}}', {{block.id}})"
+                            class="tab__selector block{{block.id}} {% if loop.first %}active{% endif %}
+                            relative block bg-black text-white text-2xl shadow border-b border-grey p-4 shadow no-underline hover:text-yellow-300 focus:text-yellow-300"
+                            style="font-family: var(--headline);"
+                            >{{rowHeadline}}</a>
+                    </div>
+                {% endfor %}
+            </div>
+
+            <div class="w-3/4 border-4 border-black">
+                {% for row in block.items.all() %}
+                    <div class="tab__content overflow-hidden bg-gray-200 block{{block.id}}" id="tabc{{row.id}}" {% if not loop.first %}style="display:none;"{% endif %}>
+                        {% if row.text %}
+                            <div class="inner p-8">
+                                {% include '_blocks/_partials/prose.twig' with {
+                                    text: row.text,
+                                    class: 'prose-xl'
+                                } %}
+                            </div>
+                        {% endif %}
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block js %}{% endblock %}

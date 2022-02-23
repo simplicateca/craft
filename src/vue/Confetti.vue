@@ -28,4 +28,4 @@
     #confetti-canvas {
         z-index: 1000;
     }
-</style>true
+</style>

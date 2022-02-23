@@ -1,10 +1,21 @@
-{% if block.headline %}
+{% set class    = class ?? 'mb-6' %}
+{% set headline = block.headline ?? headline ?? '' %}
+{% set align = '' %}
+{% if 'text-align: center' in headline %}
+    {% set align = 'text-center' %}
+{% endif %}
+
+{% if 'text-align: right' in headline %}
+    {% set align = 'text-right' %}
+{% endif %}
+
+{% set headline = headline|retconChange( ['h1','h2','h3','h4','h5','h6','p'], '' ) %}
+{% if headline %}
     <h2
-        class="block-headline {{block.headlineStyle}}"    
-        id="{{block.headline|kebab|ascii}}"      
+        class="{{class}} {{align}}"
+        id="{{headline|kebab|ascii}}"
     >
-        {{ block.headline
-            | replace( { '<p>': '', '</p>': '' } )
+        {{ headline
             | typogrify(true)
             | nl2br
         }}

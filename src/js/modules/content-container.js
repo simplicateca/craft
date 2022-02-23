@@ -7,11 +7,17 @@ const main = async() => {
     const { default: VueWaypoint } = await import(/* webpackChunkName: "vuewaypoint" */ 'vue-waypoint');
     Vue.use(VueWaypoint)
 
+    // hooper slider
+    const { Hooper, Slide, Pagination } = await import(/* webpackChunkName: "hooper" */ 'hooper');
+
     // Create our vue instance
     const vm = new Vue({
         el: "#content-container",
         components: {
             'modal': () => import(/* webpackChunkName: "modal" */ '@/vue/Modal.vue'),
+            Hooper,
+            Slide,
+            HooperPagination: Pagination
         },
         data: function() {
             return {
@@ -44,6 +50,11 @@ const main = async() => {
                 }
             },
 
+            loadImage( blockRef, imgSrc, imgTitle ) {
+                this.$refs['gallery'+blockRef].src = imgSrc;
+                this.$refs['gallery'+blockRef].setAttribute("alt", imgTitle);
+            },
+
             onModalClose() {
                 this.modalLink = ''
             },
@@ -65,6 +76,20 @@ const main = async() => {
                 }
             },
 
+            openTab(rowID, slug, blockID) {
+                document.querySelectorAll('.tab__selector.block'+blockID).forEach(function(tabContent) {
+                    tabContent.classList.remove('active')
+                })
+
+                document.querySelectorAll('.tab__content.block'+blockID).forEach(function(tabContent) {
+                    tabContent.style.display='none'
+                })
+                document.querySelector('#tabc'+rowID).style.display='block'
+                document.querySelector('#tabs'+rowID).classList.add('active')
+                
+                //history.replaceState( null, null, '#ai'+rowID + '-' + slug )
+            },
+
             scrollToID(id) {
                 const yOffset = -100;
                 const element = document.getElementById(id);
@@ -80,11 +105,11 @@ const main = async() => {
                 let rowID = match[0].replace( '#ai', '' )
                 let slug  = window.location.hash.replace( match[0] + '-', '' )
                 this.openAccordion( rowID, slug )
-                this.scrollToID( 'ai'+rowID )
+                //this.scrollToID( 'ai'+rowID )
             } else {
                 let match2 = window.location.hash.match(/^#([\w\-]+)/gi)
                 if( match2 ) {
-                    this.scrollToID( match2[0].replace( '#', '' ) )
+                    //this.scrollToID( match2[0].replace( '#', '' ) )
                 }
             }
         },
