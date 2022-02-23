@@ -1,6 +1,6 @@
 # simplicate-web/craft Change Log
 
-## 1.3 - 2022.02.23
+## 1.3.1 - 2022.02.23
 
 ### Changed
 * Completely overhauled content block design & implementation including 30+ sample matrix block layouts
