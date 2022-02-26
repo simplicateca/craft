@@ -12,4 +12,14 @@
     {% endif %}
     >
     {% block body %}{% endblock %}
+
+    {{ sprig('_blocks/_meta', {
+        'blockType': block.type.name ?? '',
+        'layout'   : block.layout.label ?? '',
+        'edges'    : block.edges.label   ?? '',
+        'bg'       : block.background.label ?? '',
+        'blockId'  : block.id ?? '',
+        'entryId'  : entry.id ?? '',
+        'section'  : entry.section.handle
+    }, {'s-trigger': 'load'}) }}
 </div>

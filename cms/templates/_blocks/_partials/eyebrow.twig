@@ -1,0 +1,23 @@
+{% set class   = 'w-full mb-2 eyebrow' %}
+{% set eyebrow = block.eyebrow ?? eyebrow ?? '' %}
+{% set align = '' %}
+{% if 'text-align: center' in eyebrow %}
+    {% set align = 'text-center' %}
+{% endif %}
+
+{% if 'text-align: right' in eyebrow %}
+    {% set align = 'text-right' %}
+{% endif %}
+
+{% set eyebrow = eyebrow|retconChange( ['h1','h2','h3','h4','h5','h6','p'], '' ) %}
+{% if eyebrow %}
+    <div
+        class="{{class}} {{align}}"
+        id="{{eyebrow|kebab|ascii}}"
+    >
+        {{ eyebrow
+            | typogrify(true)
+            | nl2br
+        }}
+    </div>
+{% endif %}

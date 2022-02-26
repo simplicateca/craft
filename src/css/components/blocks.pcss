@@ -15,6 +15,10 @@
         scroll-margin-top: var(--scroll-margin-top);
     }
 
+    .eyebrow {
+        @apply font-bold uppercase font-sans text-gray-500;
+    }
+
     .card.relative {
         a {
             &:after {
@@ -30,8 +34,37 @@
     }
 
     .prose {
+        &:after { 
+            content: "."; 
+            visibility: hidden; 
+            display: block; 
+            height: 0; 
+            clear: both;
+        }
+
+        hr {
+            border-style: dashed;
+            border-color: var(--dark);
+            border-top-width: 3px;
+        }
+
         h2 {
             @apply mb-2;
+            font-size: 3rem;
+        }
+
+        p.smaller {
+            @apply text-base;
+        }
+
+        a:not(.button) {
+            @apply text-blue-600;
+        }
+
+        em {
+            &:before {
+                content: ' '
+            }
         }
     }
 
@@ -49,6 +82,14 @@
         .block-content {
             p, li, h1, h2, h3, div, a, strong {
                 color: #fff;
+            }
+
+            hr {
+                border-color: #fff;
+            }
+
+            .eyebrow {
+                @apply text-gray-100;
             }
 
             a.button:not(.button--text) {
@@ -81,6 +122,14 @@
                     color: #fff;
                 }
 
+                hr {
+                    border-color: #fff;
+                }
+
+                .eyebrow {
+                    @apply text-gray-100;
+                }
+
                 a.button:not(.button--text) {
                     border: 2px solid #fff;
                 }
@@ -99,6 +148,14 @@
                     color: #fff;
                 }
                 
+                hr {
+                    border-color: #fff;
+                }
+
+                .eyebrow {
+                    @apply text-gray-100;
+                }
+
                 a.button:not(.button--text) {
                     border: 2px solid #fff;
                 }
@@ -114,6 +171,14 @@
 
             p, li, h1, h2, h3, h4, div, a, strong {
                 color: #fff;
+            }
+
+            hr {
+                border-color: #fff;
+            }
+
+            .eyebrow {
+                @apply text-gray-100;
             }
 
             a.button:not(.button--text) {
@@ -173,9 +238,50 @@
 
         &.image {
             margin-top: 0;
+
+            &.image--center {
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+            }
+
+            &.image--circle {
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+
+                div.img {
+                    img {
+                        @apply rounded-full;
+                    }
+
+                }
+            }
+
+            &.image--left {
+                display: flex;
+                flex-direction: column;
+
+                div.img {
+                    margin-left: 0
+                }
+
+                figcaption {
+                    text-align: left;
+                }
+            }
+
+            &.image--float {
+                float: right;
+                width: auto;
+                max-width: 50%;
+                margin-left: 4rem;
+            }
         }
 
         div.img {
+            margin-right: auto;
+            margin-left: auto;
             img {
                 display: block;
                 margin: 0;
@@ -235,7 +341,8 @@
     }
 
     ul.two-column {
-        @apply columns-2 m-0 p-0;
+        @apply columns-2;
+        column-gap: 8rem;
 
         li {
             margin: 0 0 0.75rem 0;
@@ -248,6 +355,7 @@
     }
 
     ul.checkmarks.two-column {
+        @apply columns-2 m-0 p-0;
         li {
             &::before {
                 transform: translateY(0px);

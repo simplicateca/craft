@@ -1,4 +1,4 @@
-dateModified: 1645643192
+dateModified: 1645852816
 email:
   fromEmail: steve@simplicate.ca
   fromName: admin
@@ -15,6 +15,7 @@ meta:
     1ddd814c-a3f1-4689-bb67-33d04ad8307a: Headline # Headline
     1edf3767-b37f-430e-8ffd-4bd1a3b9f478: 'Anchor Link' # Anchor Link
     2c133977-4e62-45df-af34-a21ab5afed67: Basic # Basic
+    3abe1fa4-77c1-4d66-a3da-ad8dc475b818: Headline # Headline
     3b748353-8f9a-49de-9662-ee18c32578e3: Text # Text
     3c05e593-d621-444e-8fb9-ddbb1b356a43: 'Static Assets' # Static Assets
     3d132a28-a031-453f-8dcf-7c2f939cb34a: Button # Button
@@ -29,7 +30,7 @@ meta:
     5bcbe5df-4160-4a4f-9920-b80fcb5ea72d: Button # Button
     5c438d3a-ab99-4c94-9e0b-39ddb3e3100f: Buttons # Buttons
     05fb8aa2-0c98-4cee-93c3-5ad2f2709822: 'Anchor Link' # Anchor Link
-    5ff7eb60-d8c3-46aa-812a-d1e865a3f872: 'Block Headline' # Block Headline
+    5ff7eb60-d8c3-46aa-812a-d1e865a3f872: Eyebrow # Eyebrow
     6a1ab78a-ce1d-4e06-944f-7fa172aaa06a: Text # Text
     6bd61b45-415d-4702-8b93-c734e25ed41e: Text # Text
     07a0012a-4bdf-4aaa-8415-bbe06adaf62c: Text # Text
@@ -37,33 +38,41 @@ meta:
     7b71f9f9-edbb-45b7-80c8-3d8bba143155: 'Title Style' # Title Style
     7c143451-c641-4b9e-9b70-317f53656197: Search # Search
     7df7b031-eaca-476e-984f-2455f793f599: Revealer # Revealer
+    7ee37099-f386-42e2-b4fa-2442db13c547: Background # Background
     7fa68ddc-cf1c-4e9b-9ce7-b8865ca9d48c: 'Emergency Message' # Emergency Message
     07fd881e-0862-439b-a7f3-7232454c1947: 'Layout Variations' # Layout Variations
     8d76450d-4425-43d1-a9eb-b151c3cae1d0: Layout # Layout
+    8dfe3044-fa11-4189-8229-57e400ec874a: Users # Users
     8fb8abb9-c8de-487c-ae92-012e8f094ca2: Background # Background
     9d81e4ce-5846-4157-aebc-c26abc01d16e: 'Has Search?' # Has Search?
     14d7d858-e4eb-4c44-90bc-a606a5a2372a: Redirect # Redirect
-    20aa7fd2-2f1f-4b3f-b505-a14c1c3cc164: 'Block Headline' # Block Headline
+    20aa7fd2-2f1f-4b3f-b505-a14c1c3cc164: Eyebrow # Eyebrow
     29f0f7bf-a7d4-4015-9ea2-cfd8f1530b1b: 'Has Search?' # Has Search?
+    38b98344-6260-45e3-92ea-d455cfa4afe1: Eyebrow # Eyebrow
     51b4cdd8-a3aa-47f5-bbb3-f01ce199d3d8: 'Title Style' # Title Style
+    053bfa49-6de1-439c-8e91-d2b6169eb5e7: Headline # Headline
     54aa6fb8-4a59-4704-9956-2c47eb2f5ceb: 'Anchor Link' # Anchor Link
     67a0e610-9765-4200-9b9f-e59e4130f652: Background # Background
     69ac403d-1688-46dc-ab62-a46257cb4e1b: 'Emergency Message Layout' # Emergency Message Layout
     69c2d7dc-3df8-4df1-a444-d2ae376da00c: Text # Text
-    72b4a2cb-e557-468e-ac08-22f48060f192: 'Block Headline' # Block Headline
-    85eec3ec-1883-4c10-af75-90414406842a: People # People
+    72b4a2cb-e557-468e-ac08-22f48060f192: Eyebrow # Eyebrow
+    85eec3ec-1883-4c10-af75-90414406842a: FAQs # FAQs
     86da4c73-7a95-496d-9abe-cd3807a11ead: 'Layout Variations' # Layout Variations
     187bd4a1-b799-4996-9fbc-c74c2d8b7ce0: 'Background Image' # Background Image
-    213c9175-81d2-4141-8993-904e59925583: Features # Features
+    213c9175-81d2-4141-8993-904e59925583: Repeater # Repeater
     237ef9a6-2022-4b3a-8925-f51a79590775: Layout # Layout
+    241f9726-2434-411d-bd66-29e9593ef5cb: 'Layout Variations' # Layout Variations
     267c2f19-de6c-4986-a2fa-d0a8b2a5f969: Headline # Headline
+    267e0240-5cf1-4d41-b3ed-86fb8328dc1a: Background # Background
     479c17fb-3144-43b4-9417-f940264f6a71: 'Title Style' # Title Style
     625a205f-5664-4223-840b-ec4c4e73b1bb: Limit # Limit
     650e7d1d-63e5-42f9-b3ab-4febfb502723: Pages # Pages
     0976e4cf-6b48-45af-9477-99ac396436ae: Buttons # Buttons
     986a0a6d-c09c-4a78-b259-2190a004b305: Redirect # Redirect
     3721b4d6-42d5-41fc-b6e7-76204b42c91a: News # News
-    5347a201-6da8-47ff-bc5b-20a0dc63d44e: Features # Features
+    5252a6fb-4088-4f59-980a-0d5f910ab392: Eyebrow # Eyebrow
+    5347a201-6da8-47ff-bc5b-20a0dc63d44e: Items # Items
+    5491cd12-3474-47e4-afb0-8239bbfe9dd9: 'Anchor Link' # Anchor Link
     7574f2c5-ebea-4c7c-9efb-fabe0fc82275: 'Title Style' # Title Style
     7593ee0e-5c97-47ca-a580-35990cabaffe: Image # Image
     8496e71d-a6f9-42fd-b44d-5223878de015: 'Listing Page' # Listing Page
@@ -75,8 +84,9 @@ meta:
     67671be0-6716-4133-92fd-9b01454d8838: Button # Button
     138531be-7e43-4759-a397-5325db40a30b: Button # Button
     568005e9-0360-4053-b2e8-85db17dc554b: Text # Text
+    751770b9-039b-4d3b-8f92-3e31d5c0fba9: 'Anchor Link' # Anchor Link
     6996714c-bbb3-4367-9b3f-90be15abbbee: 'Public Schema' # Public Schema
-    7506709b-79c3-40ab-b4d3-5ce0fa5ba5bc: 'Block Headline' # Block Headline
+    7506709b-79c3-40ab-b4d3-5ce0fa5ba5bc: Eyebrow # Eyebrow
     25414516-f079-42de-9891-f9dd403af271: Image(s) # Image(s)
     79001047-67b4-4b93-825f-333664a55c70: 'Text (Right)' # Text (Right)
     a2bd406d-dfd3-4190-aad1-ef06ff685696: Button # Button
@@ -87,12 +97,13 @@ meta:
     a52e2b08-2e30-4b00-8784-4104c409d3ed: FAQs # FAQs
     a61ac261-5f37-431f-a92f-8b38277c3a8d: Background # Background
     a345255e-6a6e-450c-8f3f-bd44bd0d7a91: Text # Text
-    a1609989-70ec-42e9-a2d0-ce1a902593c7: Records # Records
+    a1609989-70ec-42e9-a2d0-ce1a902593c7: Items # Items
     aa5de47f-bd21-4e66-9e6b-93f174062abc: Image(s) # Image(s)
     aaa3f092-4a89-4ed0-9389-471df91b59d1: 'Layout Variations' # Layout Variations
     ad4c26f2-0839-4f69-bd4b-8f2f43c2d3f1: Edges # Edges
     adcea45e-bf40-4faf-b0c8-4ce089696971: 'Lead Image(s)' # Lead Image(s)
     b0be437c-c9b7-4725-b61e-01ae79d26892: 'Layout Variations' # Layout Variations
+    b08a1d54-1fa7-49b1-a0aa-22920892b640: Edges # Edges
     b1c52a06-4990-43f5-90d3-898a48789556: Dek # Dek
     b2c539bf-f3bf-4c27-81e6-cffc9cb8657d: Background # Background
     b7f27b4f-7fd9-4b59-a422-46ec9280d3a6: 'Title Style' # Title Style
@@ -102,6 +113,7 @@ meta:
     b431aa28-7fd8-4a95-8ace-467582d8e01f: 'Text (Left)' # Text (Left)
     b911f8a5-3dbc-4aa9-8be2-9eb2c9c8a2ed: 'Intro Text' # Intro Text
     b947d0e1-da59-4426-bb04-17175245afa2: Edges # Edges
+    b181050f-eab8-45f0-906a-c8241c2d3cf2: 'Show Block Meta' # Show Block Meta
     ba25b35f-89c4-4230-96a4-31904c63bbf7: Edges # Edges
     bb08d0c0-bcc3-4d96-b172-572ca8f601a1: 'Anchor Link' # Anchor Link
     bcb40c76-f64f-408f-b1da-edb455b3588d: Craft # Craft
@@ -109,9 +121,11 @@ meta:
     c0bba8e0-117d-4192-b3a3-ac1a1ed80a6b: Buttons # Buttons
     c00d6261-7e8e-413b-816c-41326575c213: Feature # Feature
     c2aae972-6c74-45e4-a721-cb093d6508db: Background # Background
-    c4d11cc3-ff49-4b48-ad2a-d5a30294d552: 'Block Headline' # Block Headline
+    c4d11cc3-ff49-4b48-ad2a-d5a30294d552: Eyebrow # Eyebrow
+    c4e2b9d0-07cf-41e9-9dc7-2d4e215bd72c: Edges # Edges
     c9c14235-dfc3-4c81-bb97-f3e3be70fb14: Buttons # Buttons
     c25e161a-2f9c-406c-9ace-21fa7f000c4a: Limit # Limit
+    c223fda9-a939-46a4-8969-a240d2d54f07: Headline # Headline
     c441b407-6c5c-4101-b07b-1883f705c486: Buttons # Buttons
     c864b8d2-2de8-4995-9bb6-4647bee68943: Edges # Edges
     c1193bb1-b500-4050-8b68-a0a7bee4594f: Headline # Headline
@@ -126,20 +140,25 @@ meta:
     d79b3073-00bf-430c-95d5-6d03d8303032: SEO # SEO
     d339dd86-5cec-4889-b2d2-81f993979c61: Button # Button
     d3282cfb-d044-4890-b553-9a0b87393027: Default # Default
+    d9001b71-df6e-4238-b1e5-b49c432c88cf: Headline # Headline
     dc845fdf-e229-4765-9b4c-c77ca578bd52: Text # Text
     dda1fa64-dd45-42b6-8df9-476cbac15152: Image(s) # Image(s)
-    de3083f1-a02b-4884-ae77-ddd215b34e40: 'Block Headline' # Block Headline
+    de3083f1-a02b-4884-ae77-ddd215b34e40: Eyebrow # Eyebrow
     decb9b0a-5710-46ed-a447-bc2856783123: News # News
     dfaccb44-ab96-458f-8938-7bb7466b4e98: 'Title Style' # Title Style
     e0dac603-c510-4bb5-8701-e25672d93744: Common # Common
     e0521335-ccc2-4893-a505-4baacf112dee: Basic # Basic
-    e2e0830e-80f8-4dfd-8edf-45b6f917cd2d: 'Block Headline' # Block Headline
+    e2d14d09-0715-4ab2-b3ea-5bea36055901: Square # Square
+    e2e0830e-80f8-4dfd-8edf-45b6f917cd2d: Eyebrow # Eyebrow
     e3ee13e0-fc9a-44f0-bc39-783e24026d9c: 'Title Style' # Title Style
+    e6d20858-c077-4e76-b107-03166b8ba61d: Eyebrow # Eyebrow
     e8279648-aafc-4293-a410-7e3c587f89c2: Edges # Edges
     ec26ccd6-8b77-446f-83e4-5a157ab84ee5: Text # Text
     ecafdb45-55b7-4568-b087-9c19bc75197a: 'Error 404' # Error 404
     f2bf26d7-ca02-4ca1-be4f-08d37fad24b4: Edges # Edges
+    f6cc4c9c-7682-4448-bb2e-60fc180b4ee0: Eyebrow # Eyebrow
     f7b9a8d7-c436-467b-8a9e-b42540bd0149: 'Layout Variations' # Layout Variations
+    f800cb7c-e505-4e86-ae6a-31a286813755: 'Layout Variations' # Layout Variations
     f550181c-24c3-4a0a-b98c-93332f009dd0: Edges # Edges
     fa8b5ac4-70bd-4a10-8f53-e75b245a33c7: Image # Image
     fac14507-5966-4d29-8eeb-fb358414aaaf: Buttons # Buttons
@@ -274,9 +293,3 @@ system:
   name: Craft
   schemaVersion: 3.7.33
   timeZone: America/Toronto
-users:
-  allowPublicRegistration: false
-  defaultGroup: null
-  photoSubpath: null
-  photoVolumeUid: null
-  requireEmailVerification: true

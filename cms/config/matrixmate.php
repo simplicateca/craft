@@ -2,20 +2,52 @@
 
 return [
     'fields' => [
+
         'heroBlock' => [
             'defaultTabName' => 'Additional Settings',
-            // 'groups' => [[
-            //     'label' => 'Basic Components',
-            //     'types' => ['text', 'textImage'],
-            // ], ],
             'types' => [
+                'text' => [
+                    'tabs' => [[
+                        'label' => 'Content',
+                        'fields' => ['headline', 'text'],
+                    ], [
+                        'label' => 'Format & Layout',
+                        'fields' => ['eyebrow', 'anchor', 'layout', 'edges', 'background'],
+                    ]],
+                ],
+
+                'textImage' => [
+                    'tabs' => [[
+                        'label' => 'Content',
+                        'fields' => ['headline', 'text', 'images'],
+                    ], [
+                        'label' => 'Format & Layout',
+                        'fields' => ['eyebrow', 'anchor', 'layout', 'edges', 'background'],
+                    ]],
+                ],
+            ]
+        ],
+
+        'sidebarBlocks' => [
+            'defaultTabName' => 'Additional Settings',
+            'types' => [
+                'headline' => [
+                    'tabs' => [[
+                        'label' => 'Headline',
+                        'fields' => ['headline'],
+                    ], [
+                        'label' => 'Format & Layout',
+                        'fields' => ['eyebrow', 'anchor', 'layout', 'edges', 'background'],
+                    ]],
+                ],
+
                 'text' => [
                     'tabs' => [[
                         'label' => 'Content',
                         'fields' => ['text'],
                     ], [
-                        'label' => 'Headline & Layout',
-                        'fields' => ['headline', 'anchor', 'layout', 'edges', 'background'],
+                        'label' => 'Format & Layout',
+                        'fields' => ['eyebrow', 'anchor', 'layout', 'edges', 'background'],
                     ]],
                 ],
 
@@ -24,8 +56,8 @@ return [
                         'label' => 'Content',
                         'fields' => ['text', 'records'],
                     ], [
-                        'label' => 'Headline & Layout',
-                        'fields' => ['headline', 'anchor', 'layout', 'edges', 'background'],
+                        'label' => 'Format & Layout',
+                        'fields' => ['eyebrow', 'anchor', 'layout', 'edges', 'background'],
                     ]],
                 ],
             ]
@@ -38,13 +70,23 @@ return [
             //     'types' => ['text', 'textImage'],
             // ], ],
             'types' => [
+                'headline' => [
+                    'tabs' => [[
+                        'label' => 'Headline',
+                        'fields' => ['headline'],
+                    ], [
+                        'label' => 'Format & Layout',
+                        'fields' => ['eyebrow', 'anchor', 'layout', 'edges', 'background'],
+                    ]],
+                ],
+
                 'text' => [
                     'tabs' => [[
                         'label' => 'Content',
                         'fields' => ['text'],
                     ], [
-                        'label' => 'Headline & Layout',
-                        'fields' => ['headline', 'anchor', 'layout', 'edges', 'background'],
+                        'label' => 'Format & Layout',
+                        'fields' => ['eyebrow', 'anchor', 'layout', 'edges', 'background'],
                     ]],
                 ],
 
@@ -53,8 +95,8 @@ return [
                         'label' => 'Content',
                         'fields' => ['text', 'images'],
                     ], [
-                        'label' => 'Headline & Layout',
-                        'fields' => ['headline', 'anchor', 'layout', 'edges', 'background'],
+                        'label' => 'Format & Layout',
+                        'fields' => ['eyebrow', 'anchor', 'layout', 'edges', 'background'],
                     ]],
                 ],
 
@@ -63,8 +105,8 @@ return [
                         'label' => 'Content',
                         'fields' => ['text', 'text2'],
                     ], [
-                        'label' => 'Headline & Layout',
-                        'fields' => ['headline', 'anchor', 'layout', 'edges', 'background'],
+                        'label' => 'Format & Layout',
+                        'fields' => ['eyebrow', 'anchor', 'layout', 'edges', 'background'],
                     ]],
                 ],
 
@@ -73,8 +115,8 @@ return [
                         'label' => 'Content',
                         'fields' => ['images'],
                     ], [
-                        'label' => 'Headline & Layout',
-                        'fields' => ['headline', 'anchor', 'layout', 'edges', 'background'],
+                        'label' => 'Format & Layout',
+                        'fields' => ['eyebrow', 'anchor', 'layout', 'edges', 'background'],
                     ]],
                 ],
 
@@ -83,8 +125,8 @@ return [
                         'label' => 'Content',
                         'fields' => ['text', 'records'],
                     ], [
-                        'label' => 'Headline & Layout',
-                        'fields' => ['headline', 'anchor', 'layout', 'edges', 'background'],
+                        'label' => 'Format & Layout',
+                        'fields' => ['eyebrow', 'anchor', 'layout', 'edges', 'background'],
                     ]],
                 ],
 
@@ -93,8 +135,8 @@ return [
                         'label' => 'Content',
                         'fields' => ['text', 'features'],
                     ], [
-                        'label' => 'Headline & Layout',
-                        'fields' => ['headline', 'anchor', 'layout', 'edges', 'background'],
+                        'label' => 'Format & Layout',
+                        'fields' => ['eyebrow', 'anchor', 'layout', 'edges', 'background'],
                     ]],
                 ],
 
@@ -103,11 +145,10 @@ return [
                         'label' => 'Content',
                         'fields' => ['text', 'items'],
                     ], [
-                        'label' => 'Headline & Layout',
-                        'fields' => ['headline', 'anchor', 'layout', 'edges', 'background'],
+                        'label' => 'Format & Layout',
+                        'fields' => ['eyebrow', 'anchor', 'layout', 'edges', 'background'],
                     ]],
                 ],
-
             ],
         ],
     ],

@@ -1,6 +1,6 @@
 {% if pageInfo.totalPages > 1 %}
     <nav class="c-pagination mt-20" role="navigation" aria-label="Pagination Navigation">
-        <ul>
+        <ul class="m-0 p-0 list-none flex">
             {% if pageInfo.prevUrl %}
                 <li class="prev"><a href="{{ pageInfo.prevUrl }}">&larr; {{"Previous"|t}}</a></li>
             {% endif %}

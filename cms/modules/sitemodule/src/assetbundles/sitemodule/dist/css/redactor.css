@@ -16,9 +16,18 @@
     font-size: 22px !important;
 }
 
+.redactor-dropdown-item-smaller span {
+    font-size: 14px !important;
+}
+
 /* in editor styles */
 .input .redactor-styles p.lead {
     font-size: 22px !important;
+    line-height: 1.3em !important;
+}
+
+.input .redactor-styles p.smaller {
+    font-size: 14px !important;
     line-height: 1.3em !important;
 }
 

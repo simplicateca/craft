@@ -29,6 +29,7 @@ return [
     'runQueueAutomatically' => (bool)App::env('RUN_QUEUE_AUTOMATICALLY'),
     'securityKey' => App::env('SECURITY_KEY'),
     // Craft config settings from constants
+    'maxRevisions' => 10,
     'cacheDuration' => false,
     'defaultSearchTermOptions' => [
         'subLeft' => true,

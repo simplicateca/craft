@@ -2,9 +2,7 @@
 
 {% block body %}
     <div class="block-content container">
-        {% include '_blocks/_partials/headline.twig' with {
-            class: 'mb-16'
-        } %}
+        {% include '_blocks/_partials/eyebrow.twig' %}
 
         {% set cols = block.images|length >= 4 ? 4 : block.images|length %}
 

@@ -1,0 +1,22 @@
+{% extends '_blocks/_layout.twig' %}
+
+{% block body %}
+    <div class="block-content container headline">
+        {% set class = 'mb-0' %}
+
+        {% if block.layout == 'extraLarge' %}
+            {% set class = 'text-7xl mb-0 font-black' %}
+        {% endif %}
+
+        {% if block.layout == 'alternateFont' %}
+            {% set class = 'font-serif mb-0' %}
+        {% endif %}
+
+        {% include '_blocks/_partials/eyebrow.twig' %}
+        {% include '_blocks/_partials/headline.twig' with {
+            class: class
+        } %}
+    </div>
+{% endblock %}
+
+{% block js %}{% endblock %}

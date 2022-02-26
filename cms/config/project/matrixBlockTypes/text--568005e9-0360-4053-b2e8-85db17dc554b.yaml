@@ -46,4 +46,4 @@ fields:
     type: craft\redactor\Field
 handle: text
 name: Text
-sortOrder: 1
+sortOrder: 2

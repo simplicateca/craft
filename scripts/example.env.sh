@@ -16,8 +16,13 @@
 GLOBAL_DB_DRIVER="mysql"
 
 # -- LOCAL settings --
+CONTAINER=$(readlink -f "$0")
+SCRIPT=`basename "$0"`
+CONTAINER=${CONTAINER/$SCRIPT/}
+CONTAINER=${CONTAINER/\/scripts\//}
+CONTAINER="${CONTAINER##*/}"
 
-LOCAL_DB_CONTAINER="REPLACE_ME_mariadb_1"
+LOCAL_DB_CONTAINER="${CONTAINER}_mariadb_1"
 
 # -- REMOTE settings --
 

@@ -1,5 +1,32 @@
 # simplicate-web/craft Change Log
 
+## 1.3.2 - 2022.02.26
+
+### Changed
+
+* Updated README with improved instructions for installation
+* Changed all content blocks from having a `headline` field to having an `eyebrow` field
+* Fixed the Redactor "email" plugin so that it appears within the "Link" menu
+* Changed the default Redactor menu to include inline styles
+* Renamed the `Features` text block to `Repeater` to better describe it's content
+* Updated the webpack docker container to `node:bullseye` to fix a build error installing `mozjpeg`
+* Updated the `scripts/.env` file to try and guess the docker container name by reading the project folder
+
+### Added
+
+* Created the ability for admin users to toggle a field to make `Content Block Meta` details visible when viewing frontend pages.
+* Created a new `Headline` block type
+* Created a full page of redactor typography and content embed examples on the guide site
+* Created default image transform
+* Added a default configuration for the `Knock-Knock` plugin to protect the staging site
+
+
+### Removed
+
+* Removed file, fullscreen, and video buttons from the default Redactor config
+
+
+
 ## 1.3.1 - 2022.02.23
 
 ### Changed

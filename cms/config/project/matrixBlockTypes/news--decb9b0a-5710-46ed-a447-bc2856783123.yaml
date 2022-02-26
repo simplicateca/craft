@@ -26,7 +26,7 @@ fieldLayouts:
         sortOrder: 1
 fields:
   29f0f7bf-a7d4-4015-9ea2-cfd8f1530b1b: # Has Search?
-    columnSuffix: iobtjapf
+    columnSuffix: null
     contentColumnType: boolean
     fieldGroup: null
     handle: hasSearch
@@ -41,7 +41,7 @@ fields:
     translationMethod: none
     type: craft\fields\Lightswitch
   c25e161a-2f9c-406c-9ace-21fa7f000c4a: # Limit
-    columnSuffix: ggugoisz
+    columnSuffix: null
     contentColumnType: integer(10)
     fieldGroup: null
     handle: limit

@@ -21,7 +21,7 @@
             <div class="c-primaryLogo"><a href="/">[LOGO]</a></div>
             <nav class="c-primary" role="navigation" aria-label="Primary Navigation">
                 {% set nav = craft.navigate.raw('primary') %}
-                <ul>
+                <ul class="m-0 p-0 list-none flex">
                     {% for node in nav %}
                         {{ macros.renderNode(node) }}
                     {% endfor %}

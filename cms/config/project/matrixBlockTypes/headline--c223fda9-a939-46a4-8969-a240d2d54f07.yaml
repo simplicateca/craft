@@ -1,29 +1,20 @@
-field: a4fe99b5-7832-4eb2-9833-f551177bb821 # Content Blocks
+field: a35a0beb-0cf7-4a2b-9ec3-91e953a18116 # Sidebar Blocks
 fieldLayouts:
-  a067cac1-ec42-43cc-b56a-f98e3b5b7803:
+  8729952a-d918-4fb7-bf8e-fad40d92d3f5:
     tabs:
       -
         elements:
           -
-            fieldUid: 1d242d6f-f863-4979-b2af-bb1da5c2aee2 # Text
+            fieldUid: 3abe1fa4-77c1-4d66-a3da-ad8dc475b818 # Headline
             instructions: null
             label: null
-            required: false
+            required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
             warning: null
             width: 100
           -
-            fieldUid: dda1fa64-dd45-42b6-8df9-476cbac15152 # Image(s)
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            warning: null
-            width: 100
-          -
-            fieldUid: 20aa7fd2-2f1f-4b3f-b505-a14c1c3cc164 # Eyebrow
+            fieldUid: 38b98344-6260-45e3-92ea-d455cfa4afe1 # Eyebrow
             instructions: null
             label: null
             required: false
@@ -32,7 +23,7 @@ fieldLayouts:
             warning: null
             width: 50
           -
-            fieldUid: 54aa6fb8-4a59-4704-9956-2c47eb2f5ceb # Anchor Link
+            fieldUid: 751770b9-039b-4d3b-8f92-3e31d5c0fba9 # Anchor Link
             instructions: null
             label: null
             required: false
@@ -41,7 +32,7 @@ fieldLayouts:
             warning: null
             width: 50
           -
-            fieldUid: b0be437c-c9b7-4725-b61e-01ae79d26892 # Layout Variations
+            fieldUid: f800cb7c-e505-4e86-ae6a-31a286813755 # Layout Variations
             instructions: null
             label: null
             required: false
@@ -50,7 +41,7 @@ fieldLayouts:
             warning: null
             width: 25
           -
-            fieldUid: c2aae972-6c74-45e4-a721-cb093d6508db # Background
+            fieldUid: 267e0240-5cf1-4d41-b3ed-86fb8328dc1a # Background
             instructions: null
             label: null
             required: false
@@ -59,7 +50,7 @@ fieldLayouts:
             warning: null
             width: 25
           -
-            fieldUid: e8279648-aafc-4293-a410-7e3c587f89c2 # Edges
+            fieldUid: c4e2b9d0-07cf-41e9-9dc7-2d4e215bd72c # Edges
             instructions: null
             label: null
             required: false
@@ -70,13 +61,13 @@ fieldLayouts:
         name: Content
         sortOrder: 1
 fields:
-  1d242d6f-f863-4979-b2af-bb1da5c2aee2: # Text
+  3abe1fa4-77c1-4d66-a3da-ad8dc475b818: # Headline
     columnSuffix: null
     contentColumnType: text
     fieldGroup: null
-    handle: text
-    instructions: ''
-    name: Text
+    handle: headline
+    instructions: 'Used to create a large headline break between blocks.'
+    name: Headline
     searchable: true
     settings:
       availableTransforms: '*'
@@ -87,7 +78,7 @@ fields:
       manualConfig: ''
       purifierConfig: ''
       purifyHtml: '1'
-      redactorConfig: Standard.json
+      redactorConfig: Headline.json
       removeEmptyTags: '1'
       removeInlineStyles: '1'
       removeNbsp: '1'
@@ -98,14 +89,14 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\redactor\Field
-  20aa7fd2-2f1f-4b3f-b505-a14c1c3cc164: # Eyebrow
+  38b98344-6260-45e3-92ea-d455cfa4afe1: # Eyebrow
     columnSuffix: null
     contentColumnType: text
     fieldGroup: null
     handle: eyebrow
     instructions: 'A small line of sub-text that appears above a headline.'
     name: Eyebrow
-    searchable: true
+    searchable: false
     settings:
       availableTransforms: '*'
       availableVolumes: '*'
@@ -126,111 +117,7 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\redactor\Field
-  54aa6fb8-4a59-4704-9956-2c47eb2f5ceb: # Anchor Link
-    columnSuffix: null
-    contentColumnType: text
-    fieldGroup: null
-    handle: anchor
-    instructions: 'Creates a URL `#hash-tag` for linking directly to this block'
-    name: 'Anchor Link'
-    searchable: false
-    settings:
-      byteLimit: null
-      charLimit: null
-      code: '1'
-      columnType: null
-      initialRows: '4'
-      multiline: ''
-      placeholder: '#example-link'
-      uiMode: normal
-    translationKeyFormat: null
-    translationMethod: none
-    type: craft\fields\PlainText
-  b0be437c-c9b7-4725-b61e-01ae79d26892: # Layout Variations
-    columnSuffix: null
-    contentColumnType: string
-    fieldGroup: null
-    handle: layout
-    instructions: 'How the content lays out inside the block.'
-    name: 'Layout Variations'
-    searchable: false
-    settings:
-      optgroups: true
-      options:
-        -
-          __assoc__:
-            -
-              - optgroup
-              - 'Even Columns (50/50)'
-        -
-          __assoc__:
-            -
-              - label
-              - 'Text Left (even)'
-            -
-              - value
-              - textLeftEven
-            -
-              - default
-              - '1'
-        -
-          __assoc__:
-            -
-              - label
-              - 'Text Right (even)'
-            -
-              - value
-              - textRightEven
-            -
-              - default
-              - ''
-        -
-          __assoc__:
-            -
-              - optgroup
-              - 'Text Heavy'
-        -
-          __assoc__:
-            -
-              - label
-              - 'Text Left (heavy)'
-            -
-              - value
-              - textLeft
-            -
-              - default
-              - ''
-        -
-          __assoc__:
-            -
-              - label
-              - 'Text Right (heavy)'
-            -
-              - value
-              - textRight
-            -
-              - default
-              - ''
-        -
-          __assoc__:
-            -
-              - optgroup
-              - Other
-        -
-          __assoc__:
-            -
-              - label
-              - Gallery
-            -
-              - value
-              - gallery
-            -
-              - default
-              - ''
-    translationKeyFormat: null
-    translationMethod: none
-    type: craft\fields\Dropdown
-  c2aae972-6c74-45e4-a721-cb093d6508db: # Background
+  267e0240-5cf1-4d41-b3ed-86fb8328dc1a: # Background
     columnSuffix: null
     contentColumnType: string
     fieldGroup: null
@@ -251,7 +138,7 @@ fields:
               - normal
             -
               - default
-              - '1'
+              - ''
         -
           __assoc__:
             -
@@ -288,41 +175,27 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\Dropdown
-  dda1fa64-dd45-42b6-8df9-476cbac15152: # Image(s)
+  751770b9-039b-4d3b-8f92-3e31d5c0fba9: # Anchor Link
     columnSuffix: null
-    contentColumnType: string
+    contentColumnType: text
     fieldGroup: null
-    handle: images
-    instructions: ''
-    name: Image(s)
-    searchable: true
+    handle: anchor
+    instructions: 'Creates a URL `#hash-tag` for linking directly to this block'
+    name: 'Anchor Link'
+    searchable: false
     settings:
-      allowSelfRelations: false
-      allowUploads: true
-      allowedKinds:
-        - image
-      defaultUploadLocationSource: 'volume:a4f97962-52de-4b53-8422-5b833d1cd5fd' # Uploads
-      defaultUploadLocationSubpath: '{owner.owner.type.handle}/{owner.owner.slug}/'
-      limit: ''
-      localizeRelations: false
-      previewMode: full
-      restrictFiles: '1'
-      selectionLabel: 'Choose Image'
-      showSiteMenu: true
-      showUnpermittedFiles: false
-      showUnpermittedVolumes: false
-      singleUploadLocationSource: 'volume:a4f97962-52de-4b53-8422-5b833d1cd5fd' # Uploads
-      singleUploadLocationSubpath: ''
-      source: null
-      sources: '*'
-      targetSiteId: null
-      useSingleFolder: false
-      validateRelatedElements: false
-      viewMode: large
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: null
+      uiMode: normal
     translationKeyFormat: null
-    translationMethod: site
-    type: craft\fields\Assets
-  e8279648-aafc-4293-a410-7e3c587f89c2: # Edges
+    translationMethod: none
+    type: craft\fields\PlainText
+  c4e2b9d0-07cf-41e9-9dc7-2d4e215bd72c: # Edges
     columnSuffix: null
     contentColumnType: string
     fieldGroup: null
@@ -380,6 +253,31 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\Dropdown
-handle: textImage
-name: 'Text + Image'
-sortOrder: 3
+  f800cb7c-e505-4e86-ae6a-31a286813755: # Layout Variations
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: layout
+    instructions: 'How the content lays out inside the block.'
+    name: 'Layout Variations'
+    searchable: false
+    settings:
+      optgroups: true
+      options:
+        -
+          __assoc__:
+            -
+              - label
+              - Normal
+            -
+              - value
+              - normal
+            -
+              - default
+              - ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Dropdown
+handle: headline
+name: Headline
+sortOrder: 1

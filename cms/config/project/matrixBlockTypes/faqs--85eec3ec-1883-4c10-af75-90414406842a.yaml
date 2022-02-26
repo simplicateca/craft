@@ -26,7 +26,7 @@ fieldLayouts:
         sortOrder: 1
 fields:
   9d81e4ce-5846-4157-aebc-c26abc01d16e: # Has Search?
-    columnSuffix: zeshxfxl
+    columnSuffix: null
     contentColumnType: boolean
     fieldGroup: null
     handle: hasSearch
@@ -41,7 +41,7 @@ fields:
     translationMethod: none
     type: craft\fields\Lightswitch
   625a205f-5664-4223-840b-ec4c4e73b1bb: # Limit
-    columnSuffix: wkzaqlpg
+    columnSuffix: null
     contentColumnType: integer(10)
     fieldGroup: null
     handle: limit
@@ -61,6 +61,6 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\Number
-handle: people
-name: People
+handle: faqs
+name: FAQs
 sortOrder: 2

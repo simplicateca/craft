@@ -1,37 +1,9 @@
 /**
- * components/utility.css
+ * _settings/utility.css
  * 
  * Utility classes
  *
  */
-
-@define-mixin reset-list {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-  
-@define-mixin horizontal-list {
-    @mixin reset-list;
-  
-    li {
-        display: inline-block;
-        margin: 0;
-        padding: 0;
-    }
-}
-
-nav ul, nav ol {
-    @mixin horizontal-list;
-}
-
-.tag {
-    display: inline-block;
-    padding: .2rem .5rem;
-    background: #eee;
-    margin: .2rem 1rem .2rem -.5rem;
-}
-
 
 .more {
     &:after {
@@ -46,7 +18,7 @@ nav ul, nav ol {
 }
 
 a {
-    @apply text-blue-500 underline;
+    @apply text-blue-600 underline;
 
     &:hover, &:focus {
         @apply text-blue-900;

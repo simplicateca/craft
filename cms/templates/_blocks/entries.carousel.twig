@@ -2,8 +2,9 @@
 
 {% block body %}
     <div class="block-content container">       
-        {% include '_blocks/_partials/headline.twig' with {
-            class: 'mb-16'
+        {% include '_blocks/_partials/eyebrow.twig' %}
+        {% include '_blocks/_partials/prose.twig' with {
+
         } %}
 
         <hooper
@@ -11,7 +12,7 @@
             :auto-play="false"
             :play-speed="15000"
             >
-            {% for entry in block.records.all() %}
+            {% for entry in block.items.all() %}
                 <slide>
                     <div class="feature">
                         {% include  [
@@ -28,7 +29,7 @@
                 </slide>
             {% endfor %}
 
-            {% if block.records.all()|length > 1 %}
+            {% if block.items.all()|length > 1 %}
                 <hooper-pagination slot="hooper-addons" class="my-4 flex justify-center"></hooper-pagination>
             {% endif %}
         </hooper>

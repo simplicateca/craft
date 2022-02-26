@@ -5,8 +5,9 @@
         <div class="container mx-auto relative overflow-hidden">
             <div class="flex items-center">
                 <div class="w-1/2">
+                    {% include '_blocks/_partials/eyebrow.twig' %}
                     {% include '_blocks/_partials/headline-h1.twig' with {
-                        class: 'mb-8'
+                        class: block.text ? 'mb-8' : 'mb-0'
                     } %}
                     {% include '_blocks/_partials/prose.twig' with {
                         class: 'prose-2xl'

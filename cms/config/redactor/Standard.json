@@ -1,17 +1,25 @@
 {
-  "buttons": ["html", "formatting", "bold", "italic", "unorderedlist", "orderedlist", "alignment", "link", "image", "video", "file", "line"],
-  "plugins": ["fullscreen", "video", "email", "alignment", "imageclass", "listclass", "linkclass"],
+  "buttons": ["html", "formatting", "bold", "italic", "unorderedlist", "orderedlist", "alignment", "link", "image", "line"],
+  "plugins": [ "email", "alignment", "imageclass", "listclass", "linkclass", "inlinestyle"],
   "linkNewTab": true,
   "toolbarFixed": true,
   "imagePosition": false,
-  "formatting": ["p", "lead", "h2", "h3", "h4"],
+  "formatting": ["p", "blockquote", "lead", "smaller", "h2", "h3", "h4"],
   "formattingAdd": {
-    "lede": {
+    "lead": {
       "title": "Lead / Intro Paragraph",
       "api": "module.block.format",
       "args": {
           "tag": "p",
           "class": "lead"
+      }
+    },
+    "smaller": {
+      "title": "Smaller Paragraph",
+      "api": "module.block.format",
+      "args": {
+          "tag": "p",
+          "class": "smaller"
       }
     }
   },
@@ -29,6 +37,9 @@
     { "label": "Grid (3 columns)",  "class": "grid-3" }
   ],
   "imageClasses" : [
-    { "label": "Normal", "class": "image", "default": true }
+    { "label": "Align Left", "class": "image image--left", "default": true },
+    { "label": "Center", "class": "image image--center", "default": false },
+    { "label": "Circle", "class": "image image--circle", "default": false },
+    { "label": "Float Right", "class": "image image--float", "default": false }
   ]
 }

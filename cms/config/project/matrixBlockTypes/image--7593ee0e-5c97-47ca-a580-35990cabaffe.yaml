@@ -14,14 +14,14 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: de3083f1-a02b-4884-ae77-ddd215b34e40 # Block Headline
+            fieldUid: de3083f1-a02b-4884-ae77-ddd215b34e40 # Eyebrow
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
             warning: null
-            width: 75
+            width: 50
           -
             fieldUid: 1edf3767-b37f-430e-8ffd-4bd1a3b9f478 # Anchor Link
             instructions: null
@@ -30,7 +30,7 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             warning: null
-            width: 25
+            width: 50
           -
             fieldUid: 7b0a973f-bff0-4f46-bfb0-b6a50c8fe28a # Layout Variations
             instructions: null
@@ -66,7 +66,7 @@ fields:
     contentColumnType: text
     fieldGroup: null
     handle: anchor
-    instructions: 'The a URL `#hash-tag` for jumping to this part of the entry.'
+    instructions: 'Creates a URL `#hash-tag` for linking directly to this block'
     name: 'Anchor Link'
     searchable: false
     settings:
@@ -103,6 +103,17 @@ fields:
             -
               - default
               - '1'
+        -
+          __assoc__:
+            -
+              - label
+              - Circles
+            -
+              - value
+              - circles
+            -
+              - default
+              - ''
         -
           __assoc__:
             -
@@ -220,17 +231,17 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\Dropdown
-  de3083f1-a02b-4884-ae77-ddd215b34e40: # Block Headline
+  de3083f1-a02b-4884-ae77-ddd215b34e40: # Eyebrow
     columnSuffix: null
     contentColumnType: text
     fieldGroup: null
-    handle: headline
-    instructions: 'Use as a section headline above the primary content of this block.'
-    name: 'Block Headline'
+    handle: eyebrow
+    instructions: 'A small line of sub-text that appears above a headline.'
+    name: Eyebrow
     searchable: true
     settings:
       availableTransforms: '*'
-      availableVolumes: ''
+      availableVolumes: '*'
       columnType: text
       configSelectionMode: choose
       defaultTransform: ''
@@ -240,7 +251,7 @@ fields:
       redactorConfig: Headline.json
       removeEmptyTags: '1'
       removeInlineStyles: '1'
-      removeNbsp: ''
+      removeNbsp: '1'
       showHtmlButtonForNonAdmins: ''
       showUnpermittedFiles: false
       showUnpermittedVolumes: false
@@ -308,4 +319,4 @@ fields:
     type: craft\fields\Dropdown
 handle: image
 name: Image
-sortOrder: 4
+sortOrder: 5

@@ -1,15 +1,15 @@
 <footer id="page-footer" class="bg-black bg-opacity-70">
     <div class="container py-6">
         <div class="flex">
-            <div class="text-white">
+            <div class="text-white mr-2">
                 © {{"now"|date('Y')}} {{ currentSite.name }}. All rights reserved.
             </div>
 
             <nav class="legal" role="navigation" aria-label="Legal Navigation">
                 {% set nav = craft.navigate.raw('bottom') %}
-                <ul>
+                <ul class="m-0 p-0 list-none flex">
                     {% for node in nav %}
-                        <li><a
+                        <li class="mr-2"><a
                             href="{{ node.url }}"
                             class="text-white hover:text-yellow-300 focus:text-yellow-300"
                             >{{ node.name }}</a></li>

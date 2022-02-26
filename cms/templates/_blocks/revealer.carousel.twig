@@ -2,9 +2,8 @@
 
 {% block body %}
     <div class="block-content container">       
-        {% include '_blocks/_partials/headline.twig' with {
-            class: 'mb-16'
-        } %}
+        {% include '_blocks/_partials/eyebrow.twig' %}
+        {% include '_blocks/_partials/prose.twig' %}
 
         <hooper
             :wheel-control="false"

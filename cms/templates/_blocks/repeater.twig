@@ -3,18 +3,15 @@
 {% block body %}
     <div class="block-content container">
 
-        {% set headlineClass = block.text ? 'mb-8' : 'mb-16' %}
         {% set proseClass    = 'mb-12 lg:prose-xl' %}
 
-        {% include '_blocks/_partials/headline.twig' with {
-            class: headlineClass
-        } %}
+        {% include '_blocks/_partials/eyebrow.twig' %}
 
         {% include '_blocks/_partials/prose.twig' with {
             class: proseClass
         } %}
 
-        {% set cols = block.features|length >= 4 ? 4 : block.features|length %}
+        {% set cols = block.items|length >= 4 ? 4 : block.items|length %}
 
         {% set imageWidth = 'mb-8' %}
         {% set textWidth  = '' %}
@@ -37,7 +34,7 @@
 
         <div class="{{gridClass}}">
             {% set index = 1 %}
-            {% for row in block.features.all() %}
+            {% for row in block.items.all() %}
                 {% if block.layout == 'verticalAlternating' %}
                     {% set wrapper   = cycle(['flex-row-reverse items-center', 'flex-row items-center'], loop.index0) %}
                     {% set textWidth = cycle(['w-4/5 pr-4', 'w-4/5 pl-4'], loop.index0) %}

@@ -20,7 +20,7 @@ fields:
     columnSuffix: null
     contentColumnType: string
     fieldGroup: null
-    handle: records
+    handle: items
     instructions: ''
     name: Entry
     searchable: false
@@ -43,4 +43,4 @@ fields:
     type: craft\fields\Entries
 handle: entries
 name: Entry
-sortOrder: 2
+sortOrder: 3

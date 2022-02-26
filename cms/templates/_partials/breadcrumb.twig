@@ -2,7 +2,7 @@
 <div class="c-breadcrumb">
     <div class="container">
         <nav class="breadcrumb" aria-label="Breadcrumb">
-            <ol>
+            <ol class="m-0 p-0 list-none flex">
                 {% for crumb in crumbs %}
                     <li><a href="{{ crumb.url }}" {% if loop.last %}aria-current="page"{% endif %}>
                         {{ crumb.title }}

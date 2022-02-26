@@ -74,6 +74,7 @@
     {{ craft.twigpack.includeSafariNomoduleFix() }}
     {{ craft.twigpack.includeJsModule("runtime.js", true) }}
     {{ craft.twigpack.includeJsModule("app.js", true) }}
+    {{ sprig.script }}
 
     {# -- Any JavaScript that should be included before </body> -- #}
     {% block bodyJs %}

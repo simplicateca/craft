@@ -2,7 +2,7 @@
 # ------------------------------------------------------------------------------------------------
 # https://github.com/nystudio107/docker-images/blob/master/node-dev-base/node-14-alpine/Dockerfile
 
-FROM node:14-alpine
+FROM node:bullseye
 
 # Install packages for headless chrome
 RUN apk update \
@@ -32,6 +32,7 @@ RUN apk update \
         libxxf86vm \
         make \
         nasm \
+        zlib1g-dev \
         # Misc packages
         nano \
         # Image optimization packages

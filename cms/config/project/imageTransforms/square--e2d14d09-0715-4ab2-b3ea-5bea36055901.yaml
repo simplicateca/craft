@@ -1,0 +1,9 @@
+format: null
+handle: square
+height: 350
+interlace: none
+mode: crop
+name: Square
+position: center-center
+quality: null
+width: 350

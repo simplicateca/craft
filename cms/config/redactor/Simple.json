@@ -1,7 +1,25 @@
 {
-  "buttons": ["html", "bold", "italic", "unorderedlist", "orderedlist", "link", "line"],
-  "plugins": ["email", "h2h3", "listclass", "linkclass"],
+  "buttons": ["html", "formatting", "bold", "italic", "unorderedlist", "orderedlist", "link", "line"],
+  "plugins": ["email", "listclass", "linkclass"],
   "linkNewTab": true,
+  "formattingAdd": {
+    "lead": {
+      "title": "Lead / Intro Paragraph",
+      "api": "module.block.format",
+      "args": {
+          "tag": "p",
+          "class": "lead"
+      }
+    },
+    "smaller": {
+      "title": "Smaller Paragraph",
+      "api": "module.block.format",
+      "args": {
+          "tag": "p",
+          "class": "smaller"
+      }
+    }
+  },
   "toolbarFixed": true,
   "linkClasses" : [
     { "label": "Button (regular)",      "class": "button" },

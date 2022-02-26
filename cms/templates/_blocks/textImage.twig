@@ -2,9 +2,10 @@
 
 {% block body %}
     <div class="block-content container">
-        {% include '_blocks/_partials/headline.twig' with {
-            class: 'mb-10'
-        } %}
+
+        {% if block.layout != 'textLeftEven' and block.layout != 'textRightEven'  %}
+            {% include '_blocks/_partials/eyebrow.twig' %}
+        {% endif %}
 
         {% set colOrder = '' %}
 
@@ -20,18 +21,22 @@
         {% endif %}
 
         {% if block.layout == 'textLeftEven' %}
-            {% set textWidth  = 'w-1/2 flex content-center items-center px-16' %}
+            {% set textWidth  = 'w-1/2 flex flex-col justify-center content-center items-center px-16' %}
             {% set imageWidth = 'w-1/2' %}
         {% endif %}
 
         {% if block.layout == 'textRightEven' %}
             {% set colOrder  = 'flex-row-reverse' %}
-            {% set textWidth  = 'w-1/2 flex content-center items-center px-16' %}
+            {% set textWidth  = 'w-1/2 flex flex-col justify-center content-center items-center px-16' %}
             {% set imageWidth = 'w-1/2' %}
         {% endif %}
 
         <div class="flex w-full {{colOrder}}">
             <div class="text {{textWidth}}">
+                {% if block.layout == 'textLeftEven' or block.layout == 'textRightEven'  %}
+                    {% include '_blocks/_partials/eyebrow.twig' %}
+                {% endif %}
+
                 {% include '_blocks/_partials/prose.twig' with {
                     class: 'lg:prose-2xl'
                 } %}

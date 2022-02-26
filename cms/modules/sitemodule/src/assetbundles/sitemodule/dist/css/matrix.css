@@ -9,7 +9,7 @@
  */
 
 /* align & enlarge 25% / 50% / 75% select fields */
-/* .field.width-25,
+.field.width-25,
 .field.width-50,
 .field.width-75 {
      display: flex;
@@ -38,12 +38,4 @@
 .field.width-50 div.instructions,
 .field.width-75 div.instructions {
     flex-grow: 1;
-} */
-
-
-/* a little more spacing after button fields */
-div[id*='buttons-field'].field.width-100 {
-    padding-bottom: 24px !important;
 }
-
-/* a little extra padding above the create new component button */

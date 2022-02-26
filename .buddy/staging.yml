@@ -10,7 +10,7 @@
     type: "BUILD"
     working_directory: "/buddy/$PROJECT_SHORTNAME"
     docker_image_name: "library/node"
-    docker_image_tag: "14"
+    docker_image_tag: "bullseye"
     execute_commands:
     - "cd buildchain"
     - "npm install"
@@ -118,7 +118,7 @@
     - "echo \"Backup the database just in case any migrations or Project Config changes have issues\""
     - "./craft backup/db"
     - "echo \"Run pending migrations, sync project config, and clear caches\""
-    - "./craft migrate/all"
+    - "./craft migrate/all --interactive=0"
     - "./craft project-config/apply"
     - "./craft clear-caches/all"
     - "echo \"Done prepping Craft\""
