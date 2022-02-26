@@ -54,14 +54,17 @@ You will need Docker desktop for your platform installed to run the project in l
 ## Admin Login
 
 URL:  http://localhost:8000/admin
+
 Login: `steve@simplicate.ca`
+
 Password: `letmein`
 
 
 ## Accessing the Site Guide / Document frontend
 
 From [Settings > System > Sites](http://localhost:8000/admin/settings/sites) click the "Site Guide" entry and enable the setting labelled:
-**Make this the primary site**
+
+    **Make this the primary site**
 
 Craft will now display this site when you visit `http://localhost:8000`. 
 
@@ -70,3 +73,15 @@ You can revert this by making any other site the primary.
 ## Important things to note
 
  - If you make a change to the contents of the `.env file` you will need to shutdown the docker container and restart it.
+
+ - This project assumes you will be using an Amazon S3 or Digital Ocean Spaces type solution for storing your project assets in the cloud. You can disable this editing the `Asset Settings` or lean into it by editing the `CDN + S3 settings` section of the `.env` file to look something like:
+
+```
+    CDN_URL=https://[YOUR_BUCKET].[YOUR_REGION].digitaloceanspaces.com
+    CDN_FOLDER=[asset/root/folder]
+    S3_KEY=[...]
+    S3_SECRET=[...]
+    S3_ENDPOINT=https://[YOUR_REGION].digitaloceanspaces.com
+    S3_BUCKET=[YOUR_BUCKET]
+    S3_REGION=[YOUR_REGION]
+```
