@@ -29,6 +29,7 @@ RUN set -eux; \
     && \
     # Packages to install
     apk add --no-cache \
+        su-exec \
         bzip2-dev \
         ca-certificates \
         curl \
@@ -145,7 +146,7 @@ WORKDIR /var/www/project/cms
 # This automatic running adds to the startup overhead of `docker-compose up`
 # but saves far more time in not having to deal with out of sync versions
 # when working with teams or multiple environments
-CMD composer install --verbose --no-progress --no-scripts --optimize-autoloader --no-interaction \
+CMD su-exec www-data composer install --verbose --no-progress --no-scripts --optimize-autoloader --no-interaction \
     && \
     chown -R www-data:www-data /var/www/project/cms/vendor \
     && \
@@ -153,6 +154,8 @@ CMD composer install --verbose --no-progress --no-scripts --optimize-autoloader 
     && \
     chown -R www-data:www-data /var/www/project/cms/web \
     && \
+    chown www-data:www-data /var/www/project/cms/.env \
+    && \    
     su-exec www-data composer craft-update \
     && \
     php-fpm

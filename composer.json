@@ -23,6 +23,7 @@
   "scripts": {
     "post-create-project-cmd": [
       "@php -r \"copy('./cms/example.env', './cms/.env');\"",
+      "@php -r \"chmod('./cms/.env', 777);\"",
       "@php -r \"copy('./scripts/example.env.sh', './scripts/.env.sh');\"",
       "@php -r \"unlink('composer.json');\"",
       "@php -r \"unlink('composer.lock');\"",
