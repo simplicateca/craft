@@ -1,5 +1,12 @@
 # simplicate-web/craft Change Log
 
+## 1.3.4 - 2022.02.27
+
+### Changed
+
+* Switched out mariadb docker for mysql to fix an issue with loading a seed DB on first run
+
+
 ## 1.3.3 - 2022.02.26
 
 ### Changed

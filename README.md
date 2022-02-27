@@ -30,24 +30,21 @@ You will need Docker desktop for your platform installed to run the project in l
 
 2. Change into the project directory and run this command to bring up the docker container for the first time:
 
-	`docker-compose up`
+	`make dev`
 
 	This first launch will take several minutes to run while Docker does it's thing. Subsequent launches will be faster.
 
 
-3. To import the seed database, open a second console window in the project directory and run:
+3. The webpack container will likely be the last to finish installing. Wait until you see this in the console:
 
-	`./scripts/docker_restore_db.sh db-seed/seed_db.sql`
+```
+webpack_1  | [nodemon] starting `webpack serve --config webpack.dev.js`
+webpack_1  | <i> [webpack-dev-server] Project is running at:
+webpack_1  | <i> [webpack-dev-server] Loopback: http://localhost:8080/
+```
 
-	This command **must be run while the docker container launched in step 2 is still running**.
+	And then visit the URL http://localhost:8000
 
-4. Once the original docker container has completed it's installation and you can see that it's accepting connections on http://localhost:8000 close it down `CTRL+C` and bring it back up again with:
-
-	`docker-compose up`
-
-	This is necessary because the first attempt will have partially failed due to the seed database not being initially available.
-	
-5. This second launch of the docker container should work without issue. Once the console indicates that it's accepting connections, you can visit the site at: http://localhost:8000
   
 
 ## Admin Login
