@@ -44,7 +44,16 @@ update-clean:
 	docker-compose up
 up:
 	if [ ! "$$(docker ps -q -f name=${CONTAINER})" ]; then \
-		cp -n cms/example.env cms/.env; \
+		cp -n cms/.env.example cms/.env; \
+      	chmod 0777 cms/.env; \
+      	chmod 0777 cms/composer.json; \
+      	chmod -f 0777 cms/composer.lock || true; \
+      	chmod 0777 cms/config; \
+      	chmod -R 0777 cms/config/project; \
+      	chmod -f 0777 cms/config/license.key || true; \
+      	chmod -R 0777 cms/storage; \
+      	chmod -R 0777 cms/vendor; \
+      	chmod -R 0777 cms/web/cpresources; \
 		docker-compose up; \
     fi
 %:

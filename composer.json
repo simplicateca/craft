@@ -22,9 +22,11 @@
   },
   "scripts": {
     "post-create-project-cmd": [
-      "@php -r \"copy('./cms/example.env', './cms/.env');\"",
-      "@php -r \"chmod('./cms/.env', 777);\"",
-      "@php -r \"copy('./scripts/example.env.sh', './scripts/.env.sh');\"",
+      "@php -r \"copy('./cms/.env.example', './cms/.env');\"",
+      "@php -r \"chmod('./cms/.env', 0777);\"",
+      "@php -r \"chmod('./cms/composer.json', 0777);\"",
+      "@php -r \"chmod('./cms/config', 0777);\"",
+      "@php -r \"copy('./scripts/.env.example.sh', './scripts/.env.sh');\"",
       "@php -r \"unlink('composer.json');\"",
       "@php -r \"unlink('composer.lock');\"",
       "@php -r \"unlink('LICENSE.md');\"",

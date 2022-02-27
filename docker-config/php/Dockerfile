@@ -146,16 +146,14 @@ WORKDIR /var/www/project/cms
 # This automatic running adds to the startup overhead of `docker-compose up`
 # but saves far more time in not having to deal with out of sync versions
 # when working with teams or multiple environments
-CMD su-exec www-data composer install --verbose --no-progress --no-scripts --optimize-autoloader --no-interaction \
+CMD chown -R www-data:www-data /var/www/project/cms/vendor \
     && \
-    chown -R www-data:www-data /var/www/project/cms/vendor \
+    chown www-data:www-data /var/www/project/cms \
     && \
     chown -R www-data:www-data /var/www/project/cms/storage \
     && \
-    chown -R www-data:www-data /var/www/project/cms/web \
+    composer install --verbose --no-progress --no-scripts --optimize-autoloader --no-interaction \
     && \
-    chown www-data:www-data /var/www/project/cms/.env \
-    && \    
     su-exec www-data composer craft-update \
     && \
     php-fpm
