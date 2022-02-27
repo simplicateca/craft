@@ -119,12 +119,13 @@ COPY zzz-docker-php-fpm.conf /usr/local/etc/php-fpm.d/
 WORKDIR /var/www/project
 
 COPY ./run_queue.sh .
-RUN chmod a+x run_queue.sh
-
-# Create the storage directory and make it writeable by PHP
-RUN mkdir -p /var/www/project/cms/storage && \
-    mkdir -p /var/www/project/cms/storage/runtime && \
-    chown -R www-data:www-data /var/www/project/cms/storage
+RUN chmod a+x run_queue.sh \
+    && \
+    mkdir -p /var/www/project/cms/storage \
+    && \
+    mkdir -p /var/www/project/cms/web/cpresources \
+    && \
+    chown -R www-data:www-data /var/www/project
 
 # Create the cpresources directory and make it writeable by PHP
 RUN mkdir -p /var/www/project/cms/web/cpresources && \
@@ -152,6 +153,6 @@ CMD composer install --verbose --no-progress --no-scripts --optimize-autoloader 
     && \
     chown -R www-data:www-data /var/www/project/cms/web \
     && \
-    composer craft-update \
+    su-exec www-data composer craft-update \
     && \
     php-fpm
