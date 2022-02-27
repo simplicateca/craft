@@ -21,6 +21,7 @@ SCRIPT=`basename "$0"`
 CONTAINER=${CONTAINER/$SCRIPT/}
 CONTAINER=${CONTAINER/\/scripts\//}
 CONTAINER="${CONTAINER##*/}"
+CONTAINER=$(echo $CONTAINER | tr '[:upper:]' '[:lower:]')
 
 LOCAL_DB_CONTAINER="${CONTAINER}_mariadb_1"
 

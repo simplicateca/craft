@@ -48,6 +48,7 @@ services:
       - "3306:3306"
     volumes:
       - db-data:/var/lib/mysql
+      - ./db-seed:/docker-entrypoint-initdb.d
   redis:
     build:
       context: ./docker-config/redis

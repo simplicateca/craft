@@ -1,5 +1,15 @@
 # simplicate-web/craft Change Log
 
+## 1.3.3 - 2022.02.26
+
+### Changed
+
+* Updated Makefile
+* Added database init on first docker-compose
+* Reverted webpack back to node:14-alpine
+* Force lowercase in container folder name in scripts/.env
+
+
 ## 1.3.2 - 2022.02.26
 
 ### Changed

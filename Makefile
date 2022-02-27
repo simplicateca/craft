@@ -1,7 +1,7 @@
 CONTAINER?=$(shell basename $(CURDIR))_php_1
 BUILDCHAIN?=$(shell basename $(CURDIR))_webpack_1
 
-.PHONY: build clean composer dev npm pulldb restoredb up
+.PHONY: build clean composer craft dev npm pulldb restoredb nuke ssh update update-clean up
 
 build: up
 	docker exec -it ${BUILDCHAIN} npm run build
@@ -23,6 +23,13 @@ pulldb: up
 restoredb: up
 	cd scripts/ && ./docker_restore_db.sh \
 		$(filter-out $@,$(MAKECMDGOALS))
+nuke:
+	docker-compose down -v
+	rm -f cms/composer.lock
+	rm -rf cms/vendor/
+	docker-compose up --build --force-recreate
+ssh: up
+	docker exec -it ${CONTAINER} /bin/sh
 update:
 	docker-compose down
 	rm -f cms/composer.lock
@@ -37,7 +44,8 @@ update-clean:
 	docker-compose up
 up:
 	if [ ! "$$(docker ps -q -f name=${CONTAINER})" ]; then \
-        docker-compose up; \
+		cp -n cms/example.env cms/.env; \
+		docker-compose up; \
     fi
 %:
 	@:

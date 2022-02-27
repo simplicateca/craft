@@ -1,11 +1,10 @@
-
 ## About simplicate-web/craft
 
 This is a highly opinionated, Docker-based `Craft CMS 3` project scaffolding / boilerplate.
 
 It excels at rapidly prototyping modern website structures + page layouts.
 
-We use it very early in our design & development process to increases collaboration and communication between team members and project stakeholders. We've found that it leads to better sites being developed in shorter timelines.
+We use it very early in our design & development process to increases collaboration and communication between team members and project stakeholders. We've found that it results in shorter timelines and better sites.
 
 It comes pre-populated with:
 
@@ -42,7 +41,7 @@ You will need Docker desktop for your platform installed to run the project in l
 
 	This command **must be run while the docker container launched in step 2 is still running**.
 
-4. Once the original docker container has completed it's installation and you can see that it's accepting connections on `http://localhost:8000` close it down `CTRL+C` and bring it back up again with:
+4. Once the original docker container has completed it's installation and you can see that it's accepting connections on http://localhost:8000 close it down `CTRL+C` and bring it back up again with:
 
 	`docker-compose up`
 
@@ -64,9 +63,9 @@ Password: `letmein`
 
 From [Settings > System > Sites](http://localhost:8000/admin/settings/sites) click the "Site Guide" entry and enable the setting labelled:
 
-    **Make this the primary site**
+    Make this the primary site
 
-Craft will now display this site when you visit `http://localhost:8000`. 
+Craft will now display this site when you visit http://localhost:8000 
 
 You can revert this by making any other site the primary.
 
