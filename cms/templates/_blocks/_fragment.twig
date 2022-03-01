@@ -1,0 +1,53 @@
+{% if fragmentID %}
+    {% set method    = method   ?? 'sequential' %}
+    {% set position  = position ?? 'content'    %}
+
+    {% set fragments = craft.entries().section('fragments').id(fragmentID).all() %}
+    
+    {% if method == 'abtest' %}
+        {% set fragments = shuffle( fragments )|slice(0,1) %}
+    {% endif %}
+    
+    {% if fragments %}
+        {% for fragment in fragments %}
+            <div class="block-container">
+                {% set blocks = [] %}
+                {% switch position %}
+                    {% case 'content' %}
+                        {% set blocks = fragment.contentBlocks.all() %}
+                    {% case 'footer' %}
+                        {% set blocks = fragment.footerBlocks.all() %}
+                    {% case 'hero' %}
+                        {% set blocks = fragment.heroBlock.all() %}
+                    {% case 'sidebar' %}
+                        {% set blocks = fragment.sidebarBlocks.all() %}
+                    {% default %}
+                        {% set blocks = fragment.contentBlocks.all() %}
+                {% endswitch %}
+
+                {% for block in blocks %}
+                    {% set entryId   = block.id %}
+                    {% set entryType = entryType ?? block.type.handle    ?? '' %}
+                    {% set section   = section   ?? block.section.handle ?? '' %}
+
+                    {% if block.layout %}
+                        {% include ([  
+                            '_blocks/' ~ block.type.handle ~ '.' ~ section ~ '.' ~ entryType ~ '.' ~ block.layout.value ~ '.twig',
+                            '_blocks/' ~ block.type.handle ~ '.' ~ section ~ '.' ~ entryType ~ '.twig',
+                            '_blocks/' ~ block.type.handle ~ '.' ~ section ~ '.' ~ block.layout.value ~ '.twig',
+                            '_blocks/' ~ block.type.handle ~ '.' ~ section ~ '.twig',
+                            '_blocks/' ~ block.type.handle ~ '.' ~ block.layout.value ~ '.twig',
+                            '_blocks/' ~ block.type.handle ~ '.twig'
+                        ]) %}
+                    {% else %}
+                        {% include ([  
+                            '_blocks/' ~ block.type.handle ~ '.' ~ section ~ '.' ~ entryType ~ '.twig',
+                            '_blocks/' ~ block.type.handle ~ '.' ~ section ~ '.twig',
+                            '_blocks/' ~ block.type.handle ~ '.twig'
+                        ]) %}
+                    {% endif %}
+                {% endfor %}
+            </div>
+        {% endfor %}
+    {% endif %}
+{% endif %}

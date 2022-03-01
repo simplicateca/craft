@@ -2,14 +2,14 @@
 
 {% block body %}
     <div class="block-content container headline">
-        {% set class = 'mb-0' %}
+        {% set class = 'mb-2' %}
 
         {% if block.layout == 'extraLarge' %}
-            {% set class = 'text-7xl mb-0 font-black' %}
+            {% set class = 'text-7xl mb-2 font-black' %}
         {% endif %}
 
         {% if block.layout == 'alternateFont' %}
-            {% set class = 'font-serif mb-0' %}
+            {% set class = 'font-serif mb-2' %}
         {% endif %}
 
         {% include '_blocks/_partials/eyebrow.twig' %}

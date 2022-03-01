@@ -1,7 +1,7 @@
 defaultPlacement: end
 enableVersioning: true
-handle: pages
-name: Pages
+handle: fragments
+name: Fragments
 previewTargets:
   -
     __assoc__:
@@ -19,14 +19,11 @@ siteSettings:
   34463b82-dd3f-441c-b9c6-59c351e847aa: # Wireframe Site
     enabledByDefault: true
     hasUrls: true
-    template: _page
-    uriFormat: '{parent.uri}/{slug}'
+    template: fragments/_entry
+    uriFormat: 'fragments/{slug}'
   cc8cbe25-440c-439e-a58b-6515a3b420d0: # Site Guide
     enabledByDefault: true
     hasUrls: true
-    template: _page
-    uriFormat: '{parent.uri}/{slug}'
-structure:
-  maxLevels: null
-  uid: 0f9bddc9-659f-4907-82a2-028748c7f504
-type: structure
+    template: fragments/_entry
+    uriFormat: 'fragments/{slug}'
+type: channel

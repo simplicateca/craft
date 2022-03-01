@@ -1,0 +1,23 @@
+{% block blockBody %}
+    {% if block.method == 'abtest' %}
+        {{ sprig('_blocks/_fragment', {
+            'fragmentID': block.fragments.ids(),
+            'entryType' : entry.type.handle,
+            'section'   : entry.section.handle,
+            'method'    : 'abtest',
+            'position'  : 'content'
+        }, {'s-trigger': 'load'}) }}
+    {% else %}
+        {% set fragments = block.fragments.all() %}
+        {% for fragment in fragments %}
+            {% include '_blocks/_loop.twig' with {
+                'blocks'    : fragment.contentBlocks,
+                'entryId'   : fragment.id,
+                'entryType' : entry.type.handle,
+                'section'   : entry.section.handle,
+                'method'    : 'sequential',
+                'position'  : 'content'
+            } %}
+        {% endfor %}
+    {% endif %}   
+{% endblock %}

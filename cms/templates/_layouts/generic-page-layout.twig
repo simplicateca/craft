@@ -35,12 +35,14 @@
 {# -- Page body -- #}
 {% block bodyHtml %}
     <div id="page-container">
-        {# -- Emergency Message / Hello Bar -- #}
-        {% include "_partials/emergency-message.twig" %}
+        {% block emergencymessage %}
+            {# -- Emergency Message / Hello Bar -- #}    
+            {% include "_partials/emergency-message.twig" %}
+        {% endblock %}
 
         <div id="content-container">
             {# -- Info header, including _navbar.twig -- #}
-            {% include "_partials/info-header.twig" %}
+            {% block header %}{% include "_partials/info-header.twig" %}{% endblock %}
 
             <main id="page-content">
                 {# -- Primary content block -- #}
@@ -52,10 +54,12 @@
             {% block subcontent %}{% endblock %}
 
             {# -- Info footer -- #}
-            {% include "_partials/info-footer.twig" %}
+            {% block footer %}
+                {% include "_partials/info-footer.twig" %}
 
-            {# -- HTML Footer -- #}
-            {% include "_partials/global-footer.twig" %}
+                {# -- HTML Footer -- #}
+                {% include "_partials/global-footer.twig" %}
+            {% endblock %}
 
             <modal :link="modalLink" v-on:close="onModalClose"></modal>
         </div>

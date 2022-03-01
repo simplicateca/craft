@@ -1,4 +1,4 @@
-dateModified: 1645852816
+dateModified: 1646084375
 email:
   fromEmail: steve@simplicate.ca
   fromName: admin
@@ -58,6 +58,7 @@ meta:
     72b4a2cb-e557-468e-ac08-22f48060f192: Eyebrow # Eyebrow
     85eec3ec-1883-4c10-af75-90414406842a: FAQs # FAQs
     86da4c73-7a95-496d-9abe-cd3807a11ead: 'Layout Variations' # Layout Variations
+    174cd975-f457-4998-8bcc-3d25963f9c3b: 'Content Fragment' # Content Fragment
     187bd4a1-b799-4996-9fbc-c74c2d8b7ce0: 'Background Image' # Background Image
     213c9175-81d2-4141-8993-904e59925583: Repeater # Repeater
     237ef9a6-2022-4b3a-8925-f51a79590775: Layout # Layout
@@ -82,9 +83,11 @@ meta:
     34463b82-dd3f-441c-b9c6-59c351e847aa: 'Wireframe Site' # Wireframe Site
     64029a67-3d0c-4cad-8fc6-dc0eec8c112c: Default # Default
     67671be0-6716-4133-92fd-9b01454d8838: Button # Button
+    89093e20-515d-4e3c-b4c4-c6733d8ab56f: Fragments # Fragments
     138531be-7e43-4759-a397-5325db40a30b: Button # Button
     568005e9-0360-4053-b2e8-85db17dc554b: Text # Text
     751770b9-039b-4d3b-8f92-3e31d5c0fba9: 'Anchor Link' # Anchor Link
+    05645178-c86a-4d11-87dd-8041e7c0407b: Method # Method
     6996714c-bbb3-4367-9b3f-90be15abbbee: 'Public Schema' # Public Schema
     7506709b-79c3-40ab-b4d3-5ce0fa5ba5bc: Eyebrow # Eyebrow
     25414516-f079-42de-9891-f9dd403af271: Image(s) # Image(s)
@@ -98,6 +101,7 @@ meta:
     a61ac261-5f37-431f-a92f-8b38277c3a8d: Background # Background
     a345255e-6a6e-450c-8f3f-bd44bd0d7a91: Text # Text
     a1609989-70ec-42e9-a2d0-ce1a902593c7: Items # Items
+    a9201360-fe99-432b-9f60-dcceb22f2919: Documentation # Documentation
     aa5de47f-bd21-4e66-9e6b-93f174062abc: Image(s) # Image(s)
     aaa3f092-4a89-4ed0-9389-471df91b59d1: 'Layout Variations' # Layout Variations
     ad4c26f2-0839-4f69-bd4b-8f2f43c2d3f1: Edges # Edges
@@ -116,7 +120,7 @@ meta:
     b181050f-eab8-45f0-906a-c8241c2d3cf2: 'Show Block Meta' # Show Block Meta
     ba25b35f-89c4-4230-96a4-31904c63bbf7: Edges # Edges
     bb08d0c0-bcc3-4d96-b172-572ca8f601a1: 'Anchor Link' # Anchor Link
-    bcb40c76-f64f-408f-b1da-edb455b3588d: Craft # Craft
+    bcb40c76-f64f-408f-b1da-edb455b3588d: 'Primary Site' # Primary Site
     bf54b939-18ca-4edf-a1ac-956f04744f8e: 'Primary Navigation' # Primary Navigation
     c0bba8e0-117d-4192-b3a3-ac1a1ed80a6b: Buttons # Buttons
     c00d6261-7e8e-413b-816c-41326575c213: Feature # Feature
@@ -137,6 +141,7 @@ meta:
     d05f4009-0b38-4065-a1b1-65221aa65e63: 'Hero Block' # Hero Block
     d08c5ca6-5020-4ac5-9460-c831d0921585: Headline # Headline
     d4b0af7c-aad2-41a6-9de2-49f00ef28aa5: Background # Background
+    d7da6677-ed4d-4768-8519-8c3123f108ab: Fragment # Fragment
     d79b3073-00bf-430c-95d5-6d03d8303032: SEO # SEO
     d339dd86-5cec-4889-b2d2-81f993979c61: Button # Button
     d3282cfb-d044-4890-b553-9a0b87393027: Default # Default
@@ -148,6 +153,7 @@ meta:
     dfaccb44-ab96-458f-8938-7bb7466b4e98: 'Title Style' # Title Style
     e0dac603-c510-4bb5-8701-e25672d93744: Common # Common
     e0521335-ccc2-4893-a505-4baacf112dee: Basic # Basic
+    e2cdac24-87bd-4a5b-be66-d991b0323794: Fragment(s) # Fragment(s)
     e2d14d09-0715-4ab2-b3ea-5bea36055901: Square # Square
     e2e0830e-80f8-4dfd-8edf-45b6f917cd2d: Eyebrow # Eyebrow
     e3ee13e0-fc9a-44f0-bc39-783e24026d9c: 'Title Style' # Title Style
@@ -170,6 +176,11 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 1.0.0
+  entriessubset:
+    edition: standard
+    enabled: true
+    licenseKey: 9R9DDM1EXYYOUZRA27ZR38WN
+    schemaVersion: 1.1.1
   environment-label:
     edition: standard
     enabled: true

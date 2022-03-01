@@ -4,7 +4,8 @@
 # +  
 # https://github.com/nystudio107/docker-images/blob/master/php-prod-craft/php-7.4-alpine/mariadb/Dockerfile
 
-FROM php:7.4-fpm-alpine
+#FROM php:7.4-fpm-alpine
+FROM nystudio107/php-prod-base:8.0-alpine
 
 # dependencies required for running "phpize"
 # these get automatically installed and removed by "docker-php-ext-*" (unless they're already installed)
@@ -30,69 +31,16 @@ RUN set -eux; \
     # Packages to install
     apk add --no-cache \
         su-exec \
-        bzip2-dev \
-        ca-certificates \
-        curl \
-        fcgi \
-        freetype-dev \
-        gettext-dev \
-        gnu-libiconv=1.15-r3 \
-        icu-dev \
-        imagemagick \
-        imagemagick-dev \
-        libjpeg-turbo-dev \
-        libmcrypt-dev \
-        libpng \
-        libpng-dev \
-        libressl-dev \
-        libtool \
-        libwebp-dev \
-        libxml2-dev \
-        libzip-dev \
-        oniguruma-dev \
-        unzip \
         gifsicle \
         jpegoptim \
         libwebp-tools \
         nano \
         optipng \
-        mariadb-client \        
-    && \
-    # pecl PHP extensions
-    pecl install \
-        imagick-3.4.4 \
-        redis \
-    && \
-    # Configure PHP extensions
-    docker-php-ext-configure \
-        # ref: https://github.com/docker-library/php/issues/920#issuecomment-562864296
-        gd --enable-gd --with-freetype --with-jpeg --with-webp \
+        mysql-client \
     && \
     # Install PHP extensions
     docker-php-ext-install \
-        bcmath \
-        bz2 \
-        exif \
-        ftp \
-        gettext \
-        gd \
-        iconv \
-        intl \
-        mbstring \
-        opcache \
-        pdo \
         pdo_mysql \
-        shmop \
-        sockets \
-        sysvmsg \
-        sysvsem \
-        sysvshm \
-        zip \
-    && \
-    # Enable PHP extensions
-    docker-php-ext-enable \
-        imagick \
-        redis \
     && \
     # Install Composer
     curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin/ --filename=composer \
@@ -102,16 +50,98 @@ RUN set -eux; \
     && \
     # Clean out directories that don't need to be part of the image
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+
+# # Install packages
+# RUN set -eux; \
+#     # Packages needed only for build
+#     apk add --no-cache --virtual .build-deps \
+#         $PHPIZE_DEPS \
+#     && \
+#     # Packages to install
+#     apk add --no-cache \
+#         su-exec \
+#         bzip2-dev \
+#         ca-certificates \
+#         curl \
+#         fcgi \
+#         freetype-dev \
+#         gettext-dev \
+#         gnu-libiconv=1.15-r3 \
+#         icu-dev \
+#         imagemagick \
+#         imagemagick-dev \
+#         libjpeg-turbo-dev \
+#         libmcrypt-dev \
+#         libpng \
+#         libpng-dev \
+#         libressl-dev \
+#         libtool \
+#         libwebp-dev \
+#         libxml2-dev \
+#         libzip-dev \
+#         oniguruma-dev \
+#         unzip \
+#         gifsicle \
+#         jpegoptim \
+#         libwebp-tools \
+#         nano \
+#         optipng \
+#         mariadb-client \        
+#     && \
+#     # pecl PHP extensions
+#     pecl install \
+#         imagick-3.4.4 \
+#         redis \
+#     && \
+#     # Configure PHP extensions
+#     docker-php-ext-configure \
+#         # ref: https://github.com/docker-library/php/issues/920#issuecomment-562864296
+#         gd --enable-gd --with-freetype --with-jpeg --with-webp \
+#     && \
+#     # Install PHP extensions
+#     docker-php-ext-install \
+#         bcmath \
+#         bz2 \
+#         exif \
+#         ftp \
+#         gettext \
+#         gd \
+#         iconv \
+#         intl \
+#         mbstring \
+#         opcache \
+#         pdo \
+#         pdo_mysql \
+#         shmop \
+#         sockets \
+#         sysvmsg \
+#         sysvsem \
+#         sysvshm \
+#         zip \
+#     && \
+#     # Enable PHP extensions
+#     docker-php-ext-enable \
+#         imagick \
+#         redis \
+#     && \
+#     # Install Composer
+#     curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin/ --filename=composer \
+#     && \
+#     # Remove the build deps
+#     apk del .build-deps \
+#     && \
+#     # Clean out directories that don't need to be part of the image
+#     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
     
 
 # https://github.com/docker-library/php/issues/1121
-ENV LD_PRELOAD /usr/lib/preloadable_libiconv.so php
+# ENV LD_PRELOAD /usr/lib/preloadable_libiconv.so php
 
 # Copy the `zzz-docker-php.ini` file into place for php
-COPY zzz-docker-php.ini /usr/local/etc/php/conf.d/
+#COPY zzz-docker-php.ini /usr/local/etc/php/conf.d/
 
 # Copy the `zzz-docker-php-fpm.conf` file into place for php-fpm
-COPY zzz-docker-php-fpm.conf /usr/local/etc/php-fpm.d/
+#COPY zzz-docker-php-fpm.conf /usr/local/etc/php-fpm.d/
 
 
 # original source
