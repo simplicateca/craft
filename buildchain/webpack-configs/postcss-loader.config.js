@@ -37,13 +37,13 @@ module.exports = (type = 'modern', settings) => {
                                         ['postcss-import', {
                                             path: ['./node_modules'],
                                         }],
+                                        ['postcss-mixins', {
+                                        }],
                                         ['tailwindcss/nesting', {
                                         }],
                                         TailwindCss('./tailwind.config.js'),
-                                        ['postcss-mixins', {
-                                        }],
-                                        ['postcss-nested', {
-                                        }],
+                                        // ['postcss-nested', {
+                                        // }],
                                         ['postcss-hexrgba', {
                                         }],
                                         ...postCssPlugins,

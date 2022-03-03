@@ -22,9 +22,9 @@ body {
 	font-weight: 400;
     font-family: var(--text);
     
-    @mixin tablet-down {
+    /* @mixin tablet-down {
         overflow-x : hidden;
-    }
+    } */
 
     &.has-mobile-menu {
         overflow: hidden;
@@ -70,13 +70,44 @@ main {
 
 
 div.container {
-    margin: 0 auto;
-    width : 100%;
+    margin   : 0 auto;
+    max-width: calc( 100% - 2rem );
+    width    : calc( 100% - 2rem );
 
     /* for testing purposes only */
     /* box-shadow: inset 0px 0px 0px 1px rgba(255,0,0,0.25); */
 
-    @mixin desktop-up {
+    @screen xl {
+        max-width: calc( 100% - 4rem );
+        width    : calc( 100% - 4rem );        
+    }
+
+    @screen 2xl {
+        max-width: 1500px;
+    }
+}
+
+.pages--withSidebar {
+    div.body {
+        div.sidebar,
+        div.content {
+            div.container {
+                width: 100%;
+                max-width: 100%;
+            }
+        }
+    }
+}
+
+
+/* div.container {
+    margin: 0 auto;
+    width : 100%; */
+
+    /* for testing purposes only */
+    /* box-shadow: inset 0px 0px 0px 1px rgba(255,0,0,0.25); */
+
+    /* @mixin desktop-up {
         max-width: calc( var(--desktop-width) - 50px );       
     }
 
@@ -104,5 +135,5 @@ div.container {
 
     img {
         max-width: 100%;
-    }
-}
+    } */
+/* } */

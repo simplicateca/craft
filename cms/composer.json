@@ -1,6 +1,6 @@
 {
   "require": {
-    "craftcms/cms": "3.7.34",
+    "craftcms/cms": "3.7.36",
     "craftcms/redactor": "2.10.5",
     "dolphiq/redirect": "1.1.1",
     "mmikkel/reasons": "2.2.6",
@@ -13,7 +13,7 @@
     "nystudio107/craft-twigpack": "1.2.15",
     "nystudio107/craft-typogrify": "1.1.19",
     "putyourlightson/craft-sherlock": "3.1.4",
-    "putyourlightson/craft-sprig": "1.11.1",
+    "putyourlightson/craft-sprig": "^1.11.1",
     "sebastianlenz/linkfield": "1.0.25",
     "solspace/craft-express-forms": "1.1.2",
     "studioespresso/craft-navigate": "2.8.1",

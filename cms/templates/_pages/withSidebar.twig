@@ -18,8 +18,8 @@
 
         <div class="body">
             <div class="container">
-                <div class="flex">      
-                    <div class="w-full overflow-y-auto">
+                <div class="flex flex-col lg:flex-row">
+                    <div class="grow content">
                         {% include '_blocks/_loop.twig' with {
                             'position': 'content',
                             'blocks'  : entry.contentBlocks,
@@ -27,8 +27,9 @@
                         } %}
                     </div>
 
-                    <div class="flex flex-col w-80 pl-8 ml-8 border-l">
-                        <div class="flex flex-col justify-between mt-8">
+                    <div class="flex flex-col pt-8 mt-8 border-t
+                        lg:pt-0 lg:mt-0 lg:pl-8 lg:ml-8 lg:border-l lg:border-t-0 sidebar">
+                        <div class="flex flex-col justify-between mt-8 lg:w-96 lg:max-w-xs">
                             <aside>
                                 {% include '_blocks/_loop.twig' with {
                                     'position': 'sidebar',

@@ -15,7 +15,6 @@
         display: flex;
         flex-direction: column;
         opacity: 0;
-        max-height: 0px;
         z-index: 1000;
         position: fixed;
         overflow: auto;
@@ -27,10 +26,12 @@
         animation-name: menuIn;
         animation-duration: 0.5s;
         animation-fill-mode: forwards;
-        
-        @mixin tablet-down {
-            min-height: 100vh;
-            max-height: auto;
+        min-height: 100vh;
+        max-height: auto;
+
+        @screen lg {
+            min-height: 0px;
+            max-height: 0px;
         }
 
         .logo {
@@ -92,29 +93,28 @@
     }
 
     .toggle {
-        display : none;
         z-index: 1001;
 
-        @mixin tablet-down {
-            top       : 15px;
-            display   : block;
-            position  : fixed;
-            right     : 20px;
-            height    : 24px;
-            width     : 30px;
-            transform : translateY(0px);
-            transition: transform 0.3s;
+        top       : 1.5rem;
+        display   : block;
+        position  : fixed;
+        right     : 2rem;
+        height    : 24px;
+        width     : 30px;
+        transform : translateY(0px);
+        transition: transform 0.3s;
+
+        @screen lg {
+            display : none;
         }
 
         body.has-emergency-message & {
-            @mixin tablet-down {
-                transform: translateY(60px);
-            }
+            transform: translateY(60px);
         }
 
-        @mixin tiny {
+        /* @mixin tiny {
             right: 10px;
-        }
+        } */
 
         span {
             height          : 4px;
@@ -124,6 +124,10 @@
             top             : 0;
             background-color: var(--dark);
             transition      : transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+
+            body.scrolled & {
+                background-color: #fff;
+            }
 
             &:nth-child(1) {
                 body.has-mobile-menu & {

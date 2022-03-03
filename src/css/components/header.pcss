@@ -7,7 +7,11 @@ div.c-primaryLogo {
     a {
         color: var(--dark);
         text-decoration: none;
-    }
+
+        body.scrolled & {
+            color: #fff;
+        }
+    }   
 }
 
 #page-header {
@@ -25,22 +29,6 @@ div.c-primaryLogo {
     body.noHero &,
     body.scrolled & {
         background: #000;
-
-        li {
-            a {
-                color: #fff;
-
-                &:hover, &:focus {
-                    @apply text-blue-600;
-                }
-            }
-        }        
-
-        div.c-primaryLogo {        
-            a {
-                color: #fff;
-            }
-        }
     }
     
 
@@ -59,13 +47,14 @@ div.c-primaryLogo {
 
 nav.c-primary {
     ul {
-        @mixin tablet-down {
-            display: none;
+        display: none;
+        @screen lg {
+            display: flex;
         }
     }
 
     li {
-        margin-left: 2rem;
+        margin-left: 1rem;
         position: relative;
 
         &:hover, 
@@ -75,27 +64,59 @@ nav.c-primary {
             }
         }
 
+        &.button {
+            a {
+                @apply bg-gray-600 text-white;
+
+                &:hover, &:focus {
+                    @apply bg-blue-600 text-white;
+                }
+
+                body.scrolled & {
+                    @apply bg-blue-600 text-white;
+
+                    &:hover, &:focus {
+                        @apply bg-yellow-300 text-black;
+                    }
+                }
+            }
+        }
+
         a {
             font-family: var(--headline);
             font-weight: 700;
             text-decoration: none;
             font-size: 1.3rem;
             display: block;
-            padding: 1rem 0.5rem;
+            padding: 0.75rem 1rem;
             color: var(--dark);
+            line-height: 1em;
 
             &:hover, &:focus {
                 @apply text-blue-600;
+
+                body.scrolled & {
+                    @apply text-yellow-300;
+                }
+            }
+
+            body.scrolled & {
+                @apply text-white;
             }
         }
 
         ul {
             position: absolute;
-            top: 3.5rem;
+            top: 2.75rem;
             left: 0;
             display: none;
             background: #eee;
             text-align: left;
+            max-width: 300px;
+
+            body.scrolled & {
+                background: #000;
+            }
 
             li {
                 display: block;
@@ -104,14 +125,14 @@ nav.c-primary {
                 a {
                     display: block;
                     white-space: nowrap;
-                    padding: 1rem 0.5rem;
+                    padding: 0.75rem 1rem;
+                    font-size: 1rem;
                 }
             }
         }
     }
 
     a.search {
-
         svg {
             max-height: 24px;
             min-height: 24px;
@@ -127,5 +148,4 @@ nav.c-primary {
         }
 
     }
-
 }

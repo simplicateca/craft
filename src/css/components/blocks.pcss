@@ -7,6 +7,18 @@
     }
 }
 
+#sidebar-blocks {
+    .c-block {
+        &:first-of-type {
+            margin-top: 0;
+            
+            @screen lg {
+                margin-top: var(--block-gap);
+            }
+        }
+    }
+}
+
 .c-block {
     margin-top: var(--block-gap);
     scroll-margin-top: var(--scroll-margin-top);

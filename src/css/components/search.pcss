@@ -11,13 +11,11 @@
         font-size: 1.8rem;
         line-height: 1em;
         padding: 1rem;
+        width: calc( 100% - 9rem );
 
-        @mixin tablet-up {
+        @screen md {
             min-width: 40rem;
-        }
-        
-        @mixin mobile {
-            width: calc( 100% - 9rem );
+            max-width: 40rem;
         }
     }
         

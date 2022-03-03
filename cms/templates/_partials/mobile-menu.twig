@@ -1,13 +1,13 @@
 {% set mobilePages = [] %}
-{# {% set nodes = craft.navigation.nodes('primaryNavigation').all() %}
+{% set nodes = craft.navigate.raw('primary') %}
 {% for item in nodes %}
     {% set mobilePages = mobilePages|merge([{
         id: item.id,
         url: item.url,
-        title: item.title,
-        level: item.level,
+        title: item.name,
+        level: 1,
     }]) %}
-{% endfor %} #}
+{% endfor %}
 
 <div id="mobile-menu">
     <mobile-menu :pages="{{mobilePages|json_encode}}"></mobile-menu>
