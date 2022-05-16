@@ -5,6 +5,7 @@
 /cms/composer.lock
 /cms/core
 /cms/config/license.key
+/cms/config/license.key.1
 
 # COMPOSER
 */vendor/*
