@@ -16,8 +16,3 @@
 {% block emergencymessage %}{% endblock %}
 {% block header %}{% endblock %}
 {% block footer %}{% endblock %}
-
-{% block contentJS %}
-    {% include '_blocks/_loop.twig' with { 'blocks': entry.contentBlocks, js: true } %}
-{% endblock contentJS %}
-

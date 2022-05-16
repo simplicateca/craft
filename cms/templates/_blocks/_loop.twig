@@ -1,8 +1,9 @@
-{% set blocks = blocks.one() is defined ? blocks.all() : blocks %}
+{% set position = position ?? '' %}
+{% set blocks   = blocks.one() is defined ? blocks.all() : blocks %}
 
 {% if blocks %}
     <div id="{{position}}-blocks" class="block-container">
-        {% for block in blocks.all() %}
+        {% for block in blocks %}
             {% set layout    = block.layout      ?? layout     ?? '' %}
             {% set blockType = block.type.handle ?? block.type ?? '' %}        
 
