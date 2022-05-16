@@ -13,8 +13,6 @@
             <div class="block-container">
                 {% set blocks = [] %}
                 {% switch position %}
-                    {% case 'content' %}
-                        {% set blocks = fragment.contentBlocks.all() %}
                     {% case 'footer' %}
                         {% set blocks = fragment.footerBlocks.all() %}
                     {% case 'hero' %}
@@ -29,23 +27,17 @@
                     {% set entryId   = block.id %}
                     {% set entryType = entryType ?? block.type.handle    ?? '' %}
                     {% set section   = section   ?? block.section.handle ?? '' %}
+                    {% set layout    = layout    ?? block.layout         ?? '' %}
+                    {% set blockType = blockType ?? block.type.handle    ?? '' %}
 
-                    {% if block.layout %}
-                        {% include ([  
-                            '_blocks/' ~ block.type.handle ~ '.' ~ section ~ '.' ~ entryType ~ '.' ~ block.layout.value ~ '.twig',
-                            '_blocks/' ~ block.type.handle ~ '.' ~ section ~ '.' ~ entryType ~ '.twig',
-                            '_blocks/' ~ block.type.handle ~ '.' ~ section ~ '.' ~ block.layout.value ~ '.twig',
-                            '_blocks/' ~ block.type.handle ~ '.' ~ section ~ '.twig',
-                            '_blocks/' ~ block.type.handle ~ '.' ~ block.layout.value ~ '.twig',
-                            '_blocks/' ~ block.type.handle ~ '.twig'
-                        ]) %}
-                    {% else %}
-                        {% include ([  
-                            '_blocks/' ~ block.type.handle ~ '.' ~ section ~ '.' ~ entryType ~ '.twig',
-                            '_blocks/' ~ block.type.handle ~ '.' ~ section ~ '.twig',
-                            '_blocks/' ~ block.type.handle ~ '.twig'
-                        ]) %}
-                    {% endif %}
+                    {% include ([  
+                        '_blocks/' ~ blockType ~ '.' ~ section ~ '.' ~ entryType ~ '.' ~ layout ~ '.twig',
+                        '_blocks/' ~ blockType ~ '.' ~ section ~ '.' ~ entryType ~ '.twig',
+                        '_blocks/' ~ blockType ~ '.' ~ section ~ '.' ~ layout ~ '.twig',
+                        '_blocks/' ~ blockType ~ '.' ~ section ~ '.twig',
+                        '_blocks/' ~ blockType ~ '.' ~ layout ~ '.twig',
+                        '_blocks/' ~ blockType ~ '.twig'
+                    ]) %}
                 {% endfor %}
             </div>
         {% endfor %}

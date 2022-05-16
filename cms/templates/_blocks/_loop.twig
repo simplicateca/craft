@@ -1,53 +1,26 @@
-{#
-    this template can be called two ways:
-
-    (1) passing in just the `blocks` array will look through the blocks and output the content
-    (2) also including the `js` variable == true, will tell the loop to only output the {% block js %} block for each block
-
-    this is so that we can have a vue instance manage the entire block container for common animations and other tasks, but also so that individual blocks
-    can include their own JS modules without embedding `script` elements inside the main block container (which vue will bitch about).
-#}
+{% set blocks = blocks.one() is defined ? blocks.all() : blocks %}
 
 {% if blocks %}
-    {% if js is defined %}
-        {% for blockItem in blocks.all() %}
-            {% if block("js", '_blocks/' ~ blockItem.type.handle ~ '.twig') is defined %}    
-                {{ block ('js', '_blocks/' ~ blockItem.type.handle ~ '.twig') }}
-            {% endif %}
+    <div id="{{position}}-blocks" class="block-container">
+        {% for block in blocks.all() %}
+            {% set layout    = block.layout      ?? layout     ?? '' %}
+            {% set blockType = block.type.handle ?? block.type ?? '' %}        
+
+            {% include ([  
+                '_blocks/' ~ position ~ '.' ~ blockType ~ '.' ~ entry.section.handle ~ '.' ~ entry.type.handle ~ '.' ~ layout ~ '.twig',
+                '_blocks/' ~ position ~ '.' ~ blockType ~ '.' ~ entry.section.handle ~ '.' ~ entry.type.handle ~ '.twig',
+                '_blocks/' ~ position ~ '.' ~ blockType ~ '.' ~ entry.section.handle ~ '.' ~ layout ~ '.twig',
+                '_blocks/' ~ position ~ '.' ~ blockType ~ '.' ~ entry.section.handle ~ '.twig',
+                '_blocks/' ~ position ~ '.' ~ blockType ~ '.' ~ layout ~ '.twig',
+                '_blocks/' ~ position ~ '.' ~ blockType ~ '.twig',
+                '_blocks/' ~ blockType ~ '.' ~ layout ~ '.twig',
+                '_blocks/' ~ blockType ~ '.twig'
+            ]) with {
+                entry: entry,
+                block: block,
+                position: position,
+                loop: loop
+            } only %}
         {% endfor %}
-    {% else %}
-        <div id="{{position}}-blocks" class="block-container">
-            {% for block in blocks.all() %}
-                {% if block.layout %}
-                    {% include ([  
-                        '_blocks/' ~ position ~ '.' ~ block.type.handle ~ '.' ~ entry.section.handle ~ '.' ~ entry.type.handle ~ '.' ~ block.layout.value ~ '.twig',
-                        '_blocks/' ~ position ~ '.' ~ block.type.handle ~ '.' ~ entry.section.handle ~ '.' ~ entry.type.handle ~ '.twig',
-                        '_blocks/' ~ position ~ '.' ~ block.type.handle ~ '.' ~ entry.section.handle ~ '.' ~ block.layout.value ~ '.twig',
-                        '_blocks/' ~ position ~ '.' ~ block.type.handle ~ '.' ~ entry.section.handle ~ '.twig',
-                        '_blocks/' ~ position ~ '.' ~ block.type.handle ~ '.' ~ block.layout.value ~ '.twig',
-                        '_blocks/' ~ position ~ '.' ~ block.type.handle ~ '.twig',
-                        '_blocks/' ~ block.type.handle ~ '.' ~ block.layout.value ~ '.twig',
-                        '_blocks/' ~ block.type.handle ~ '.twig'
-                    ]) with {
-                        entry: entry,
-                        block: block,
-                        position: position,
-                        loop: loop
-                    } %}
-                {% else %}
-                    {% include ([  
-                        '_blocks/' ~ position ~ '.' ~ block.type.handle ~ '.' ~ entry.section.handle ~ '.' ~ entry.type.handle ~ '.twig',
-                        '_blocks/' ~ position ~ '.' ~ block.type.handle ~ '.' ~ entry.section.handle ~ '.twig',
-                        '_blocks/' ~ position ~ '.' ~ block.type.handle ~ '.twig',
-                        '_blocks/' ~ block.type.handle ~ '.twig'
-                    ]) with {
-                        entry: entry,
-                        block: block,
-                        position: position,
-                        loop: loop
-                    } %}
-                {% endif %}
-            {% endfor %}
-        </div>
-    {% endif %}
+    </div>
 {% endif %}

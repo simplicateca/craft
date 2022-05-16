@@ -33,6 +33,7 @@ RUN set -eux; \
         libwebp-tools \
         nano \
         optipng \
+        mariadb-client \
         mysql-client \
     && \
     # Install PHP extensions
