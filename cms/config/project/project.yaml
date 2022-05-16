@@ -1,4 +1,4 @@
-dateModified: 1646330579
+dateModified: 1652680536
 email:
   fromEmail: steve@simplicate.ca
   fromName: admin
@@ -91,10 +91,12 @@ meta:
     6996714c-bbb3-4367-9b3f-90be15abbbee: 'Public Schema' # Public Schema
     7506709b-79c3-40ab-b4d3-5ce0fa5ba5bc: Eyebrow # Eyebrow
     25414516-f079-42de-9891-f9dd403af271: Image(s) # Image(s)
+    43406218-0e65-4e33-bd0a-df130a7d2e6c: 'SEO Editor' # SEO Editor
     79001047-67b4-4b93-825f-333664a55c70: 'Text (Right)' # Text (Right)
     a2bd406d-dfd3-4190-aad1-ef06ff685696: Button # Button
     a4f97962-52de-4b53-8422-5b833d1cd5fd: Uploads # Uploads
     a4fe99b5-7832-4eb2-9833-f551177bb821: 'Content Blocks' # Content Blocks
+    a9eefedb-b175-4baa-a9ee-903aa94e9c9b: 'Content Editor' # Content Editor
     a35a0beb-0cf7-4a2b-9ec3-91e953a18116: 'Sidebar Blocks' # Sidebar Blocks
     a39c9c32-2acb-47fd-ad36-7980c445a44e: 'Text + Image' # Text + Image
     a52e2b08-2e30-4b00-8784-4104c409d3ed: FAQs # FAQs
@@ -158,6 +160,7 @@ meta:
     e2e0830e-80f8-4dfd-8edf-45b6f917cd2d: Eyebrow # Eyebrow
     e3ee13e0-fc9a-44f0-bc39-783e24026d9c: 'Title Style' # Title Style
     e6d20858-c077-4e76-b107-03166b8ba61d: Eyebrow # Eyebrow
+    e511df66-41ea-4d8f-bfa5-538fec0fc45f: 'Site Owner' # Site Owner
     e8279648-aafc-4293-a410-7e3c587f89c2: Edges # Edges
     ec26ccd6-8b77-446f-83e4-5a157ab84ee5: Text # Text
     ecafdb45-55b7-4568-b087-9c19bc75197a: 'Error 404' # Error 404

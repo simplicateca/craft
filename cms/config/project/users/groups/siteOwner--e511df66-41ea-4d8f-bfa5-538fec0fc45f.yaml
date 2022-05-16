@@ -1,0 +1,25 @@
+description: ''
+handle: siteOwner
+name: 'Site Owner'
+permissions:
+  - accesscp
+  - accesscpwhensystemisoff
+  - accesssitewhensystemisoff
+  - administrateusers
+  - 'assignusergroup:a9eefedb-b175-4baa-a9ee-903aa94e9c9b' # Content Editor
+  - assignusergroups
+  - assignuserpermissions
+  - deleteusers
+  - 'editsite:34463b82-dd3f-441c-b9c6-59c351e847aa' # Wireframe Site
+  - editusers
+  - impersonateusers
+  - moderateusers
+  - registerusers
+  - 'utility:asset-indexes'
+  - 'utility:clear-caches'
+  - 'utility:db-backup'
+  - 'utility:deprecation-errors'
+  - 'utility:php-info'
+  - 'utility:queue-manager'
+  - 'utility:system-messages'
+  - 'utility:system-report'

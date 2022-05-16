@@ -1,5 +1,13 @@
 # simplicate-web/craft Change Log
 
+## 1.3.6 - 2002.05.16
+
+### Changed
+
+* Updated to Craft 3.7.42
+* Created default user groups for "Content Editor / Site Owner / SEO Editor"
+
+
 ## 1.3.5 - 2022.05.16
 
 ### Changed
