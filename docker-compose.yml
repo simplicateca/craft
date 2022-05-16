@@ -17,7 +17,7 @@ services:
       context: ./docker-config/php
       dockerfile: ./Dockerfile
     depends_on:
-      - "mariadb"
+      - "mysql"
       - "redis"
     env_file:
       *env
@@ -32,9 +32,9 @@ services:
       - ./cms/storage/runtime/compiled_templates:/var/www/project/cms/storage/runtime/compiled_templates:delegated
       - ./cms:/var/www/project/cms:cached
       - ./cms/vendor:/var/www/project/cms/vendor:delegated
-  mariadb:
+  mysql:
     build:
-      context: ./docker-config/mariadb
+      context: ./docker-config/mysql
       dockerfile: ./Dockerfile
     cap_add:
       - SYS_NICE  # CAP_SYS_NICE

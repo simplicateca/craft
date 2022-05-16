@@ -1,4 +1,5 @@
 CONTAINER?=$(shell basename $(CURDIR))_php_1
+DBCONTAINER?=$(shell basename $(CURDIR))_mysql_1
 BUILDCHAIN?=$(shell basename $(CURDIR))_webpack_1
 
 .PHONY: build clean composer craft dev npm pulldb restoredb nuke ssh update update-clean up
@@ -15,6 +16,7 @@ craft: up
 	docker exec -it ${CONTAINER} php craft \
 		$(filter-out $@,$(MAKECMDGOALS))
 dev: up
+	docker exec -it ${DBCONTAINER} mysql -uroot -psecret -Bse "ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'root';ALTER USER 'project'@'%' IDENTIFIED WITH mysql_native_password BY 'project';"
 npm: up
 	docker exec -it ${BUILDCHAIN} npm \
 		$(filter-out $@,$(MAKECMDGOALS))
