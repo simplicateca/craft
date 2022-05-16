@@ -81,3 +81,5 @@ You can revert this by making any other site the primary.
     S3_BUCKET=[YOUR_BUCKET]
     S3_REGION=[YOUR_REGION]
 ```
+
+ - If you attempt to export the Craft CMS database through the Admin > Utilities menu and receive an error message, run `make fixdb` and attempt the export again. This fixes a [weird mysql-server:8 bug](https://stackoverflow.com/questions/49194719/authentication-plugin-caching-sha2-password-cannot-be-loaded) that only shows up when trying to export. This command only needs to be run once.

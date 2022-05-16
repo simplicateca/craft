@@ -1,5 +1,12 @@
 # simplicate-web/craft Change Log
 
+## 1.3.5 - 2022.05.16
+
+### Changed
+
+* Fixed the errors that were plauging the package since swapping out mariadb for mysql server 8
+* Added a Makefile command `make fixdb` to update mysql root user permissions if experiencing issues exporting the Craft CMS database
+
 ## 1.3.4 - 2022.02.27
 
 ### Changed
