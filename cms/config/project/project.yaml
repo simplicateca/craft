@@ -1,4 +1,4 @@
-dateModified: 1652680536
+dateModified: 1652936016
 email:
   fromEmail: steve@simplicate.ca
   fromName: admin
@@ -133,6 +133,7 @@ meta:
     c25e161a-2f9c-406c-9ace-21fa7f000c4a: Limit # Limit
     c223fda9-a939-46a4-8969-a240d2d54f07: Headline # Headline
     c441b407-6c5c-4101-b07b-1883f705c486: Buttons # Buttons
+    c631ebbf-3bef-4266-8a8b-5d9087223423: Primary # Primary
     c864b8d2-2de8-4995-9bb6-4647bee68943: Edges # Edges
     c1193bb1-b500-4050-8b68-a0a7bee4594f: Headline # Headline
     c3237db2-d369-48c5-813e-2345a8581370: Background # Background
@@ -142,6 +143,7 @@ meta:
     cd395274-64b5-4e73-aeb8-7e99e6d8148e: Documentation # Documentation
     d05f4009-0b38-4065-a1b1-65221aa65e63: 'Hero Block' # Hero Block
     d08c5ca6-5020-4ac5-9460-c831d0921585: Headline # Headline
+    d1f62e57-fa7c-44d0-8deb-ce19e5ff24f4: Legal # Legal
     d4b0af7c-aad2-41a6-9de2-49f00ef28aa5: Background # Background
     d7da6677-ed4d-4768-8519-8c3123f108ab: Fragment # Fragment
     d79b3073-00bf-430c-95d5-6d03d8303032: SEO # SEO
@@ -212,11 +214,11 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 1.0.0
-  navigate:
+  navigation:
     edition: standard
     enabled: true
-    licenseKey: ZJUANHF6DTK3900Y0HHLHU2G
-    schemaVersion: 2.4.0
+    licenseKey: E7FAUH9NOO7NUN86YZ9Y5M61
+    schemaVersion: 1.0.21
   reasons:
     edition: standard
     enabled: true

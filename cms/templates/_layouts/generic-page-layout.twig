@@ -56,25 +56,16 @@
             {# -- Info footer -- #}
             {% block footer %}
                 {% include "_partials/info-footer.twig" %}
-
-                {# -- HTML Footer -- #}
-                {% include "_partials/global-footer.twig" %}
             {% endblock %}
 
             <modal :link="modalLink" v-on:close="onModalClose"></modal>
         </div>
 
-        {{ craft.twigpack.includeJsModule("content-container.js", true) }}
-        {% block contentJS %}{% endblock %}
-
-        <div id="component-container">
-            {# -- Confetti proves Vue single file components are loading. Remove for production -- #}
-            {% if not craft.app.request.pathInfo %}
-                <confetti></confetti>
-            {% endif %}
-        </div>
-
-        {# -- Mobile Menu -- #}
         {% include "_partials/mobile-menu.twig" %}
+
+        {# -- Confetti proves Vue single file components are loading. Remove for production -- #}
+        {% if not craft.app.request.pathInfo %}
+            <confetti></confetti>
+        {% endif %}
     </div>
 {% endblock bodyHtml %}

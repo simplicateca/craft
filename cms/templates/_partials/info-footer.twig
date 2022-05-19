@@ -6,15 +6,22 @@
             </div>
 
             <nav class="legal" role="navigation" aria-label="Legal Navigation">
-                {% set nav = craft.navigate.raw('bottom') %}
-                <ul class="m-0 p-0 list-none flex">
-                    {% for node in nav %}
-                        <li class="mr-2"><a
-                            href="{{ node.url }}"
-                            class="text-white hover:text-yellow-300 focus:text-yellow-300"
-                            >{{ node.name }}</a></li>
-                    {% endfor %}
-                </ul>
+                {{ craft.navigation.render('legal', {
+                    ulClass: 'm-0 p-0 list-none flex',
+                    liClass: 'nav-item',
+                    aClass: 'text-white block mr-2',
+                    activeClass: 'nav-active',
+                    hasChildrenClass: 'nav-has-children',
+                    ulAttributes: {
+                        'data-attr': 'Some value',
+                    },
+                    liAttributes: {
+                        'data-attr': 'Some value',
+                    },
+                    aAttributes: {
+                        'data-attr': 'Some value',
+                    },
+                }) }}
             </nav>
         </div>
     </div>

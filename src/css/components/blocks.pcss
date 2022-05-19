@@ -1,24 +1,6 @@
 @import 'blocks-combinations.pcss';
 @import 'blocks-revealer.pcss';
 
-#hero-blocks {
-    .c-block {
-        margin-top: 0;
-    }
-}
-
-#sidebar-blocks {
-    .c-block {
-        &:first-of-type {
-            margin-top: 0;
-            
-            @screen lg {
-                margin-top: var(--block-gap);
-            }
-        }
-    }
-}
-
 .c-block {
     margin-top: var(--block-gap);
     scroll-margin-top: var(--scroll-margin-top);
@@ -29,6 +11,20 @@
 
     .eyebrow {
         @apply font-bold uppercase font-sans text-gray-500;
+    }
+
+    &.position--hero {
+        margin-top: 0 !important;
+    }
+
+    &.position--sidebar {
+        &:first-of-type {
+            margin-top: 0;
+
+            @screen lg {
+                margin-top: var(--block-gap);
+            }            
+        }
     }
 
     .card.relative {

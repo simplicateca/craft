@@ -1,0 +1,33 @@
+handle: legal
+instructions: ''
+maxNodes: ''
+name: Legal
+permissions:
+  craft\elements\Asset:
+    enabled: '1'
+    permissions: '*'
+  craft\elements\Category:
+    enabled: '1'
+    permissions: '*'
+  craft\elements\Entry:
+    enabled: '1'
+    permissions: '*'
+  craft\elements\Tag:
+    enabled: ''
+    permissions: '*'
+  custom:
+    enabled: '1'
+  verbb\navigation\nodetypes\PassiveType:
+    enabled: '1'
+  verbb\navigation\nodetypes\SiteType:
+    enabled: '1'
+propagateNodes: false
+siteSettings:
+  34463b82-dd3f-441c-b9c6-59c351e847aa: # Wireframe Site
+    enabled: '1'
+  cc8cbe25-440c-439e-a58b-6515a3b420d0: # Site Guide
+    enabled: '1'
+sortOrder: 2
+structure:
+  maxLevels: null
+  uid: d38282dc-c747-4b18-9cc3-81089a42e2b7

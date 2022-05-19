@@ -1,0 +1,33 @@
+handle: primary
+instructions: ''
+maxNodes: ''
+name: Primary
+permissions:
+  craft\elements\Asset:
+    enabled: '1'
+    permissions: '*'
+  craft\elements\Category:
+    enabled: '1'
+    permissions: '*'
+  craft\elements\Entry:
+    enabled: '1'
+    permissions: '*'
+  craft\elements\Tag:
+    enabled: ''
+    permissions: '*'
+  custom:
+    enabled: '1'
+  verbb\navigation\nodetypes\PassiveType:
+    enabled: '1'
+  verbb\navigation\nodetypes\SiteType:
+    enabled: '1'
+propagateNodes: false
+siteSettings:
+  34463b82-dd3f-441c-b9c6-59c351e847aa: # Wireframe Site
+    enabled: '1'
+  cc8cbe25-440c-439e-a58b-6515a3b420d0: # Site Guide
+    enabled: '1'
+sortOrder: 1
+structure:
+  maxLevels: null
+  uid: 4fe70de7-32cb-4d01-b895-5bb4b2f49d08

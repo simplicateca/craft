@@ -14,6 +14,14 @@ div.c-primaryLogo {
     }   
 }
 
+
+#content-container {
+    body.has-emergency-message:not(.scrolled) & {
+        top: 40px;
+    }
+}
+
+
 #page-header {
     background: #eee;
     position: sticky;
@@ -21,10 +29,6 @@ div.c-primaryLogo {
     top: 0;
     z-index: 10;
     transition: background-color 0.3s ease;
-
-    body.has-emergency-message & {
-        top: 40px;
-    }
 
     body.noHero &,
     body.scrolled & {

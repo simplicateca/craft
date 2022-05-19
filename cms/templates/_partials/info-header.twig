@@ -1,32 +1,27 @@
-{% import _self as macros %}
-{% macro renderNode(node) %}
-    {% import _self as macros %}
-    <li class="{% if node.classes|length %}{{ node.classes }}{% endif %}">
-        <a  href="{{ node.url }}" class="{% if node.active %}active{% endif %}" 
-        {% if node.blank %}target="_blank" rel="noopener"{% endif %}>{{ node.name }}
-        </a>
-        {% if node.children|length %}
-            <ul>
-            {% for child in node.children %}
-                {{ macros.renderNode(child) }}
-            {% endfor %}
-            </ul>
-        {% endif %}
-    </li>
-{% endmacro %}
-
 <header id="page-header">
     <div class="container">
         <div class="wrapper">
             <div class="c-primaryLogo"><a href="/">[LOGO]</a></div>
             <nav class="c-primary" role="navigation" aria-label="Primary Navigation">
-                {% set nav = craft.navigate.raw('primary') %}
-                <ul class="m-0 p-0 list-none flex">
-                    {% for node in nav %}
-                        {{ macros.renderNode(node) }}
-                    {% endfor %}
-                </ul>
+                {{ craft.navigation.render('primary', {
+                    ulClass: 'm-0 p-0 list-none flex',
+                    liClass: 'nav-item',
+                    aClass: 'nav-link',
+                    activeClass: 'nav-active',
+                    hasChildrenClass: 'nav-has-children',
+                    ulAttributes: {
+                        'data-attr': 'Some value',
+                    },
+                    liAttributes: {
+                        'data-attr': 'Some value',
+                    },
+                    aAttributes: {
+                        'data-attr': 'Some value',
+                    },
+                }) }}
             </nav>
+
+            <mobile-toggle @toggle-menu="handleMenuToggle" :open="mobileOpen"></mobile-toggle>
         </div>
     </div>
 </header>

@@ -1,16 +1,12 @@
 <template>
     <div class="c-mobileMenu">
-        <a href="#" class="toggle" @click.prevent="toggleMenu" :class="mobileMenuOpen ? 'active' : ''">
-            <span></span>
-            <span></span>
-            <span></span>
-        </a>
-
-        <nav v-if="mobileMenuOpen">
-            <div class="logo">
-                <div class="c-primaryLogo">
-                    <a href="/">[LOGO]</a>
+        <nav v-if="open" class="bg-stone-900">
+            <div class="flex w-full items-center sticky top-0 bg-stone-900 p-4 text-white">
+                <div class="c-primaryLogo flex-grow">
+                    <a href="/" class="text-white">[LOGO]</a>
                 </div>
+
+                <mobile-toggle :open="true"></mobile-toggle>
             </div>
 
             <div class="menuWrapper">
@@ -32,11 +28,16 @@
 </template>
 
 <script>
+    import MobileToggle from './MobileToggle'
+
     export default {
+        components: {
+            'mobile-toggle': MobileToggle
+        },
+
         data() {
             return {
-                mobileMenuOpen: false,
-                openMenu: 0
+                
             }
         },
 
@@ -45,6 +46,11 @@
                 type: Array,
                 default: []
             },
+
+            open: {
+                type: Boolean,
+                default: false
+            }
         },
 
         computed: {
@@ -68,34 +74,20 @@
                 return result;
             },
 
-            toggleMenu( status = '' ) {
-                if( status  == 'off' ) {
-                    this.mobileMenuOpen = false;
-                } else {
-                    this.mobileMenuOpen = !this.mobileMenuOpen;
-                }
-
-                if( this.mobileMenuOpen ) {
-                    document.querySelector('body').classList.add('has-mobile-menu');
-                } else {
-                    document.querySelector('body').classList.remove('has-mobile-menu');
-                }
+            here(event) {
+                console.log(event)
             },
 
             menuOn(menu) {
-                this.showMenu[menu] = true;
+                //this.showMenu[menu] = true;
             },
 
             menuOff(menu) {
-                if( menu == 'all' ) {
-                    this.toggleMenu( 'off' )
-                } else {
-                    this.showMenu[menu]  = false;
-                }
+                //this.showMenu[menu]  = false;
             },
 
             showSub( pageid ) {
-                this.openMenu = ( this.openMenu == pageid ) ? 0 : pageid
+                //this.openMenu = ( this.openMenu == pageid ) ? 0 : pageid
             }
         }
    }

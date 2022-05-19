@@ -123,17 +123,17 @@ return [
                 'entries' => [
                     'tabs' => [[
                         'label' => 'Content',
-                        'fields' => ['text', 'records'],
+                        'fields' => ['text', 'items'],
                     ], [
                         'label' => 'Format & Layout',
                         'fields' => ['eyebrow', 'anchor', 'layout', 'edges', 'background'],
                     ]],
                 ],
 
-                'features' => [
+                'repeater' => [
                     'tabs' => [[
                         'label' => 'Content',
-                        'fields' => ['text', 'features'],
+                        'fields' => ['text', 'items'],
                     ], [
                         'label' => 'Format & Layout',
                         'fields' => ['eyebrow', 'anchor', 'layout', 'edges', 'background'],

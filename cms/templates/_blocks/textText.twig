@@ -1,20 +1,19 @@
 {% extends '_blocks/_layout.twig' %}
 
+{% set leftWidth  = 'w-1/2' %}
+{% set rightWidth = 'w-1/2' %}
+{% if block.layout == 'heavyLeft' %}
+    {% set leftWidth  = 'w-2/3' %}
+    {% set rightWidth = 'w-1/3' %}
+{% endif %}
+{% if block.layout == 'heavyRight' %}
+    {% set leftWidth  = 'w-1/3' %}
+    {% set rightWidth = 'w-2/3' %}
+{% endif %}
+
 {% block body %}
     <div class="block-content container">
         {% include '_blocks/_partials/eyebrow.twig' %}
-
-        {% set leftWidth  = 'w-1/2' %}
-        {% set rightWidth = 'w-1/2' %}
-        {% if block.layout == 'heavyLeft' %}
-            {% set leftWidth  = 'w-2/3' %}
-            {% set rightWidth = 'w-1/3' %}
-        {% endif %}
-        {% if block.layout == 'heavyRight' %}
-            {% set leftWidth  = 'w-1/3' %}
-            {% set rightWidth = 'w-2/3' %}
-        {% endif %}
-        
 
         <div class="flex">
             <div class="text left {{leftWidth}} pr-8 flex">
@@ -34,9 +33,8 @@
 {% endblock %}
 
 {% block tailwind %}
+    {#-- these don't show up anywhere, but the tailwind JIT compiler finds them -- #}
     <div class="w-1/2"></div>
     <div class="w-1/3"></div>
     <div class="w-2/3"></div>
 {% endblock %}
-
-{% block js %}{% endblock %}

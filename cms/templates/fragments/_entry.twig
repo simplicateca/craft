@@ -3,11 +3,25 @@
 {% block content %}
     <div class="{{entry.section.handle}} {{entry.section.handle}}--{{entry.type.handle}}">
         <div class="body">
-            {% include '_blocks/_loop.twig' with {
-                'position': 'content',
-                'blocks'  : entry.contentBlocks,
-                'entry'   : entry,
-            } %}
+
+            {# if this isn't a default fragment, try to embed it directly #}
+            {% if entry.type.handle != 'default' %}
+
+                {% include ([
+                    '_partials/' ~ entry.type.handle ~ '.twig',
+                    '_partials/fragment.' ~ entry.type.handle ~ '.twig',
+                ]) with {
+                    'fragment': entry,
+                    'block': entry
+                } only %}
+
+            {# otherwise, just loop through the blocks as if they were a mini-block of their own #}
+            {% else %}
+                {% include '_blocks/_loop.twig' with {
+                    'blocks' : entry.contentBlocks.all(),
+                    'entry'  : entry
+                } only %}
+            {% endif %}
         </div>
     </div>
 {% endblock %}

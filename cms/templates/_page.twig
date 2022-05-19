@@ -1,3 +1,5 @@
+{% set bodyClasses = entry.slug == '__home__' ? 'home' : entry.slug %}
+
 {% set folder = '_pages' %}
 {% set handle = entry.type.handle|replace( { 'Index' : '-index' } ) %}
 

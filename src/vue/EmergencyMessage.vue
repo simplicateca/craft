@@ -2,7 +2,7 @@
     <div class="emergency-message" :class="{ hidden: !showing }">
         <div v-html="msg.text"></div>
         <a v-if="msg.url" :href="msg.url" v-on:click.prevent="onCTA">{{msg.link || 'Details'}}</a>
-        <a href="#" class="close" aria-label="Close Notification" v-on:click.prevent="onClose"></a>
+        <!-- <a href="#" class="close" aria-label="Close Notification" v-on:click.prevent="onClose"></a> -->
     </div>
 </template>
 
@@ -50,34 +50,34 @@
 </script>
 
 <style>
-    #emergency-message {
-        position: sticky;
+    .emergency-message {
+        @apply bg-black;
+        position: fixed;
+        z-index: 10000;
         top: 0;
         width: 100%;
-        z-index: 10000;
-    }
-
-    .emergency-message {
-        background: #000;
         display: flex;
         align-items: center;
         justify-content: center;
         overflow: hidden;
-        position: relative;
         z-index: 9999;
         padding: 0 1rem;
-        min-height: 40px;
+        height: 100%;
         max-height: 40px;
         transition: max-height 0.15s linear, opacity 0.15s linear;
                
+        body.scrolled & {
+            max-height: 0px;
+        }
+        
         p {
+            @apply uppercase text-base;
             margin: 0;
             padding: 0px 0;
             font-weight: bold;
             color: #fff;
             text-align : center;
             flex-grow: 1;
-            font-size: 1.5rem;
 
             &:before {
                 content: '';

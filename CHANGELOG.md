@@ -1,5 +1,34 @@
 # simplicate-web/craft Change Log
 
+
+## 1.4 - 2002.05.19
+
+### Added
+
+* Ability to assign parallax functionality to html elements using class/data attributes. See the `handleParallax` function in `src/js/app.js` 
+* New base TwigExtension added to default SiteModule. Provides new twig filters for extracting or removing the leading HTML header tags (h1,h2,h3, etc) from a twig variable.
+* Added default slug-based class names to the <body> tag for each page
+* New default navigation menus - `primary` and `legal`
+
+### Changed
+
+* Consolidated the `emergency-message`, `content-container`, `mobile-menu` modules into `app.js`
+* Re-arranged the base template so that all the site content is inside the `app.js` Vue container
+* Updated the nomenclature for block twig file naming. See `cms/templates/_blocks/_loop.twig` for a reference
+* Improved on the structure of previewing & including content fragments inside the page builder
+* Replaced the `Navigate` plugin with the Verbb `Navigation` plugin
+* Separated the mobile menu toggle button from the main mobile menu component
+* Some general base template clean-up
+* Tweaked the way emergency messages pop-up and push content down
+* Matrixmate config now references `entries` and `repeater` blocks by their proper names & fields
+
+### Removed
+
+* No more html5shiv + respond.js support for IE8. No one should still be using that browser. 
+* A/B option removed from the fragment block. Might return in the future as a `layout` option.
+* `cms/templates/index.twig` was no longer needed since using `__home__` slug trick within page structure
+
+
 ## 1.3.6 - 2002.05.16
 
 ### Changed

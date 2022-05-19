@@ -16,12 +16,6 @@
      flex-direction: column;
 }
 
-.field.width-25 div.input,
-.field.width-50 div.input,
-.field.width-75 div.input {
-    justify-self: flex-end;
-}
-
 .field.width-25 div.input .select,
 .field.width-50 div.input .select,
 .field.width-75 div.input .select {
@@ -34,8 +28,50 @@
     width: 100%;
 }
 
-.field.width-25 div.instructions,
+.field.width-25 div.input {
+    justify-self: flex-end;
+}
+
+/* .field.width-25 div.input,
+.field.width-50 div.input,
+.field.width-75 div.input {
+    justify-self: flex-end;
+} */
+
+.field.width-25 div.instructions {
+    flex-grow: 1;
+}
+
+/* .field.width-25 div.instructions,
 .field.width-50 div.instructions,
 .field.width-75 div.instructions {
     flex-grow: 1;
+} */
+
+
+.matrix-field .blocks > .matrixblock {
+    margin-bottom: 3rem;
+}
+
+.matrix-field .blocks > .matrixblock.collapsed {
+    margin-bottom: 0.5rem;
+}
+
+
+.matrix-field .buttons.last .btngroup {
+    margin-top: 2rem;
+}
+
+.matrix-field .buttons.last .btngroup::before {
+    content: 'Add a new content block';
+    position: absolute;
+    display: block;
+    top: -1.5rem;
+    color: #596673;
+    font-weight: bold;
+}
+
+.matrix-field .buttons.last .btngroup.disabled::before {
+    content: 'Block limit reached';
+    color: #444;
 }

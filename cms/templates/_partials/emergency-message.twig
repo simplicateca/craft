@@ -9,9 +9,5 @@
         'link': eMsg.button.text,
         'url': eMsg.button.url
     } %}    
-    <div id="emergency-message">
-        <emergency-message :msg="{{ msg|json_encode }}"></emergency-message>
-    </div>
-
-    {{ craft.twigpack.includeJsModule("emergency-message.js", true) }}
+    <emergency-message :msg="{{ msg|json_encode }}"></emergency-message>
 {% endif %}

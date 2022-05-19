@@ -11,6 +11,7 @@
 namespace modules\sitemodule;
 
 use modules\sitemodule\assetbundles\sitemodule\SiteModuleAsset;
+use modules\sitemodule\twigextensions\SiteModuleTwigExtension;
 use modules\sitemodule\services\Helper;
 use modules\sitemodule\variables\SiteVariable;
 
@@ -106,6 +107,9 @@ class SiteModule extends Module
                 'class' => Helper::class,
             ]
         ]);
+
+        // Add in our Twig extensions
+        Craft::$app->view->registerTwigExtension( new SiteModuleTwigExtension() );
 
         // register our variables
         Event::on(

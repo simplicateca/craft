@@ -2,15 +2,6 @@
     position: relative;
     z-index: 100000;
 
-    .c-primaryLogo {
-        margin-left: 1rem;
-        padding-top: 1rem;
-        
-        a {
-            color: #fff;
-        }
-    }
-
     nav {
         display: flex;
         flex-direction: column;
@@ -22,7 +13,6 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background: var(--dark);
         animation-name: menuIn;
         animation-duration: 0.5s;
         animation-fill-mode: forwards;
@@ -35,11 +25,9 @@
         }
 
         .logo {
-            position: fixed;
+            position: sticky;
             top: 0;
-            left: 0;
             width: 100%;
-            background: var(--dark);
             height: 60px;
             z-index: 5;
         }
@@ -49,7 +37,6 @@
             min-height: 100%;
             justify-content: center;
             flex-grow: 1;
-            padding-top: 25vh;
         }
 
         ul.primary {
@@ -69,7 +56,6 @@
                     font-size: 3rem;
                     display: block;
                     text-decoration: none;
-                    color: #fff;
                 }
             }
         }
@@ -85,76 +71,63 @@
                 a {
                     display: block;
                     font-size: 2rem;
-                    color: #fff;
                     text-decoration: none;
                 }
             }
         }
     }
+}
 
-    .toggle {
-        z-index: 1001;
+.mobileMenuToggle {
+    z-index   : 1001;
+    display   : block;
+    height    : 24px;
+    width     : 30px;
+    transform : translateY(0px);
+    transition: transform 0.3s;
 
-        top       : 1.5rem;
-        display   : block;
-        position  : fixed;
-        right     : 2rem;
-        height    : 24px;
-        width     : 30px;
-        transform : translateY(0px);
-        transition: transform 0.3s;
+    @screen lg {
+        display : none;
+    }
 
-        @screen lg {
-            display : none;
+    span {
+        height          : 4px;
+        width           : 30px;
+        position        : absolute;
+        left            : 0;
+        top             : 0;
+        background-color: var(--dark);
+        transition      : transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+
+        body.scrolled & {
+            background-color: #fff;
         }
 
-        body.has-emergency-message & {
-            transform: translateY(60px);
+        &:nth-child(1) {
+            body.has-mobile-menu & {
+                background-color: transparent;
+            }
         }
 
-        /* @mixin tiny {
-            right: 10px;
-        } */
+        &:nth-child(2) {
+            top: calc( 50% - 2px );
 
-        span {
-            height          : 4px;
-            width           : 30px;
-            position        : absolute;
-            left            : 0;
-            top             : 0;
-            background-color: var(--dark);
-            transition      : transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
-
-            body.scrolled & {
+            body.has-mobile-menu & {
+                top   : 10px;
+                transform: rotate(-45deg);
                 background-color: #fff;
             }
+        }
 
-            &:nth-child(1) {
-                body.has-mobile-menu & {
-                    background-color: transparent;
-                }
-            }
+        &:nth-child(3) {
+            bottom: 0;
+            top   : auto;
 
-            &:nth-child(2) {
-                top: calc( 50% - 2px );
-
-                body.has-mobile-menu & {
-                    top   : 10px;
-                    transform: rotate(-45deg);
-                    background-color: #fff;
-                }
-            }
-
-            &:nth-child(3) {
-                bottom: 0;
-                top   : auto;
-
-                body.has-mobile-menu & {
-                    background-color: #fff;
-                    transform: rotate(45deg);
-                    bottom: auto;
-                    top   : 10px;
-                }
+            body.has-mobile-menu & {
+                background-color: #fff;
+                transform: rotate(45deg);
+                bottom: auto;
+                top   : 10px;
             }
         }
     }

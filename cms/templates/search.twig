@@ -1,11 +1,6 @@
 {% extends "_layouts/generic-page-layout.twig" %}
 
-{# -- Anything that should be included before </head> -- #}
-{% block headLinks %}
-    {{ parent() }}
-{% endblock headLinks %}
-
-{% set bodyClasses = 'noHero' %}
+{% set bodyClasses = 'noHero search' %}
 
 {% block content %}
     {% set crumbs = [
@@ -73,9 +68,3 @@
 {% block subcontent %}
     {% include '_partials/above-footer.twig' %}
 {% endblock %}
-
-
-{# -- Any JavaScript that should be included before </body> -- #}
-{% block bodyJs %}
-    {{ parent() }}
-{% endblock bodyJs %}

@@ -1,27 +1,58 @@
-{% set position = position ?? '' %}
-{% set blocks   = blocks.one() is defined ? blocks.all() : blocks %}
+{% set blocks       = blocks.all() ?? blocks ?? [] %}
+{% set position     = position     ?? 'content' %}
+{% set entry        = entry        ?? null %}
+{% set entryType    = entryType    ?? entry.type.handle    ?? '' %}
+{% set section      = section      ?? entry.section.handle ?? '' %}
+{% set parentLoop   = loop         ?? null %}
 
 {% if blocks %}
-    <div id="{{position}}-blocks" class="block-container">
-        {% for block in blocks %}
-            {% set layout    = block.layout      ?? layout     ?? '' %}
-            {% set blockType = block.type.handle ?? block.type ?? '' %}        
+    {% for block in blocks %}
+        {% set layout    = block.layout      ?? layout     ?? '' %}
+        {% set blockType = block.type.handle ?? block.type ?? '' %}
+        {% set first     = parentLoop ? ( parentLoop.first and loop.first ) : loop.first %}
+        {% set last      = parentLoop ? ( parentLoop.last  and loop.last  ) : loop.last  %}
 
-            {% include ([  
-                '_blocks/' ~ position ~ '.' ~ blockType ~ '.' ~ entry.section.handle ~ '.' ~ entry.type.handle ~ '.' ~ layout ~ '.twig',
-                '_blocks/' ~ position ~ '.' ~ blockType ~ '.' ~ entry.section.handle ~ '.' ~ entry.type.handle ~ '.twig',
-                '_blocks/' ~ position ~ '.' ~ blockType ~ '.' ~ entry.section.handle ~ '.' ~ layout ~ '.twig',
-                '_blocks/' ~ position ~ '.' ~ blockType ~ '.' ~ entry.section.handle ~ '.twig',
-                '_blocks/' ~ position ~ '.' ~ blockType ~ '.' ~ layout ~ '.twig',
-                '_blocks/' ~ position ~ '.' ~ blockType ~ '.twig',
-                '_blocks/' ~ blockType ~ '.' ~ layout ~ '.twig',
-                '_blocks/' ~ blockType ~ '.twig'
-            ]) with {
-                entry: entry,
-                block: block,
-                position: position,
-                loop: loop
-            } only %}
-        {% endfor %}
-    </div>
+        {#
+            pages.basic.content.textImage.reverse.twig
+            pages.basic.content.textImage.twig
+            
+            pages.content.textImage.reverse.twig
+            pages.content.textImage.twig
+
+            pages.textImage.reverse.twig
+            pages.textImage.twig
+
+            content.textImage.reverse.twig
+            content.textImage.twig
+            
+            textImage.reverse.twig
+            textImage.twig
+        #}
+
+        {% set blockPath = [
+            '_blocks/' ~ section   ~ '.' ~ entryType ~ '.' ~ position  ~ '.' ~ blockType ~ '.' ~ layout ~ '.twig',
+            '_blocks/' ~ section   ~ '.' ~ entryType ~ '.' ~ position  ~ '.' ~ blockType ~ '.twig',
+
+            '_blocks/' ~ section   ~ '.' ~ position  ~ '.' ~ blockType ~ '.' ~ layout    ~ '.twig',
+            '_blocks/' ~ section   ~ '.' ~ position  ~ '.' ~ blockType ~ '.twig',
+
+            '_blocks/' ~ section   ~ '.' ~ blockType ~ '.' ~ layout    ~ '.twig',
+            '_blocks/' ~ section   ~ '.' ~ blockType ~ '.twig',
+
+            '_blocks/' ~ position  ~ '.' ~ blockType ~ '.' ~ layout    ~ '.twig',
+            '_blocks/' ~ position  ~ '.' ~ blockType ~ '.twig',
+
+            '_blocks/' ~ blockType ~ '.' ~ layout    ~ '.twig',
+            '_blocks/' ~ blockType ~ '.twig'
+        ] %}
+
+        {% include ( blockPath ) with {
+            block    : block,
+            entry    : entry,
+            position : position,
+            first    : first,
+            last     : last,
+            loop     : loop,
+        } only %}
+    {% endfor %}
 {% endif %}

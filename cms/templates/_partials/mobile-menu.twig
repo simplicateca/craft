@@ -1,16 +1,12 @@
 {% set mobilePages = [] %}
-{% set nodes = craft.navigate.raw('primary') %}
+{% set nodes = craft.navigation.nodes('primary').all() %}
 {% for item in nodes %}
     {% set mobilePages = mobilePages|merge([{
         id: item.id,
         url: item.url,
-        title: item.name,
+        title: item.title,
         level: 1,
     }]) %}
 {% endfor %}
 
-<div id="mobile-menu">
-    <mobile-menu :pages="{{mobilePages|json_encode}}"></mobile-menu>
-</div>
-
-{{ craft.twigpack.includeJsModule("mobile-menu.js", true) }}
+<mobile-menu @toggle-menu="handleMenuToggle" :pages="{{mobilePages|json_encode}}" :open="mobileOpen"></mobile-menu>
