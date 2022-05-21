@@ -1,5 +1,11 @@
 # simplicate-web/craft Change Log
 
+## 1.4.1 - 2002.05.21
+
+### Changed
+
+* Forced zlib `1.2.12-r1` in webpack docker config, which was otherwise failing to build under some circumstances
+
 
 ## 1.4 - 2002.05.19
 

@@ -34,6 +34,7 @@ RUN apk update \
         nasm \
         # Misc packages
         nano \
+        "zlib=1.2.12-r1" \
         # Image optimization packages
         gifsicle \
         jpegoptim \
