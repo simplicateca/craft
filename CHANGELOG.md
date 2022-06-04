@@ -1,5 +1,13 @@
 # simplicate-web/craft Change Log
 
+## 1.4.2 - 2002.06.
+
+### Changed
+
+* No longer ignore the cms/.env.example file
+
+
+
 ## 1.4.1 - 2002.05.21
 
 ### Changed

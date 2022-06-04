@@ -17,7 +17,7 @@
 # Craft 3 CMS project root directory
 
 # CRAFT ENVIRONMENT
-.env*
+.env
 
 # COMPOSER
 */vendor/*
