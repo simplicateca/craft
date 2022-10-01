@@ -14,6 +14,7 @@ use modules\sitemodule\SiteModule;
 
 use Craft;
 use craft\web\Controller;
+use yii\web\Response;
 
 
 /**
@@ -46,7 +47,7 @@ class DefaultController extends Controller
      *         The actions must be in 'kebab-case'
      * @access protected
      */
-    protected $allowAnonymous = ['index'];
+    protected static array $allowAnonymous = ['index'];
 
     // Public Methods
     // =========================================================================
@@ -55,10 +56,10 @@ class DefaultController extends Controller
      * Handle a request going to our module's index action URL,
      * e.g.: actions/site-module/default
      *
-     * @return mixed
+     * @return Response
      */
-    public function actionIndex() {
-        return "Here";
+    public function actionIndex(): Response {
+        echo "Here";
         exit;
     }
 }

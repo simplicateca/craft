@@ -17,24 +17,13 @@
   "config": {
     "optimize-autoloader": true,
     "platform": {
-      "php": "7.4"
+      "php": "8.1"
     }
   },
   "scripts": {
     "post-create-project-cmd": [
-      "@php -r \"copy('./cms/.env.example', './cms/.env');\"",
-      "@php -r \"chmod('./cms/.env', 0777);\"",
-      "@php -r \"chmod('./cms/composer.json', 0777);\"",
-      "@php -r \"chmod('./cms/config', 0777);\"",
-      "@php -r \"copy('./scripts/.env.example.sh', './scripts/.env.sh');\"",
-      "@php -r \"unlink('composer.json');\"",
-      "@php -r \"unlink('composer.lock');\"",
-      "@php -r \"unlink('LICENSE.md');\"",
-      "@php -r \"unlink('README.md');\"",
-      "@php -r \"unlink('CHANGELOG.md');\"",
-      "@php -r \"unlink('.gitignore');\"",
-      "@php -r \"copy('.gitignore.prod', '.gitignore');\"",
-      "@php -r \"unlink('.gitignore.prod');\""
+      "@php -r \"chmod('prep.php', 0755);\"",
+      "@php prep.php"
     ]
   }
 }

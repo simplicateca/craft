@@ -54,7 +54,7 @@ class DefaultController extends Controller
      *
      * @return mixed
      */
-    public function actionIndex()
+    public function actionIndex(): mixed
     {
         $result = 'something';
 

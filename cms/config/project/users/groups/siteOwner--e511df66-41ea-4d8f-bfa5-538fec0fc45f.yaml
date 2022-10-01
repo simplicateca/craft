@@ -7,7 +7,6 @@ permissions:
   - accesssitewhensystemisoff
   - administrateusers
   - 'assignusergroup:a9eefedb-b175-4baa-a9ee-903aa94e9c9b' # Content Editor
-  - assignusergroups
   - assignuserpermissions
   - deleteusers
   - 'editsite:34463b82-dd3f-441c-b9c6-59c351e847aa' # Wireframe Site
@@ -23,3 +22,4 @@ permissions:
   - 'utility:queue-manager'
   - 'utility:system-messages'
   - 'utility:system-report'
+  - 'assignusergroup:e511df66-41ea-4d8f-bfa5-538fec0fc45f' # Site Owner

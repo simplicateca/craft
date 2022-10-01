@@ -26,6 +26,8 @@
     docker_image_tag: "7.4"
     execute_commands:
     - "cd cms"
+    - "composer config --no-plugins allow-plugins.yiisoft/* true"
+    - "composer config --no-plugins allow-plugins.craftcms/* true"
     - "composer install --no-scripts --no-interaction --prefer-dist --optimize-autoloader --ignore-platform-reqs"
     setup_commands:
     - "echo \"memory_limit=-1\" >> /usr/local/etc/php/conf.d/buddy.ini"
@@ -125,6 +127,22 @@
     trigger_condition: "ALWAYS"
     run_as_script: true
     shell: "BASH"
+  - action: "Send confirmation message to Slack"
+    type: "SLACK"
+    content: "[#$BUDDY_EXECUTION_ID] $BUDDY_PIPELINE_NAME execution by <$BUDDY_INVOKER_URL|$BUDDY_INVOKER_NAME>"
+    blocks: "[{\"type\":\"section\",\"fields\":[{\"type\":\"mrkdwn\",\"text\":\"*Successful execution:* <$BUDDY_EXECUTION_URL|Execution #$BUDDY_EXECUTION_ID $BUDDY_EXECUTION_COMMENT>\"},{\"type\":\"mrkdwn\",\"text\":\"*Pipeline:* <$BUDDY_PIPELINE_URL|$BUDDY_PIPELINE_NAME>\"},{\"type\":\"mrkdwn\",\"text\":\"*Branch:* $BUDDY_EXECUTION_BRANCH\"},{\"type\":\"mrkdwn\",\"text\":\"*Project:* <$BUDDY_PROJECT_URL|$BUDDY_PROJECT_NAME>\"}]}]"
+    channel: "C03JCBRH6HY"
+    channel_name: "deployments"
+    integration_hash: "v1ZzQABWJxbo80B3dgwOL0EMrN"
+    trigger_condition: "ALWAYS"
+  - action: "Send error message to Slack"
+    type: "SLACK"
+    trigger_time: "ON_FAILURE"
+    content: "[#$BUDDY_EXECUTION_ID] $BUDDY_PIPELINE_NAME execution by <$BUDDY_INVOKER_URL|$BUDDY_INVOKER_NAME>"
+    blocks: "[{\"type\":\"section\",\"fields\":[{\"type\":\"mrkdwn\",\"text\":\"*Failed execution:* <$BUDDY_EXECUTION_URL|Execution #$BUDDY_EXECUTION_ID $BUDDY_EXECUTION_COMMENT>\"},{\"type\":\"mrkdwn\",\"text\":\"*Pipeline:* <$BUDDY_PIPELINE_URL|$BUDDY_PIPELINE_NAME>\"},{\"type\":\"mrkdwn\",\"text\":\"*Branch:* $BUDDY_EXECUTION_BRANCH\"},{\"type\":\"mrkdwn\",\"text\":\"*Project:* <$BUDDY_PROJECT_URL|$BUDDY_PROJECT_NAME>\"}]}]"
+    channel: "C03JCBRH6HY"
+    channel_name: "deployments"
+    integration_hash: "v1ZzQABWJxbo80B3dgwOL0EMrN"
   variables:
   - key: "PROJECT_SHORTNAME"
     value: "REPLACE_ME"

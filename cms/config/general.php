@@ -8,40 +8,49 @@
  * @see \craft\config\GeneralConfig
  */
 
+use craft\config\GeneralConfig;
 use craft\helpers\App;
 
-return [
-    // Craft config settings from .env variables
-    'aliases' => [
+return GeneralConfig::create()
+    // Enable Dev Mode (see https://craftcms.com/guides/what-dev-mode-does)
+    ->devMode( (App::env('CRAFT_ENVIRONMENT') != 'production') )
+
+    // run the queue automatically (or do we have a cron job setup)
+    ->runQueueAutomatically( ( App::env('RUN_QUEUE') == 'auto' ) )
+
+    // Allow administrative changes
+    ->allowAdminChanges( (App::env('CRAFT_ENVIRONMENT') != 'production') )
+    
+    // Disallow robots
+    ->disallowRobots( (App::env('CRAFT_ENVIRONMENT') != 'production') )
+
+    ->aliases([
         '@assetsUrl' => App::env('ASSETS_URL'),
         '@cdnUrl' => App::env('CDN_URL'),
         '@cdnFolder' => App::env('CDN_FOLDER'),
         '@web' => App::env('SITE_URL'),
         '@webroot' => App::env('WEB_ROOT_PATH'),
-    ],
-    'allowUpdates' => (bool)App::env('ALLOW_UPDATES'),
-    'allowAdminChanges' => (bool)App::env('ALLOW_ADMIN_CHANGES'),
-    'backupOnUpdate' => (bool)App::env('BACKUP_ON_UPDATE'),
-    'devMode' => (bool)App::env('DEV_MODE'),
-    'enableTemplateCaching' => (bool)App::env('ENABLE_TEMPLATE_CACHING'),
-    'isSystemLive' => (bool)App::env('IS_SYSTEM_LIVE'),
-    'resourceBasePath' => App::env('WEB_ROOT_PATH').'/cpresources',
-    'runQueueAutomatically' => (bool)App::env('RUN_QUEUE_AUTOMATICALLY'),
-    'securityKey' => App::env('SECURITY_KEY'),
-    // Craft config settings from constants
-    'maxRevisions' => 10,
-    'cacheDuration' => false,
-    'defaultSearchTermOptions' => [
-        'subLeft' => true,
+    ])
+
+    // Set the default week start day for date pickers (0 = Sunday, 1 = Monday, etc.)
+    ->defaultWeekStartDay(1)
+
+    // Prevent generated URLs from including "index.php"
+    ->omitScriptNameInUrls()
+
+    // improve save speed by limiting the number of revisions we save
+    ->maxRevisions(10)
+
+    ->defaultSearchTermOptions([
+        'subLeft'  => true,
         'subRight' => true,
-    ],
-    'defaultTokenDuration' => 'P2W',
-    'enableCsrfProtection' => true,
-    'errorTemplatePrefix' => 'errors/',
-    'generateTransformsBeforePageLoad' => true,
-    'maxCachedCloudImageSize' => 3000,
-    'maxUploadFileSize' => '100M',
-    'omitScriptNameInUrls' => true,
-    'useEmailAsUsername' => true,
-    'usePathInfo' => true
-];
+    ])
+
+    ->errorTemplatePrefix('errors/')
+
+    // 100MB
+    ->maxUploadFileSize(104857600)
+    
+    ->useEmailAsUsername(true)
+
+;

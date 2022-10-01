@@ -1,6 +1,6 @@
 # simplicate-web/craft Change Log
 
-## 1.4.2 - 2002.06.
+## 1.4.2 - 2022.06.
 
 ### Changed
 
@@ -8,14 +8,14 @@
 
 
 
-## 1.4.1 - 2002.05.21
+## 1.4.1 - 2022.05.21
 
 ### Changed
 
 * Forced zlib `1.2.12-r1` in webpack docker config, which was otherwise failing to build under some circumstances
 
 
-## 1.4 - 2002.05.19
+## 1.4 - 2022.05.19
 
 ### Added
 
@@ -43,7 +43,7 @@
 * `cms/templates/index.twig` was no longer needed since using `__home__` slug trick within page structure
 
 
-## 1.3.6 - 2002.05.16
+## 1.3.6 - 2022.05.16
 
 ### Changed
 

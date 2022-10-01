@@ -11,7 +11,6 @@
 namespace modules\sitemodule\variables;
 
 use Craft;
-
 use modules\sitemodule\SiteModule;
 
 /**

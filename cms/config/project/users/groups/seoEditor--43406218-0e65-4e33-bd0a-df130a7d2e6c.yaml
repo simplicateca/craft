@@ -37,3 +37,4 @@ permissions:
   - 'seomatic:tracking-scripts:matomo'
   - 'seomatic:tracking-scripts:pinteresttag'
   - 'seomatic:tracking-scripts:plausible'
+  - 'assignusergroup:43406218-0e65-4e33-bd0a-df130a7d2e6c' # SEO Editor

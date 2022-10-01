@@ -23,25 +23,16 @@ fieldLayouts:
             step: null
             tip: null
             title: null
-            type: craft\fieldlayoutelements\AssetTitleField
+            type: craft\fieldlayoutelements\assets\AssetTitleField
             warning: null
             width: 100
         name: Content
         sortOrder: 1
+fs: staticAssets
 handle: staticAssets
 hasUrls: true
 name: 'Static Assets'
-settings:
-  bucket: $S3_BUCKET
-  contentDisposition: ''
-  endpoint: $S3_ENDPOINT
-  expires: ''
-  keyId: $S3_KEY
-  region: $S3_REGION
-  secret: $S3_SECRET
-  subfolder: '@cdnFolder/static'
 sortOrder: 0
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
-type: vaersaagod\dospaces\Volume
 url: $CDN_URL

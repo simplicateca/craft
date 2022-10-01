@@ -10,26 +10,26 @@
 
 namespace modules\sitemodule;
 
-use modules\sitemodule\assetbundles\sitemodule\SiteModuleAsset;
-use modules\sitemodule\twigextensions\SiteModuleTwigExtension;
-use modules\sitemodule\services\Helper;
-use modules\sitemodule\variables\SiteVariable;
-
 use Craft;
-use craft\events\RegisterTemplateRootsEvent;
-use craft\events\TemplateEvent;
-use craft\console\Application as ConsoleApplication;
-use craft\i18n\PhpMessageSource;
-use craft\web\UrlManager;
-use craft\events\RegisterUrlRulesEvent;
-use craft\web\twig\variables\CraftVariable;
-use craft\web\View;
 
+use craft\console\Application as ConsoleApplication;
+use craft\events\RegisterTemplateRootsEvent;
+use craft\events\RegisterUrlRulesEvent;
+use craft\events\TemplateEvent;
+use craft\i18n\PhpMessageSource;
 use craft\redactor\Field AS RedactorField;
+use craft\web\twig\variables\CraftVariable;
+use craft\web\UrlManager;
+use craft\web\View;
 
 use yii\base\Event;
 use yii\base\InvalidConfigException;
 use yii\base\Module;
+
+use modules\sitemodule\assetbundles\sitemodule\SiteModuleAsset;
+use modules\sitemodule\services\Helper;
+use modules\sitemodule\twigextensions\SiteModuleTwigExtension;
+use modules\sitemodule\variables\SiteVariable;
 
 /**
  * Class SiteModule
@@ -48,7 +48,7 @@ class SiteModule extends Module
     /**
      * @var SiteModule
      */
-    public static $instance;
+    public static SiteModule $instance;
 
     // Public Methods
     // =========================================================================
@@ -91,7 +91,7 @@ class SiteModule extends Module
     /**
      * @inheritdoc
      */
-    public function init()
+    public function init(): void
     {
         parent::init();
         self::$instance = $this;
@@ -177,7 +177,4 @@ class SiteModule extends Module
             __METHOD__
         );
     }
-
-    // Protected Methods
-    // =========================================================================
 }

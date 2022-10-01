@@ -3,18 +3,37 @@
 # Run Queue shell script
 #
 # This shell script runs the Craft CMS queue via `php craft queue/listen`
-# It's wrapped in a "keep alive" infinite loop that restarts the command
-# (after a 30 second sleep) should it exit unexpectedly for any reason
+# It waits until the database container responds, then runs any pending
+# migrations / project config changes via the `craft-update` Composer script,
+# then runs the queue listener that listens for and runs pending queue jobs
 #
 # @author    nystudio107
-# @copyright Copyright (c) 2020 nystudio107
+# @copyright Copyright (c) 2022 nystudio107
 # @link      https://nystudio107.com/
 # @license   MIT
 
-while true
+cd /var/www/project/cms
+# Wait until the MySQL db container responds
+echo "### Waiting for MySQL database"
+until eval "mysql -h mariadb -u $DB_USER -p$DB_PASSWORD $DB_DATABASE -e 'select 1' > /dev/null 2>&1"
 do
-  cd /var/www/project/cms
-  php craft queue/listen 10
-  echo "-> craft queue/listen will retry in 30 seconds"
-  sleep 30
+  sleep 1
 done
+# Wait until the `composer install` is done by looking for the `vendor/autoload.php` and `composer.lock` files
+echo "### Waiting for vendor/autoload.php"
+while [ ! -f "vendor/autoload.php" ] || [ ! -f "composer.lock" ]
+do
+  sleep 1
+done
+# Ensure permissions on directories Craft needs to write to
+chown www-data:www-data /var/www/project/cms
+chown www-data:www-data /var/www/project/cms/composer.*
+chown -R www-data:www-data /var/www/project/cms/storage
+chown -R www-data:www-data /var/www/project/cms/web/cpresources
+chown -R www-data:www-data /var/www/project/cms/config/project
+chown -R www-data:www-data /var/www/project/cms/vendor
+
+# Run any pending migrations/project config changes
+su-exec www-data composer craft-update
+# Run a queue listener
+su-exec www-data php craft queue/listen 10

@@ -28,6 +28,7 @@
 
 # ASSETS
 /cms/web/assets/*
+!*/cms/web/assets/temp/.gitkeep
 /cms/web/cpresources/*
 
 # BUILD FILES

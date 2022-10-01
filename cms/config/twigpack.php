@@ -25,7 +25,7 @@
 
 return [
     // If `devMode` is on, use webpack-dev-server to all for HMR (hot module reloading)
-    'useDevServer' => getenv('DEV_MODE'),
+    'useDevServer' => ( getenv('CRAFT_ENVIRONMENT') == 'dev' ),
     // The JavaScript entry from the manifest.json to inject on Twig error pages
     'errorEntry' => 'app.js',
     // Manifest file names

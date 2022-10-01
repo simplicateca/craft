@@ -24,22 +24,22 @@ class Config
     // Constants
     // =========================================================================
 
-    const PHP_SUFFIX = '.php';
+    protected const PHP_SUFFIX = '.php';
+
 
     // Static Methods
     // =========================================================================
 
     /**
-     * Loads a config file from, trying @craft/config first, then the modules's
-     * @modules/sitemodule
+     * Loads a config file from, trying @craft/config first, then @modules/sitemodule
      *
      * @param string $fileName
      *
      * @return array
      */
-    public static function getConfigFromFile(string $fileName): array
+    public static function getConfigFromFile( string $fileName ): array
     {
-        $fileName .= self::PHP_SUFFIX;
+        $fileName  .= self::PHP_SUFFIX;
         $currentEnv = Craft::$app->getConfig()->env;
 
         // Try craft/config first
@@ -75,7 +75,5 @@ class Config
 
         return $mergedConfig;
     }
-
-    // Private Methods
-    // =========================================================================
+    
 }

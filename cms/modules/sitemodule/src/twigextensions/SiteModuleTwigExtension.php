@@ -28,10 +28,12 @@ use Symfony\Component\DomCrawler\Crawler;
  *
  * @author    Steve Comrie
  * @package   SiteModule
- * @since     1
+ * @since     1.0.0
  */
+
 class SiteModuleTwigExtension extends AbstractExtension
 {
+
     // Public Methods
     // =========================================================================
 
@@ -40,7 +42,7 @@ class SiteModuleTwigExtension extends AbstractExtension
      *
      * @return string The extension name
      */
-    public function getName()
+    public function getName(): string
     {
         return 'SiteModule';
     }
@@ -52,7 +54,7 @@ class SiteModuleTwigExtension extends AbstractExtension
      *
      * @return array
      */
-    public function getFilters()
+    public function getFilters(): array
     {
         return [
             new TwigFilter( 'extractLeadingHeaders', [$this, 'extractHeaders',  ]),
@@ -63,23 +65,24 @@ class SiteModuleTwigExtension extends AbstractExtension
     /**
      * Returns an array of Twig functions, used in Twig templates via:
      *
-     *      {% set this = someFunction('something') %}
+     * {% set this = someFunction('something') %}
      *
-    * @return array
+     * @return array
      */
-    public function getFunctions()
+    public function getFunctions(): array
     {
         return [
             new TwigFunction('leadingHeaders', [$this, 'leadingHeaders']),
         ];
     }
 
-
-    public function extractHeaders( $html = "" ) {
+    public function extractHeaders( string $html = "" ): string
+    {
         return $this->leadingHeaders( $html, 'extract' );
     }
 
-    public function removeHeaders( $html = "" ) {
+    public function removeHeaders(  string $html = "" ): string
+    {
         return $this->leadingHeaders( $html, 'remove' );
     }
 
@@ -87,11 +90,12 @@ class SiteModuleTwigExtension extends AbstractExtension
      * Finds any leading header tags (h1-h6) at the beginning of a string of
      * HTML code and optionally extract or removes them, returning the result
      *
-     * @param string $html -- a block of well formatted html code
+     * @param string $html   -- a string of well formatted html code
+     * @param string $method -- extract|remove
      *
      * @return string
      */
-    public function leadingHeaders( $html = "", $method = 'extract' )
+    public function leadingHeaders( string $html = "", string $method = 'extract' ): string
     {
         $libxmlUseInternalErrors = \libxml_use_internal_errors(true);
         $content = \mb_convert_encoding($html, 'HTML-ENTITIES', Craft::$app->getView()->getTwig()->getCharset());

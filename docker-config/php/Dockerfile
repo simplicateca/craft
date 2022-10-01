@@ -1,8 +1,8 @@
 # original source
 # ------------------------------------------------------------------------------------------------
-# https://github.com/nystudio107/docker-images/blob/master/php-prod-base/php-8.0-alpine/Dockerfile
+# https://github.com/simplicate-web/docker-images/blob/master/php/php-8.1-alpine/Dockerfile
 
-FROM nystudio107/php-prod-base:8.0-alpine
+FROM simplicateweb/php-8.1-alpine:latest
 
 # dependencies required for running "phpize"
 # these get automatically installed and removed by "docker-php-ext-*" (unless they're already installed)
@@ -33,7 +33,6 @@ RUN set -eux; \
         libwebp-tools \
         nano \
         optipng \
-        mariadb-client \
         mysql-client \
     && \
     # Install PHP extensions
@@ -59,33 +58,17 @@ RUN chmod a+x run_queue.sh \
     mkdir -p /var/www/project/cms/web/cpresources \
     && \
     chown -R www-data:www-data /var/www/project
-
-# Create the cpresources directory and make it writeable by PHP
-RUN mkdir -p /var/www/project/cms/web/cpresources && \
-    chown -R www-data:www-data /var/www/project/cms/web/cpresources
-
-# Permissions
-RUN chown -R www-data:www-data /var/www/project/cms/web
+COPY ./composer_install.sh .
+RUN chmod a+x composer_install.sh
 
 WORKDIR /var/www/project/cms
 
-# Force permissions, update Craft, and start php-fpm
-
-# Do a `composer install` without running any Composer scripts
-# - If `composer.lock` is present, it will install what is in the lock file
-# - If `composer.lock` is missing, it will update to the latest dependencies
-#   and create the `composer.lock` file
-# This automatic running adds to the startup overhead of `docker-compose up`
-# but saves far more time in not having to deal with out of sync versions
-# when working with teams or multiple environments
-CMD chown -R www-data:www-data /var/www/project/cms/vendor \
-    && \
-    chown www-data:www-data /var/www/project/cms \
-    && \
-    chown -R www-data:www-data /var/www/project/cms/storage \
-    && \
-    composer install --verbose --no-progress --no-scripts --optimize-autoloader --no-interaction \
-    && \
-    su-exec www-data composer craft-update \
+# Run the composer_install.sh script that will do a `composer install`:
+# - If `composer.lock` is missing
+# - If `vendor/` is missing
+# ...then start up php-fpm. The `run_queue.sh` script in the queue container
+# will take care of running any pending migrations and apply any Project Config changes,
+# as well as set permissions via an async CLI process
+CMD /var/www/project/composer_install.sh \
     && \
     php-fpm
