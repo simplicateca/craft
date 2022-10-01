@@ -1,0 +1,66 @@
+field: 0cf8a6fe-e260-4ded-9320-9db2b141edcc # Listing Block
+fieldLayouts:
+  cf0f3bed-f2ac-4664-920e-bb3e9f6739fa:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 625a205f-5664-4223-840b-ec4c4e73b1bb # Limit
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 9d81e4ce-5846-4157-aebc-c26abc01d16e # Has Search?
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  9d81e4ce-5846-4157-aebc-c26abc01d16e: # Has Search?
+    columnSuffix: null
+    contentColumnType: boolean
+    fieldGroup: null
+    handle: hasSearch
+    instructions: ''
+    name: 'Has Search?'
+    searchable: false
+    settings:
+      default: false
+      offLabel: null
+      onLabel: null
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Lightswitch
+  625a205f-5664-4223-840b-ec4c4e73b1bb: # Limit
+    columnSuffix: null
+    contentColumnType: integer(10)
+    fieldGroup: null
+    handle: limit
+    instructions: ''
+    name: Limit
+    searchable: false
+    settings:
+      decimals: 0
+      defaultValue: 3
+      max: null
+      min: 1
+      prefix: null
+      previewCurrency: ''
+      previewFormat: decimal
+      size: null
+      suffix: null
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Number
+handle: faqs
+name: FAQs
+sortOrder: 2

@@ -1,0 +1,46 @@
+field: a35a0beb-0cf7-4a2b-9ec3-91e953a18116 # Sidebar Blocks
+fieldLayouts:
+  6dad8a0b-5ca1-4007-a9e7-52e3a6af16d2:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 4ebdb729-ea5a-4ff4-b10f-e4b2d0da2292 # Entry
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  4ebdb729-ea5a-4ff4-b10f-e4b2d0da2292: # Entry
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: items
+    instructions: ''
+    name: Entry
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      limit: ''
+      localizeRelations: false
+      selectionLabel: ''
+      showSiteMenu: false
+      source: null
+      sources:
+        - 'section:a52e2b08-2e30-4b00-8784-4104c409d3ed' # FAQs
+        - 'section:3721b4d6-42d5-41fc-b6e7-76204b42c91a' # News
+        - 'section:650e7d1d-63e5-42f9-b3ab-4febfb502723' # Pages
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Entries
+handle: entries
+name: Entry
+sortOrder: 3

@@ -1,0 +1,25 @@
+handle: primaryNavigation
+instructions: ''
+maxNodes: ''
+name: 'Primary Navigation'
+permissions:
+  craft\elements\Asset:
+    enabled: ''
+    permissions: '*'
+  craft\elements\Category:
+    enabled: '1'
+    permissions: '*'
+  craft\elements\Entry:
+    enabled: '1'
+    permissions: '*'
+  custom:
+    enabled: '1'
+  verbb\navigation\nodetypes\PassiveType:
+    enabled: '1'
+propagateNodes: false
+siteSettings:
+  34463b82-dd3f-441c-b9c6-59c351e847aa: null # Wireframe Site
+sortOrder: 1
+structure:
+  maxLevels: null
+  uid: e65a3b8e-1725-430e-8cdd-219eb8728a82

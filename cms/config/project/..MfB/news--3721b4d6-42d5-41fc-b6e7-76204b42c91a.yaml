@@ -1,0 +1,17 @@
+defaultPlacement: end
+enableVersioning: true
+handle: news
+name: News
+propagationMethod: all
+siteSettings:
+  34463b82-dd3f-441c-b9c6-59c351e847aa: # Wireframe Site
+    enabledByDefault: true
+    hasUrls: true
+    template: news/_entry
+    uriFormat: 'news/{slug}'
+  cc8cbe25-440c-439e-a58b-6515a3b420d0: # Site Guide
+    enabledByDefault: true
+    hasUrls: true
+    template: news/_entry
+    uriFormat: 'news/{slug}'
+type: channel

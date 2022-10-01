@@ -1,0 +1,105 @@
+fieldLayouts:
+  4e6cfc21-1b84-4c1b-af96-bc28ea415aa2:
+    tabs:
+      -
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            id: null
+            instructions: 'This is the main page title. It will appear on the page unless a hero block is added.'
+            label: ''
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\EntryTitleField
+            warning: null
+            width: 100
+          -
+            heading: 'Hero Content'
+            type: craft\fieldlayoutelements\Heading
+          -
+            fieldUid: d05f4009-0b38-4065-a1b1-65221aa65e63 # Hero Block
+            instructions: 'Use the block below to customize the hero section for this page'
+            label: ''
+            required: ''
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            heading: 'Page Content'
+            type: craft\fieldlayoutelements\Heading
+          -
+            fieldUid: a4fe99b5-7832-4eb2-9833-f551177bb821 # Content Blocks
+            instructions: 'Use the blocks below to construct the body of your entry. Each block contains specific settings and content requirements.'
+            label: 'Body Content Intro'
+            required: ''
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            heading: 'Listing Options'
+            type: craft\fieldlayoutelements\Heading
+          -
+            fieldUid: 0cf8a6fe-e260-4ded-9320-9db2b141edcc # Listing Block
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+      -
+        elements:
+          -
+            fieldUid: adcea45e-bf40-4faf-b0c8-4ce089696971 # Lead Image(s)
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 50
+          -
+            fieldUid: b1c52a06-4990-43f5-90d3-898a48789556 # Dek
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 50
+          -
+            fieldUid: d79b3073-00bf-430c-95d5-6d03d8303032 # SEO
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: SEO
+        sortOrder: 2
+handle: listing
+hasTitleField: true
+name: 'Listing Page'
+section: 650e7d1d-63e5-42f9-b3ab-4febfb502723 # Pages
+sortOrder: 4
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

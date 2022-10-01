@@ -1,0 +1,47 @@
+fieldLayouts:
+  155d9590-a8a9-44a0-b379-c089f17b9c37:
+    tabs:
+      -
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\AssetTitleField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+handle: contentAssets
+hasUrls: true
+name: Uploads
+settings:
+  bucket: $S3_BUCKET
+  contentDisposition: ''
+  endpoint: $S3_ENDPOINT
+  expires: ''
+  keyId: $S3_KEY
+  region: $S3_REGION
+  secret: $S3_SECRET
+  subfolder: '@cdnFolder/uploads'
+sortOrder: 0
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
+type: vaersaagod\dospaces\Volume
+url: $CDN_URL

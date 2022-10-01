@@ -1,0 +1,86 @@
+description: ''
+handle: contentEditor
+name: 'Content Editor'
+permissions:
+  - accesscp
+  - accesscpwhensystemisoff
+  - accessplugin-navigate
+  - accessplugin-redirect
+  - accesssitewhensystemisoff
+  - 'createentries:3721b4d6-42d5-41fc-b6e7-76204b42c91a' # News
+  - 'createentries:650e7d1d-63e5-42f9-b3ab-4febfb502723' # Pages
+  - 'createentries:89093e20-515d-4e3c-b4c4-c6733d8ab56f' # Fragments
+  - 'createentries:a52e2b08-2e30-4b00-8784-4104c409d3ed' # FAQs
+  - 'createfoldersinvolume:3c05e593-d621-444e-8fb9-ddbb1b356a43' # Static Assets
+  - 'createfoldersinvolume:a4f97962-52de-4b53-8422-5b833d1cd5fd' # Uploads
+  - 'deleteentries:3721b4d6-42d5-41fc-b6e7-76204b42c91a' # News
+  - 'deleteentries:650e7d1d-63e5-42f9-b3ab-4febfb502723' # Pages
+  - 'deleteentries:89093e20-515d-4e3c-b4c4-c6733d8ab56f' # Fragments
+  - 'deleteentries:a52e2b08-2e30-4b00-8784-4104c409d3ed' # FAQs
+  - 'deletefilesandfoldersinvolume:3c05e593-d621-444e-8fb9-ddbb1b356a43' # Static Assets
+  - 'deletefilesandfoldersinvolume:a4f97962-52de-4b53-8422-5b833d1cd5fd' # Uploads
+  - 'deletepeerentries:3721b4d6-42d5-41fc-b6e7-76204b42c91a' # News
+  - 'deletepeerentries:650e7d1d-63e5-42f9-b3ab-4febfb502723' # Pages
+  - 'deletepeerentries:a52e2b08-2e30-4b00-8784-4104c409d3ed' # FAQs
+  - 'deletepeerentrydrafts:16422b2c-c780-4355-b3a5-44a1cc28ba36' # Error 404
+  - 'deletepeerentrydrafts:3721b4d6-42d5-41fc-b6e7-76204b42c91a' # News
+  - 'deletepeerentrydrafts:4faab281-22d5-4b78-a310-d3f84c34aa67' # Search
+  - 'deletepeerentrydrafts:650e7d1d-63e5-42f9-b3ab-4febfb502723' # Pages
+  - 'deletepeerentrydrafts:7fa68ddc-cf1c-4e9b-9ce7-b8865ca9d48c' # Emergency Message
+  - 'deletepeerentrydrafts:89093e20-515d-4e3c-b4c4-c6733d8ab56f' # Fragments
+  - 'deletepeerentrydrafts:a52e2b08-2e30-4b00-8784-4104c409d3ed' # FAQs
+  - 'deletepeerfilesinvolume:a4f97962-52de-4b53-8422-5b833d1cd5fd' # Uploads
+  - 'editentries:16422b2c-c780-4355-b3a5-44a1cc28ba36' # Error 404
+  - 'editentries:3721b4d6-42d5-41fc-b6e7-76204b42c91a' # News
+  - 'editentries:4faab281-22d5-4b78-a310-d3f84c34aa67' # Search
+  - 'editentries:650e7d1d-63e5-42f9-b3ab-4febfb502723' # Pages
+  - 'editentries:7fa68ddc-cf1c-4e9b-9ce7-b8865ca9d48c' # Emergency Message
+  - 'editentries:89093e20-515d-4e3c-b4c4-c6733d8ab56f' # Fragments
+  - 'editentries:a52e2b08-2e30-4b00-8784-4104c409d3ed' # FAQs
+  - 'editimagesinvolume:3c05e593-d621-444e-8fb9-ddbb1b356a43' # Static Assets
+  - 'editimagesinvolume:a4f97962-52de-4b53-8422-5b833d1cd5fd' # Uploads
+  - 'editpeerentries:3721b4d6-42d5-41fc-b6e7-76204b42c91a' # News
+  - 'editpeerentries:650e7d1d-63e5-42f9-b3ab-4febfb502723' # Pages
+  - 'editpeerentries:89093e20-515d-4e3c-b4c4-c6733d8ab56f' # Fragments
+  - 'editpeerentries:a52e2b08-2e30-4b00-8784-4104c409d3ed' # FAQs
+  - 'editpeerentrydrafts:16422b2c-c780-4355-b3a5-44a1cc28ba36' # Error 404
+  - 'editpeerentrydrafts:3721b4d6-42d5-41fc-b6e7-76204b42c91a' # News
+  - 'editpeerentrydrafts:4faab281-22d5-4b78-a310-d3f84c34aa67' # Search
+  - 'editpeerentrydrafts:650e7d1d-63e5-42f9-b3ab-4febfb502723' # Pages
+  - 'editpeerentrydrafts:7fa68ddc-cf1c-4e9b-9ce7-b8865ca9d48c' # Emergency Message
+  - 'editpeerentrydrafts:89093e20-515d-4e3c-b4c4-c6733d8ab56f' # Fragments
+  - 'editpeerentrydrafts:a52e2b08-2e30-4b00-8784-4104c409d3ed' # FAQs
+  - 'editpeerfilesinvolume:3c05e593-d621-444e-8fb9-ddbb1b356a43' # Static Assets
+  - 'editpeerfilesinvolume:a4f97962-52de-4b53-8422-5b833d1cd5fd' # Uploads
+  - 'editpeerimagesinvolume:3c05e593-d621-444e-8fb9-ddbb1b356a43' # Static Assets
+  - 'editpeerimagesinvolume:a4f97962-52de-4b53-8422-5b833d1cd5fd' # Uploads
+  - 'editsite:34463b82-dd3f-441c-b9c6-59c351e847aa' # Wireframe Site
+  - 'publishentries:16422b2c-c780-4355-b3a5-44a1cc28ba36' # Error 404
+  - 'publishentries:3721b4d6-42d5-41fc-b6e7-76204b42c91a' # News
+  - 'publishentries:4faab281-22d5-4b78-a310-d3f84c34aa67' # Search
+  - 'publishentries:650e7d1d-63e5-42f9-b3ab-4febfb502723' # Pages
+  - 'publishentries:7fa68ddc-cf1c-4e9b-9ce7-b8865ca9d48c' # Emergency Message
+  - 'publishentries:89093e20-515d-4e3c-b4c4-c6733d8ab56f' # Fragments
+  - 'publishentries:a52e2b08-2e30-4b00-8784-4104c409d3ed' # FAQs
+  - 'publishpeerentries:3721b4d6-42d5-41fc-b6e7-76204b42c91a' # News
+  - 'publishpeerentries:650e7d1d-63e5-42f9-b3ab-4febfb502723' # Pages
+  - 'publishpeerentries:89093e20-515d-4e3c-b4c4-c6733d8ab56f' # Fragments
+  - 'publishpeerentries:a52e2b08-2e30-4b00-8784-4104c409d3ed' # FAQs
+  - 'publishpeerentrydrafts:16422b2c-c780-4355-b3a5-44a1cc28ba36' # Error 404
+  - 'publishpeerentrydrafts:3721b4d6-42d5-41fc-b6e7-76204b42c91a' # News
+  - 'publishpeerentrydrafts:4faab281-22d5-4b78-a310-d3f84c34aa67' # Search
+  - 'publishpeerentrydrafts:650e7d1d-63e5-42f9-b3ab-4febfb502723' # Pages
+  - 'publishpeerentrydrafts:7fa68ddc-cf1c-4e9b-9ce7-b8865ca9d48c' # Emergency Message
+  - 'publishpeerentrydrafts:89093e20-515d-4e3c-b4c4-c6733d8ab56f' # Fragments
+  - 'publishpeerentrydrafts:a52e2b08-2e30-4b00-8784-4104c409d3ed' # FAQs
+  - 'replacefilesinvolume:3c05e593-d621-444e-8fb9-ddbb1b356a43' # Static Assets
+  - 'replacefilesinvolume:a4f97962-52de-4b53-8422-5b833d1cd5fd' # Uploads
+  - 'replacepeerfilesinvolume:3c05e593-d621-444e-8fb9-ddbb1b356a43' # Static Assets
+  - 'replacepeerfilesinvolume:a4f97962-52de-4b53-8422-5b833d1cd5fd' # Uploads
+  - 'saveassetinvolume:3c05e593-d621-444e-8fb9-ddbb1b356a43' # Static Assets
+  - 'saveassetinvolume:a4f97962-52de-4b53-8422-5b833d1cd5fd' # Uploads
+  - 'utility:clear-caches'
+  - 'viewpeerfilesinvolume:3c05e593-d621-444e-8fb9-ddbb1b356a43' # Static Assets
+  - 'viewpeerfilesinvolume:a4f97962-52de-4b53-8422-5b833d1cd5fd' # Uploads
+  - 'viewvolume:3c05e593-d621-444e-8fb9-ddbb1b356a43' # Static Assets
+  - 'viewvolume:a4f97962-52de-4b53-8422-5b833d1cd5fd' # Uploads

@@ -1,0 +1,14 @@
+columnSuffix: cvrpdgoz
+contentColumnType: boolean
+fieldGroup: 8dfe3044-fa11-4189-8229-57e400ec874a # Users
+handle: showBlockMeta
+instructions: 'When enabled, you will see the setting information for each content block through-out the site.'
+name: 'Show Block Meta'
+searchable: false
+settings:
+  default: false
+  offLabel: null
+  onLabel: null
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Lightswitch
