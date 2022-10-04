@@ -22,16 +22,10 @@
   },
   "toolbarFixed": true,
   "linkClasses" : [
-    { "label": "Button (regular)",      "class": "button" },
-    { "label": "Text Button (regular)", "class": "button button--text" },
-    { "label": "Button (large)",        "class": "button button--large" },
-    { "label": "Button (small)",        "class": "button button--small" }
+    { "label": "Button", "class": "button" }
   ],
   "listClasses" : [
-    { "label": "Two Column", "class": "two-column" },
     { "label": "Checkmarks", "class": "checkmarks" },
-    { "label": "Two Column + Checkmarks", "class": "two-column checkmarks" },
-    { "label": "Grid (2 columns)",  "class": "grid" },
-    { "label": "Grid (3 columns)",  "class": "grid-3" }
+    { "label": "2 columns",  "class": "grid" }
   ]
 }

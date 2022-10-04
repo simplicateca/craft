@@ -27,7 +27,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: a4fe99b5-7832-4eb2-9833-f551177bb821 # Content Blocks
+            fieldUid: a4fe99b5-7832-4eb2-9833-f551177bb821 # Content Builder
             instructions: null
             label: null
             required: false

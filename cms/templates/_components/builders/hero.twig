@@ -1,0 +1,20 @@
+{% set entry  = entry  ??? null %}
+{% set blocks = blocks ??? entry.heroBlock.all() %}
+
+{% if blocks %}
+    <section class="
+        c-hero--{{entry.section.handle}}--{{entry.type.handle}}
+    ">
+        {% block aboveBuilder %}{% endblock %}
+
+        {% block builder %}
+            {{ include( '_components/builders/_loop', {
+                'position': 'hero',
+                'blocks'  : [blocks|first ??? null],
+                'entry'   : entry,
+            }, withContext = false ) }}
+        {% endblock %}
+
+        {% block belowBuilder %}{% endblock %}
+    </section>
+{% endif %}

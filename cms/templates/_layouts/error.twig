@@ -1,0 +1,19 @@
+{% extends "_layouts/base" %}
+{% set templatePath = _self ??? '' %}
+
+{% block content %}
+    <div class="container">
+        <h1>
+            {{ errorHeadline ?? 'Error' }}
+        </h1>
+        <p>
+            {{ (errorText ?? 'An error has occurred.') |nl2br }}
+        </p>
+    </div>
+{% endblock %}
+
+{% block subcontent %}{% endblock %}
+
+{# -- Any JavaScript that should be included before </body> -- #}
+{% block bodyJs %}
+{% endblock bodyJs %}

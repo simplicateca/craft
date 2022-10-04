@@ -1,0 +1,12 @@
+{% extends "_layouts/base" %}
+
+{% block header %}
+    {% embed "_components/header/header" with { entry: entry } only %}
+        {% block belowTitle %}
+            <time
+                class="pt-4 block"
+                datetime="{{ entry.postDate | date('Y-m-d') }}"
+            >{{ entry.postDate | date('F jS, Y') }}</time>
+        {% endblock %}
+    {% endembed %}
+{% endblock %}

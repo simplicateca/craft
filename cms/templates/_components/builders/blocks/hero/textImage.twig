@@ -1,0 +1,14 @@
+{% embed '_components/builders/blocks/textImage' %}
+    {% block aboveText %}
+        {{ include('_components/text/headline-h1', {
+            class: block.text ? 'mb-8' : 'mb-0'
+        }) }}
+    {% endblock %}
+
+    {% block text %}
+        {{ include('_components/text/prose', {
+            text: block.text ??? null,
+            size: 'xl'
+        }) }}
+    {% endblock %}
+{% endembed %}

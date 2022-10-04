@@ -1,0 +1,39 @@
+/* -- Load / unload transitions -- */
+body { margin: 0; }
+
+div.loader {
+	position: fixed;
+	top: 0;
+    left: 0;
+  	bottom: 0;
+  	right: 0;
+    transition: opacity 0.9s cubic-bezier(0.6, 0.05, 0.4, 1),
+                z-index 0s ease 0.3s;
+    z-index: 1000;
+    background: #fff;
+}
+
+div.loader div {
+	position: absolute;
+	width: 100%;
+	height: 100vh;
+	top: 0;
+	left: 0;
+	bottom: auto;
+	right: auto;
+	background: #fff;
+    opacity: 1;
+    transition: opacity 0.9s cubic-bezier(0.6, 0.05, 0.4, 1);
+    z-index: 1000;
+}
+
+div.loader.unload {
+    transition: z-index 0s ease 0s, background 0.4s cubic-bezier(0.6, 0.05, 0.4, 1);
+    background: #fff;
+    z-index: 1000 !important;
+}
+
+div.loader.active {
+    z-index: -1;
+    opacity: 0;
+}

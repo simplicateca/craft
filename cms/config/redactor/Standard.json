@@ -7,7 +7,7 @@
   "formatting": ["p", "blockquote", "lead", "smaller", "h2", "h3", "h4"],
   "formattingAdd": {
     "lead": {
-      "title": "Lead / Intro Paragraph",
+      "title": "Larger Paragraph",
       "api": "module.block.format",
       "args": {
           "tag": "p",
@@ -15,31 +15,22 @@
       }
     },
     "smaller": {
-      "title": "Smaller Paragraph",
+      "title": "Smaller",
       "api": "module.block.format",
       "args": {
           "tag": "p",
-          "class": "smaller"
+          "class": "small"
       }
     }
   },
   "linkClasses" : [
-    { "label": "Button (regular)",      "class": "button" },
-    { "label": "Text Button (regular)", "class": "button button--text" },
-    { "label": "Button (large)",        "class": "button button--large" },
-    { "label": "Button (small)",        "class": "button button--small" }
+    { "label": "Button", "class": "button" }
   ],
   "listClasses" : [
-    { "label": "Two Column", "class": "two-column" },
     { "label": "Checkmarks", "class": "checkmarks" },
-    { "label": "Two Column + Checkmarks", "class": "two-column checkmarks" },
-    { "label": "Grid (2 columns)",  "class": "grid" },
-    { "label": "Grid (3 columns)",  "class": "grid-3" }
+    { "label": "2 columns",  "class": "grid" }
   ],
   "imageClasses" : [
-    { "label": "Align Left", "class": "image image--left", "default": true },
-    { "label": "Center", "class": "image image--center", "default": false },
-    { "label": "Circle", "class": "image image--circle", "default": false },
-    { "label": "Float Right", "class": "image image--float", "default": false }
+    { "label": "Center", "class": "prose-img-center", "default": true }
   ]
 }

@@ -19,6 +19,6 @@ siteSettings:
   34463b82-dd3f-441c-b9c6-59c351e847aa: # Wireframe Site
     enabledByDefault: true
     hasUrls: true
-    template: search.twig
+    template: _sections/search.twig
     uriFormat: search
 type: single

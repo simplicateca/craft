@@ -1,0 +1,7 @@
+{% extends "_layouts/base" %}
+
+{% block content %}
+    <section class="container py-10">
+        {{ include( '_components/text/prose', { text: entry.text }, withContext = false ) }}
+    </section>
+{% endblock %}

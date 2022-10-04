@@ -1,0 +1,16 @@
+{% embed '_components/builders/blocks/text' %}
+
+    {% block aboveText %}
+        <div class="grid grid-cols-1 gap-4">
+            {{ include('_components/text/headline-h1', {} ) }}
+    {% endblock %}
+
+    {% block text %}
+        {% set proseSize = 'xl' %}
+        {{ parent() }}
+    {% endblock %}
+
+    {% block belowText %}
+        </div>
+    {% endblock %}
+{% endembed %}

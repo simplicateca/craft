@@ -1,0 +1,27 @@
+columnSuffix: wtwwruam
+contentColumnType: text
+fieldGroup: e0dac603-c510-4bb5-8701-e25672d93744 # Common
+handle: summary
+instructions: null
+name: Summary
+searchable: true
+settings:
+  availableTransforms: '*'
+  availableVolumes: '*'
+  columnType: text
+  configSelectionMode: choose
+  defaultTransform: ''
+  manualConfig: ''
+  purifierConfig: null
+  purifyHtml: true
+  redactorConfig: Simple.json
+  removeEmptyTags: true
+  removeInlineStyles: false
+  removeNbsp: false
+  showHtmlButtonForNonAdmins: false
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: false
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\redactor\Field

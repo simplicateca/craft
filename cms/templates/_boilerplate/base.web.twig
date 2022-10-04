@@ -1,0 +1,67 @@
+{% extends "_config.twig" %}
+
+{%- block htmlPage -%}
+    {% minify %}
+    <!DOCTYPE html>
+    <html class="no-js {{
+        "template-"
+          ~ (templatePath
+            |default("")
+            |replace({
+              "/": "-",
+              "_": ""
+            }))
+        }}" lang="{{ craft.app.language |slice(0,2) }}" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
+        
+        <head>
+            {{ include( "_layouts/_partial/fonts", {}, withContext = true) }}
+
+            {{ include("_boilerplate/_partials/head-meta.twig", {}, withContext = true) }}
+
+            {# -- Inline and critical CSS #}
+            <style>
+                [v-cloak], [x-cloak] { display: none !important; }
+                html{ visibility: hidden; opacity:0; }
+            </style>
+
+            {{ include( "_boilerplate/_partials/head-critical-css",
+                { criticalPath: templatePath|default("") },
+                withContext = false )
+            }}
+
+            {% block headCss %}{% endblock headCss %}
+
+            {# -- Any <meta> tags that should be included in the <head> #}
+            {% block headMeta %}{% endblock headMeta %}
+
+            {# -- Inline and polyfill JS #}
+            {{ include("_boilerplate/_partials/head-js.twig", {}, withContext = false) }}
+
+            {# -- Any JavaScript that should be included before </head> -- #}
+            {% block headJs %}{% endblock headJs %}
+        </head>
+
+        <body class="{{bodyClasses|default('')}}" hx-ext="ajax-header">
+
+            {{ include( "_components/a11y/skip-to-content", {}, withContext = false) }}
+
+            {{ include( "_components/transitions/curtain", {}, withContext = false) }}
+
+            {# -- Page content that should be included in the <body> -- #}
+            {% block bodyHtml %}
+            {% endblock bodyHtml %}
+
+            {{ include( "_components/modal/dynamic", {}, withContext = false) }}
+
+            {#-- Site-wide JavaScript --#}
+            {{ craft.twigpack.includeSafariNomoduleFix() }}
+            {{ craft.twigpack.includeJsModule("runtime.js", true) }}
+            {{ craft.twigpack.includeJsModule("app.js", true) }}
+
+            {# -- Any JavaScript that should be included before </body> -- #}
+            {% block bodyJs %}
+            {% endblock bodyJs %}
+        </body>
+    </html>
+    {% endminify %}
+{%- endblock -%}

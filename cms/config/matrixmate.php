@@ -19,10 +19,10 @@ return [
                 'textImage' => [
                     'tabs' => [[
                         'label' => 'Content',
-                        'fields' => ['headline', 'text', 'images'],
+                        'fields' => ['headline', 'variant', 'text', 'images'],
                     ], [
                         'label' => 'Format & Layout',
-                        'fields' => ['eyebrow', 'anchor', 'layout', 'edges', 'background'],
+                        'fields' => ['eyebrow', 'anchor', 'edges', 'background'],
                     ]],
                 ],
             ]
@@ -70,20 +70,10 @@ return [
             //     'types' => ['text', 'textImage'],
             // ], ],
             'types' => [
-                'headline' => [
-                    'tabs' => [[
-                        'label' => 'Headline',
-                        'fields' => ['headline'],
-                    ], [
-                        'label' => 'Format & Layout',
-                        'fields' => ['eyebrow', 'anchor', 'layout', 'edges', 'background'],
-                    ]],
-                ],
-
                 'text' => [
                     'tabs' => [[
                         'label' => 'Content',
-                        'fields' => ['text'],
+                        'fields' => ['variant', 'text'],
                     ], [
                         'label' => 'Format & Layout',
                         'fields' => ['eyebrow', 'anchor', 'layout', 'edges', 'background'],
@@ -93,7 +83,7 @@ return [
                 'textImage' => [
                     'tabs' => [[
                         'label' => 'Content',
-                        'fields' => ['text', 'images'],
+                        'fields' => ['variant', 'text', 'images'],
                     ], [
                         'label' => 'Format & Layout',
                         'fields' => ['eyebrow', 'anchor', 'layout', 'edges', 'background'],

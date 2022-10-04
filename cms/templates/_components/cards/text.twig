@@ -1,0 +1,27 @@
+{% set htag    = htag    ??? 'h2' %}
+{% set title   = title   ??? entry.title ??? entry.headline ??? null %}
+{% set text    = text    ??? entry.summary ??? entry.dek ??? entry.text ??? null %}
+{% set url     = url     ??? entry.url ??? null %}
+{% set handle  = handle  ??? entry.section.handle ??? null %}
+
+<article class="tease {{handle}} relative">
+    {% block title %}
+        {%- if title -%}
+            <{{htag}} class="">{{title}}</{{htag}}>
+        {%- endif -%}
+    {% endblock %}
+
+    {% block aboveSummary %}{% endblock %}
+
+    {% block summary %}
+        {{ include('_components/text/prose', {
+            text: text
+        }) }}
+    {% endblock %}
+
+    {% block link %}
+        {%- if url -%}
+            <a class="clickable-parent" href="{{ url }}">Read more →</a>
+        {%- endif -%}
+    {% endblock %}
+</article>

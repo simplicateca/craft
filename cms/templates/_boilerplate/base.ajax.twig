@@ -1,0 +1,15 @@
+{% extends "_config" %}
+
+{% block htmlPage %}
+    {% minify %}
+        <div id="ajaxContent">
+            {% if block('ajaxContent') %}
+                {% block ajaxContent %}{% endblock ajaxContent %}
+            {% else %}
+                {% block content %}
+                    <code>No content block defined.</code>
+                {% endblock content %}
+            {% endif %}
+        </div>
+    {% endminify %}
+{% endblock %}

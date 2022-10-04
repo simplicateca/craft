@@ -1,0 +1,31 @@
+{
+    "Text Rows": {
+      "class": "textRows",
+      "tease-format": "text",
+      "wrapper-div": "grid grid-cols-1 gap-12"
+    },
+
+    "Two Cards": {
+      "class": "twoCards",
+      "tease-format": "stackedCard",
+      "wrapper-div": "grid grid-cols-2 gap-20"
+    },
+
+    "Grid Cards": {
+      "class": "gridCards",
+      "tease-format": "stackedCard",
+      "wrapper-div": "grid grid-cols-3 gap-8"
+    },
+
+    "Large Cards": {
+      "class": "largeCards",
+      "tease-format": "largeCard",
+      "wrapper-div": "grid grid-cols-1 gap-12"
+    },
+
+    "Teaser Cards": {
+      "class": "teaserCards",
+      "tease-format": "teaserCard",
+      "wrapper-div": "grid grid-cols-3 gap-8"
+    }
+}

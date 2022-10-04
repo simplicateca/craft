@@ -1,0 +1,40 @@
+{% set block      = block ?? null %}
+
+{% set blockID    = block ? block.type.handle ~ '-' ~ block.id : '' %}
+{% set blockID    = block.anchor ?? blockID %}
+{% set blockID    = blockID|kebab|ascii|replace({'#': ''}) %}
+
+{% set position   = position ?? ''    %}
+{% set class      = class    ?? ''    %}
+
+{% set first      = first    ?? false %}
+{% set last       = last     ?? false %}
+
+{% set blockType  = blockType ?? block.type.handle  ?? '' %}
+{% set variant    = variant ??? layout ??? block.variant ??? block.layout ??? null %}
+{% set edges      = edges ?? block.edges            ?? '' %}
+{% set background = background ?? block.background  ?? '' %}
+
+<div
+    class="
+      c-block--{{blockType}}
+      position--{{position}}
+      variant--{{variant}}
+      edges--{{edges}}
+      bg--{{background}}
+      {{class}}
+      {% if first %}alpha{% endif %}
+      {% if last  %}omega{% endif %}
+    "
+    v-waypoint="{ active: true, callback: onWaypoint, options: intersectionOptions }"
+    
+    {% if blockID %}
+        id="{{blockID}}"
+        data-toc="toc-{{blockID}}"
+    {% endif %}
+    >
+
+    {% block blockContent %}{% endblock %}   
+
+    {{ sprig( '_components-sprig/builders/block-meta', { id: block.id }, {'s-trigger': 'load'} ) }}
+</div>

@@ -3,32 +3,49 @@ fieldLayouts:
   6dad8a0b-5ca1-4007-a9e7-52e3a6af16d2:
     tabs:
       -
+        elementCondition: null
         elements:
           -
+            elementCondition: null
             fieldUid: 4ebdb729-ea5a-4ff4-b10f-e4b2d0da2292 # Entry
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: ab9bf92b-9057-4e4d-b4ad-8612f449095b
+            userCondition: null
             warning: null
             width: 100
         name: Content
-        sortOrder: 1
+        uid: cace9df3-a737-44e2-8ad5-ad5495c87c33
+        userCondition: null
 fields:
   4ebdb729-ea5a-4ff4-b10f-e4b2d0da2292: # Entry
     columnSuffix: null
     contentColumnType: string
     fieldGroup: null
     handle: items
-    instructions: ''
+    instructions: null
     name: Entry
     searchable: false
     settings:
       allowSelfRelations: false
-      limit: ''
       localizeRelations: false
-      selectionLabel: ''
+      maxRelations: null
+      minRelations: null
+      selectionCondition:
+        __assoc__:
+          -
+            - elementType
+            - craft\elements\Entry
+          -
+            - fieldContext
+            - global
+          -
+            - class
+            - craft\elements\conditions\entries\EntryCondition
+      selectionLabel: null
       showSiteMenu: false
       source: null
       sources:

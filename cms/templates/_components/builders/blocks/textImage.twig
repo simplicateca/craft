@@ -1,0 +1,34 @@
+{% extends '_components/builders/_block.twig' %}
+
+{% set variant    = block.variant.get('class')     ??? null %}
+{% set wrapperDiv = block.variant.get('wrapper-div') ??? null %}
+{% set textDiv    = block.variant.get('text-div')    ??? null %}
+{% set imageDiv   = block.variant.get('image-div')   ??? null %}
+
+{% block blockContent %}
+    {% block beforeContainer %}{% endblock %}
+
+    <div class="container {{variant}}">
+        <div class="{{wrapperDiv}}">
+            <div class="{{textDiv}}">
+                {% block aboveText %}{% endblock %}
+
+                {% block text %}
+                    {{ include('_components/text/prose', {
+                        text: block.text ??? null
+                    }) }}
+                {% endblock %}
+
+                {% block belowText %}{% endblock %}
+            </div>
+
+            <div class="{{imageDiv}}">
+                {% block image %}
+                    {{ include('_components/media/image') }}
+                {% endblock %}
+            </div>
+        </div>
+    </div>
+
+    {% block afterContainer %}{% endblock %}
+{% endblock %}

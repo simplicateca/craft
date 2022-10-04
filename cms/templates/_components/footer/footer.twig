@@ -1,0 +1,11 @@
+<footer class="bg-gray-600">
+    <div class="container">
+        <div class="flex py-6 text-white">
+            <div>
+                © {{"now"|date('Y')}} {{ currentSite.name }}. All rights reserved.
+            </div>
+
+            {{ include( "_components/navigation/menu", { menu: 'legal' }, withContext = false ) }}
+        </div>
+    </div>
+</footer>

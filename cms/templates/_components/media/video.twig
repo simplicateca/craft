@@ -1,0 +1,21 @@
+{% set image = image ?? null %}
+{% if not image and block.images.one() %}
+    {% set image = block.images.one() %}
+{% endif %}
+{% if image %}
+
+    {% set class = class ?? '' %}
+
+    {% set transform = transform ?? null %}
+    {% if transform %}
+        {% do image.setTransform(transform) %}
+    {% endif %}
+
+    <img
+        src="{{image.url}}"
+        width="{{ image.width }}"
+        height="{{ image.height }}"
+        alt="{{image.title}}"
+        loading="lazy"
+        class="{{class}}" />
+{% endif %}

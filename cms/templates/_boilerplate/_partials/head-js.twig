@@ -1,10 +1,14 @@
 {# -- Polyfills detected by User-Agent as per: https://polyfill.io/v2/docs/examples#feature-detection -- #}
 <script src="https://cdn.polyfill.io/v3/polyfill.min.js?callback=polyfillsAreLoaded&flags=gated" defer async></script>
 
-{# -- Handle tabs gracefully as per https://hackernoon.com/removing-that-ugly-focus-ring-and-keeping-it-too-6c8727fefcd2 -- #}
-{% include "_boilerplate/_partials/tab-handler.twig" %}
+<script defer src="https://unpkg.com/@alpinejs/focus@3.x.x/dist/cdn.min.js"></script>
+<script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    
+<script defer src="https://unpkg.com/htmx.org@1.8.0/dist/htmx.min.js"></script>
+<script defer src="https://unpkg.com/htmx.org@1.8.0/dist/ext/ajax-header.js"></script>
 
-{# -- Tiny Cookie JavaScript -- #}
-<script>
-    {{ source("_inline-js/tiny-cookie.min.js") }}
-</script>
+{{ include("_boilerplate/_partials/js/js-global-vars", {}, withContext = true) }}
+{{ include("_boilerplate/_partials/js/js-tab-handler", {}, withContext = true) }}
+{{ include("_boilerplate/_partials/js/js-tiny-cookie", {}, withContext = true) }}
+{{ include("_boilerplate/_partials/js/js-enabled-check", {}, withContext = true) }}
+{{ include("_boilerplate/_partials/js/js-touch-device-check", {}, withContext = true) }}

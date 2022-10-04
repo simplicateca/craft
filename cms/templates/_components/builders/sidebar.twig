@@ -1,0 +1,21 @@
+{% set entry  = entry  ??? null %}
+{% set blocks = blocks ??? entry.sidebarBlocks.all() %}
+
+{% if blocks %}
+    <aside class="
+        c-sidebar--{{entry.section.handle}}--{{entry.type.handle}}
+        my-10
+    ">
+        {% block aboveBuilder %}{% endblock %}
+
+        {% block builder %}
+            {{ include( '_components/builders/_loop', {
+                'position': 'sidebar',
+                'blocks'  : blocks,
+                'entry'   : entry,
+            }, withContext = false ) }}
+        {% endblock %}
+
+        {% block belowBuilder %}{% endblock %}
+    </aside>
+{% endif %}

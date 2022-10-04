@@ -1,0 +1,4 @@
+{% extends craft.app.request.isAjax() and not craft.app.request.getIsPreview()
+    ? "_boilerplate/base.ajax.twig"
+    : "_boilerplate/base.web.twig"
+%}

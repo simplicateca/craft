@@ -1,0 +1,300 @@
+field: a4fe99b5-7832-4eb2-9833-f551177bb821 # Content Builder
+fieldLayouts:
+  5c81451a-e63d-4966-9100-ae781bf92ed9:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 0bcee758-a660-4162-8172-61eb22e388b1 # Text
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: acb31ed2-94c4-4136-bb42-5b55ffa91749
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 1a985008-f76e-481c-8f5b-0d30aec5998f # Layout Variant
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 25e29ab4-1e4e-444e-8911-07aae91c12ba
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 69a283b4-6d7c-4669-895c-8474a32201f8 # Limit / Per Page
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 83b8b4ee-afe8-4be5-8bc7-c24374bc5c6a
+            userCondition: null
+            warning: null
+            width: 25
+          -
+            elementCondition: null
+            fieldUid: 041164a1-2d58-4fa0-9493-2de14aabe9ea # Order
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: bd35df7c-729b-4f74-9e7b-fa641ccb0ff6
+            userCondition: null
+            warning: null
+            width: 25
+          -
+            elementCondition: null
+            fieldUid: e1f06878-5f13-4be3-a010-2741b9b3c7f5 # Include Search?
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 5855838f-8e9d-42f6-b070-9401e96591e2
+            userCondition: null
+            warning: null
+            width: 25
+          -
+            elementCondition: null
+            fieldUid: 5af7b832-6533-4a17-8189-4cb4f8a8f712 # Include Pagination?
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: a7a2ab93-7d7d-46cd-9a7e-cb3332bde0cd
+            userCondition: null
+            warning: null
+            width: 25
+          -
+            elementCondition: null
+            fieldUid: 9bc3780c-8a26-4b34-964e-9afe3f249654 # Tags
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 3c5d67d0-093b-42e4-8707-bf28d163639c
+            userCondition: null
+            warning: null
+            width: 25
+          -
+            elementCondition: null
+            fieldUid: 6f23d0a6-104c-41be-8d66-f5e9a9a260ac # Background
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 34b8b9e2-3c8e-435d-b2dc-45d319d794e0
+            userCondition: null
+            warning: null
+            width: 25
+          -
+            elementCondition: null
+            fieldUid: 1da11484-e4d8-4414-9b03-6dc1be10a931 # Spacing
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 1a442921-0be1-4e36-9891-4d363f48a858
+            userCondition: null
+            warning: null
+            width: 25
+        name: Content
+        uid: 1b905d20-6fce-410e-8ace-f0ecdbeb1e39
+        userCondition: null
+fields:
+  0bcee758-a660-4162-8172-61eb22e388b1: # Text
+    columnSuffix: tzocwopw
+    contentColumnType: text
+    fieldGroup: null
+    handle: text
+    instructions: null
+    name: Text
+    searchable: false
+    settings:
+      availableTransforms: '*'
+      availableVolumes: '*'
+      columnType: text
+      configSelectionMode: choose
+      defaultTransform: ''
+      manualConfig: ''
+      purifierConfig: null
+      purifyHtml: true
+      redactorConfig: Standard.json
+      removeEmptyTags: true
+      removeInlineStyles: false
+      removeNbsp: true
+      showHtmlButtonForNonAdmins: false
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      uiMode: enlarged
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\redactor\Field
+  1a985008-f76e-481c-8f5b-0d30aec5998f: # Layout Variant
+    columnSuffix: lmsffoac
+    contentColumnType: string
+    fieldGroup: null
+    handle: variant
+    instructions: null
+    name: 'Layout Variant'
+    searchable: false
+    settings:
+      config: blocks/listing-formats.json
+    translationKeyFormat: null
+    translationMethod: none
+    type: trendyminds\designtokens\fields\DesignTokensField
+  1da11484-e4d8-4414-9b03-6dc1be10a931: # Spacing
+    columnSuffix: kbibsqwh
+    contentColumnType: string
+    fieldGroup: null
+    handle: spacing
+    instructions: null
+    name: Spacing
+    searchable: false
+    settings:
+      config: blocks/spacing.json
+    translationKeyFormat: null
+    translationMethod: none
+    type: trendyminds\designtokens\fields\DesignTokensField
+  5af7b832-6533-4a17-8189-4cb4f8a8f712: # Include Pagination?
+    columnSuffix: kdjpooyf
+    contentColumnType: boolean
+    fieldGroup: null
+    handle: hasPagination
+    instructions: null
+    name: 'Include Pagination?'
+    searchable: false
+    settings:
+      default: false
+      offLabel: null
+      onLabel: null
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Lightswitch
+  6f23d0a6-104c-41be-8d66-f5e9a9a260ac: # Background
+    columnSuffix: sufzuzdu
+    contentColumnType: string
+    fieldGroup: null
+    handle: bg
+    instructions: null
+    name: Background
+    searchable: false
+    settings:
+      config: blocks/backgrounds.json
+    translationKeyFormat: null
+    translationMethod: none
+    type: trendyminds\designtokens\fields\DesignTokensField
+  9bc3780c-8a26-4b34-964e-9afe3f249654: # Tags
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: tags
+    instructions: null
+    name: Tags
+    searchable: false
+    settings:
+      allowLimit: false
+      allowMultipleSources: false
+      allowSelfRelations: false
+      localizeRelations: false
+      maxRelations: null
+      minRelations: null
+      selectionLabel: null
+      showSiteMenu: false
+      source: 'taggroup:309b4130-a979-4b2c-8a72-971bbeb15553' # Sitewide Content
+      sources: '*'
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Tags
+  69a283b4-6d7c-4669-895c-8474a32201f8: # Limit / Per Page
+    columnSuffix: njtiaavk
+    contentColumnType: integer(10)
+    fieldGroup: null
+    handle: limit
+    instructions: null
+    name: 'Limit / Per Page'
+    searchable: false
+    settings:
+      decimals: 0
+      defaultValue: 12
+      max: null
+      min: -1
+      prefix: null
+      previewCurrency: null
+      previewFormat: decimal
+      size: null
+      suffix: null
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Number
+  041164a1-2d58-4fa0-9493-2de14aabe9ea: # Order
+    columnSuffix: youtxjmv
+    contentColumnType: string
+    fieldGroup: null
+    handle: order
+    instructions: null
+    name: Order
+    searchable: false
+    settings:
+      options:
+        -
+          __assoc__:
+            -
+              - label
+              - 'Most Recent'
+            -
+              - value
+              - mostRecent
+            -
+              - default
+              - '1'
+        -
+          __assoc__:
+            -
+              - label
+              - Random
+            -
+              - value
+              - random
+            -
+              - default
+              - ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\RadioButtons
+  e1f06878-5f13-4be3-a010-2741b9b3c7f5: # Include Search?
+    columnSuffix: pkgeltqc
+    contentColumnType: boolean
+    fieldGroup: null
+    handle: hasSearch
+    instructions: null
+    name: 'Include Search?'
+    searchable: false
+    settings:
+      default: false
+      offLabel: null
+      onLabel: null
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Lightswitch
+handle: newsListing
+name: 'News Listing'
+sortOrder: 8

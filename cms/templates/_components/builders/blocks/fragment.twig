@@ -1,0 +1,43 @@
+{% set fragments  = fragments ?? block.fragments.all() %}
+{% set position   = position ?? 'content' %}
+{% set parentLoop = loop ?? null %}
+
+{% block blockBody %}
+    {% for fragment in fragments %}
+
+        {% set type = fragment.type.handle ?? fragment.type %}
+
+        {# if this isn't a default fragment, try to embed it directly #}
+        {% if type != 'default' %}
+
+            {% set first  = parentLoop ? ( parentLoop.first and loop.first ) : loop.first %}
+            {% set last   = parentLoop ? ( parentLoop.last  and loop.last  ) : loop.last  %}
+
+            {% include ([
+                '_partials/' ~ type ~ '.twig',
+                '_partials/fragment.' ~ type ~ '.twig',
+            ]) with {
+                'fragment' : fragment,
+                'block'    : fragment,
+                'entry'    : entry,
+                'position' : position,
+                'loop'     : parentLoop,
+                'first'    : first,
+                'last'     : last,
+            } only %}
+
+        {# otherwise, just loop through the blocks as if they were a mini-block of their own #}
+        {% else %}
+
+            {% include '_components/builders/_loop.twig' with {
+                'block'    : fragment,
+                'blocks'   : fragment.contentBlocks.all(),
+                'entry'    : entry,
+                'position' : position,
+                'loop'     : parentLoop,
+            } only %}
+            
+        {% endif %}
+
+    {% endfor %}
+{% endblock %}

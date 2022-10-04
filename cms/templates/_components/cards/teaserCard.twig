@@ -1,0 +1,28 @@
+{% set htag    = htag    ??? 'h2' %}
+{% set title   = title   ??? entry.title ??? entry.headline ??? null %}
+{% set text    = text    ??? entry.summary ??? entry.dek ??? entry.text ??? null %}
+{% set url     = url     ??? entry.url ??? null %}
+{% set handle  = handle  ??? entry.section.handle ??? null %}
+{% set images  = images  ??? entry.images.all() ??? null %}
+
+<article class="tease {{handle}} relative">
+    <div class="flex flex-row items-center border-1 border-gray-200">
+        <div class="bg-gray-200 aspect-square h-24">
+            &nbsp;
+        </div>
+
+        <div class="p-2">
+            {% block title %}
+                {%- if title -%}
+                    <{{htag}} class="sm !leading-none">{{title}}</{{htag}}>
+                {%- endif -%}
+            {% endblock %}
+
+            {% block link %}
+                {%- if url -%}
+                    <a class="self-end mt-2 clickable-parent" href="{{ url }}">Read more →</a>
+                {%- endif -%}
+            {% endblock %}
+        </div>
+    </div>
+</article>

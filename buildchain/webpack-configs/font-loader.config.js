@@ -9,7 +9,7 @@ module.exports = (type = 'modern', settings) => {
         module: {
             rules: [
                 {
-                    test: /\.(ttf|eot|woff2?)$/i,
+                    test: /\.(ttf|eot|woff2*)$/i,
                     use: [
                         {
                             loader: 'file-loader',

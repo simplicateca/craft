@@ -1,0 +1,28 @@
+{% extends '_components/builders/_block.twig' %}
+
+{% block blockContent %}
+    <div class="block-content container">
+        
+        {{ include( '_components/text/eyebrow.twig' ) }}
+
+        <hooper
+            :wheel-control="false"
+            :auto-play="false"
+            :play-speed="15000"
+            >
+            {% for image in block.images.all() %}
+                <slide>
+                    <div class="image">
+                        {{ include('_components/media/image', {
+                            image: image
+                        }) }}
+                    </div>
+                </slide>
+            {% endfor %}
+
+            {% if block.images.all()|length > 1 %}
+                <hooper-pagination slot="hooper-addons" class="my-4 flex justify-center"></hooper-pagination>
+            {% endif %}
+        </hooper>
+    </div>
+{% endblock %}

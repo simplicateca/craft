@@ -1,0 +1,17 @@
+{% apply spaceless %}
+
+{# -- Prefetch & preconnect headers and links -- #}
+{% set prefetchUrls = [
+    alias("@assetsUrl"),
+    'https://unpkg.com',
+    'https://cdn.polyfill.io'
+
+] %}
+{# -- General global variables -- #}
+{% set baseUrl = alias('@assetsUrl') ~ '/' %}
+
+{# -- Twig output from the render; this must be in a block -- #}
+{% block htmlPage %}
+{% endblock %}
+
+{% endapply %}

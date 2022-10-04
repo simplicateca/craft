@@ -1,0 +1,39 @@
+{% extends '_components/builders/_block.twig' %}
+
+{% set titleTag = 'h3' %}
+{% set cols = 1 %}
+{% if block.layout == 'cards' %}
+    {% set cols = block.items|length >= 3 ? 3 : block.items|length %}
+    {% set titleTag = 'h3' %}
+{% endif %}
+
+{% set headlineClass = 'mb-16' %}
+{% if block.layout == 'normal' %}
+    {% set headlineClass = 'mb-8' %}
+{% endif %}
+
+{% block blockContent %}
+    <div class="container">
+
+        {{ include( '_components/text/eyebrow.twig' ) }}
+
+        {{ include('_components/text/prose', {
+            class: 'mb-12'
+        }) }}
+
+        <div class="records grid gap-16 grid-cols-{{cols}}">
+            {% for entry in block.items.all() %}
+                {% include  [
+                    '_sections/' ~ entry.section.handle ~ '/_tease.' ~ position,
+                    '_sections/' ~ entry.section.handle ~ '/_tease',
+                    '_sections/_tease.' ~ position,
+                    '_sections/_tease'
+                ] with {
+                    titleTag: titleTag,
+                    entry: entry,
+                    format: block.layout.value ?? ''
+                } %}
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

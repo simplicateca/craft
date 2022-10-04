@@ -1,0 +1,17 @@
+{
+  "Accordion": {
+    "class": "accordion",
+    "wrapper-div": "w-full max-w-5xl mx-auto",
+    "text-div": "w-full",
+    "repeater-div": "w-full",
+    "component-template": "_components/accordion/accordion"
+  },
+
+  "3 Column Grid": {
+    "class": "gridCards",
+    "wrapper-div": "text-center",
+    "text-div": "max-w-5xl mx-auto",
+    "repeater-div": "grid grid-cols-3 gap-12",
+    "card-template": "_components/cards/stackedCard"
+  }
+}

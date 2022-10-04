@@ -42,7 +42,7 @@ fieldLayouts:
             heading: 'Page Content'
             type: craft\fieldlayoutelements\Heading
           -
-            fieldUid: a4fe99b5-7832-4eb2-9833-f551177bb821 # Content Blocks
+            fieldUid: a4fe99b5-7832-4eb2-9833-f551177bb821 # Content Builder
             instructions: 'Use the blocks below to construct the body of your entry. Each block contains specific settings and content requirements.'
             label: 'Body Content Blocks'
             required: ''

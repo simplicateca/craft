@@ -3,34 +3,42 @@ fieldLayouts:
   cf0f3bed-f2ac-4664-920e-bb3e9f6739fa:
     tabs:
       -
+        elementCondition: null
         elements:
           -
+            elementCondition: null
             fieldUid: 625a205f-5664-4223-840b-ec4c4e73b1bb # Limit
             instructions: null
             label: null
             required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: cae29da4-e73f-4c1a-8e05-cf76067aa06a
+            userCondition: null
             warning: null
             width: 100
           -
+            elementCondition: null
             fieldUid: 9d81e4ce-5846-4157-aebc-c26abc01d16e # Has Search?
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 672d88c1-77be-4fb2-95b2-c753d9101053
+            userCondition: null
             warning: null
             width: 100
         name: Content
-        sortOrder: 1
+        uid: 995f18ea-0ffe-4619-b6fa-863df1deb71a
+        userCondition: null
 fields:
   9d81e4ce-5846-4157-aebc-c26abc01d16e: # Has Search?
     columnSuffix: null
     contentColumnType: boolean
     fieldGroup: null
     handle: hasSearch
-    instructions: ''
+    instructions: null
     name: 'Has Search?'
     searchable: false
     settings:
@@ -45,7 +53,7 @@ fields:
     contentColumnType: integer(10)
     fieldGroup: null
     handle: limit
-    instructions: ''
+    instructions: null
     name: Limit
     searchable: false
     settings:
@@ -54,7 +62,7 @@ fields:
       max: null
       min: 1
       prefix: null
-      previewCurrency: ''
+      previewCurrency: null
       previewFormat: decimal
       size: null
       suffix: null

@@ -18,7 +18,7 @@
  */
 
 return [
-    'id' => getenv('APP_ID') ?: 'CraftCMS',
+    'id' => getenv('CRAFT_APP_ID') ?: 'CraftCMS',
     'modules' => [
         'site-module' => [
             'class' => \modules\sitemodule\SiteModule::class,
@@ -36,7 +36,7 @@ return [
             'database' => getenv('REDIS_DEFAULT_DB'),
         ],
         'cache' => [
-            'keyPrefix' => getenv('APP_ID') ?: 'CraftCMS',
+            'keyPrefix' => getenv('CRAFT_APP_ID') ?: 'CraftCMS',
             'class' => yii\redis\Cache::class,
             'redis' => [
                 'hostname' => getenv('REDIS_HOSTNAME'),

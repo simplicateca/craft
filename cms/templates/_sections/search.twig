@@ -1,0 +1,70 @@
+{% extends "_layouts/base" %}
+
+{% set bodyClasses = 'noHero search' %}
+
+{% block content %}
+    {% set crumbs = [
+        { title: 'Home', url: '/' },
+        { title: 'Search', url: '/search' },
+    ] %}
+
+    {% set searchQuery = craft.app.request.getParam('q') %}    
+    {% set limit = 10 %}
+    {% set entries = searchQuery
+        ? craft.entries()
+            .search(searchQuery)
+            .orderBy('score')
+            .limit(limit)
+        : []  %}
+
+    {% if searchQuery %}
+        {% set crumbs = crumbs|merge([{ title: 'Results for: ' ~ searchQuery, url: craft.app.request.absoluteUrl }]) %}
+    {% endif %}
+
+    {# Paginate the entries #}
+    {% if searchQuery and entries|length %}
+        {% paginate entries as pageInfo, pageEntries %}
+        {% set expandedResults = craft.expandedSearch.search(searchQuery, {
+            length: 250,
+            offset: (pageInfo.currentPage - 1) * limit,
+            limit: limit
+        }) %}
+    {% endif %}
+
+    {% set pageTitle = searchQuery and entries|length ? 'Search Results' : 'Search' %}
+
+    {% include '_partials/breadcrumb.twig' with { crumbs: crumbs } %}
+
+    <div class="page--search">
+        <div class="container">
+            <h1>{{pageTitle}}</h1>
+
+            {% include '_partials/search-form.twig' with { searchText: searchQuery } %}
+
+            {% if searchQuery %}
+                {% set resultMessage = expandedResults is defined
+                    ? entries|length ~ " results for <mark>" ~ searchQuery ~ "</mark>"
+                    : "Your search for <mark>" ~ searchQuery ~ "</mark> didn’t return any results." %}
+                
+                <p>{{resultMessage| raw}}</p>
+           
+                {% if expandedResults is defined %}
+                    <div class="c-searchResults">
+                        {% for result in expandedResults %}
+                            {% include  [
+                                ( result.entry.type.handle ~ '/_tease.twig'), 
+                                '_pages/_tease.twig'
+                            ] with { entry: result.entry, summary: result.matchedValue } %}
+                        {% endfor %}
+                    </div>
+
+                    {{ include('_components/pagination/pagination') }}
+                {% endif %}
+            {% endif %}
+        </div>
+    </div>
+{% endblock %}
+
+{% block subcontent %}
+    {% include '_partials/above-footer.twig' %}
+{% endblock %}

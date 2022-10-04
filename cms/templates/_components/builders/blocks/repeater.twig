@@ -1,0 +1,127 @@
+{% extends '_components/builders/_block.twig' %}
+
+{% set proseSize   = null %}
+{% set text        = text ??? block.text ??? null %}
+
+{% set variant     = block.variant.get('class')              ??? null %}
+{% set wrapperDiv  = block.variant.get('wrapper-div')        ??? null %}
+{% set textDiv     = block.variant.get('text-div')           ??? null %}
+{% set repeaterDiv = block.variant.get('repeater-div')       ??? null %}
+{% set component   = block.variant.get('component-template') ??? null %}
+{% set cardLayout  = block.variant.get('card-template')      ??? null %}
+
+
+{% set itemsArray  = items ??? block.items.all() ??? [] %}
+
+{% block blockContent %}
+
+    <div class="container {{variant}}">
+
+        <div class="{{wrapperDiv}}">
+            <div class="{{textDiv}}">
+                {% block aboveText %}{% endblock %}
+
+                {% block text %}
+                    {% if text %}
+                        {{ include('_components/text/prose', {
+                            size: proseSize,
+                            text: text
+                        }, withContext = false ) }}
+                    {% endif %}
+                {% endblock %}
+
+                {% block belowText %}{% endblock %}
+            </div>
+
+            {% if itemsArray %}
+                <div class="{{repeaterDiv}}">
+
+                    {% if component %}
+                        {% embed component with {
+                            items: items,
+                            component: component
+                        } only %}
+
+                        {% endembed %}
+                    {% else %}
+                        {% for item in itemsArray %}
+                            {% embed cardLayout with {
+                                entry: item,
+                                cardLayout: cardLayout
+                            } only %}
+
+                            {% endembed %}
+                        {% endfor %}
+                    {% endif %}
+                </div>
+            {% endif %}
+        </div>
+    </div>
+{% endblock %}
+
+{% block old %}
+    <div class="block-content container">
+
+        {% set proseClass    = 'mb-12 lg:prose-xl' %}
+
+        {{ include( '_components/text/eyebrow.twig' ) }}
+
+        {{ include('_components/text/prose', {
+            class: proseClass
+        }) }}
+
+        {% set cols = block.items|length >= 4 ? 4 : block.items|length %}
+
+        {% set imageWidth = 'mb-8' %}
+        {% set textWidth  = '' %}
+        {% set gridClass  = 'grid gap-12 grid-cols-' ~ cols ~ ' mt-8' %}
+
+        {% set wrapper = block.layout == 'horizontal' ? 'flex-col' : 'flex-row items-center' %}
+        {% if 'vertical' in block.layout.value %}
+            {% set cols = 1 %}
+            {% set imageWidth = 'w-1/5' %}
+            {% set textWidth  = 'w-4/5 pl-8' %}
+            {% set gridClass  = 'grid gap-8 grid-cols-1' %}
+        {% endif %}
+
+        {% if block.layout == 'grid' %}
+            {% set gridClass  = 'grid gap-8 grid-cols-2' %}
+            {% set imageWidth = 'w-1/5 pt-1' %}
+            {% set textWidth  = 'w-4/5 pl-4' %}
+            {% set wrapper    = 'flex-row' %}
+        {% endif %}
+
+        <div class="{{gridClass}}">
+            {% set index = 1 %}
+            {% for row in block.items.all() %}
+                {% if block.layout == 'verticalAlternating' %}
+                    {% set wrapper   = cycle(['flex-row-reverse items-center', 'flex-row items-center'], loop.index0) %}
+                    {% set textWidth = cycle(['w-4/5 pr-4', 'w-4/5 pl-4'], loop.index0) %}
+                {% endif %}
+
+                <div class="flex {{wrapper}}">
+                    <div class="text-center {{imageWidth}}">
+                        {% if row.icon.one() %}
+                            <img src="{{row.icon.one().url}}" alt="{{row.icon.one().title}}">
+                        {% endif %}
+                    </div>
+
+                    <div class="{{textWidth}}">
+                        {% if row.headline %}
+                            {% if block.layout.value == 'grid' %}
+                                <h3 class="mb-0">{{row.headline}}</h3>
+                            {% else %}
+                                <h3 class="mb-4">{{row.headline}}</h3>
+                            {% endif %}
+                        {% endif %}
+                        
+                        {{ include('_components/text/prose', {
+                            text: row.text,
+                            class: 'prose'
+                        }) }}
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

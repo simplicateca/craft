@@ -1,36 +1,103 @@
-field: a4fe99b5-7832-4eb2-9833-f551177bb821 # Content Blocks
+field: a4fe99b5-7832-4eb2-9833-f551177bb821 # Content Builder
 fieldLayouts:
   564ddb22-070a-4f59-9191-678a9a6aa04c:
     tabs:
       -
+        elementCondition: null
         elements:
           -
+            elementCondition: null
             fieldUid: e2cdac24-87bd-4a5b-be66-d991b0323794 # Fragment(s)
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: cf64b0c8-2197-4b35-882d-1efa6ff77c73
+            userCondition: null
             warning: null
             width: 50
+          -
+            elementCondition: null
+            fieldUid: abf72c9c-cdfc-4765-b71d-a03735da679d # Spacing
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 41cfa4e2-45bf-495a-8ef7-5181c17669d7
+            userCondition: null
+            warning: null
+            width: 25
+          -
+            elementCondition: null
+            fieldUid: bf152e62-fb69-4e45-836d-7546488987e6 # Background
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 32fc547d-c5c4-4205-a400-fed243e51d88
+            userCondition: null
+            warning: null
+            width: 25
         name: Content
-        sortOrder: 1
+        uid: d9dcfac7-2f95-4e7f-8dff-5e8f93eb6332
+        userCondition: null
 fields:
+  abf72c9c-cdfc-4765-b71d-a03735da679d: # Spacing
+    columnSuffix: gslywyag
+    contentColumnType: string
+    fieldGroup: null
+    handle: spacing
+    instructions: null
+    name: Spacing
+    searchable: false
+    settings:
+      config: blocks/fragment-spacing.json
+    translationKeyFormat: null
+    translationMethod: none
+    type: trendyminds\designtokens\fields\DesignTokensField
+  bf152e62-fb69-4e45-836d-7546488987e6: # Background
+    columnSuffix: nfwtlclo
+    contentColumnType: string
+    fieldGroup: null
+    handle: bg
+    instructions: null
+    name: Background
+    searchable: false
+    settings:
+      config: blocks/fragment-backgrounds.json
+    translationKeyFormat: null
+    translationMethod: none
+    type: trendyminds\designtokens\fields\DesignTokensField
   e2cdac24-87bd-4a5b-be66-d991b0323794: # Fragment(s)
     columnSuffix: null
     contentColumnType: string
     fieldGroup: null
     handle: fragments
-    instructions: ''
+    instructions: null
     name: Fragment(s)
     searchable: false
     settings:
       allowSelfRelations: false
       entryTypes:
         - 174cd975-f457-4998-8bcc-3d25963f9c3b # Content Fragment
-      limit: ''
       localizeRelations: false
-      selectionLabel: ''
+      maxRelations: null
+      minRelations: null
+      selectionCondition:
+        __assoc__:
+          -
+            - elementType
+            - craft\elements\Entry
+          -
+            - fieldContext
+            - global
+          -
+            - class
+            - craft\elements\conditions\entries\EntryCondition
+      selectionLabel: null
       showSiteMenu: false
       source: null
       sources:
@@ -45,4 +112,4 @@ fields:
     type: nfourtythree\entriessubset\fields\EntriesSubsetField
 handle: fragment
 name: Fragment
-sortOrder: 9
+sortOrder: 7

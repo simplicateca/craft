@@ -19,11 +19,11 @@ siteSettings:
   34463b82-dd3f-441c-b9c6-59c351e847aa: # Wireframe Site
     enabledByDefault: true
     hasUrls: true
-    template: fragments/_entry
+    template: _sections/fragments/_entry.twig
     uriFormat: 'fragments/{slug}'
   cc8cbe25-440c-439e-a58b-6515a3b420d0: # Site Guide
     enabledByDefault: true
     hasUrls: true
-    template: fragments/_entry
+    template: _sections/fragments/_entry.twig
     uriFormat: 'fragments/{slug}'
 type: channel

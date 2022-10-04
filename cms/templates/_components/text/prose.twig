@@ -1,0 +1,23 @@
+{% set text  = text ??? block.text ??? null %}
+{% set size  = size ??? 'DEFAULT'  %}
+{% set sizes = {
+    'tiny'   : 'prose-sm',
+    'small'  : 'prose',
+    'DEFAULT': 'prose-lg',
+    'large'  : 'prose-xl',
+    'xl'     : 'prose-2xl'
+} %}
+
+{% set proseClass = attribute(sizes, size) %}
+
+<div class="prose {{proseClass}}">
+    {% apply typogrify
+        | retconChange( 'h1', 'h2' )
+        | retconAttr( "figure", { style: '' } )
+        | retconWrap( "figure img", ".img" )
+        | retconWrap( "figure iframe[src*='youtube']", ".video" )
+        | retconAttr( "figure div.image + figcaption", { class: 'img' } )
+        | retconAttr( "figure div.video iframe", { style: '' } ) %}
+        {% block text %}{{text}}{% endblock %}
+    {% endapply %}
+</div>

@@ -1,0 +1,84 @@
+fieldLayouts:
+  44a33a2f-7625-459e-aed6-bd555138cbec:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 77d04eff-cd3c-4a0c-ae93-84839425651c
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 69ac403d-1688-46dc-ab62-a46257cb4e1b # Emergency Message Layout
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 77905452-fd8c-4240-bf16-405547d53ffd
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            type: craft\fieldlayoutelements\HorizontalRule
+            uid: 76b95bbb-28ab-4496-922b-3f28af9c2e67
+            userCondition: null
+          -
+            elementCondition: null
+            fieldUid: b1c52a06-4990-43f5-90d3-898a48789556 # Dek
+            instructions: 'A short one sentence message (80 characters)'
+            label: Message
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 059fc1cc-7bc5-49db-b9ea-de548210dc96
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: d339dd86-5cec-4889-b2d2-81f993979c61 # Button
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 58735c29-ebe5-47e8-9b0f-e9a5733458a5
+            userCondition: null
+            warning: null
+            width: 50
+        name: Content
+        uid: bb87b4cb-d2c3-4675-907e-f0d5a9bd8f90
+        userCondition: null
+handle: alertMessage
+hasTitleField: false
+name: 'Alert Message'
+section: 7fa68ddc-cf1c-4e9b-9ce7-b8865ca9d48c # Alert Message
+sortOrder: 1
+titleFormat: '{section.name|raw}'
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

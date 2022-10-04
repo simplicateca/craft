@@ -1,0 +1,51 @@
+
+h2 {
+    @apply mb-2;
+    font-weight: 700;
+    font-size: 1.5em;
+    line-height: 1.3333333;
+
+    &.sm {
+        font-size: 1.4285714em;
+        line-height: 1.4;
+    }
+
+    &.lg,
+    &.large {
+        font-size: 1.6666667em;
+    }
+
+    &.xl {
+        font-size: 1.8em;
+        line-height: 1.1111111;
+    }
+}
+
+h3 {
+    @apply mb-2;
+    font-weight: 600;
+    font-size: 1.25em;
+    line-height: 1.6;
+    
+    &.sm {
+        font-size: 1.2857143em;
+        line-height: 1.5555556;
+    }
+
+    &.lg,
+    &.large {
+        font-size: 1.3333333em;
+    }
+
+    &.xl {
+        font-size: 1.5em;
+        line-height: 1.3333333;
+    }
+}
+
+
+.bgDark {
+    h2,h3,h4,p,li {
+        @apply text-white;
+    }
+}

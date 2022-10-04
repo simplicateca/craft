@@ -1,0 +1,14 @@
+{% embed [
+    '_components/cards/' ~ ( format ??? null ),
+    '_components/cards/text'
+] with {
+    entry:  entry  ??? null,
+    format: format ??? 'text'
+} only %}
+    {% block aboveSummary %}
+        <time
+            class="block"
+            datetime="{{ entry.postDate | date('Y-m-d') }}"
+        >{{ entry.postDate | date('d M Y') }}</time>
+    {% endblock %}
+{% endembed %}

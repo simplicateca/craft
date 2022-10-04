@@ -1,0 +1,35 @@
+{% extends "_boilerplate" %}
+{% set templatePath = _self ??? '' %}
+
+{# -- Page body -- #}
+{% block bodyHtml %}
+    {% block alertbar %}
+        {{ include( "_components-sprig/alert-bar/alert-bar", {}, withContext = false ) }}
+    {% endblock %}
+
+    {% block header %}
+        {{ include( "_components/header/header", { entry: entry }, withContext = false ) }}
+    {% endblock %}
+
+    {% block belowHeader %}
+        {{ include( "_components/breadcrumb/breadcrumb", {}, withContext = true ) }}
+    {% endblock %}
+
+    <main>
+        {% block aboveContent %}{% endblock %}
+    
+        {% block content %}
+            {{ include( "_components/builders/content", { entry: entry }, withContext = false ) }}
+        {% endblock %}
+    
+        {% block belowContent %}{% endblock %}
+    </main>
+
+    {% block aboveFooter %}
+        {{ include( "_components/footer/above", {}, withContext = false ) }}
+    {% endblock %}
+
+    {% block footer %}
+        {{ include( "_components/footer/footer", {}, withContext = false ) }}
+    {% endblock %}
+{% endblock bodyHtml %}

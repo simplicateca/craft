@@ -1,0 +1,26 @@
+{
+  "Optimal Reading - Left": {
+    "class": "optimalLeft",
+    "wrapper-div": "w-full max-w-5xl",
+    "text-div": "w-full"
+  },
+
+  "Optimal Reading - Center": {
+    "class": "optimalCenter",
+    "wrapper-div": "w-full max-w-5xl mx-auto",
+    "text-div": "w-full"
+  },
+
+  "Full Width": {
+    "class": "fullWidth",
+    "wrapper-div": "w-full",
+    "text-div": "w-full"
+  },
+
+  "Focused": {
+    "class": "focused",
+    "wrapper-div": "w-full max-w-sm mx-auto",
+    "text-div": "w-full p-10",
+    "bg-color": "bg-sky-100"
+  }
+}

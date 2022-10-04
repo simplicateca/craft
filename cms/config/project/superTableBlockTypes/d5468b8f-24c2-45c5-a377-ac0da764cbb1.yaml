@@ -3,52 +3,63 @@ fieldLayouts:
   79dd7d9f-7ef5-438e-9e9f-d231cc488aca:
     tabs:
       -
+        elementCondition: null
         elements:
           -
+            elementCondition: null
             fieldUid: 1ddd814c-a3f1-4689-bb67-33d04ad8307a # Headline
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 61cadeca-8dfa-4a6e-86ec-b11ac8f1e6a4
+            userCondition: null
             warning: null
             width: 100
           -
+            elementCondition: null
             fieldUid: 69c2d7dc-3df8-4df1-a444-d2ae376da00c # Text
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 69ae4ad8-d5b8-4026-a6cd-9eccd9a8f0be
+            userCondition: null
             warning: null
             width: 100
           -
+            elementCondition: null
             fieldUid: fd647249-c4ea-4ade-99ab-13f9e53bba3f # Image / Icon
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: d93f1dbf-17fa-41ab-b73e-bdf543d358d6
+            userCondition: null
             warning: null
             width: 100
         name: Content
-        sortOrder: 1
+        uid: 0e802755-824f-48de-979f-ee9d5fd2bf97
+        userCondition: null
 fields:
   1ddd814c-a3f1-4689-bb67-33d04ad8307a: # Headline
     columnSuffix: null
     contentColumnType: text
     fieldGroup: null
     handle: headline
-    instructions: ''
+    instructions: null
     name: Headline
     searchable: true
     settings:
       byteLimit: null
       charLimit: null
-      code: ''
+      code: false
       columnType: null
-      initialRows: '4'
-      multiline: ''
+      initialRows: 4
+      multiline: false
       placeholder: null
       uiMode: normal
     translationKeyFormat: null
@@ -59,7 +70,7 @@ fields:
     contentColumnType: text
     fieldGroup: null
     handle: text
-    instructions: ''
+    instructions: null
     name: Text
     searchable: true
     settings:
@@ -70,13 +81,13 @@ fields:
       configSelectionMode: choose
       defaultTransform: ''
       manualConfig: ''
-      purifierConfig: ''
-      purifyHtml: '1'
+      purifierConfig: null
+      purifyHtml: true
       redactorConfig: Simple.json
-      removeEmptyTags: '1'
-      removeInlineStyles: '1'
-      removeNbsp: '1'
-      showHtmlButtonForNonAdmins: ''
+      removeEmptyTags: true
+      removeInlineStyles: true
+      removeNbsp: true
+      showHtmlButtonForNonAdmins: false
       showUnpermittedFiles: false
       showUnpermittedVolumes: false
       uiMode: normal
@@ -87,31 +98,45 @@ fields:
     columnSuffix: null
     contentColumnType: string
     fieldGroup: null
-    handle: icon
-    instructions: ''
+    handle: images
+    instructions: null
     name: 'Image / Icon'
     searchable: true
     settings:
       allowSelfRelations: false
+      allowSubfolders: false
       allowUploads: true
       allowedKinds:
         - image
       defaultUploadLocationSource: 'volume:a4f97962-52de-4b53-8422-5b833d1cd5fd' # Uploads
       defaultUploadLocationSubpath: icons/
-      limit: '1'
       localizeRelations: false
+      maxRelations: 1
+      minRelations: null
       previewMode: full
-      restrictFiles: '1'
+      restrictFiles: true
+      restrictLocation: false
+      restrictedDefaultUploadSubpath: null
+      restrictedLocationSource: 'volume:a4f97962-52de-4b53-8422-5b833d1cd5fd' # Uploads
+      restrictedLocationSubpath: null
+      selectionCondition:
+        __assoc__:
+          -
+            - elementType
+            - craft\elements\Asset
+          -
+            - fieldContext
+            - global
+          -
+            - class
+            - craft\elements\conditions\assets\AssetCondition
       selectionLabel: 'Choose Image'
       showSiteMenu: true
       showUnpermittedFiles: false
       showUnpermittedVolumes: false
-      singleUploadLocationSource: 'volume:a4f97962-52de-4b53-8422-5b833d1cd5fd' # Uploads
-      singleUploadLocationSubpath: ''
       source: null
       sources: '*'
       targetSiteId: null
-      useSingleFolder: false
       validateRelatedElements: false
       viewMode: list
     translationKeyFormat: null

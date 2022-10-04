@@ -3,95 +3,78 @@ fieldLayouts:
   71a6d7a6-25ac-452b-be15-ac1e85ee1f0c:
     tabs:
       -
+        elementCondition: null
         elements:
           -
+            elementCondition: null
             fieldUid: d08c5ca6-5020-4ac5-9460-c831d0921585 # Headline
             instructions: null
             label: null
             required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: e9097578-15ac-44ef-87fd-cc84292d97e2
+            userCondition: null
             warning: null
             width: 100
           -
+            elementCondition: null
             fieldUid: 6bd61b45-415d-4702-8b93-c734e25ed41e # Text
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 0312ee83-431f-46df-8213-cda6f2af4ed2
+            userCondition: null
             warning: null
             width: 100
           -
+            elementCondition: null
             fieldUid: e6d20858-c077-4e76-b107-03166b8ba61d # Eyebrow
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 56ae1f90-e19f-455d-94de-686fa6a0689c
+            userCondition: null
             warning: null
             width: 100
           -
-            fieldUid: 237ef9a6-2022-4b3a-8925-f51a79590775 # Layout
+            elementCondition: null
+            fieldUid: ea2610d5-eecb-4d99-916e-90ce7e2c2bbc # Background
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 78543238-2420-49c8-b9c8-9c94fb98ce92
+            userCondition: null
             warning: null
-            width: 25
+            width: 100
           -
-            fieldUid: d4b0af7c-aad2-41a6-9de2-49f00ef28aa5 # Background
+            elementCondition: null
+            fieldUid: 34c8b184-a3df-4101-9525-d2c4a65aa9cb # Variant
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: bcd0b055-368d-4601-a190-ccedeb506394
+            userCondition: null
             warning: null
-            width: 25
-          -
-            fieldUid: 4f595261-8437-4ec8-918c-d02f09238a1c # Edges
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            warning: null
-            width: 25
+            width: 100
         name: Content
-        sortOrder: 1
+        uid: 7d750c4a-98f2-471f-b70b-27b31afd4974
+        userCondition: null
 fields:
-  4f595261-8437-4ec8-918c-d02f09238a1c: # Edges
-    columnSuffix: null
-    contentColumnType: string
-    fieldGroup: null
-    handle: edges
-    instructions: 'How the block interacts with elements around it.'
-    name: Edges
-    searchable: false
-    settings:
-      optgroups: true
-      options:
-        -
-          __assoc__:
-            -
-              - label
-              - Normal
-            -
-              - value
-              - normal
-            -
-              - default
-              - ''
-    translationKeyFormat: null
-    translationMethod: none
-    type: craft\fields\Dropdown
   6bd61b45-415d-4702-8b93-c734e25ed41e: # Text
     columnSuffix: null
     contentColumnType: text
     fieldGroup: null
     handle: text
-    instructions: ''
+    instructions: null
     name: Text
     searchable: true
     settings:
@@ -101,44 +84,32 @@ fields:
       configSelectionMode: choose
       defaultTransform: ''
       manualConfig: ''
-      purifierConfig: ''
-      purifyHtml: '1'
+      purifierConfig: null
+      purifyHtml: true
       redactorConfig: Simple.json
-      removeEmptyTags: '1'
-      removeInlineStyles: '1'
-      removeNbsp: '1'
-      showHtmlButtonForNonAdmins: ''
+      removeEmptyTags: true
+      removeInlineStyles: true
+      removeNbsp: true
+      showHtmlButtonForNonAdmins: false
       showUnpermittedFiles: false
       showUnpermittedVolumes: false
       uiMode: normal
     translationKeyFormat: null
     translationMethod: none
     type: craft\redactor\Field
-  237ef9a6-2022-4b3a-8925-f51a79590775: # Layout
-    columnSuffix: null
+  34c8b184-a3df-4101-9525-d2c4a65aa9cb: # Variant
+    columnSuffix: ntqzccqg
     contentColumnType: string
     fieldGroup: null
-    handle: layout
-    instructions: 'How the content lays out inside the block.'
-    name: Layout
+    handle: variant
+    instructions: null
+    name: Variant
     searchable: false
     settings:
-      optgroups: true
-      options:
-        -
-          __assoc__:
-            -
-              - label
-              - Normal
-            -
-              - value
-              - normal
-            -
-              - default
-              - ''
+      config: blocks/text.json
     translationKeyFormat: null
     translationMethod: none
-    type: craft\fields\Dropdown
+    type: trendyminds\designtokens\fields\DesignTokensField
   d08c5ca6-5020-4ac5-9460-c831d0921585: # Headline
     columnSuffix: null
     contentColumnType: text
@@ -146,63 +117,27 @@ fields:
     handle: headline
     instructions: 'This will replace the "Title" field to act as the primary headline for the page and the SEO <h1> tag.'
     name: Headline
-    searchable: false
+    searchable: true
     settings:
-      availableTransforms: '*'
+      availableTransforms: ''
       availableVolumes: ''
       columnType: text
       configSelectionMode: choose
       defaultTransform: ''
       manualConfig: ''
-      purifierConfig: ''
-      purifyHtml: '1'
-      redactorConfig: Dek.json
-      removeEmptyTags: '1'
-      removeInlineStyles: '1'
-      removeNbsp: '1'
-      showHtmlButtonForNonAdmins: ''
+      purifierConfig: null
+      purifyHtml: true
+      redactorConfig: Headline.json
+      removeEmptyTags: true
+      removeInlineStyles: false
+      removeNbsp: false
+      showHtmlButtonForNonAdmins: false
       showUnpermittedFiles: false
       showUnpermittedVolumes: false
       uiMode: normal
     translationKeyFormat: null
     translationMethod: none
     type: craft\redactor\Field
-  d4b0af7c-aad2-41a6-9de2-49f00ef28aa5: # Background
-    columnSuffix: null
-    contentColumnType: string
-    fieldGroup: null
-    handle: background
-    instructions: 'How the block background should look.'
-    name: Background
-    searchable: false
-    settings:
-      optgroups: true
-      options:
-        -
-          __assoc__:
-            -
-              - label
-              - Normal
-            -
-              - value
-              - normal
-            -
-              - default
-              - ''
-        -
-          __assoc__:
-            -
-              - label
-              - Dark
-            -
-              - value
-              - dark
-            -
-              - default
-              - ''
-    translationKeyFormat: null
-    translationMethod: none
-    type: craft\fields\Dropdown
   e6d20858-c077-4e76-b107-03166b8ba61d: # Eyebrow
     columnSuffix: null
     contentColumnType: text
@@ -218,19 +153,32 @@ fields:
       configSelectionMode: choose
       defaultTransform: ''
       manualConfig: ''
-      purifierConfig: ''
-      purifyHtml: '1'
+      purifierConfig: null
+      purifyHtml: true
       redactorConfig: Headline.json
-      removeEmptyTags: '1'
-      removeInlineStyles: '1'
-      removeNbsp: '1'
-      showHtmlButtonForNonAdmins: ''
+      removeEmptyTags: true
+      removeInlineStyles: true
+      removeNbsp: true
+      showHtmlButtonForNonAdmins: false
       showUnpermittedFiles: false
       showUnpermittedVolumes: false
       uiMode: normal
     translationKeyFormat: null
     translationMethod: none
     type: craft\redactor\Field
+  ea2610d5-eecb-4d99-916e-90ce7e2c2bbc: # Background
+    columnSuffix: unpwravq
+    contentColumnType: string
+    fieldGroup: null
+    handle: bg
+    instructions: 'How the block background should look.'
+    name: Background
+    searchable: false
+    settings:
+      config: blocks/hero-backgrounds.json
+    translationKeyFormat: null
+    translationMethod: none
+    type: trendyminds\designtokens\fields\DesignTokensField
 handle: text
-name: Simple
+name: Text
 sortOrder: 2

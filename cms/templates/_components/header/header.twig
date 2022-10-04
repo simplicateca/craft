@@ -1,0 +1,50 @@
+{% set entry  = entry  ??? null %}
+{% set blocks = blocks ??? entry.heroBlock.all() ??? null %}
+{% set title  = title  ??? entry.title ??? null %}
+
+<header class="c-header" role="heading" aria-level="1">
+    {% block headerNavbar %}
+        <div class="bg-grey-200 py-4">
+            <div class="container">
+                <div class="flex">
+                    {% block headerLogo %}
+                        <div class="c-primaryLogo"><a href="/">[LOGO]</a></div>
+                    {% endblock %}
+
+                    {% block headerNavigation %}
+                        {{ include(
+                            [
+                                "_components/navigation/menu-primary",
+                                "_components/navigation/menu"
+                            ],
+                            { menu: 'primary' },
+                            withContext = false
+                        ) }}
+                    {% endblock %}
+                </div>
+            </div>
+        </div>
+    {% endblock %}
+
+    {% block headerHero %}
+        {% if blocks %}
+            {{ include("_components/builders/hero.twig", {
+                'position': 'hero',
+                'blocks'  : [blocks|first ??? null],
+                'entry'   : entry,
+            }, withContext = false ) }}
+        {% endif %}
+    {% endblock %}
+    
+    {% block headerTitle %}
+        {% if title and not blocks %}
+            <div class="container pt-10">
+                {% include '_components/text/headline-h1.twig' with {
+                    headline: title
+                } %}
+
+                {% block belowTitle %}{% endblock %}
+            </div>
+        {% endif %}
+    {% endblock %}
+</header>

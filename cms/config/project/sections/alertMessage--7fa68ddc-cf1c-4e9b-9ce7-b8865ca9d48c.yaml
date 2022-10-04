@@ -1,0 +1,12 @@
+defaultPlacement: end
+enableVersioning: true
+handle: alertMessage
+name: 'Alert Message'
+propagationMethod: all
+siteSettings:
+  34463b82-dd3f-441c-b9c6-59c351e847aa: # Wireframe Site
+    enabledByDefault: true
+    hasUrls: false
+    template: null
+    uriFormat: null
+type: single

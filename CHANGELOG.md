@@ -28,7 +28,7 @@
 
 * Consolidated the `emergency-message`, `content-container`, `mobile-menu` modules into `app.js`
 * Re-arranged the base template so that all the site content is inside the `app.js` Vue container
-* Updated the nomenclature for block twig file naming. See `cms/templates/_blocks/_loop.twig` for a reference
+* Updated the nomenclature for block twig file naming. See `cms/templates/_components/builders/_loop.twig` for a reference
 * Improved on the structure of previewing & including content fragments inside the page builder
 * Replaced the `Navigate` plugin with the Verbb `Navigation` plugin
 * Separated the mobile menu toggle button from the main mobile menu component

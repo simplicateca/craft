@@ -1,0 +1,114 @@
+{% set blocks       = blocks       ??? blocks.all()         ??? null %}
+{% set parentLoop   = loop         ??? null %}
+{% set position     = position     ??? 'content' %}
+
+{% set entry        = entry        ??? blocks|first.owner   ??? null %}
+{% set entryType    = entryType    ??? entry.type.handle    ??? null %}
+{% set section      = section      ??? entry.section.handle ??? null %}
+
+{% set sectionOpen     = false %}
+{% set previousBgColor = null  %}
+
+{% if blocks %}
+    {% for block in blocks %}
+
+        {% set variant   = variant ??? block.variant ??? block.layout ??? null %}
+        {% set blockType = block.type.handle ??? block.type ??? null %}
+        {# {% set first     = parentLoop ? ( parentLoop.first and loop.first ) : loop.first %}
+        {% set last      = parentLoop ? ( parentLoop.last  and loop.last  ) : loop.last  %} #}
+        {% set first     = ( loop.first ) %}
+        {% set last      = loop.last ??? null %}
+
+        {% set bgClass   = block.bg.get('class') ??? null %}
+        {% set bgWrapper = block.bg.get('wrapper-div') ??? null %}
+        {% set bgColor   = block.bg.get('bg-color') ??? null %}
+        {% set fillColor = block.bg.get('fill-color') ??? null %}
+        {% set textColor = block.bg.get('text-color') ??? null %}
+        {% set bgPattern = block.bg.get('pattern') ??? null %}
+
+        {% set spaceClass   = block.spacing.get('class') ??? null %}
+        {% set spaceWrapper = block.spacing.get('wrapper-div') ??? null %}
+        {% set spaceBefore  = block.spacing.get('include-before') ??? null %}
+
+        {#
+            _sections/news/blocks/textImage.textLeft.hero.twig
+            _sections/news/blocks/textImage.hero.twig
+            _sections/news/blocks/textImage.textLeft.twig
+            _sections/news/blocks/textImage.twig
+
+            _components/builders/blocks/textImage.textLeft.hero.twig
+            _components/builders/blocks/textImage.hero.twig
+            _components/builders/blocks/textImage.textLeft.twig
+            _components/builders/blocks/textImage.twig
+        #}
+
+        {% set blockPath = [
+            "_sections/#{section}/blocks/#{position}/#{blockType}.#{variant}",
+            "_sections/#{section}/blocks/#{position}/#{blockType}",
+            "_sections/#{section}/blocks/#{blockType}.#{variant}",
+            "_sections/#{section}/blocks/#{blockType}",
+
+            "_components/builders/blocks/#{position}/#{blockType}.#{variant}",
+            "_components/builders/blocks/#{position}/#{blockType}",
+            "_components/builders/blocks/#{blockType}.#{variant}",
+            "_components/builders/blocks/#{blockType}",
+        ] %}
+
+        {% if position == 'listing' %}
+            {% set blockPath = [
+                "_sections/#{blockType}/blocks/#{position}.#{variant}",
+                "_sections/#{blockType}/blocks/#{position}",
+                "_components/builders/blocks/#{position}",
+            ] %}
+        {% endif %}
+
+        {% if bgClass != 'bgInherit' %}
+            {% if sectionOpen == true %}
+                </div>
+            {% endif %}
+
+            {% if spaceBefore %}
+                {% embed spaceBefore with {
+                    fillColor: fillColor,
+                    spaceBefore: spaceBefore
+                } only %}
+
+                {% endembed %}
+            {% endif %}
+           
+            {% set sectionOpen = true %}
+            <div class="
+                {{bgClass}}
+                {{spaceClass}}
+                {{bgWrapper}}
+                {{spaceWrapper}}
+                {{bgColor}}
+                !{{textColor}}
+                
+                {% if bgPattern %}
+                    bg-repeat
+                {% endif %}
+            "
+            {% if bgPattern %}
+                style="background-image: url({{bgPattern}})"
+            {% endif %}
+            >
+        {% endif %}
+
+        {{ include( blockPath, {
+            block    : block,
+            entry    : entry,
+            position : position,
+            first    : first,
+            last     : last,
+            loop     : loop,
+        }, withContext = false ) }}
+
+        {% if loop.last and sectionOpen == true %}
+            </div>
+        {% endif %}
+
+        {% set previousBgColor = bgColor %}
+        
+    {% endfor %}
+{% endif %}

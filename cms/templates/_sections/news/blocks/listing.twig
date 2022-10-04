@@ -1,0 +1,31 @@
+{% extends '_components/builders/_block.twig' %}
+
+{% set wrapperClass = block.variant.get('wrapper-div')  ??? null   %}
+{% set teaseFormat  = block.variant.get('tease-format') ??? 'text' %}
+
+{% set query = craft.entries()
+    .section('news')
+    .limit(block.limit)
+%}
+
+{% paginate query as pageInfo, pageEntries %}
+
+{% block blockContent %}
+    <div class="container">
+        <div class="{{wrapperClass}}">
+            {% for entry in pageEntries %}
+                {{ include( [
+                    '_sections/news/_tease.content',
+                    '_sections/news/_tease',
+                    '_sections/_tease.content',
+                    '_sections/_tease'
+                ], {
+                    entry: entry,
+                    format: teaseFormat
+                }, withContext = false ) }}
+            {% endfor %}
+        </div>
+                
+        {{ include('_components/pagination/pagination') }}
+    </div>
+{% endblock %}

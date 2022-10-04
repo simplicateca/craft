@@ -1,0 +1,4 @@
+{% set menu    = menu  ?? "primary" %}
+
+{{ include( "_components/navigation/menu",   { menu: menu }, withContext = false ) }}
+{{ include( "_components/navigation/mobile", { menu: menu }, withContext = false ) }}

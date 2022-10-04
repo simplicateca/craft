@@ -1,74 +1,97 @@
-field: a4fe99b5-7832-4eb2-9833-f551177bb821 # Content Blocks
+field: a4fe99b5-7832-4eb2-9833-f551177bb821 # Content Builder
 fieldLayouts:
   740cffdc-873e-42da-ab3b-9f6a01003077:
     tabs:
       -
+        elementCondition: null
         elements:
           -
+            elementCondition: null
             fieldUid: b911f8a5-3dbc-4aa9-8be2-9eb2c9c8a2ed # Intro Text
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 8681f02a-2210-4f45-9404-ca6b2379ba31
+            userCondition: null
             warning: null
             width: 100
           -
+            elementCondition: null
             fieldUid: a1609989-70ec-42e9-a2d0-ce1a902593c7 # Items
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 33fad8c0-e55c-48fa-a820-4a3b1170da8e
+            userCondition: null
             warning: null
             width: 100
           -
+            elementCondition: null
             fieldUid: c4d11cc3-ff49-4b48-ad2a-d5a30294d552 # Eyebrow
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: b1fff6d4-13c6-4486-9253-3b57c0938486
+            userCondition: null
             warning: null
             width: 50
           -
+            elementCondition: null
             fieldUid: cd660f34-a88e-4f6f-a63d-dac487f3c1b3 # Anchor Link
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: c0a4744a-f5be-4ecd-a39e-b056d94bedd2
+            userCondition: null
             warning: null
             width: 50
           -
+            elementCondition: null
             fieldUid: 07fd881e-0862-439b-a7f3-7232454c1947 # Layout Variations
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 7721d025-f700-44b7-8ab2-c920c8f2f7a5
+            userCondition: null
             warning: null
             width: 25
           -
+            elementCondition: null
             fieldUid: b99b85fc-06c0-4960-bcda-7f07690ef20d # Background
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: b327ec65-2b08-42c3-99b7-28846c7708d8
+            userCondition: null
             warning: null
             width: 25
           -
+            elementCondition: null
             fieldUid: b947d0e1-da59-4426-bb04-17175245afa2 # Edges
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 77f51075-54de-4ad6-a232-9d1d1d844ec8
+            userCondition: null
             warning: null
             width: 25
         name: Content
-        sortOrder: 1
+        uid: d1aaa0a6-b73f-406c-bc76-8576bc43d59b
+        userCondition: null
 fields:
   07fd881e-0862-439b-a7f3-7232454c1947: # Layout Variations
     columnSuffix: null
@@ -79,7 +102,6 @@ fields:
     name: 'Layout Variations'
     searchable: false
     settings:
-      optgroups: true
       options:
         -
           __assoc__:
@@ -122,14 +144,26 @@ fields:
     contentColumnType: string
     fieldGroup: null
     handle: items
-    instructions: ''
+    instructions: null
     name: Items
     searchable: true
     settings:
       allowSelfRelations: false
-      limit: ''
       localizeRelations: false
-      selectionLabel: ''
+      maxRelations: null
+      minRelations: null
+      selectionCondition:
+        __assoc__:
+          -
+            - elementType
+            - craft\elements\Entry
+          -
+            - fieldContext
+            - global
+          -
+            - class
+            - craft\elements\conditions\entries\EntryCondition
+      selectionLabel: null
       showSiteMenu: true
       source: null
       sources:
@@ -151,7 +185,6 @@ fields:
     name: Background
     searchable: false
     settings:
-      optgroups: true
       options:
         -
           __assoc__:
@@ -205,7 +238,7 @@ fields:
     contentColumnType: text
     fieldGroup: null
     handle: text
-    instructions: ''
+    instructions: null
     name: 'Intro Text'
     searchable: true
     settings:
@@ -215,13 +248,13 @@ fields:
       configSelectionMode: choose
       defaultTransform: ''
       manualConfig: ''
-      purifierConfig: ''
-      purifyHtml: '1'
+      purifierConfig: null
+      purifyHtml: true
       redactorConfig: Standard.json
-      removeEmptyTags: '1'
-      removeInlineStyles: '1'
-      removeNbsp: '1'
-      showHtmlButtonForNonAdmins: ''
+      removeEmptyTags: true
+      removeInlineStyles: true
+      removeNbsp: true
+      showHtmlButtonForNonAdmins: false
       showUnpermittedFiles: false
       showUnpermittedVolumes: false
       uiMode: enlarged
@@ -237,7 +270,6 @@ fields:
     name: Edges
     searchable: false
     settings:
-      optgroups: true
       options:
         -
           __assoc__:
@@ -301,13 +333,13 @@ fields:
       configSelectionMode: choose
       defaultTransform: ''
       manualConfig: ''
-      purifierConfig: ''
-      purifyHtml: '1'
+      purifierConfig: null
+      purifyHtml: true
       redactorConfig: Headline.json
-      removeEmptyTags: '1'
-      removeInlineStyles: '1'
-      removeNbsp: '1'
-      showHtmlButtonForNonAdmins: ''
+      removeEmptyTags: true
+      removeInlineStyles: true
+      removeNbsp: true
+      showHtmlButtonForNonAdmins: false
       showUnpermittedFiles: false
       showUnpermittedVolumes: false
       uiMode: normal
@@ -325,15 +357,15 @@ fields:
     settings:
       byteLimit: null
       charLimit: null
-      code: '1'
+      code: true
       columnType: null
-      initialRows: '4'
-      multiline: ''
+      initialRows: 4
+      multiline: false
       placeholder: '#example-link'
       uiMode: normal
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\PlainText
 handle: entries
-name: Entries
-sortOrder: 6
+name: 'Embedded Entries'
+sortOrder: 5

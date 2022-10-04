@@ -1,0 +1,10 @@
+{% extends '_components/builders/_block.twig' %}
+
+{% block blockContent %}
+    <div class="block-content container">
+        {{ include( '_components/text/eyebrow.twig' ) }}
+        {{ include('_components/text/prose', {
+            class: 'lg:prose'
+        }) }}
+    </div>
+{% endblock %}

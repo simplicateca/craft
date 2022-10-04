@@ -1,0 +1,41 @@
+{% extends '_components/builders/_block' %}
+
+{% set proseSize = null %}
+{% set text = text ??? block.text ??? null %}
+
+{% set variant    = block.variant.get('class')       ??? null %}
+{% set wrapperDiv = block.variant.get('wrapper-div') ??? null %}
+{% set textDiv    = block.variant.get('text-div')    ??? null %}
+{% set bgColor    = block.variant.get('bg-color')    ??? null %}
+
+{% set bgColor    = block.variant.get('bg-color')    ??? null %}
+{% set blockBG    = block.bg.get('bg-color')         ??? null %}
+
+{% if bgColor and blockBG != 'bg-white' %}
+    {% set bgColor = 'bg-white' %}
+{% endif %}
+
+{% block blockContent %}
+    {% block beforeContainer %}{% endblock %}
+
+    <div class="container {{variant}}">
+        <div class="{{wrapperDiv}}">
+            <div class="{{textDiv}} {{bgColor}}">
+                {% block aboveText %}{% endblock %}
+
+                {% block text %}
+                    {% if text %}
+                        {{ include('_components/text/prose', {
+                            size: proseSize,
+                            text: text
+                        }, withContext = false ) }}
+                    {% endif %}
+                {% endblock %}
+
+                {% block belowText %}{% endblock %}
+            </div>
+        </div>
+    </div>
+
+    {% block afterContainer %}{% endblock %}
+{% endblock %}

@@ -1,0 +1,37 @@
+{
+    "Inherit from Fragment": {
+        "class": "bgFromFragment",
+        "wrapper-div": ""
+    },
+
+    "None": {
+        "class": "bgNone",
+        "wrapper-div": "pt-12",
+        "bg-color": "bg-white"
+    },
+
+    "Icon Pattern": {
+        "class": "bgGrey",
+        "wrapper-div": "py-12",
+        "bg-color": "bg-neutral-200",
+        "pattern": "https://simplicate.nyc3.digitaloceanspaces.com/simplicate/assets/site/images/email-pattern.png"
+    },
+
+    "Blue": {
+        "class": "bgBlue",
+        "wrapper-div": "py-12",
+        "bg-color": "bg-sky-100"
+    },
+
+    "Dark": {
+        "class": "bgDark",
+        "wrapper-div": "py-12",
+        "bg-color": "bg-neutral-700",
+        "text-color": "text-white"
+    },
+
+    "Inherit from Block Above": {
+        "class": "bgInherit",
+        "wrapper-div": false
+    }
+}

@@ -1,0 +1,25 @@
+{% extends '_components/builders/_block.twig' %}
+
+{% block blockContent %}
+    <div class="bg-gray-300 py-24">
+        <div class="container mx-auto relative overflow-hidden">
+            <div class="flex">
+                <div class="w-1/2">
+                    {{ include('_components/text/eyebrow', {} ) }}
+                    {{ include('_components/text/headline-h1', {} ) }}
+
+                    <time
+                        datetime="{{ entry.postDate | date('Y-m-d') }}"
+                    >{{ entry.postDate | date('F jS, Y') }}</time>
+
+                    {{ include('_components/text/prose', {} ) }}
+                    
+                </div>
+
+                <div class="w-1/2">
+                    {{ include('_components/media/image') }}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

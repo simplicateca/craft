@@ -1,0 +1,46 @@
+{% extends "_boilerplate" %}
+{% set templatePath = _self ??? '' %}
+
+{% block bodyHtml %}
+
+    {% block alertbar %}
+        {{ include( "_components-sprig/alert-bar/alert-bar", {}, withContext = true) }}
+    {% endblock %}
+
+    {% block header %}
+        {{ include( "_components/header/header", { entry: entry }, withContext = false ) }}
+    {% endblock %}
+
+    {% block belowHeader %}
+        {{ include( "_components/breadcrumb/breadcrumb", {}, withContext = true ) }}
+    {% endblock %}
+
+    <main class="container">
+        <div class="flex flex-col lg:flex-row">
+            <div class="grow mr-20">
+                {% block aboveContent %}{% endblock %}
+
+                {% block content %}
+                    {{ include( "_components/builders/content", { entry: entry }, withContext = false ) }}
+                {% endblock %}
+
+                {% block belowContent %}{% endblock %}
+            </div>
+
+            <div class="lg:w-full lg:max-w-xs">
+                {% block sidebar %}
+                    {{ include( "_components/builders/sidebar", { entry: entry }, withContext = false ) }}
+                {% endblock %}
+            </div>
+        </div>
+    </main>
+
+    {% block aboveFooter %}
+        {{ include( "_components/footer/above", {}, withContext = false ) }}
+    {% endblock %}
+
+    {% block footer %}
+        {{ include( "_components/footer/footer", {}, withContext = false ) }}
+    {% endblock %}
+
+{% endblock bodyHtml %}

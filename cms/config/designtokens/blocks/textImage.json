@@ -1,0 +1,22 @@
+{
+  "Text Left": {
+    "class": "textLeft",
+    "wrapper-div": "flex",
+    "text-div": "w-1/2",
+    "image-div": "w-1/2"
+  },
+
+  "Text Right": {
+    "class": "textRight",
+    "wrapper-div": "flex flex-row-reverse",
+    "text-div": "w-1/2",
+    "image-div": "w-1/2"
+  },
+
+  "Thumbnail Gallery": {
+    "class": "thumbGallery",
+    "wrapper-div": "flex flex-row-reverse",
+    "text-div": "w-1/3",
+    "image-div": "w-2/3 grid grid-cols-4"
+  }
+}

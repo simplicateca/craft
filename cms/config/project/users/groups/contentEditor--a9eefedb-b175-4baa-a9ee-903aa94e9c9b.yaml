@@ -22,7 +22,7 @@ permissions:
   - 'deletepeerentrydrafts:3721b4d6-42d5-41fc-b6e7-76204b42c91a' # News
   - 'deletepeerentrydrafts:4faab281-22d5-4b78-a310-d3f84c34aa67' # Search
   - 'deletepeerentrydrafts:650e7d1d-63e5-42f9-b3ab-4febfb502723' # Pages
-  - 'deletepeerentrydrafts:7fa68ddc-cf1c-4e9b-9ce7-b8865ca9d48c' # Emergency Message
+  - 'deletepeerentrydrafts:7fa68ddc-cf1c-4e9b-9ce7-b8865ca9d48c' # Alert Message
   - 'deletepeerentrydrafts:89093e20-515d-4e3c-b4c4-c6733d8ab56f' # Fragments
   - 'deletepeerentrydrafts:a52e2b08-2e30-4b00-8784-4104c409d3ed' # FAQs
   - 'editsite:34463b82-dd3f-441c-b9c6-59c351e847aa' # Wireframe Site
@@ -54,10 +54,10 @@ permissions:
   - 'savepeerentrydrafts:3721b4d6-42d5-41fc-b6e7-76204b42c91a' # News
   - 'viewpeerentries:3721b4d6-42d5-41fc-b6e7-76204b42c91a' # News
   - 'savepeerentries:3721b4d6-42d5-41fc-b6e7-76204b42c91a' # News
-  - 'viewentries:7fa68ddc-cf1c-4e9b-9ce7-b8865ca9d48c' # Emergency Message
-  - 'saveentries:7fa68ddc-cf1c-4e9b-9ce7-b8865ca9d48c' # Emergency Message
-  - 'viewpeerentrydrafts:7fa68ddc-cf1c-4e9b-9ce7-b8865ca9d48c' # Emergency Message
-  - 'savepeerentrydrafts:7fa68ddc-cf1c-4e9b-9ce7-b8865ca9d48c' # Emergency Message
+  - 'viewentries:7fa68ddc-cf1c-4e9b-9ce7-b8865ca9d48c' # Alert Message
+  - 'saveentries:7fa68ddc-cf1c-4e9b-9ce7-b8865ca9d48c' # Alert Message
+  - 'viewpeerentrydrafts:7fa68ddc-cf1c-4e9b-9ce7-b8865ca9d48c' # Alert Message
+  - 'savepeerentrydrafts:7fa68ddc-cf1c-4e9b-9ce7-b8865ca9d48c' # Alert Message
   - 'viewentries:16422b2c-c780-4355-b3a5-44a1cc28ba36' # Error 404
   - 'saveentries:16422b2c-c780-4355-b3a5-44a1cc28ba36' # Error 404
   - 'viewpeerentrydrafts:16422b2c-c780-4355-b3a5-44a1cc28ba36' # Error 404

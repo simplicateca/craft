@@ -19,7 +19,7 @@ use yii\helpers\Console;
 /**
  * Default Command
  *
- * The first line of this class docblock is displayed as the description
+ * The first line of this class doc-block is displayed as the description
  * of the Console Command in ./craft help
  *
  * Craft can be invoked via commandline console by using the `./craft` command
@@ -49,7 +49,7 @@ class DefaultController extends Controller
     /**
      * Handle site-module/default console commands
      *
-     * The first line of this method docblock is displayed as the description
+     * The first line of this method doc-block is displayed as the description
      * of the Console Command in ./craft help
      *
      * @return mixed

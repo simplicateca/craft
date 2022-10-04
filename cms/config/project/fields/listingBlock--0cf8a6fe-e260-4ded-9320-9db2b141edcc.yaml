@@ -1,14 +1,14 @@
 columnSuffix: null
 contentColumnType: string
-fieldGroup: e0dac603-c510-4bb5-8701-e25672d93744 # Common
+fieldGroup: ea1a69ed-b5c5-46cf-a629-4435f7f7cad0 # Content Builders
 handle: listingBlock
-instructions: ''
+instructions: null
 name: 'Listing Block'
 searchable: false
 settings:
   contentTable: '{{%matrixcontent_listingblock}}'
-  maxBlocks: ''
-  minBlocks: ''
+  maxBlocks: null
+  minBlocks: null
   propagationKeyFormat: null
   propagationMethod: all
 translationKeyFormat: null

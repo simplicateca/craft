@@ -94,6 +94,7 @@ services:
       - ./cms/web:/var/www/project/cms/web:delegated
       - ./src:/var/www/project/src:cached
       - ./cms/templates:/var/www/project/cms/templates:cached
+      - ./cms/config/designtokens:/var/www/project/cms/config/designtokens:cached
 volumes:
   db-data:
   cpresources:

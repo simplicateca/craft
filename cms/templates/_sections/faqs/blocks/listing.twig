@@ -1,0 +1,17 @@
+{% extends '_components/builders/_block.twig' %}
+
+{% block blockContent %}
+    <div class="block-content container">
+        {% set query = craft.entries()
+            .section('faqs')
+            .limit(block.limit) %}
+        
+        {% paginate query as pageInfo, pageEntries %}
+
+        {% for entry in pageEntries %}
+            {% include 'faqs/_tease.twig' with { format: 'text' } %}
+        {% endfor %}
+            
+        {{ include('_components/pagination/pagination') }}
+    </div>
+{% endblock %}

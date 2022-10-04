@@ -1,74 +1,97 @@
-field: a4fe99b5-7832-4eb2-9833-f551177bb821 # Content Blocks
+field: a4fe99b5-7832-4eb2-9833-f551177bb821 # Content Builder
 fieldLayouts:
   ddb9be0d-9c71-4e4a-82c1-e7bae599e577:
     tabs:
       -
+        elementCondition: null
         elements:
           -
+            elementCondition: null
             fieldUid: b431aa28-7fd8-4a95-8ace-467582d8e01f # Text (Left)
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: e1606cf7-2992-4c96-99b3-6d962ecf7b8e
+            userCondition: null
             warning: null
             width: 100
           -
+            elementCondition: null
             fieldUid: 79001047-67b4-4b93-825f-333664a55c70 # Text (Right)
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: e6db4a45-0247-4c09-918e-9dd563db1fa0
+            userCondition: null
             warning: null
             width: 100
           -
+            elementCondition: null
             fieldUid: 5ff7eb60-d8c3-46aa-812a-d1e865a3f872 # Eyebrow
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 4404315a-453e-403a-872f-44f9c409467b
+            userCondition: null
             warning: null
             width: 50
           -
+            elementCondition: null
             fieldUid: 1bd5ff27-b43b-4768-8fdd-170cf3a12f81 # Anchor Link
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 84efce44-e8a5-48e8-bec3-f1725adda571
+            userCondition: null
             warning: null
             width: 50
           -
+            elementCondition: null
             fieldUid: 86da4c73-7a95-496d-9abe-cd3807a11ead # Layout Variations
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: ee2516da-3a83-4f1a-a18b-8f525ab60336
+            userCondition: null
             warning: null
             width: 25
           -
+            elementCondition: null
             fieldUid: 67a0e610-9765-4200-9b9f-e59e4130f652 # Background
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: baa2c968-cc46-4165-858a-45ae29d7bd8c
+            userCondition: null
             warning: null
             width: 25
           -
+            elementCondition: null
             fieldUid: ba25b35f-89c4-4230-96a4-31904c63bbf7 # Edges
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: ac0272a1-1399-43f3-ae6c-19587d710ab8
+            userCondition: null
             warning: null
             width: 25
         name: Content
-        sortOrder: 1
+        uid: fdd84f30-2bdd-479e-be58-143b9b45dbfd
+        userCondition: null
 fields:
   1bd5ff27-b43b-4768-8fdd-170cf3a12f81: # Anchor Link
     columnSuffix: null
@@ -81,10 +104,10 @@ fields:
     settings:
       byteLimit: null
       charLimit: null
-      code: '1'
+      code: true
       columnType: null
-      initialRows: '4'
-      multiline: ''
+      initialRows: 4
+      multiline: false
       placeholder: '#example-link'
       uiMode: normal
     translationKeyFormat: null
@@ -105,13 +128,13 @@ fields:
       configSelectionMode: choose
       defaultTransform: ''
       manualConfig: ''
-      purifierConfig: ''
-      purifyHtml: '1'
+      purifierConfig: null
+      purifyHtml: true
       redactorConfig: Headline.json
-      removeEmptyTags: '1'
-      removeInlineStyles: '1'
-      removeNbsp: ''
-      showHtmlButtonForNonAdmins: ''
+      removeEmptyTags: true
+      removeInlineStyles: true
+      removeNbsp: false
+      showHtmlButtonForNonAdmins: false
       showUnpermittedFiles: false
       showUnpermittedVolumes: false
       uiMode: normal
@@ -127,7 +150,6 @@ fields:
     name: Background
     searchable: false
     settings:
-      optgroups: true
       options:
         -
           __assoc__:
@@ -218,7 +240,6 @@ fields:
     name: 'Layout Variations'
     searchable: false
     settings:
-      optgroups: true
       options:
         -
           __assoc__:
@@ -261,7 +282,7 @@ fields:
     contentColumnType: text
     fieldGroup: null
     handle: text2
-    instructions: ''
+    instructions: null
     name: 'Text (Right)'
     searchable: true
     settings:
@@ -271,13 +292,13 @@ fields:
       configSelectionMode: choose
       defaultTransform: ''
       manualConfig: ''
-      purifierConfig: ''
-      purifyHtml: '1'
+      purifierConfig: null
+      purifyHtml: true
       redactorConfig: Standard.json
-      removeEmptyTags: '1'
-      removeInlineStyles: '1'
-      removeNbsp: '1'
-      showHtmlButtonForNonAdmins: ''
+      removeEmptyTags: true
+      removeInlineStyles: true
+      removeNbsp: true
+      showHtmlButtonForNonAdmins: false
       showUnpermittedFiles: false
       showUnpermittedVolumes: false
       uiMode: enlarged
@@ -289,7 +310,7 @@ fields:
     contentColumnType: text
     fieldGroup: null
     handle: text
-    instructions: ''
+    instructions: null
     name: 'Text (Left)'
     searchable: true
     settings:
@@ -299,13 +320,13 @@ fields:
       configSelectionMode: choose
       defaultTransform: ''
       manualConfig: ''
-      purifierConfig: ''
-      purifyHtml: '1'
+      purifierConfig: null
+      purifyHtml: true
       redactorConfig: Standard.json
-      removeEmptyTags: '1'
-      removeInlineStyles: '1'
-      removeNbsp: '1'
-      showHtmlButtonForNonAdmins: ''
+      removeEmptyTags: true
+      removeInlineStyles: true
+      removeNbsp: true
+      showHtmlButtonForNonAdmins: false
       showUnpermittedFiles: false
       showUnpermittedVolumes: false
       uiMode: enlarged
@@ -321,7 +342,6 @@ fields:
     name: Edges
     searchable: false
     settings:
-      optgroups: true
       options:
         -
           __assoc__:
@@ -372,4 +392,4 @@ fields:
     type: craft\fields\Dropdown
 handle: textText
 name: 'Text + Text'
-sortOrder: 4
+sortOrder: 3

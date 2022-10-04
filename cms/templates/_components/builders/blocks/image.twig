@@ -1,0 +1,42 @@
+{% extends '_components/builders/_block.twig' %}
+
+{% block blockContent %}
+    <div class="block-content container">
+        
+        {{ include( '_components/text/eyebrow.twig' ) }}
+
+        {% set cols = block.images|length >= 4 ? 4 : block.images|length %}
+
+        {% set bgcolor   = '' %}
+        {% set transform = '' %}
+        {% set class     = '' %}
+
+        {% if ( block.background == 'band' or block.background == 'box' ) and cols == 4 %}
+            {% set bgcolor = 'bg-white' %}
+        {% endif %}
+
+        {% if block.layout == 'circles' %}
+            {% set transform = 'square' %}
+            {% set class     = 'rounded-full' %}
+        {% endif %}
+
+
+        <div class="grid gap-16 grid-cols-{{cols}} w-full">
+            {% for image in block.images.all() %}
+                <div class="image">
+                    <div class="{{bgcolor}}">
+                        {{ include('_components/media/image', {
+                            image: image,
+                            class: class,
+                            transform: transform
+                        }) }}
+                    </div>
+
+                    {% if cols == 4 %}
+                        <h4 class="text-xl mt-4 text-center">{{image.title}}</h4>
+                    {% endif %}
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

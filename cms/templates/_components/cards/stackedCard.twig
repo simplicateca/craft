@@ -1,0 +1,37 @@
+{% set htag    = htag    ??? 'h2' %}
+{% set title   = title   ??? entry.title ??? entry.headline ??? null %}
+{% set text    = text    ??? entry.summary ??? entry.dek ??? entry.text ??? null %}
+{% set url     = url     ??? entry.url ??? null %}
+{% set handle  = handle  ??? entry.section.handle ??? null %}
+{% set images  = images  ??? entry.images.all() ??? null %}
+
+<article class="tease {{handle}} relative">
+    <div class="grid grid-cols-1 h-full content-start">
+        <div class="bg-gray-200 w-full aspect-video">
+            &nbsp;
+        </div>
+
+        <div class="mt-2">
+            {% block title %}
+                {%- if title -%}
+                    <{{htag}}>{{title}}</{{htag}}>
+                {%- endif -%}
+            {% endblock %}
+
+            {% block aboveSummary %}{% endblock %}
+
+            {% block summary %}
+                {{ include('_components/text/prose', {
+                    text: craft.typogrify.truncate(text, 60),
+                    size: 'small'
+                }) }}
+            {% endblock %}
+        </div>
+        
+        {% block link %}
+            {%- if url -%}
+                <a class="self-end mt-2 clickable-parent" href="{{ url }}">Read more →</a>
+            {%- endif -%}
+        {% endblock %}
+    </div>  
+</article>

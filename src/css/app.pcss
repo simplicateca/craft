@@ -1,48 +1,30 @@
-/**
- * This injects Tailwind's base styles, which is a combination of
- * Normalize.css and some additional base styles.
- */
 @import 'tailwindcss/base';
-
-/**
- * Here we add custom base styles, applied after the tailwind-base
- * classes
- *
- */
-
-
-/**
- * This injects any component classes registered by plugins.
- *
- */
 @import 'tailwindcss/components';
-
 
 /**
  * Site settings (variables / fonts / breakpoints / etc)
  */
-@import './_settings/_global.pcss';
-@import './_settings/typography.pcss';
+/* @import './_settings/_global.pcss';
+@import './_settings/typography.pcss'; */
 
 
 /**
  * Layout & utility classes
  */
-@import './_settings/utility.pcss';
-@import './_settings/frame.pcss';
+/* @import './_settings/utility.pcss';
+@import './_settings/frame.pcss'; */
 
 
-/**
- * Include styles for individual components
- */
-@import './components/header.pcss';
-@import './components/a11y.pcss';
-@import './components/mobile-menu.pcss';
-@import './components/buttons.pcss';
-@import './components/search.pcss';
-@import './components/pagination.pcss';
-@import './components/blocks.pcss';
- 
+@import '../templates/_components/buttons/buttons.pcss';
+@import '../templates/_components/header/header.pcss';
+@import '../templates/_components/a11y/skip-to-content.pcss';
+@import '../templates/_components/navigation/mobile.pcss';
+@import '../templates/_components/builders/builders.pcss';
+
+@import '../templates/_components/text/typography.pcss';
+
+@import '../templates/_components-sprig/search/search.pcss';
+
 
 /**
  * This injects all of Tailwind's utility classes, generated based on your config file.
@@ -51,9 +33,38 @@
  */
 @import 'tailwindcss/utilities';
 
+html {
+    visibility: visible;
+    opacity: 1;
+}
 
-/**
- * Include vendor css.
- *
- */
-@import './components/hooper.pcss';
+.container {
+    .container {
+        max-width: 100%;
+        padding-right: 0;
+        padding-left: 0;
+    }
+}
+
+.prose, .prose-sm, .prose-lg, .prose-xl, .prose-2xl {
+    *:first-child {
+        margin-top: 0;
+    }
+
+    *:last-child {
+        margin-bottom: 0;
+    }
+}
+
+
+a.clickable-parent {
+    &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 2;
+    }
+}

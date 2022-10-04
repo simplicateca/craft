@@ -1,81 +1,104 @@
-field: a4fe99b5-7832-4eb2-9833-f551177bb821 # Content Blocks
+field: a4fe99b5-7832-4eb2-9833-f551177bb821 # Content Builder
 fieldLayouts:
   a067cac1-ec42-43cc-b56a-f98e3b5b7803:
     tabs:
       -
+        elementCondition: null
         elements:
           -
+            elementCondition: null
+            fieldUid: 30b5253e-1f74-41f3-b484-e6c82e3210d5 # Variant
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 9ebdf9f9-f485-4eaa-8d3f-3dfbcb3e859a
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
             fieldUid: 1d242d6f-f863-4979-b2af-bb1da5c2aee2 # Text
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 25e6f7b0-ef21-41a3-bde5-2f2646a2779e
+            userCondition: null
             warning: null
             width: 100
           -
+            elementCondition: null
             fieldUid: dda1fa64-dd45-42b6-8df9-476cbac15152 # Image(s)
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 482f9cf0-2950-4e81-a1ee-4dcd8c1a4597
+            userCondition: null
             warning: null
             width: 100
           -
+            elementCondition: null
             fieldUid: 20aa7fd2-2f1f-4b3f-b505-a14c1c3cc164 # Eyebrow
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 05a0cf91-efa2-4744-8d50-f71766696876
+            userCondition: null
             warning: null
             width: 50
           -
+            elementCondition: null
             fieldUid: 54aa6fb8-4a59-4704-9956-2c47eb2f5ceb # Anchor Link
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: b614bdcb-6def-4673-9490-60b1fd22d225
+            userCondition: null
             warning: null
             width: 50
           -
-            fieldUid: b0be437c-c9b7-4725-b61e-01ae79d26892 # Layout Variations
+            elementCondition: null
+            fieldUid: e826463c-c088-426d-be5d-9630e1b872c9 # Spacing
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: adf55cbb-40d8-4b6c-9618-e0f89cde467c
+            userCondition: null
             warning: null
-            width: 25
+            width: 100
           -
-            fieldUid: c2aae972-6c74-45e4-a721-cb093d6508db # Background
+            elementCondition: null
+            fieldUid: b8f98eab-bd44-4073-b73b-c5c394a00643 # Background
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: db705720-4f45-4505-8b23-dd8e4c9fd2b0
+            userCondition: null
             warning: null
-            width: 25
-          -
-            fieldUid: e8279648-aafc-4293-a410-7e3c587f89c2 # Edges
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            warning: null
-            width: 25
+            width: 100
         name: Content
-        sortOrder: 1
+        uid: cac765d1-21c1-46d6-addb-0dfd3c50eb9e
+        userCondition: null
 fields:
   1d242d6f-f863-4979-b2af-bb1da5c2aee2: # Text
     columnSuffix: null
     contentColumnType: text
     fieldGroup: null
     handle: text
-    instructions: ''
+    instructions: null
     name: Text
     searchable: true
     settings:
@@ -85,13 +108,13 @@ fields:
       configSelectionMode: choose
       defaultTransform: ''
       manualConfig: ''
-      purifierConfig: ''
-      purifyHtml: '1'
+      purifierConfig: null
+      purifyHtml: true
       redactorConfig: Standard.json
-      removeEmptyTags: '1'
-      removeInlineStyles: '1'
-      removeNbsp: '1'
-      showHtmlButtonForNonAdmins: ''
+      removeEmptyTags: true
+      removeInlineStyles: true
+      removeNbsp: true
+      showHtmlButtonForNonAdmins: false
       showUnpermittedFiles: false
       showUnpermittedVolumes: false
       uiMode: enlarged
@@ -113,19 +136,32 @@ fields:
       configSelectionMode: choose
       defaultTransform: ''
       manualConfig: ''
-      purifierConfig: ''
-      purifyHtml: '1'
+      purifierConfig: null
+      purifyHtml: true
       redactorConfig: Headline.json
-      removeEmptyTags: '1'
-      removeInlineStyles: '1'
-      removeNbsp: '1'
-      showHtmlButtonForNonAdmins: ''
+      removeEmptyTags: true
+      removeInlineStyles: true
+      removeNbsp: true
+      showHtmlButtonForNonAdmins: false
       showUnpermittedFiles: false
       showUnpermittedVolumes: false
       uiMode: normal
     translationKeyFormat: null
     translationMethod: none
     type: craft\redactor\Field
+  30b5253e-1f74-41f3-b484-e6c82e3210d5: # Variant
+    columnSuffix: payanbyx
+    contentColumnType: string
+    fieldGroup: null
+    handle: variant
+    instructions: null
+    name: Variant
+    searchable: false
+    settings:
+      config: blocks/textImage.json
+    translationKeyFormat: null
+    translationMethod: none
+    type: trendyminds\designtokens\fields\DesignTokensField
   54aa6fb8-4a59-4704-9956-2c47eb2f5ceb: # Anchor Link
     columnSuffix: null
     contentColumnType: text
@@ -137,249 +173,89 @@ fields:
     settings:
       byteLimit: null
       charLimit: null
-      code: '1'
+      code: true
       columnType: null
-      initialRows: '4'
-      multiline: ''
+      initialRows: 4
+      multiline: false
       placeholder: '#example-link'
       uiMode: normal
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\PlainText
-  b0be437c-c9b7-4725-b61e-01ae79d26892: # Layout Variations
-    columnSuffix: null
+  b8f98eab-bd44-4073-b73b-c5c394a00643: # Background
+    columnSuffix: cpekkbhk
     contentColumnType: string
     fieldGroup: null
-    handle: layout
-    instructions: 'How the content lays out inside the block.'
-    name: 'Layout Variations'
-    searchable: false
-    settings:
-      optgroups: true
-      options:
-        -
-          __assoc__:
-            -
-              - optgroup
-              - 'Even Columns (50/50)'
-        -
-          __assoc__:
-            -
-              - label
-              - 'Text Left (even)'
-            -
-              - value
-              - textLeftEven
-            -
-              - default
-              - '1'
-        -
-          __assoc__:
-            -
-              - label
-              - 'Text Right (even)'
-            -
-              - value
-              - textRightEven
-            -
-              - default
-              - ''
-        -
-          __assoc__:
-            -
-              - optgroup
-              - 'Text Heavy'
-        -
-          __assoc__:
-            -
-              - label
-              - 'Text Left (heavy)'
-            -
-              - value
-              - textLeft
-            -
-              - default
-              - ''
-        -
-          __assoc__:
-            -
-              - label
-              - 'Text Right (heavy)'
-            -
-              - value
-              - textRight
-            -
-              - default
-              - ''
-        -
-          __assoc__:
-            -
-              - optgroup
-              - Other
-        -
-          __assoc__:
-            -
-              - label
-              - Gallery
-            -
-              - value
-              - gallery
-            -
-              - default
-              - ''
-    translationKeyFormat: null
-    translationMethod: none
-    type: craft\fields\Dropdown
-  c2aae972-6c74-45e4-a721-cb093d6508db: # Background
-    columnSuffix: null
-    contentColumnType: string
-    fieldGroup: null
-    handle: background
-    instructions: 'How the block background should look.'
+    handle: bg
+    instructions: null
     name: Background
     searchable: false
     settings:
-      optgroups: true
-      options:
-        -
-          __assoc__:
-            -
-              - label
-              - Normal
-            -
-              - value
-              - normal
-            -
-              - default
-              - '1'
-        -
-          __assoc__:
-            -
-              - label
-              - Band
-            -
-              - value
-              - band
-            -
-              - default
-              - ''
-        -
-          __assoc__:
-            -
-              - label
-              - Box
-            -
-              - value
-              - box
-            -
-              - default
-              - ''
-        -
-          __assoc__:
-            -
-              - label
-              - Outline
-            -
-              - value
-              - outline
-            -
-              - default
-              - ''
+      config: blocks/backgrounds.json
     translationKeyFormat: null
     translationMethod: none
-    type: craft\fields\Dropdown
+    type: trendyminds\designtokens\fields\DesignTokensField
   dda1fa64-dd45-42b6-8df9-476cbac15152: # Image(s)
     columnSuffix: null
     contentColumnType: string
     fieldGroup: null
     handle: images
-    instructions: ''
+    instructions: null
     name: Image(s)
     searchable: true
     settings:
       allowSelfRelations: false
+      allowSubfolders: false
       allowUploads: true
       allowedKinds:
         - image
       defaultUploadLocationSource: 'volume:a4f97962-52de-4b53-8422-5b833d1cd5fd' # Uploads
       defaultUploadLocationSubpath: '{owner.owner.type.handle}/{owner.owner.slug}/'
-      limit: ''
       localizeRelations: false
+      maxRelations: null
+      minRelations: null
       previewMode: full
-      restrictFiles: '1'
+      restrictFiles: true
+      restrictLocation: false
+      restrictedDefaultUploadSubpath: null
+      restrictedLocationSource: 'volume:a4f97962-52de-4b53-8422-5b833d1cd5fd' # Uploads
+      restrictedLocationSubpath: null
+      selectionCondition:
+        __assoc__:
+          -
+            - elementType
+            - craft\elements\Asset
+          -
+            - fieldContext
+            - global
+          -
+            - class
+            - craft\elements\conditions\assets\AssetCondition
       selectionLabel: 'Choose Image'
       showSiteMenu: true
       showUnpermittedFiles: false
       showUnpermittedVolumes: false
-      singleUploadLocationSource: 'volume:a4f97962-52de-4b53-8422-5b833d1cd5fd' # Uploads
-      singleUploadLocationSubpath: ''
       source: null
       sources: '*'
       targetSiteId: null
-      useSingleFolder: false
       validateRelatedElements: false
       viewMode: large
     translationKeyFormat: null
     translationMethod: site
     type: craft\fields\Assets
-  e8279648-aafc-4293-a410-7e3c587f89c2: # Edges
-    columnSuffix: null
+  e826463c-c088-426d-be5d-9630e1b872c9: # Spacing
+    columnSuffix: eqfigngd
     contentColumnType: string
     fieldGroup: null
-    handle: edges
-    instructions: 'How the block interacts with elements around it.'
-    name: Edges
+    handle: spacing
+    instructions: null
+    name: Spacing
     searchable: false
     settings:
-      optgroups: true
-      options:
-        -
-          __assoc__:
-            -
-              - label
-              - Normal
-            -
-              - value
-              - normal
-            -
-              - default
-              - ''
-        -
-          __assoc__:
-            -
-              - label
-              - 'Line Before'
-            -
-              - value
-              - lineBefore
-            -
-              - default
-              - ''
-        -
-          __assoc__:
-            -
-              - label
-              - 'No Gap Before'
-            -
-              - value
-              - noGapBefore
-            -
-              - default
-              - ''
-        -
-          __assoc__:
-            -
-              - label
-              - 'Extra Space'
-            -
-              - value
-              - extraSpace
-            -
-              - default
-              - ''
+      config: blocks/spacing.json
     translationKeyFormat: null
     translationMethod: none
-    type: craft\fields\Dropdown
+    type: trendyminds\designtokens\fields\DesignTokensField
 handle: textImage
 name: 'Text + Image'
-sortOrder: 3
+sortOrder: 2
