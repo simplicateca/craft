@@ -326,10 +326,6 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 1.0.0
-  express-forms:
-    edition: lite
-    enabled: true
-    schemaVersion: 1.0.1
   fastcgi-cache-bust:
     edition: standard
     enabled: true
