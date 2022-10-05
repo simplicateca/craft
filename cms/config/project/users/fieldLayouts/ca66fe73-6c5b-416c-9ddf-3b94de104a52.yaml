@@ -1,14 +1,19 @@
 tabs:
   -
+    elementCondition: null
     elements:
       -
+        elementCondition: null
         fieldUid: b181050f-eab8-45f0-906a-c8241c2d3cf2 # Show Block Meta
         instructions: null
         label: null
         required: false
         tip: null
         type: craft\fieldlayoutelements\CustomField
+        uid: 453bde0e-a795-4633-8040-222e1c3b8f8e
+        userCondition: null
         warning: null
         width: 100
     name: 'Content Admin'
-    sortOrder: 1
+    uid: 89de91e6-9ff7-4611-aad2-6091680ede55
+    userCondition: null

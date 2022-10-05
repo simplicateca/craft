@@ -2,6 +2,7 @@ fieldLayouts:
   0e6296a2-ebef-4158-ba3d-e196af38899e:
     tabs:
       -
+        elementCondition: null
         elements:
           -
             autocapitalize: true
@@ -9,9 +10,10 @@ fieldLayouts:
             autocorrect: true
             class: null
             disabled: false
+            elementCondition: null
             id: null
             instructions: 'This is the main page title. It will appear on the page unless a hero block is added.'
-            label: ''
+            label: null
             max: null
             min: null
             name: null
@@ -24,65 +26,91 @@ fieldLayouts:
             tip: null
             title: null
             type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 7f78bbcb-7f32-477a-ba16-b79baf60d778
+            userCondition: null
             warning: null
             width: 100
           -
+            elementCondition: null
             heading: 'Hero Content'
             type: craft\fieldlayoutelements\Heading
+            uid: 3f7530e7-7389-41a8-b396-277ba5798321
+            userCondition: null
           -
+            elementCondition: null
             fieldUid: d05f4009-0b38-4065-a1b1-65221aa65e63 # Hero Block
             instructions: 'Use the block below to customize the hero section for this page'
-            label: ''
-            required: ''
+            label: null
+            required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 618ae43d-0a54-4835-a637-3662dbf41d4d
+            userCondition: null
             warning: null
             width: 100
           -
+            elementCondition: null
             heading: 'Page Content'
             type: craft\fieldlayoutelements\Heading
+            uid: 2450bbcd-9d94-4929-b258-5357a7bada4f
+            userCondition: null
           -
+            elementCondition: null
             fieldUid: a4fe99b5-7832-4eb2-9833-f551177bb821 # Content Builder
             instructions: 'Use the blocks below to construct the body of your entry. Each block contains specific settings and content requirements.'
             label: 'Body Content Blocks'
-            required: ''
+            required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 7ac47f09-ee20-4f31-93a1-d14442cfdd2f
+            userCondition: null
             warning: null
             width: 100
         name: Content
-        sortOrder: 1
+        uid: 818faf38-587a-432a-ae15-0223cdae2343
+        userCondition: null
       -
+        elementCondition: null
         elements:
           -
+            elementCondition: null
             fieldUid: adcea45e-bf40-4faf-b0c8-4ce089696971 # Lead Image(s)
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: fc50be8e-c504-4f3f-aa26-ba68f45b4f80
+            userCondition: null
             warning: null
             width: 50
           -
+            elementCondition: null
             fieldUid: b1c52a06-4990-43f5-90d3-898a48789556 # Dek
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: d7777e9e-253d-42bc-92ba-52af6fb6bf4d
+            userCondition: null
             warning: null
             width: 50
           -
+            elementCondition: null
             fieldUid: d79b3073-00bf-430c-95d5-6d03d8303032 # SEO
-            instructions: ''
+            instructions: null
             label: __blank__
-            required: ''
+            required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 3a08d1a5-d7f0-4bc8-a76e-bf56684014b6
+            userCondition: null
             warning: null
             width: 100
         name: SEO
-        sortOrder: 2
+        uid: a533ce47-f77f-4d3b-add6-fa261e2823b1
+        userCondition: null
 handle: basic
 hasTitleField: true
 name: Basic

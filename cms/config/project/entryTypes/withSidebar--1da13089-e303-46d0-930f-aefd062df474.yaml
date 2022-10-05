@@ -2,6 +2,7 @@ fieldLayouts:
   1a82b273-bb1c-458c-b9a5-2722aa9e1020:
     tabs:
       -
+        elementCondition: null
         elements:
           -
             autocapitalize: true
@@ -9,6 +10,7 @@ fieldLayouts:
             autocorrect: true
             class: null
             disabled: false
+            elementCondition: null
             id: null
             instructions: null
             label: null
@@ -24,81 +26,115 @@ fieldLayouts:
             tip: null
             title: null
             type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: aff7c356-6d38-41f0-8ad6-1611b9d0470f
+            userCondition: null
             warning: null
             width: 100
           -
+            elementCondition: null
             heading: 'Hero Content'
             type: craft\fieldlayoutelements\Heading
+            uid: ec0a2b85-d5e9-4651-91bc-d4c499b6f4f5
+            userCondition: null
           -
+            elementCondition: null
             fieldUid: d05f4009-0b38-4065-a1b1-65221aa65e63 # Hero Block
             instructions: 'Use the block below to customize the hero section for this page'
-            label: ''
-            required: ''
+            label: null
+            required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 45d1c2b8-3ae2-4ac7-b698-663d5e301564
+            userCondition: null
             warning: null
             width: 100
           -
+            elementCondition: null
             heading: 'Page Content'
             type: craft\fieldlayoutelements\Heading
+            uid: 758fff07-757a-4f14-8716-aab3810be64d
+            userCondition: null
           -
+            elementCondition: null
             fieldUid: a4fe99b5-7832-4eb2-9833-f551177bb821 # Content Builder
             instructions: 'Use the blocks below to construct the body of your entry. Each block contains specific settings and content requirements.'
             label: 'Body Content Blocks'
-            required: ''
+            required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 5f1c3647-1a55-497b-a7c2-33cbf90ecae4
+            userCondition: null
             warning: null
             width: 100
         name: Content
-        sortOrder: 1
+        uid: 7309709a-e27a-4226-a2c1-5685670c4c51
+        userCondition: null
       -
+        elementCondition: null
         elements:
           -
+            elementCondition: null
             heading: 'Sidebar Content'
             type: craft\fieldlayoutelements\Heading
+            uid: 9def0cc4-c28d-4b42-9039-959af7a8b101
+            userCondition: null
           -
+            elementCondition: null
             fieldUid: a35a0beb-0cf7-4a2b-9ec3-91e953a18116 # Sidebar Blocks
             instructions: 'Use the blocks below to construct the sidebar of your entry. Each block contains specific settings and content requirements.'
-            label: ''
-            required: ''
+            label: null
+            required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: f6cccab6-cc19-437f-84cc-fcbd912b8ae6
+            userCondition: null
             warning: null
             width: 100
         name: Sidebar
-        sortOrder: 2
+        uid: e6f941ab-670b-4aa1-83f6-1ebb29e90282
+        userCondition: null
       -
+        elementCondition: null
         elements:
           -
+            elementCondition: null
             fieldUid: adcea45e-bf40-4faf-b0c8-4ce089696971 # Lead Image(s)
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 645515ab-242d-4610-a4e6-2238a3f66628
+            userCondition: null
             warning: null
             width: 50
           -
+            elementCondition: null
             fieldUid: b1c52a06-4990-43f5-90d3-898a48789556 # Dek
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: d29e982c-a5a6-4cf0-979c-70c6ce0cf0fb
+            userCondition: null
             warning: null
             width: 50
           -
+            elementCondition: null
             fieldUid: d79b3073-00bf-430c-95d5-6d03d8303032 # SEO
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: be768740-44fb-422a-9841-f5f120ee410a
+            userCondition: null
             warning: null
             width: 100
         name: SEO
-        sortOrder: 3
+        uid: 25183390-3692-4379-9b10-d39ff01ebbbb
+        userCondition: null
 handle: withSidebar
 hasTitleField: true
 name: 'With Sidebar'

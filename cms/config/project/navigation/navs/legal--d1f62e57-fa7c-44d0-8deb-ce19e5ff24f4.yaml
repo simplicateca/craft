@@ -1,6 +1,52 @@
+defaultPlacement: end
+fieldLayouts:
+  1b65b6d9-e336-4a82-9d66-028627711de3:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\TitleField
+            uid: 66bdaf44-647f-4a16-9a48-8728e53668f5
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: verbb\navigation\fieldlayoutelements\NodeTypeElements
+            uid: cf10bde2-037a-4050-9296-d13a1f59331f
+            userCondition: null
+            warning: null
+        name: Content
+        uid: d36aafbb-41e1-4cc0-82e1-0bdd5fe8e389
+        userCondition: null
 handle: legal
-instructions: ''
-maxNodes: ''
+instructions: null
+maxNodes: null
 name: Legal
 permissions:
   craft\elements\Asset:
@@ -24,9 +70,9 @@ permissions:
 propagateNodes: false
 siteSettings:
   34463b82-dd3f-441c-b9c6-59c351e847aa: # Wireframe Site
-    enabled: '1'
+    enabled: true
   cc8cbe25-440c-439e-a58b-6515a3b420d0: # Site Guide
-    enabled: '1'
+    enabled: true
 sortOrder: 2
 structure:
   maxLevels: null

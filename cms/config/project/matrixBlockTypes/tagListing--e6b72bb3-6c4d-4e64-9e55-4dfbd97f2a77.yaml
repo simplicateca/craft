@@ -7,7 +7,7 @@ fieldLayouts:
         elements:
           -
             elementCondition: null
-            fieldUid: 61d7345d-34c5-4c93-8ae0-9f9b5f3b166b
+            fieldUid: 61d7345d-34c5-4c93-8ae0-9f9b5f3b166b # Text
             instructions: null
             label: null
             required: false
@@ -19,7 +19,7 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: 8eee0057-f0e3-4674-8fd8-6eae3cc9ae0d
+            fieldUid: 8eee0057-f0e3-4674-8fd8-6eae3cc9ae0d # Variant
             instructions: null
             label: null
             required: false
@@ -31,7 +31,7 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: 9f0a0dc0-db3f-49d5-9656-b61ad0d5c452
+            fieldUid: 9f0a0dc0-db3f-49d5-9656-b61ad0d5c452 # Filter by Topic
             instructions: null
             label: null
             required: true
@@ -43,7 +43,7 @@ fieldLayouts:
             width: 25
           -
             elementCondition: null
-            fieldUid: b6015f85-adad-474b-afb4-ac34bb560c0c
+            fieldUid: b6015f85-adad-474b-afb4-ac34bb560c0c # Limit
             instructions: null
             label: null
             required: true
@@ -55,7 +55,7 @@ fieldLayouts:
             width: 25
           -
             elementCondition: null
-            fieldUid: b161b327-4669-4d08-b51f-7b8c7091a2d4
+            fieldUid: b161b327-4669-4d08-b51f-7b8c7091a2d4 # Order
             instructions: null
             label: null
             required: true
@@ -67,7 +67,7 @@ fieldLayouts:
             width: 25
           -
             elementCondition: null
-            fieldUid: f981cb80-dd00-4b09-b682-78bfa0abccad
+            fieldUid: f981cb80-dd00-4b09-b682-78bfa0abccad # Include Search?
             instructions: null
             label: null
             required: false
@@ -79,7 +79,7 @@ fieldLayouts:
             width: 25
           -
             elementCondition: null
-            fieldUid: a479dbe3-176d-4b5b-b5e6-f6f5dab262ec
+            fieldUid: a479dbe3-176d-4b5b-b5e6-f6f5dab262ec # Include Pagination?
             instructions: null
             label: null
             required: false
@@ -91,7 +91,7 @@ fieldLayouts:
             width: 25
           -
             elementCondition: null
-            fieldUid: 0d2936c9-42b4-467f-9004-678230db8291
+            fieldUid: 0d2936c9-42b4-467f-9004-678230db8291 # Background
             instructions: null
             label: null
             required: false
@@ -103,7 +103,7 @@ fieldLayouts:
             width: 25
           -
             elementCondition: null
-            fieldUid: 39b3d1e6-0464-44f3-803e-8bf88da46270
+            fieldUid: 39b3d1e6-0464-44f3-803e-8bf88da46270 # Spacing
             instructions: null
             label: null
             required: false
@@ -117,7 +117,7 @@ fieldLayouts:
         uid: f55acb64-6c3a-483a-b5c1-2d0b59dd5d72
         userCondition: null
 fields:
-  0d2936c9-42b4-467f-9004-678230db8291:
+  0d2936c9-42b4-467f-9004-678230db8291: # Background
     columnSuffix: fwxmzlie
     contentColumnType: string
     fieldGroup: null
@@ -130,7 +130,7 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: trendyminds\designtokens\fields\DesignTokensField
-  8eee0057-f0e3-4674-8fd8-6eae3cc9ae0d:
+  8eee0057-f0e3-4674-8fd8-6eae3cc9ae0d: # Variant
     columnSuffix: kpwsojnc
     contentColumnType: string
     fieldGroup: null
@@ -143,7 +143,7 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: trendyminds\designtokens\fields\DesignTokensField
-  9f0a0dc0-db3f-49d5-9656-b61ad0d5c452:
+  9f0a0dc0-db3f-49d5-9656-b61ad0d5c452: # Filter by Topic
     columnSuffix: null
     contentColumnType: string
     fieldGroup: null
@@ -168,7 +168,7 @@ fields:
     translationKeyFormat: null
     translationMethod: site
     type: craft\fields\Tags
-  39b3d1e6-0464-44f3-803e-8bf88da46270:
+  39b3d1e6-0464-44f3-803e-8bf88da46270: # Spacing
     columnSuffix: rirvtxji
     contentColumnType: string
     fieldGroup: null
@@ -181,7 +181,7 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: trendyminds\designtokens\fields\DesignTokensField
-  61d7345d-34c5-4c93-8ae0-9f9b5f3b166b:
+  61d7345d-34c5-4c93-8ae0-9f9b5f3b166b: # Text
     columnSuffix: kwmvoeva
     contentColumnType: text
     fieldGroup: null
@@ -209,7 +209,7 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\redactor\Field
-  a479dbe3-176d-4b5b-b5e6-f6f5dab262ec:
+  a479dbe3-176d-4b5b-b5e6-f6f5dab262ec: # Include Pagination?
     columnSuffix: twdfutkz
     contentColumnType: boolean
     fieldGroup: null
@@ -224,7 +224,7 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\Lightswitch
-  b161b327-4669-4d08-b51f-7b8c7091a2d4:
+  b161b327-4669-4d08-b51f-7b8c7091a2d4: # Order
     columnSuffix: lppqelbx
     contentColumnType: string
     fieldGroup: null
@@ -259,7 +259,7 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\RadioButtons
-  b6015f85-adad-474b-afb4-ac34bb560c0c:
+  b6015f85-adad-474b-afb4-ac34bb560c0c: # Limit
     columnSuffix: mcovhmgu
     contentColumnType: integer(10)
     fieldGroup: null
@@ -280,7 +280,7 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\Number
-  f981cb80-dd00-4b09-b682-78bfa0abccad:
+  f981cb80-dd00-4b09-b682-78bfa0abccad: # Include Search?
     columnSuffix: ayojqsiw
     contentColumnType: boolean
     fieldGroup: null

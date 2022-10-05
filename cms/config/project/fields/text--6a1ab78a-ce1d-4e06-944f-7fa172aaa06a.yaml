@@ -2,7 +2,7 @@ columnSuffix: qieovwoa
 contentColumnType: text
 fieldGroup: e0dac603-c510-4bb5-8701-e25672d93744 # Common
 handle: text
-instructions: ''
+instructions: null
 name: Text
 searchable: true
 settings:
@@ -12,13 +12,13 @@ settings:
   configSelectionMode: choose
   defaultTransform: ''
   manualConfig: ''
-  purifierConfig: ''
-  purifyHtml: '1'
+  purifierConfig: null
+  purifyHtml: true
   redactorConfig: Standard.json
-  removeEmptyTags: '1'
-  removeInlineStyles: '1'
-  removeNbsp: '1'
-  showHtmlButtonForNonAdmins: ''
+  removeEmptyTags: true
+  removeInlineStyles: true
+  removeNbsp: true
+  showHtmlButtonForNonAdmins: false
   showUnpermittedFiles: false
   showUnpermittedVolumes: false
   uiMode: normal

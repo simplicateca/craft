@@ -1,10 +1,11 @@
-description: ''
+description: null
 handle: seoEditor
 name: 'SEO Editor'
 permissions:
   - accesscp
   - accessplugin-seomatic
   - accesssitewhensystemisoff
+  - 'assignusergroup:43406218-0e65-4e33-bd0a-df130a7d2e6c' # SEO Editor
   - 'seomatic:content-meta'
   - 'seomatic:content-meta:facebook'
   - 'seomatic:content-meta:general'
@@ -37,4 +38,3 @@ permissions:
   - 'seomatic:tracking-scripts:matomo'
   - 'seomatic:tracking-scripts:pinteresttag'
   - 'seomatic:tracking-scripts:plausible'
-  - 'assignusergroup:43406218-0e65-4e33-bd0a-df130a7d2e6c' # SEO Editor

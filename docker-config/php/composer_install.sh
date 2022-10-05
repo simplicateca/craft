@@ -24,7 +24,7 @@ if [ ! -f "composer.lock" ] || [ ! -f "vendor/autoload.php" ]; then
     su-exec www-data composer install --verbose --no-progress --no-scripts --optimize-autoloader --no-interaction
     # Wait until the MySQL db container responds
     echo "### Waiting for MySQL database"
-    until eval "mysql -h mariadb -u $DB_USER -p$DB_PASSWORD $DB_DATABASE -e 'select 1' > /dev/null 2>&1"
+    until eval "mysql -h mysql -u $CRAFT_DB_USER -p$CRAFT_DB_PASSWORD $CRAFT_DB_DATABASE -e 'select 1' > /dev/null 2>&1"
     do
       sleep 1
     done

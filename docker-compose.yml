@@ -42,7 +42,7 @@ services:
   queue:
     build:
       *php-build
-    command: /var/www/project/run_queue.sh
+    command: /bin/sh /var/www/project/run_queue.sh
     depends_on:
       - "php"
     env_file:

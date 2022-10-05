@@ -2,6 +2,7 @@ fieldLayouts:
   3047450d-a8c1-4a0f-abac-55c4c060904f:
     tabs:
       -
+        elementCondition: null
         elements:
           -
             autocapitalize: true
@@ -9,6 +10,7 @@ fieldLayouts:
             autocorrect: true
             class: null
             disabled: false
+            elementCondition: null
             id: null
             instructions: null
             label: null
@@ -24,28 +26,37 @@ fieldLayouts:
             tip: null
             title: null
             type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: a94d8351-801a-48e7-b4d4-63bd171c0305
+            userCondition: null
             warning: null
             width: 100
           -
+            elementCondition: null
             fieldUid: d05f4009-0b38-4065-a1b1-65221aa65e63 # Hero Block
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 093a37c4-c5a0-4faa-a2cf-0053ab10a554
+            userCondition: null
             warning: null
             width: 100
           -
+            elementCondition: null
             fieldUid: 6a1ab78a-ce1d-4e06-944f-7fa172aaa06a # Text
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: efb821b0-0d1d-4e26-8104-69187c662545
+            userCondition: null
             warning: null
             width: 100
         name: Content
-        sortOrder: 1
+        uid: c4455f3e-a54b-45c1-b400-de704e346a49
+        userCondition: null
 handle: error404
 hasTitleField: true
 name: 'Error 404'

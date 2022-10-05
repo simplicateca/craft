@@ -1,5 +1,5 @@
 baseUrl: '@web'
-enabled: true
+enabled: '1'
 handle: guide
 hasUrls: true
 language: en-CA
