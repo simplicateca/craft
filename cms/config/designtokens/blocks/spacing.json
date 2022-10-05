@@ -1,7 +1,7 @@
 {
   "Gap Above": {
     "class": "spaceGap",
-    "wrapper-div": "mt-12"
+    "wrapper-div": "mt-20"
   },
 
   "No Gap Above": {

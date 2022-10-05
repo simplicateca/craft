@@ -8,7 +8,7 @@
 
   "Icon Pattern": {
     "class": "bgGrey",
-    "wrapper-div": "py-12",
+    "wrapper-div": "py-20",
     "bg-color": "",
     "fill-color": "",
     "pattern": "https://simplicate.nyc3.digitaloceanspaces.com/simplicate/assets/site/images/email-pattern.png"
@@ -16,14 +16,14 @@
 
   "Blue": {
     "class": "bgBlue",
-    "wrapper-div": "py-12",
+    "wrapper-div": "py-20",
     "bg-color": "bg-sky-100",
     "fill-color": "fill-sky-100"
   },
 
   "Dark": {
     "class": "bgDark",
-    "wrapper-div": "py-12",
+    "wrapper-div": "py-20",
     "bg-color": "bg-neutral-700",
     "fill-color": "fill-neutral-700",
     "text-color": "text-white"

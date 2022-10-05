@@ -81,5 +81,5 @@ fieldLayouts:
         name: Content
         uid: 06209fac-a320-462f-a584-bb31888d7fc3
         userCondition: null
-handle: sitewideContent
-name: 'Sitewide Content'
+handle: topics
+name: 'Content Topics'

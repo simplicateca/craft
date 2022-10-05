@@ -10,7 +10,7 @@
   "3 Column Grid": {
     "class": "gridCards",
     "wrapper-div": "text-center",
-    "text-div": "max-w-5xl mx-auto",
+    "text-div": "max-w-5xl mx-auto pb-4",
     "repeater-div": "grid grid-cols-3 gap-12",
     "card-template": "_components/cards/stackedCard"
   }

@@ -78,16 +78,16 @@
            
             {% set sectionOpen = true %}
             <div class="
-                {{bgClass}}
-                {{spaceClass}}
-                {{bgWrapper}}
-                {{spaceWrapper}}
-                {{bgColor}}
-                !{{textColor}}
+                {{-bgClass ~ ' ' -}}
+                {{spaceClass ~ ' ' -}}
+                {{bgWrapper ~ ' ' -}}
+                {{spaceWrapper ~ ' ' -}}
+                {{bgColor ~ ' ' -}}
+                {{textColor ? '!' ~ textColor ~ ' ' : '' -}}
                 
-                {% if bgPattern %}
-                    bg-repeat
-                {% endif %}
+                {%- if bgPattern %}
+                    {{- "bg-repeat" -}}
+                {% endif -%}
             "
             {% if bgPattern %}
                 style="background-image: url({{bgPattern}})"

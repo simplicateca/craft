@@ -1,130 +1,227 @@
 field: a4fe99b5-7832-4eb2-9833-f551177bb821 # Content Builder
 fieldLayouts:
-  5c81451a-e63d-4966-9100-ae781bf92ed9:
+  315c14e5-c16f-44d7-b169-8e74920df021:
     tabs:
       -
         elementCondition: null
         elements:
           -
             elementCondition: null
-            fieldUid: 0bcee758-a660-4162-8172-61eb22e388b1 # Text
+            fieldUid: 26431232-d9c5-41cd-9cad-3647ec59afbd
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: acb31ed2-94c4-4136-bb42-5b55ffa91749
+            uid: 41be2032-3dea-4fe0-adb5-c0c7eaf8fcd1
             userCondition: null
             warning: null
             width: 100
           -
             elementCondition: null
-            fieldUid: 1a985008-f76e-481c-8f5b-0d30aec5998f # Layout Variant
+            fieldUid: 055d3887-062f-4180-bac4-65a9670f0440
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 25e29ab4-1e4e-444e-8911-07aae91c12ba
+            uid: 7ce93d6f-29e0-4ac4-9ec6-fe068dfc2dff
             userCondition: null
             warning: null
             width: 100
           -
             elementCondition: null
-            fieldUid: 9bc3780c-8a26-4b34-964e-9afe3f249654 # Tags
+            fieldUid: e8196605-52ba-47d2-ba43-8dc77de92903
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 3c5d67d0-093b-42e4-8707-bf28d163639c
+            uid: 2148e91a-9dca-400f-a187-d950e8770650
             userCondition: null
             warning: null
             width: 25
           -
             elementCondition: null
-            fieldUid: 69a283b4-6d7c-4669-895c-8474a32201f8 # Limit / Per Page
+            fieldUid: 9844b6dc-6dbb-4203-9eec-5507fcee91f7
             instructions: null
             label: null
             required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 83b8b4ee-afe8-4be5-8bc7-c24374bc5c6a
+            uid: 4c24c8bd-8b10-47c4-b679-8b9ff820fca6
             userCondition: null
             warning: null
             width: 25
           -
             elementCondition: null
-            fieldUid: 041164a1-2d58-4fa0-9493-2de14aabe9ea # Order
+            fieldUid: 09e29257-428d-40f2-81a3-c594a739de68
             instructions: null
             label: null
             required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: bd35df7c-729b-4f74-9e7b-fa641ccb0ff6
+            uid: 13497fc7-23d7-4c7d-bea4-3e969338d002
             userCondition: null
             warning: null
             width: 25
           -
             elementCondition: null
-            fieldUid: e1f06878-5f13-4be3-a010-2741b9b3c7f5 # Include Search?
+            fieldUid: 9305104a-d7ea-4f07-b6a5-4f02e3232cbd
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 5855838f-8e9d-42f6-b070-9401e96591e2
+            uid: e9fd208b-643b-4416-9cf4-2503b4565435
             userCondition: null
             warning: null
             width: 25
           -
             elementCondition: null
-            fieldUid: 5af7b832-6533-4a17-8189-4cb4f8a8f712 # Include Pagination?
+            fieldUid: d29c3934-5af7-4d49-9515-9dea41e6d3c2
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: a7a2ab93-7d7d-46cd-9a7e-cb3332bde0cd
+            uid: da780989-1020-4dc5-af0a-bde0cb88b420
             userCondition: null
             warning: null
             width: 25
           -
             elementCondition: null
-            fieldUid: 6f23d0a6-104c-41be-8d66-f5e9a9a260ac # Background
+            fieldUid: dd06e3eb-fff5-4c16-b219-b53867573f86
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 34b8b9e2-3c8e-435d-b2dc-45d319d794e0
+            uid: 860dee8f-67ee-403c-b90c-9c8a01147044
             userCondition: null
             warning: null
             width: 25
           -
             elementCondition: null
-            fieldUid: 1da11484-e4d8-4414-9b03-6dc1be10a931 # Spacing
+            fieldUid: 43048f2c-3b11-44e7-8c32-29d991c819cc
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 1a442921-0be1-4e36-9891-4d363f48a858
+            uid: 2b199b5e-c75a-4a5a-ab8a-670cb0e73e95
             userCondition: null
             warning: null
             width: 25
         name: Content
-        uid: 1b905d20-6fce-410e-8ace-f0ecdbeb1e39
+        uid: b835d646-e8f5-48a6-9bed-53d86f303a3f
         userCondition: null
 fields:
-  0bcee758-a660-4162-8172-61eb22e388b1: # Text
-    columnSuffix: tzocwopw
+  09e29257-428d-40f2-81a3-c594a739de68:
+    columnSuffix: jidmezte
+    contentColumnType: string
+    fieldGroup: null
+    handle: order
+    instructions: null
+    name: Order
+    searchable: false
+    settings:
+      options:
+        -
+          __assoc__:
+            -
+              - label
+              - 'Most Recent'
+            -
+              - value
+              - mostRecent
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - Random
+            -
+              - value
+              - random
+            -
+              - default
+              - ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\RadioButtons
+  055d3887-062f-4180-bac4-65a9670f0440:
+    columnSuffix: afglrhoj
+    contentColumnType: string
+    fieldGroup: null
+    handle: variant
+    instructions: null
+    name: Variant
+    searchable: false
+    settings:
+      config: blocks/listing-formats.json
+    translationKeyFormat: null
+    translationMethod: none
+    type: trendyminds\designtokens\fields\DesignTokensField
+  9844b6dc-6dbb-4203-9eec-5507fcee91f7:
+    columnSuffix: ajwnsacs
+    contentColumnType: integer(10)
+    fieldGroup: null
+    handle: limit
+    instructions: null
+    name: Limit
+    searchable: false
+    settings:
+      decimals: 0
+      defaultValue: 12
+      max: null
+      min: -1
+      prefix: null
+      previewCurrency: null
+      previewFormat: decimal
+      size: null
+      suffix: null
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Number
+  43048f2c-3b11-44e7-8c32-29d991c819cc:
+    columnSuffix: wbmfjcuh
+    contentColumnType: string
+    fieldGroup: null
+    handle: spacing
+    instructions: null
+    name: Spacing
+    searchable: false
+    settings:
+      config: blocks/spacing.json
+    translationKeyFormat: null
+    translationMethod: none
+    type: trendyminds\designtokens\fields\DesignTokensField
+  9305104a-d7ea-4f07-b6a5-4f02e3232cbd:
+    columnSuffix: sfmlstuo
+    contentColumnType: boolean
+    fieldGroup: null
+    handle: hasSearch
+    instructions: null
+    name: 'Include Search?'
+    searchable: false
+    settings:
+      default: false
+      offLabel: null
+      onLabel: null
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Lightswitch
+  26431232-d9c5-41cd-9cad-3647ec59afbd:
+    columnSuffix: hyzrszln
     contentColumnType: text
     fieldGroup: null
     handle: text
     instructions: null
     name: Text
-    searchable: false
+    searchable: true
     settings:
       availableTransforms: '*'
       availableVolumes: '*'
@@ -145,34 +242,8 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\redactor\Field
-  1a985008-f76e-481c-8f5b-0d30aec5998f: # Layout Variant
-    columnSuffix: lmsffoac
-    contentColumnType: string
-    fieldGroup: null
-    handle: variant
-    instructions: null
-    name: Variant
-    searchable: false
-    settings:
-      config: blocks/listing-formats.json
-    translationKeyFormat: null
-    translationMethod: none
-    type: trendyminds\designtokens\fields\DesignTokensField
-  1da11484-e4d8-4414-9b03-6dc1be10a931: # Spacing
-    columnSuffix: kbibsqwh
-    contentColumnType: string
-    fieldGroup: null
-    handle: spacing
-    instructions: null
-    name: Spacing
-    searchable: false
-    settings:
-      config: blocks/spacing.json
-    translationKeyFormat: null
-    translationMethod: none
-    type: trendyminds\designtokens\fields\DesignTokensField
-  5af7b832-6533-4a17-8189-4cb4f8a8f712: # Include Pagination?
-    columnSuffix: kdjpooyf
+  d29c3934-5af7-4d49-9515-9dea41e6d3c2:
+    columnSuffix: qqtvixca
     contentColumnType: boolean
     fieldGroup: null
     handle: hasPagination
@@ -186,8 +257,8 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\Lightswitch
-  6f23d0a6-104c-41be-8d66-f5e9a9a260ac: # Background
-    columnSuffix: sufzuzdu
+  dd06e3eb-fff5-4c16-b219-b53867573f86:
+    columnSuffix: fjmlbprp
     contentColumnType: string
     fieldGroup: null
     handle: bg
@@ -199,7 +270,7 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: trendyminds\designtokens\fields\DesignTokensField
-  9bc3780c-8a26-4b34-964e-9afe3f249654: # Tags
+  e8196605-52ba-47d2-ba43-8dc77de92903:
     columnSuffix: null
     contentColumnType: string
     fieldGroup: null
@@ -224,77 +295,6 @@ fields:
     translationKeyFormat: null
     translationMethod: site
     type: craft\fields\Tags
-  69a283b4-6d7c-4669-895c-8474a32201f8: # Limit / Per Page
-    columnSuffix: njtiaavk
-    contentColumnType: integer(10)
-    fieldGroup: null
-    handle: limit
-    instructions: null
-    name: 'Limit / Per Page'
-    searchable: false
-    settings:
-      decimals: 0
-      defaultValue: 12
-      max: null
-      min: -1
-      prefix: null
-      previewCurrency: null
-      previewFormat: decimal
-      size: null
-      suffix: null
-    translationKeyFormat: null
-    translationMethod: none
-    type: craft\fields\Number
-  041164a1-2d58-4fa0-9493-2de14aabe9ea: # Order
-    columnSuffix: youtxjmv
-    contentColumnType: string
-    fieldGroup: null
-    handle: order
-    instructions: null
-    name: Order
-    searchable: false
-    settings:
-      options:
-        -
-          __assoc__:
-            -
-              - label
-              - 'Most Recent'
-            -
-              - value
-              - mostRecent
-            -
-              - default
-              - '1'
-        -
-          __assoc__:
-            -
-              - label
-              - Random
-            -
-              - value
-              - random
-            -
-              - default
-              - ''
-    translationKeyFormat: null
-    translationMethod: none
-    type: craft\fields\RadioButtons
-  e1f06878-5f13-4be3-a010-2741b9b3c7f5: # Include Search?
-    columnSuffix: pkgeltqc
-    contentColumnType: boolean
-    fieldGroup: null
-    handle: hasSearch
-    instructions: null
-    name: 'Include Search?'
-    searchable: false
-    settings:
-      default: false
-      offLabel: null
-      onLabel: null
-    translationKeyFormat: null
-    translationMethod: none
-    type: craft\fields\Lightswitch
-handle: newsListing
-name: 'News Listing'
-sortOrder: 8
+handle: faqListing
+name: 'Faq Listing'
+sortOrder: 9

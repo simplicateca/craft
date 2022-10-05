@@ -2,10 +2,10 @@
 {% set blocks = blocks ??? entry.contentBlocks.all() %}
 
 {% if blocks %}
-    <section class="
+    <section class="{{ '' -}}
         c-content--{{entry.section.handle}}--{{entry.type.handle}}
         my-10
-    ">
+        {{- '' }}">
         {% block aboveBuilder %}{% endblock %}
 
         {% block builder %}

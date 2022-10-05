@@ -16,17 +16,10 @@
 {% set background = background ?? block.background  ?? '' %}
 
 <div
-    class="
-      c-block--{{blockType}}
-      position--{{position}}
-      variant--{{variant}}
-      edges--{{edges}}
-      bg--{{background}}
-      {{class}}
+    class="{% apply spaceless %}
       {% if first %}alpha{% endif %}
       {% if last  %}omega{% endif %}
-    "
-    v-waypoint="{ active: true, callback: onWaypoint, options: intersectionOptions }"
+    {% endapply %}"
     
     {% if blockID %}
         id="{{blockID}}"

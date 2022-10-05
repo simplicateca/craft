@@ -2,6 +2,7 @@ fieldLayouts:
   428ba83c-5ca7-4751-9529-c3d5c77739fc:
     tabs:
       -
+        elementCondition: null
         elements:
           -
             autocapitalize: true
@@ -9,6 +10,7 @@ fieldLayouts:
             autocorrect: true
             class: null
             disabled: false
+            elementCondition: null
             id: null
             instructions: null
             label: null
@@ -24,67 +26,108 @@ fieldLayouts:
             tip: null
             title: null
             type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: dd4c06b0-4735-4900-b07d-48ba38231994
+            userCondition: null
             warning: null
             width: 100
           -
+            elementCondition: null
             fieldUid: adcea45e-bf40-4faf-b0c8-4ce089696971 # Lead Image(s)
-            instructions: ''
-            label: ''
-            required: ''
+            instructions: null
+            label: null
+            required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 5bf51005-3bb9-412e-adf4-7f150865f2ef
+            userCondition: null
             warning: null
             width: 50
           -
+            elementCondition: null
             fieldUid: b1c52a06-4990-43f5-90d3-898a48789556 # Dek
-            instructions: ''
-            label: ''
-            required: '1'
+            instructions: null
+            label: null
+            required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: a8eeeea5-3bf1-46eb-8f82-8abc84922946
+            userCondition: null
             warning: null
             width: 50
           -
+            elementCondition: null
             type: craft\fieldlayoutelements\HorizontalRule
+            uid: 8b88d056-bc41-4d86-9d5f-898e1bfc4bc8
+            userCondition: null
           -
+            elementCondition: null
             heading: 'Hero Content'
             type: craft\fieldlayoutelements\Heading
+            uid: 499c7d7c-e78f-4db1-907f-40830f2933ac
+            userCondition: null
           -
+            elementCondition: null
             fieldUid: d05f4009-0b38-4065-a1b1-65221aa65e63 # Hero Block
             instructions: 'Use the block below to customize the hero section for this page'
-            label: ''
-            required: ''
+            label: null
+            required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: bb156ffb-d69e-44cc-ad8c-5217d827f31d
+            userCondition: null
             warning: null
             width: 100
           -
+            elementCondition: null
             heading: 'Page Content'
             type: craft\fieldlayoutelements\Heading
+            uid: 03355186-b876-4871-b747-0a024a4ea616
+            userCondition: null
           -
+            elementCondition: null
             fieldUid: a4fe99b5-7832-4eb2-9833-f551177bb821 # Content Builder
             instructions: 'Use the blocks below to construct the body of your entry. Each block contains specific settings and content requirements.'
             label: 'Article Content Blocks'
-            required: ''
+            required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 7d767a26-af52-4bce-8587-abff92061600
+            userCondition: null
             warning: null
             width: 100
         name: Content
-        sortOrder: 1
+        uid: 100480a7-38f5-4090-8ea7-6b1e1f466a64
+        userCondition: null
       -
+        elementCondition: null
         elements:
           -
-            fieldUid: d79b3073-00bf-430c-95d5-6d03d8303032 # SEO
-            instructions: ''
-            label: __blank__
-            required: ''
+            elementCondition: null
+            fieldUid: 772247d2-d67e-40f2-a243-6e6eca55c5f5 # Topics
+            instructions: null
+            label: null
+            required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 76184b30-8fd7-4592-9f15-c8ed69afc161
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: d79b3073-00bf-430c-95d5-6d03d8303032 # SEO
+            instructions: null
+            label: __blank__
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 526646d2-5a6d-4ea5-bc58-be49bd705b8a
+            userCondition: null
             warning: null
             width: 100
         name: SEO
-        sortOrder: 2
+        uid: 85ed043d-21f9-434f-89bd-47ecd8b3630d
+        userCondition: null
 handle: default
 hasTitleField: true
 name: Default
